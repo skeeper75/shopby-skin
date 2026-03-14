@@ -1,0 +1,3 @@
+{
+  "canNotChangeWithQuantityDiscount": "구매수량 추가할인이 적용된 상품은 수량을 나누어 {{claimTypeLabel}}할 수 없습니다."
+}
