@@ -68,6 +68,19 @@ const ExperienceGroup = lazy(() => import('../pages/ExperienceGroup'));
 const AboutUs = lazy(() => import('../pages/AboutUs'));
 const Directions = lazy(() => import('../pages/Directions'));
 
+// SPEC-SKIN-005: 관리자 페이지
+const AdminLayout = lazy(() => import('../components/admin/AdminLayout'));
+const AdminLogin = lazy(() => import('../pages/admin/Login'));
+const AdminDashboard = lazy(() => import('../pages/admin/Dashboard'));
+const AdminMembers = lazy(() => import('../pages/admin/Members'));
+const AdminOrders = lazy(() => import('../pages/admin/Orders'));
+const AdminFileCheck = lazy(() => import('../pages/admin/FileCheck'));
+const AdminStatusChange = lazy(() => import('../pages/admin/StatusChange'));
+const AdminPrintOrders = lazy(() => import('../pages/admin/PrintOrders'));
+const AdminDeferredPayment = lazy(() => import('../pages/admin/DeferredPayment'));
+const AdminReceipts = lazy(() => import('../pages/admin/Receipts'));
+const AdminSMS = lazy(() => import('../pages/admin/SMS'));
+
 // ETC
 const NoAccess = lazy(() => import('../pages/NoAccess'));
 const MemberOnly = lazy(() => import('../pages/MemberOnly'));
@@ -336,6 +349,55 @@ const Router = () =>
         {
           path: 'experience-group',
           element: <ExperienceGroup />,
+        },
+      ],
+    },
+    // SPEC-SKIN-005: 관리자 로그인 (레이아웃 없음)
+    {
+      path: 'admin/login',
+      element: <AdminLogin />,
+    },
+    // SPEC-SKIN-005: 관리자 페이지 (AdminLayout 적용)
+    {
+      path: 'admin',
+      element: <AdminLayout />,
+      children: [
+        {
+          path: 'dashboard',
+          element: <AdminDashboard />,
+        },
+        {
+          path: 'members',
+          element: <AdminMembers />,
+        },
+        // SPEC-SKIN-005: 주문관리
+        {
+          path: 'orders',
+          element: <AdminOrders />,
+        },
+        {
+          path: 'file-check',
+          element: <AdminFileCheck />,
+        },
+        {
+          path: 'status-change',
+          element: <AdminStatusChange />,
+        },
+        {
+          path: 'print-orders',
+          element: <AdminPrintOrders />,
+        },
+        {
+          path: 'deferred-payment',
+          element: <AdminDeferredPayment />,
+        },
+        {
+          path: 'receipts',
+          element: <AdminReceipts />,
+        },
+        {
+          path: 'sms',
+          element: <AdminSMS />,
         },
       ],
     },
