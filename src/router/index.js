@@ -51,6 +51,23 @@ const MyPageShippingAddress = lazy(() => import('../pages/MyPage/ShippingAddress
 const MyClaims = lazy(() => import('../pages/MyPage/Claims'));
 const GuestOrder = lazy(() => import('../pages/GuestOrder'));
 
+// SPEC-SKIN-004: 고객센터/정보/마케팅 페이지
+const BulkInquiry = lazy(() => import('../pages/BulkInquiry'));
+const BusinessConsultation = lazy(() => import('../pages/BusinessConsultation'));
+const DesignConsultation = lazy(() => import('../pages/DesignConsultation'));
+const Terms = lazy(() => import('../pages/Terms'));
+const WorkGuide = lazy(() => import('../pages/WorkGuide'));
+const GuideDetail = lazy(() => import('../pages/WorkGuide/GuideDetail'));
+const PaperLanding = lazy(() => import('../pages/Landing/PaperLanding'));
+const BindingLanding = lazy(() => import('../pages/Landing/BindingLanding'));
+const CalendarLanding = lazy(() => import('../pages/Landing/CalendarLanding'));
+const PouchLanding = lazy(() => import('../pages/Landing/PouchLanding'));
+const StickerLanding = lazy(() => import('../pages/Landing/StickerLanding'));
+const Reviews = lazy(() => import('../pages/Reviews'));
+const ExperienceGroup = lazy(() => import('../pages/ExperienceGroup'));
+const AboutUs = lazy(() => import('../pages/AboutUs'));
+const Directions = lazy(() => import('../pages/Directions'));
+
 // ETC
 const NoAccess = lazy(() => import('../pages/NoAccess'));
 const MemberOnly = lazy(() => import('../pages/MemberOnly'));
@@ -254,6 +271,71 @@ const Router = () =>
         {
           path: 'pages/order/guest-order.html',
           element: <GuestOrder />,
+        },
+        // SPEC-SKIN-004: 고객센터
+        {
+          path: 'bulk-inquiry',
+          element: <BulkInquiry />,
+        },
+        {
+          path: 'business-consultation',
+          element: <BusinessConsultation />,
+        },
+        {
+          path: 'design-consultation',
+          element: <DesignConsultation />,
+        },
+        // SPEC-SKIN-004: 정보
+        {
+          path: 'terms',
+          element: <Terms />,
+        },
+        {
+          path: 'about',
+          element: <AboutUs />,
+        },
+        {
+          path: 'directions',
+          element: <Directions />,
+        },
+        // SPEC-SKIN-004: 가이드
+        {
+          path: 'guide/work',
+          element: <WorkGuide />,
+        },
+        {
+          path: 'guide/work/:guideId',
+          element: <GuideDetail />,
+        },
+        // SPEC-SKIN-004: 마케팅 랜딩
+        {
+          path: 'landing/paper',
+          element: <PaperLanding />,
+        },
+        {
+          path: 'landing/binding',
+          element: <BindingLanding />,
+        },
+        {
+          path: 'landing/calendar',
+          element: <CalendarLanding />,
+        },
+        {
+          path: 'landing/pouch',
+          element: <PouchLanding />,
+        },
+        {
+          path: 'landing/sticker',
+          element: <StickerLanding />,
+        },
+        // SPEC-SKIN-004: 이용후기/체험단
+        {
+          path: 'reviews',
+          element: <Reviews />,
+        },
+        {
+          path: 'experience-group',
+          element: <ExperienceGroup />,
         },
       ],
     },
