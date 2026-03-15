@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import StatusBadge from '../StatusBadge';
 
+// @MX:NOTE: [AUTO] 주문 상세 슬라이드인 패널 - 주문/상품/배송/결제/파일 5개 섹션 표시
+// @MX:SPEC: SPEC-SKIN-005
 /**
  * 주문 상세 슬라이드인 패널 컴포넌트
  * - 오른쪽에서 슬라이드 인 되는 주문 상세 정보 패널

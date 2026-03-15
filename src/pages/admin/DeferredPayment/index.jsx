@@ -3,6 +3,9 @@ import AdminLayout from '../../../components/admin/AdminLayout';
 import DataTable from '../../../components/admin/DataTable';
 import StatusBadge from '../../../components/admin/StatusBadge';
 
+// @MX:NOTE: [AUTO] 후불 결제 관리 페이지 - 미결제/부분결제/결제완료 상태별 필터 및 결제 처리
+// @MX:SPEC: SPEC-SKIN-005
+
 // Mock 미결제 주문 데이터
 const MOCK_DEFERRED_ORDERS = [
   {

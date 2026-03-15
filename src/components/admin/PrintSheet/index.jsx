@@ -1,3 +1,5 @@
+// @MX:NOTE: [AUTO] A4 인쇄용 주문서 - @media print로 인쇄 최적화, page-break-after로 다건 연속 인쇄 지원
+// @MX:SPEC: SPEC-SKIN-005
 /**
  * A4 인쇄용 주문서 레이아웃 컴포넌트
  * - 인쇄 최적화 CSS (@media print) 적용

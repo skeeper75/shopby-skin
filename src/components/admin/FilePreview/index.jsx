@@ -1,5 +1,7 @@
 import { useCallback } from 'react';
 
+// @MX:NOTE: [AUTO] PDF는 iframe, 이미지는 img 태그로 미리보기 - 지원하지 않는 형식은 에러 메시지 표시
+// @MX:SPEC: SPEC-SKIN-005
 /**
  * 파일 미리보기 모달 컴포넌트
  * - PDF (iframe) 및 이미지 (img) 미리보기 지원

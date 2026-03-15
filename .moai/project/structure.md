@@ -83,6 +83,7 @@ assets/
 | Common | Modal, Button, Input, Loading | 공통 UI 요소 |
 | Banner | AdminBanner, CustomBanner | 배너 표시 |
 | Popup | DesignPopup | 디자인 팝업 |
+| **Admin** | AdminLayout, AdminSidebar, DataTable, StatusBadge, SearchBar, DatePicker, BulkActionBar, FilePreview, OrderDetailPanel, PrintSheet, SMSDialog, StatCard | **관리자 백오피스 UI (SPEC-SKIN-005)** |
 
 ---
 
@@ -116,7 +117,18 @@ pages/
 ├── Claims/                    # 클레임(환불/반품) 페이지
 ├── CustomerCenter/            # 고객센터
 ├── FAQ/                       # 자주 묻는 질문
-└── Notice/                    # 공지사항
+├── Notice/                    # 공지사항
+└── admin/                     # 관리자 백오피스 (SPEC-SKIN-005)
+    ├── Login/                 # 관리자 로그인
+    ├── Dashboard/             # 대시보드 (현황 카드 + 최근 주문)
+    ├── Members/               # 관리자 등록/관리
+    ├── Orders/                # 주문 목록 (DataTable)
+    ├── FileCheck/             # 파일확인 처리
+    ├── StatusChange/          # 주문상태 변경
+    ├── PrintOrders/           # 주문서 출력
+    ├── DeferredPayment/       # 후불결제 관리
+    ├── Receipts/              # 증빙서류 관리
+    └── SMS/                   # SMS/알림톡 발송
 ```
 
 ---
@@ -145,7 +157,8 @@ hooks/
 ├── useMall.js                 # 몰 설정 정보 접근 훅
 ├── useModal.js                # 모달 제어 훅
 ├── useCart.js                 # 장바구니 상태 훅
-└── useScroll.js               # 스크롤 이벤트 처리 훅
+├── useScroll.js               # 스크롤 이벤트 처리 훅
+└── useAdminAuth.js            # 관리자 인증 상태 훅 (SPEC-SKIN-005)
 ```
 
 **역할**: 컴포넌트에서 반복되는 상태 로직을 훅으로 분리하여 코드 재사용성을 높입니다.

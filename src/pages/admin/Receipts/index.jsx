@@ -3,6 +3,9 @@ import AdminLayout from '../../../components/admin/AdminLayout';
 import DataTable from '../../../components/admin/DataTable';
 import StatusBadge from '../../../components/admin/StatusBadge';
 
+// @MX:NOTE: [AUTO] 증빙 서류 관리 페이지 - 세금계산서/현금영수증/거래명세서 발급 처리
+// @MX:SPEC: SPEC-SKIN-005
+
 // 증빙 서류 타입
 const RECEIPT_TYPES = ['전체', '세금계산서', '현금영수증', '거래명세서'];
 

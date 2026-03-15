@@ -68,6 +68,7 @@ const ExperienceGroup = lazy(() => import('../pages/ExperienceGroup'));
 const AboutUs = lazy(() => import('../pages/AboutUs'));
 const Directions = lazy(() => import('../pages/Directions'));
 
+// @MX:NOTE: [AUTO] SPEC-SKIN-005 관리자 라우트 - /admin/login은 레이아웃 없음, /admin/* 하위는 AdminLayout 적용
 // SPEC-SKIN-005: 관리자 페이지
 const AdminLayout = lazy(() => import('../components/admin/AdminLayout'));
 const AdminLogin = lazy(() => import('../pages/admin/Login'));

@@ -4,6 +4,9 @@ import DataTable from '../../../components/admin/DataTable';
 import StatusBadge from '../../../components/admin/StatusBadge';
 import FilePreview from '../../../components/admin/FilePreview';
 
+// @MX:NOTE: [AUTO] 파일 확인 처리 페이지 - 확인완료 시 상태를 '제작진행'으로 자동 전환
+// @MX:SPEC: SPEC-SKIN-005
+
 // @MX:NOTE: [AUTO] 파일 확인 대기 주문 Mock 데이터
 const MOCK_FILE_CHECK_ORDERS = [
   {

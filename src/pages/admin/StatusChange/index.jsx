@@ -4,11 +4,14 @@ import DataTable from '../../../components/admin/DataTable';
 import StatusBadge from '../../../components/admin/StatusBadge';
 import BulkActionBar from '../../../components/admin/BulkActionBar';
 
-// @MX:NOTE: [AUTO] 주문 상태 흐름 정의 - 순차적 변경만 허용
+// @MX:NOTE: [AUTO] 상태 변경 페이지 - 개별/일괄 상태 변경 + SMS 자동발송 연동
+// @MX:SPEC: SPEC-SKIN-005
+
+// @MX:NOTE: [AUTO] 주문 상태 흐름 정의 - 순차적 변경만 허용, 역방향 변경 불가
 // 접수 → 파일확인 → 제작진행 → 제작완료 → 배송중 → 배송완료
 const STATUS_FLOW = ['접수', '파일확인', '제작진행', '제작완료', '배송중', '배송완료'];
 
-// @MX:NOTE: [AUTO] SMS 자동 발송 트리거 상태 - 제작진행중/제작완료 변경 시 고객에게 알림
+// @MX:NOTE: [AUTO] SMS 자동 발송 트리거 상태 - 제작진행/제작완료 변경 시 고객에게 알림 SMS 자동 발송
 const AUTO_SMS_STATUSES = ['제작진행', '제작완료'];
 
 // Mock 데이터

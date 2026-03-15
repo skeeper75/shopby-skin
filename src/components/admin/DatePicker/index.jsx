@@ -1,5 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 
+// @MX:NOTE: [AUTO] 빠른 기간 선택 버튼 (오늘/1주/1개월/3개월) 포함 날짜 범위 선택기
+// @MX:SPEC: SPEC-SKIN-005
 /**
  * 기간 선택 컴포넌트
  * - 시작일/종료일 input[type="date"] 기반

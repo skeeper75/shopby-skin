@@ -3,6 +3,9 @@ import AdminLayout from '../../../components/admin/AdminLayout';
 import DataTable from '../../../components/admin/DataTable';
 import SMSDialog from '../../../components/admin/SMSDialog';
 
+// @MX:NOTE: [AUTO] SMS 관리 페이지 - 수신자 선택, 템플릿 발송, 발송 이력 조회
+// @MX:SPEC: SPEC-SKIN-005
+
 // Mock SMS 발송 이력
 const MOCK_SMS_HISTORY = [
   {

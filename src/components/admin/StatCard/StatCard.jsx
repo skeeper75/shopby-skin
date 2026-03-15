@@ -1,6 +1,6 @@
 import { cn } from '../../../lib/utils';
 
-// @MX:NOTE: [AUTO] 관리자 대시보드 통계 카드 컴포넌트
+// @MX:NOTE: [AUTO] 관리자 대시보드 통계 카드 컴포넌트 - 아이콘 + 숫자 + 라벨 구성
 // @MX:SPEC: SPEC-SKIN-005
 /**
  * 통계 카드 컴포넌트

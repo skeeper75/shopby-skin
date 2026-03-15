@@ -8,6 +8,7 @@ import useAdminAuth from '../../../hooks/useAdminAuth';
 
 // @MX:NOTE: [AUTO] 관리자 로그인 페이지 - 후니프린팅 로고 중앙 배치, ID/PW 입력 폼
 // @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 로그인 성공/실패 시나리오, 유효성 검사 검증 필요
 /**
  * 관리자 로그인 페이지
  * - 중앙 정렬 로그인 폼
@@ -22,13 +23,17 @@ const Login = () => {
 
   const [formData, setFormData] = useState({ id: '', password: '' });
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState({ id: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
 
   // 입력값 변경 핸들러
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // 입력 시 에러 메시지 초기화
+    // 입력 시 해당 필드 에러 초기화
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => ({ ...prev, [name]: '' }));
+    }
     if (error) setError('');
   };
 
@@ -36,8 +41,21 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.id || !formData.password) {
-      setError('아이디와 비밀번호를 입력해주세요.');
+    // 필드별 유효성 검사
+    const newFieldErrors = { id: '', password: '' };
+    let hasFieldError = false;
+
+    if (!formData.id.trim()) {
+      newFieldErrors.id = '아이디를 입력해주세요.';
+      hasFieldError = true;
+    }
+    if (!formData.password) {
+      newFieldErrors.password = '비밀번호를 입력해주세요.';
+      hasFieldError = true;
+    }
+
+    if (hasFieldError) {
+      setFieldErrors(newFieldErrors);
       return;
     }
 
@@ -86,10 +104,20 @@ const Login = () => {
               value={formData.id}
               onChange={handleChange}
               placeholder="관리자 아이디를 입력하세요"
-              className="border-[#CACACA] focus-visible:ring-[#5538B6]"
+              className={cn(
+                'border-[#CACACA] focus-visible:ring-[#5538B6]',
+                fieldErrors.id && 'border-red-400'
+              )}
               disabled={isLoading}
               autoComplete="username"
+              aria-invalid={!!fieldErrors.id}
+              aria-describedby={fieldErrors.id ? 'id-error' : undefined}
             />
+            {fieldErrors.id && (
+              <p id="id-error" className="text-xs text-red-500 mt-1" role="alert">
+                {fieldErrors.id}
+              </p>
+            )}
           </div>
 
           <div>
@@ -103,10 +131,20 @@ const Login = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="비밀번호를 입력하세요"
-              className="border-[#CACACA] focus-visible:ring-[#5538B6]"
+              className={cn(
+                'border-[#CACACA] focus-visible:ring-[#5538B6]',
+                fieldErrors.password && 'border-red-400'
+              )}
               disabled={isLoading}
               autoComplete="current-password"
+              aria-invalid={!!fieldErrors.password}
+              aria-describedby={fieldErrors.password ? 'password-error' : undefined}
             />
+            {fieldErrors.password && (
+              <p id="password-error" className="text-xs text-red-500 mt-1" role="alert">
+                {fieldErrors.password}
+              </p>
+            )}
           </div>
 
           {/* 에러 메시지 */}

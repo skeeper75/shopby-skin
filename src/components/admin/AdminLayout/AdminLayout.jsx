@@ -8,6 +8,7 @@ import AdminSidebar from '../AdminSidebar';
 // @MX:ANCHOR: [AUTO] 관리자 레이아웃 - 모든 관리자 페이지의 최상위 레이아웃 컴포넌트
 // @MX:REASON: fan_in >= 10, 대시보드/주문관리/상품관리/회원관리 등 전체 관리자 페이지에서 사용
 // @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 사이드바 토글, 로그아웃 플로우 검증 필요
 /**
  * 관리자 레이아웃 컴포넌트
  * - 좌측 사이드바(250px, 태블릿에서 접기 가능) + 우측 메인 콘텐츠 구조

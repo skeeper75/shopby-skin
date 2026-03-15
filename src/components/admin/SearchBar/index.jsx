@@ -1,5 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 
+// @MX:NOTE: [AUTO] 디바운스 300ms 적용 - 검색 요청 빈도 제어
+// @MX:SPEC: SPEC-SKIN-005
 /**
  * 검색바 컴포넌트
  * - 디바운스 검색 (300ms) 지원
@@ -26,10 +28,22 @@ const SearchBar = ({
     }
   }, [externalValue]);
 
+  /**
+   * 입력값 정제 - HTML 태그 제거 및 길이 제한
+   * @param {string} input - 사용자 입력값
+   * @returns {string} 정제된 입력값
+   */
+  const sanitizeInput = useCallback((input) => {
+    // HTML 태그 제거
+    const stripped = input.replace(/<[^>]*>/g, '');
+    // 최대 200자 제한
+    return stripped.slice(0, 200);
+  }, []);
+
   // 디바운스 검색 처리
   const handleChange = useCallback(
     (e) => {
-      const newValue = e.target.value;
+      const newValue = sanitizeInput(e.target.value);
       setValue(newValue);
 
       if (debounceTimer.current) {
@@ -40,7 +54,7 @@ const SearchBar = ({
         onSearch?.(newValue);
       }, 300);
     },
-    [onSearch]
+    [onSearch, sanitizeInput]
   );
 
   // 즉시 검색 (버튼 클릭 또는 엔터)
@@ -50,9 +64,9 @@ const SearchBar = ({
       if (debounceTimer.current) {
         clearTimeout(debounceTimer.current);
       }
-      onSearch?.(value);
+      onSearch?.(sanitizeInput(value));
     },
-    [value, onSearch]
+    [value, onSearch, sanitizeInput]
   );
 
   // 컴포넌트 언마운트 시 타이머 정리

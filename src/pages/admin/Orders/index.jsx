@@ -7,6 +7,10 @@ import StatusBadge from '../../../components/admin/StatusBadge';
 import BulkActionBar from '../../../components/admin/BulkActionBar';
 import OrderDetailPanel from '../../../components/admin/OrderDetailPanel';
 
+// @MX:NOTE: [AUTO] 주문관리 메인 페이지 - 검색/필터/DataTable/상세패널/일괄작업 통합
+// @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 필터링 로직(검색어/상태/카테고리/기간) 검증 필요
+
 // @MX:NOTE: [AUTO] 주문 목록 Mock 데이터 - 후니프린팅 컨텍스트
 const MOCK_ORDERS = [
   {

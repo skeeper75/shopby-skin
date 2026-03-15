@@ -1,7 +1,8 @@
 import { useState, useCallback, useMemo } from 'react';
 
-// @MX:NOTE: [AUTO] SMS/LMS 바이트 계산 - 한글 2바이트, 영숫자 1바이트 기준
-// SMS 90바이트, LMS 2000바이트 제한
+// @MX:NOTE: [AUTO] SMS/LMS 바이트 계산 - 한글 2바이트, 영숫자 1바이트 기준, SMS 90바이트/LMS 2000바이트 제한
+// @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 바이트 계산 로직(calculateBytes) 및 SMS/LMS 자동분류 검증 필요
 
 /**
  * SMS 템플릿 메시지 목록
@@ -44,6 +45,27 @@ const calculateBytes = (str) => {
   }
   return bytes;
 };
+
+/**
+ * 한국 전화번호 형식 검증
+ * - 010-XXXX-XXXX, 01X-XXX-XXXX, 02-XXX-XXXX, 0XX-XXX-XXXX 등
+ * - 하이픈 유무 모두 허용
+ */
+const KOREAN_PHONE_REGEX = /^(01[016789]|02|0[3-9]\d)-?\d{3,4}-?\d{4}$/;
+
+/**
+ * 전화번호 형식 유효성 검증
+ * @param {string} phone - 전화번호 문자열
+ * @returns {boolean} 유효한 한국 전화번호 여부
+ */
+const isValidKoreanPhone = (phone) => {
+  if (!phone || typeof phone !== 'string') return false;
+  // 공백 제거 후 검증
+  return KOREAN_PHONE_REGEX.test(phone.trim());
+};
+
+/** LMS 최대 바이트 수 */
+const MAX_LMS_BYTES = 2000;
 
 /**
  * SMS 발송 모달 컴포넌트
@@ -93,14 +115,22 @@ const SMSDialog = ({
       alert('수신자를 선택해주세요.');
       return;
     }
-    if (byteCount > 2000) {
-      alert('메시지가 LMS 최대 길이(2000바이트)를 초과합니다.');
+    if (byteCount > MAX_LMS_BYTES) {
+      alert(`메시지가 LMS 최대 길이(${MAX_LMS_BYTES}바이트)를 초과합니다.`);
+      return;
+    }
+
+    // 수신자 전화번호 형식 검증
+    const invalidPhones = recipients.filter((r) => !isValidKoreanPhone(r.phone));
+    if (invalidPhones.length > 0) {
+      const names = invalidPhones.map((r) => r.name).join(', ');
+      alert(`유효하지 않은 전화번호가 포함되어 있습니다: ${names}`);
       return;
     }
 
     onSend?.({
       recipients,
-      message,
+      message: message.trim(),
       type: messageType,
     });
 

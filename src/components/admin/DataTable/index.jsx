@@ -1,7 +1,9 @@
 import { useState, useCallback, useMemo } from 'react';
 
-// @MX:ANCHOR: [AUTO] 주문관리 전역에서 사용되는 재사용 가능 데이터 테이블 컴포넌트 (fan_in >= 5)
-// @MX:REASON: Orders, FileCheck, StatusChange, DeferredPayment, Receipts, SMS 페이지에서 공통 사용
+// @MX:ANCHOR: [AUTO] 주문관리 전역에서 사용되는 재사용 가능 데이터 테이블 컴포넌트
+// @MX:REASON: fan_in=7, Orders, FileCheck, StatusChange, PrintOrders, DeferredPayment, Receipts, SMS 페이지에서 공통 사용
+// @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 정렬, 페이지네이션, 체크박스 선택 로직 검증 필요
 
 /**
  * 재사용 가능한 데이터 테이블 컴포넌트

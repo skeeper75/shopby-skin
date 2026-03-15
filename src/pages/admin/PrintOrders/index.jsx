@@ -4,6 +4,11 @@ import DataTable from '../../../components/admin/DataTable';
 import StatusBadge from '../../../components/admin/StatusBadge';
 import PrintSheet from '../../../components/admin/PrintSheet';
 
+// @MX:NOTE: [AUTO] 주문서 출력 페이지 - window.open으로 새 창 열어 인쇄, 다건 연속 출력 지원
+// @MX:SPEC: SPEC-SKIN-005
+// @MX:WARN: [AUTO] 팝업 차단 시 인쇄 불가 - window.open 반환값 null 체크 필요
+// @MX:REASON: 브라우저 팝업 차단 정책에 따라 window.open이 실패할 수 있음
+
 // Mock 주문 데이터
 const MOCK_ORDERS = [
   {

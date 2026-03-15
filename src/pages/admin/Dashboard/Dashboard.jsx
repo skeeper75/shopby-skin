@@ -5,6 +5,7 @@ import StatCard from '../../../components/admin/StatCard';
 
 // @MX:NOTE: [AUTO] 관리자 대시보드 페이지 - 통계 카드 6개, 최근 주문 테이블, 월매출 차트 영역
 // @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 통계 데이터 렌더링 및 API 연동 후 로딩 상태 검증 필요
 
 // 통계 카드 아이콘 정의
 const STAT_ICONS = {

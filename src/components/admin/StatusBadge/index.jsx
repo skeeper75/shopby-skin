@@ -7,7 +7,13 @@
  * @param {string} props.className - 추가 스타일 클래스
  */
 
+// @MX:ANCHOR: [AUTO] 주문 상태 뱃지 - Orders, FileCheck, StatusChange, PrintOrders, DeferredPayment, Receipts, OrderDetailPanel에서 사용
+// @MX:REASON: fan_in=7, 관리자 주문관리 전역에서 상태 표시 담당
+// @MX:SPEC: SPEC-SKIN-005
+// @MX:TODO: [AUTO] 테스트 미작성 - 상태별 스타일 매핑 검증 필요
+
 // @MX:NOTE: [AUTO] 주문 상태별 색상 매핑 - 후니프린팅 디자인 토큰 기반
+// @MX:NOTE: [AUTO] 새로운 상태 추가 시 STATUS_STYLES에 bg/text 색상쌍 추가 필요
 const STATUS_STYLES = {
   접수중: { bg: '#EEEBF9', text: '#5538B6' },
   접수: { bg: '#EEEBF9', text: '#5538B6' },

@@ -253,3 +253,28 @@ mini-css-extract-plugin: 최신
 | Plain CSS | 진입 장벽 낮음, 복잡한 추상화 없이 직관적인 스타일 관리 |
 | i18next | 검증된 국제화 솔루션, 한국어 기본 지원 |
 | Yarn 1 | 결정적(Deterministic) 의존성 해결, 팀 내 일관성 확보 |
+
+---
+
+## 관리자 백오피스 기술 스택 (SPEC-SKIN-005)
+
+관리자 백오피스 영역은 사용자 프론트엔드와 별도의 스타일링 체계를 적용합니다.
+
+| 구분 | 기술 | 비고 |
+|------|------|------|
+| 스타일링 | Tailwind CSS | 관리자 영역 전용 유틸리티 CSS |
+| UI 컴포넌트 | shadcn/ui 패턴 | 커스텀 관리자 컴포넌트 (12종) |
+| 디자인 토큰 | Huni Design Tokens | 브랜드 컬러 #5538B6 기반 |
+| 인증 | useAdminAuth 훅 | Mock 인증 (프로토타입 단계) |
+| 데이터 테이블 | 커스텀 DataTable | 검색/필터/페이징/일괄처리 지원 |
+| 반응형 | Desktop 전용 (≥1024px) | 태블릿 사이드바 접힘 모드 |
+
+### 관리자 영역 vs 사용자 영역 차이
+
+| 관점 | 사용자 영역 | 관리자 영역 |
+|------|------------|------------|
+| 스타일링 | Plain CSS + CSS Variables | Tailwind CSS |
+| 레이아웃 | Header + Footer + Content | Sidebar + Header + Content |
+| 반응형 | 모바일/PC | Desktop 전용 |
+| 인증 | AuthProvider (JWT) | useAdminAuth (Mock → API 연동 예정) |
+| 상태관리 | Context API (10 Providers) | useState (컴포넌트 로컬) |

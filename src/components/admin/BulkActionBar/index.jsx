@@ -1,5 +1,8 @@
 import { useState, useCallback } from 'react';
 
+// @MX:NOTE: [AUTO] 일괄 액션 바 - 선택된 주문에 대한 상태변경/출력/SMS 일괄 처리
+// @MX:SPEC: SPEC-SKIN-005
+
 // @MX:NOTE: [AUTO] 주문 상태 흐름 정의 - 순차적 상태 변경만 허용
 const ORDER_STATUSES = [
   '접수',

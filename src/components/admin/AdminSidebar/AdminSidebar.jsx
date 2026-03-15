@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import { cn } from '../../../lib/utils';
 
-// @MX:NOTE: [AUTO] 관리자 사이드바 메뉴 정의 - 주문관리만 서브메뉴 포함
+// @MX:NOTE: [AUTO] 관리자 사이드바 메뉴 정의 - 주문관리만 서브메뉴(7개) 포함, 나머지는 단일 링크
+// @MX:NOTE: [AUTO] MENU_ITEMS 배열 수정 시 라우터(src/router/index.js)의 path도 함께 업데이트 필요
 // @MX:SPEC: SPEC-SKIN-005
 const MENU_ITEMS = [
   { label: '대시보드', path: '/admin/dashboard', icon: 'dashboard' },

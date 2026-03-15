@@ -6,6 +6,9 @@ import { Input } from '../../../components/ui/input';
 
 // @MX:NOTE: [AUTO] 관리자 회원(관리자 계정) 관리 페이지 - 목록, 추가, 역할/권한 관리
 // @MX:SPEC: SPEC-SKIN-005
+// @MX:WARN: [AUTO] handleAddMember async 함수에 try/catch 없음 - API 연동 시 에러 처리 누락 위험
+// @MX:REASON: 현재 목업이지만 실제 API 전환 시 미처리 Promise rejection 발생 가능
+// @MX:TODO: [AUTO] 테스트 미작성 - 관리자 추가 유효성 검사, 중복 아이디 검사 검증 필요
 
 // 역할 정의
 const ROLE_OPTIONS = [
