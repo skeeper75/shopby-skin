@@ -1,7 +1,7 @@
 # SPEC-SKIN-004: 고객센터/정보/마케팅
 
 > **SPEC ID**: SPEC-SKIN-004
-> **상태**: Draft
+> **상태**: Completed
 > **작성일**: 2026-03-14
 > **우선순위**: Medium
 > **Phase**: 1
@@ -397,3 +397,34 @@
 | 히어로 서브 | Noto Sans 16px 400 white, opacity 0.8 | |
 | 히어로 CTA | `#5538B6` fill, white, h-[50px] radius 5px | Primary |
 | 섹션 배경 | `#F6F6F6` (교대 배치) | BG Section 토큰 |
+
+## 10. Implementation Notes (Sync Phase)
+
+> 구현 완료일: 2026-03-15
+
+### 10.1 구현 요약
+
+- **전체 IA 항목**: 14/14 구현 완료
+- **변경 파일**: 28파일 (+3,358줄, -311줄)
+- **테스트**: 295/295 통과 (33 suites, 110 신규 테스트)
+- **라우트**: 15개 신규 라우트 등록
+
+### 10.2 범위 확장 (Unplanned Additions)
+
+| 항목 | 설명 | 근거 |
+|------|------|------|
+| ChatWidget | 카카오 채널 플로팅 채팅 위젯 | SPEC 8.1 #5 UX 개선 항목 |
+| InquiryForm 공통화 | 3개 상담 폼의 공통 컴포넌트 | DRY 원칙 적용 |
+
+### 10.3 기술적 결정
+
+- **InquiryForm**: 견적문의/기업상담/디자인상담 3종 폼을 type prop으로 분기하는 공통 컴포넌트로 구현
+- **LandingTemplate**: 5종 랜딩페이지를 템플릿 패턴으로 통합
+- **GuideDetail**: 11종 가이드를 guideId 파라미터 기반 동적 라우팅으로 처리
+- **CustomSelect 접근성**: WCAG 2.1 AA 준수 키보드 내비게이션 추가 (Space/Enter/Arrow/Escape)
+
+### 10.4 운영 참고사항
+
+1. 백엔드 5개 커스텀 API 엔드포인트 구현 필요 (`custom/bulk-inquiry`, `custom/business-consultation`, `custom/design-consultation`, `custom/experience-group`, `custom/experience-group/apply`)
+2. ChatWidget 카카오 채널 URL 교체 필요 (현재 `_placeholder`)
+3. 가이드 11종 실제 콘텐츠(이미지/텍스트) 교체 필요 (현재 임시 콘텐츠)

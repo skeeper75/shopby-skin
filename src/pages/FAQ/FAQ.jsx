@@ -99,6 +99,7 @@ const FAQAccordionItem = ({ faq, value, isOpen, onToggle }) => {
   );
 };
 
+// @MX:NOTE: [FAQContent] FAQ 메인 콘텐츠 - 카테고리 탭 + 검색 필터링 + 아코디언 + GET /boards/faq API
 const FAQContent = () => {
   const [keyword, setKeyword] = useState('');
   const [searchInput, setSearchInput] = useState('');

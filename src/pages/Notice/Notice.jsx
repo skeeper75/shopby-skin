@@ -87,6 +87,7 @@ const NoticeItem = ({ item, onClick }) => {
   );
 };
 
+// @MX:NOTE: [NoticeContent] 공지사항 메인 콘텐츠 - 카테고리 필터(전체/이벤트/공지/상품) + 페이지네이션 + GET /boards/notice API
 const NoticeContent = () => {
   const noticesRef = useRef();
   const [activeCategory, setActiveCategory] = useState('all');
