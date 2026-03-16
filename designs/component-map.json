@@ -1,0 +1,113 @@
+{
+  "spec": "SPEC-DS-004",
+  "source": "PRODUCT_PRINT_OPTION (1647:129)",
+  "classifiedAt": "2026-03-16T00:00:00Z",
+  "atomicDesign": {
+    "atoms": [
+      {
+        "name": "BadgeLabel",
+        "file": "BadgeLabel.jsx",
+        "figmaPattern": "RECT 32x14, fill #5538B6, white text",
+        "instances": 2,
+        "description": "추천 등 뱃지 라벨 표시용 소형 컴포넌트"
+      },
+      {
+        "name": "InfoTooltip",
+        "file": "InfoTooltip.jsx",
+        "figmaPattern": "! 아이콘 + 말풍선 팝오버",
+        "instances": 3,
+        "description": "정보 안내용 툴팁 아이콘 + 팝오버"
+      },
+      {
+        "name": "ColorChip",
+        "file": "ColorChip.jsx",
+        "figmaPattern": "GROUP: ELLIPSE 내부 + RECT 50x50 외부",
+        "instances": 8,
+        "description": "색상 선택용 원형 칩 (RULE-4: 50x50 Ellipse)"
+      }
+    ],
+    "molecules": [
+      {
+        "name": "OptionLabel",
+        "file": "OptionLabel.jsx",
+        "figmaPattern": "TEXT 섹션 제목",
+        "instances": 12,
+        "description": "옵션 섹션 타이틀 텍스트"
+      },
+      {
+        "name": "SizeOptionChip",
+        "file": "SizeOptionChip.jsx",
+        "figmaPattern": "RECT 155x50, selected/default/disabled 3-state",
+        "instances": 45,
+        "description": "인쇄 사이즈 옵션 칩 (CVA 3-state variant)"
+      },
+      {
+        "name": "RadioOption",
+        "file": "RadioOption.jsx",
+        "figmaPattern": "RECT 116x50, selected=white+#5538B6 stroke w2",
+        "instances": 18,
+        "description": "라디오 스타일 옵션 버튼 (RULE-2: selected state)"
+      },
+      {
+        "name": "DropdownSelect",
+        "file": "DropdownSelect.jsx",
+        "figmaPattern": "RECT 461x45, custom div + ▼ indicator",
+        "instances": 4,
+        "description": "커스텀 드롭다운 선택 (RULE-1: NO native select)"
+      },
+      {
+        "name": "CounterOption",
+        "file": "CounterOption.jsx",
+        "figmaPattern": "[34px -] [155px value] [34px +] rectangular",
+        "instances": 6,
+        "description": "수량 조절 카운터 (RULE-3: 직사각형 3분할)"
+      },
+      {
+        "name": "SizeInput",
+        "file": "SizeInput.jsx",
+        "figmaPattern": "RECT 461x45, dual input (가로 X 세로)",
+        "instances": 2,
+        "description": "가로x세로 사이즈 입력 필드"
+      },
+      {
+        "name": "QuantityInput",
+        "file": "QuantityInput.jsx",
+        "figmaPattern": "RECT 461x50, number input",
+        "instances": 2,
+        "description": "수량 입력 필드"
+      },
+      {
+        "name": "CTAButton",
+        "file": "CTAButton.jsx",
+        "figmaPattern": "RECT 465x50, primary action",
+        "instances": 2,
+        "description": "주요 행동 버튼 (장바구니, 바로 주문 등)"
+      }
+    ],
+    "organisms": [
+      {
+        "name": "CollapsibleSection",
+        "file": "CollapsibleSection.jsx",
+        "figmaPattern": "OptionLabel + toggle + children",
+        "instances": 6,
+        "description": "접을 수 있는 옵션 섹션 (@radix-ui/react-collapsible)"
+      },
+      {
+        "name": "PriceSummary",
+        "file": "PriceSummary.jsx",
+        "figmaPattern": "가격 항목 리스트 + 합계",
+        "instances": 1,
+        "description": "가격 요약 정보 (항목별 + 총액)"
+      }
+    ]
+  },
+  "totalComponents": 13,
+  "rules": {
+    "RULE-1": "DropdownSelect = custom div, NOT native <select>",
+    "RULE-2": "Selected state = white fill + #5538B6 stroke width 2",
+    "RULE-3": "CounterOption = rectangular 3-part [34-155-34], no circles",
+    "RULE-4": "ColorChip = 50x50 Ellipse (32x32 = MiniColorChip)",
+    "RULE-5": "Korean option labels from API/DB, NOT hardcoded (use props)",
+    "R6": "'박없음' hides size input + color selector"
+  }
+}
