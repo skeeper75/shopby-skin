@@ -1,5 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 
+import { TextField } from '../../ui/TextField';
+
 // @MX:NOTE: [AUTO] 디바운스 300ms 적용 - 검색 요청 빈도 제어
 // @MX:SPEC: SPEC-SKIN-005
 /**
@@ -80,16 +82,16 @@ const SearchBar = ({
 
   return (
     <form onSubmit={handleSubmit} className={`flex items-center gap-2 ${className}`}>
-      <input
+      <TextField
         type="text"
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
-        className="flex-1 h-[36px] px-3 text-sm border border-[#CACACA] rounded focus:outline-none focus:border-[#5538B6] text-[#424242] placeholder:text-[#979797]"
+        className="flex-1 h-[36px]"
       />
       <button
         type="submit"
-        className="h-[36px] px-4 bg-[#5538B6] text-white text-sm rounded hover:bg-[#4530A0] transition-colors"
+        className="h-[36px] px-4 bg-[--huni-bg-brand] text-white text-sm rounded hover:bg-[--huni-bg-brand-hover] transition-colors"
       >
         검색
       </button>

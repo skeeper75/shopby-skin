@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { TextField } from '../../../components/ui/TextField';
 import { cn } from '../../../lib/utils';
-import { Input } from '../../../components/ui/input';
-import { Button } from '../../../components/ui/button';
 import useAdminAuth from '../../../hooks/useAdminAuth';
 
 // @MX:NOTE: [AUTO] 관리자 로그인 페이지 - 후니프린팅 로고 중앙 배치, ID/PW 입력 폼
@@ -97,17 +96,14 @@ const Login = () => {
             <label htmlFor="admin-id" className="block text-sm font-medium text-[#424242] mb-1.5">
               아이디
             </label>
-            <Input
+            <TextField
               id="admin-id"
               name="id"
               type="text"
               value={formData.id}
               onChange={handleChange}
               placeholder="관리자 아이디를 입력하세요"
-              className={cn(
-                'border-[#CACACA] focus-visible:ring-[#5538B6]',
-                fieldErrors.id && 'border-red-400'
-              )}
+              error={!!fieldErrors.id}
               disabled={isLoading}
               autoComplete="username"
               aria-invalid={!!fieldErrors.id}
@@ -124,17 +120,14 @@ const Login = () => {
             <label htmlFor="admin-password" className="block text-sm font-medium text-[#424242] mb-1.5">
               비밀번호
             </label>
-            <Input
+            <TextField
               id="admin-password"
               name="password"
               type="password"
               value={formData.password}
               onChange={handleChange}
               placeholder="비밀번호를 입력하세요"
-              className={cn(
-                'border-[#CACACA] focus-visible:ring-[#5538B6]',
-                fieldErrors.password && 'border-red-400'
-              )}
+              error={!!fieldErrors.password}
               disabled={isLoading}
               autoComplete="current-password"
               aria-invalid={!!fieldErrors.password}
@@ -155,16 +148,16 @@ const Login = () => {
           )}
 
           {/* 로그인 버튼 */}
-          <Button
+          <button
             type="submit"
             disabled={isLoading}
             className={cn(
               'w-full h-[36px] rounded text-sm font-medium',
-              'bg-[#5538B6] text-white hover:bg-[#4530A0] disabled:opacity-50'
+              'bg-[--huni-bg-brand] text-white hover:bg-[--huni-bg-brand-hover] disabled:opacity-50'
             )}
           >
             {isLoading ? '로그인 중...' : '로그인'}
-          </Button>
+          </button>
         </form>
       </div>
     </div>

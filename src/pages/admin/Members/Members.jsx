@@ -1,8 +1,7 @@
 import { useState, useCallback } from 'react';
 
 import { cn } from '../../../lib/utils';
-import { Button } from '../../../components/ui/button';
-import { Input } from '../../../components/ui/input';
+import { TextField } from '../../../components/ui/TextField';
 
 // @MX:NOTE: [AUTO] 관리자 회원(관리자 계정) 관리 페이지 - 목록, 추가, 역할/권한 관리
 // @MX:SPEC: SPEC-SKIN-005
@@ -132,12 +131,13 @@ const Members = () => {
         <h2 className="text-xl font-semibold text-[#424242]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 600 }}>
           관리자 관리
         </h2>
-        <Button
+        <button
+          type="button"
           onClick={openDialog}
-          className="h-[36px] px-4 rounded text-sm font-medium bg-[#5538B6] text-white hover:bg-[#4530A0]"
+          className="h-[36px] px-4 rounded text-sm font-medium bg-[--huni-bg-brand] text-white hover:bg-[--huni-bg-brand-hover]"
         >
           + 관리자 추가
-        </Button>
+        </button>
       </div>
 
       {/* 관리자 목록 테이블 */}
@@ -203,13 +203,12 @@ const Members = () => {
                 <label htmlFor="member-loginId" className="block text-sm font-medium text-[#424242] mb-1.5">
                   아이디 <span className="text-red-500">*</span>
                 </label>
-                <Input
+                <TextField
                   id="member-loginId"
                   name="loginId"
                   value={formData.loginId}
                   onChange={handleFormChange}
                   placeholder="로그인 아이디"
-                  className="border-[#CACACA] focus-visible:ring-[#5538B6]"
                 />
               </div>
 
@@ -217,13 +216,12 @@ const Members = () => {
                 <label htmlFor="member-name" className="block text-sm font-medium text-[#424242] mb-1.5">
                   이름 <span className="text-red-500">*</span>
                 </label>
-                <Input
+                <TextField
                   id="member-name"
                   name="name"
                   value={formData.name}
                   onChange={handleFormChange}
                   placeholder="관리자 이름"
-                  className="border-[#CACACA] focus-visible:ring-[#5538B6]"
                 />
               </div>
 
@@ -231,14 +229,13 @@ const Members = () => {
                 <label htmlFor="member-email" className="block text-sm font-medium text-[#424242] mb-1.5">
                   이메일 <span className="text-red-500">*</span>
                 </label>
-                <Input
+                <TextField
                   id="member-email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleFormChange}
                   placeholder="이메일 주소"
-                  className="border-[#CACACA] focus-visible:ring-[#5538B6]"
                 />
               </div>
 
@@ -246,14 +243,13 @@ const Members = () => {
                 <label htmlFor="member-password" className="block text-sm font-medium text-[#424242] mb-1.5">
                   비밀번호 <span className="text-red-500">*</span>
                 </label>
-                <Input
+                <TextField
                   id="member-password"
                   name="password"
                   type="password"
                   value={formData.password}
                   onChange={handleFormChange}
                   placeholder="비밀번호"
-                  className="border-[#CACACA] focus-visible:ring-[#5538B6]"
                 />
               </div>
 
@@ -285,20 +281,19 @@ const Members = () => {
 
               {/* 버튼 영역 */}
               <div className="flex justify-end gap-2 pt-2">
-                <Button
+                <button
                   type="button"
                   onClick={closeDialog}
-                  variant="outline"
-                  className="h-[36px] px-4 rounded text-sm border-[#CACACA] text-[#424242] hover:bg-[#F6F6F6]"
+                  className="h-[36px] px-4 rounded text-sm border border-[--huni-stroke-default] text-[--huni-fg-default] hover:bg-[--huni-bg-muted]"
                 >
                   취소
-                </Button>
-                <Button
+                </button>
+                <button
                   type="submit"
-                  className="h-[36px] px-4 rounded text-sm font-medium bg-[#5538B6] text-white hover:bg-[#4530A0]"
+                  className="h-[36px] px-4 rounded text-sm font-medium bg-[--huni-bg-brand] text-white hover:bg-[--huni-bg-brand-hover]"
                 >
                   추가
-                </Button>
+                </button>
               </div>
             </form>
           </div>

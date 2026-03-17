@@ -1,5 +1,7 @@
 import { useState, useCallback, useMemo } from 'react';
 
+import { Chip } from '../../ui/Chip';
+
 // @MX:NOTE: [AUTO] SMS/LMS 바이트 계산 - 한글 2바이트, 영숫자 1바이트 기준, SMS 90바이트/LMS 2000바이트 제한
 // @MX:SPEC: SPEC-SKIN-005
 // @MX:TODO: [AUTO] 테스트 미작성 - 바이트 계산 로직(calculateBytes) 및 SMS/LMS 자동분류 검증 필요
@@ -177,12 +179,9 @@ const SMSDialog = ({
             </label>
             <div className="flex flex-wrap gap-1.5 p-3 border border-[#CACACA] rounded bg-[#F6F6F6] max-h-[80px] overflow-y-auto">
               {recipients.map((r, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center px-2 py-0.5 bg-[#EEEBF9] text-[#5538B6] text-xs rounded"
-                >
+                <Chip key={idx} variant="primary" size="sm">
                   {r.name} ({r.phone})
-                </span>
+                </Chip>
               ))}
               {recipients.length === 0 && (
                 <span className="text-[#979797] text-sm">수신자가 없습니다.</span>
@@ -247,7 +246,7 @@ const SMSDialog = ({
           <button
             type="button"
             onClick={onClose}
-            className="h-[36px] px-5 border border-[#CACACA] text-[#424242] text-sm rounded hover:bg-[#F6F6F6] transition-colors"
+            className="h-[36px] px-5 border border-[--huni-stroke-default] text-[--huni-fg-default] text-sm rounded hover:bg-[--huni-bg-muted] transition-colors"
           >
             취소
           </button>
@@ -255,7 +254,7 @@ const SMSDialog = ({
             type="button"
             onClick={handleSend}
             disabled={!message.trim() || recipients.length === 0}
-            className="h-[36px] px-5 bg-[#5538B6] text-white text-sm rounded hover:bg-[#4530A0] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-[36px] px-5 bg-[--huni-bg-brand] text-white text-sm rounded hover:bg-[--huni-bg-brand-hover] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             발송하기
           </button>
