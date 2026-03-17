@@ -7,6 +7,7 @@ import { cn } from '../../../lib/utils';
  * Figma 기준: RECT 461x50, 숫자 입력
  *
  * @MX:NOTE: [AUTO] 인쇄물 수량 입력 필드
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -16,9 +17,9 @@ const quantityInputVariants = cva(
     variants: {
       state: {
         default:
-          'bg-white border border-[var(--po-border-default)] focus-within:border-[var(--po-primary)]',
+          'bg-white border border-[var(--huni-stroke-neutral-muted)] focus-within:border-[var(--huni-stroke-brand)]',
         disabled:
-          'bg-[var(--po-bg-section)] border border-[var(--po-border-default)] cursor-not-allowed',
+          'bg-[var(--huni-bg-neutral-weak)] border border-[var(--huni-stroke-neutral-muted)] cursor-not-allowed',
       },
       size: {
         default: 'w-[461px] h-[50px] px-3',
@@ -73,8 +74,8 @@ const QuantityInput = React.forwardRef(
           inputMode="numeric"
           className={cn(
             'flex-1 h-full bg-transparent outline-none',
-            'text-[14px] font-medium text-[var(--po-text-dark)]',
-            'placeholder:text-[var(--po-text-muted)]'
+            'text-[14px] font-medium text-[var(--huni-fg-neutral)]',
+            'placeholder:text-[var(--huni-fg-neutral-subtle)]'
           )}
           style={{ fontFamily: 'var(--po-font-family)' }}
           value={value}
@@ -86,7 +87,7 @@ const QuantityInput = React.forwardRef(
         {/* 단위 표시 */}
         {value !== '' && (
           <span
-            className="text-[13px] text-[var(--po-text-muted)] ml-1 flex-shrink-0"
+            className="text-[13px] text-[var(--huni-fg-neutral-subtle)] ml-1 flex-shrink-0"
             style={{ fontFamily: 'var(--po-font-family)' }}
           >
             {unit}

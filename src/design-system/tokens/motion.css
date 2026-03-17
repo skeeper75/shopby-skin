@@ -1,0 +1,17 @@
+/**
+ * 후니 디자인 시스템 토큰 - 모션(Motion)
+ *
+ * 애니메이션 지속시간(duration)과 이징(easing) 토큰.
+ *
+ * @MX:NOTE: [AUTO] 모션(duration/easing) 토큰 정의
+ * @MX:SPEC: SPEC-DS-006
+ */
+
+:root {
+  --huni-duration-fast: 150ms;
+  --huni-duration-normal: 200ms;
+  --huni-duration-slow: 300ms;
+  --huni-easing-default: cubic-bezier(0.35, 0, 0.35, 1);
+  --huni-easing-in: cubic-bezier(0, 0, 0.15, 1);
+  --huni-easing-out: cubic-bezier(0.35, 0, 1, 1);
+}

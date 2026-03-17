@@ -27,4 +27,12 @@
   --po-leading-tight: 1.2;
   --po-leading-normal: 1.5;
   --po-leading-relaxed: 1.75;
+
+  /* === 추가 타이포그래피 토큰 (t8~t10) === */
+  --huni-text-t8: 22px;
+  --huni-text-t9: 24px;
+  --huni-text-t10: 26px;
+  --huni-leading-t8: 30px;
+  --huni-leading-t9: 32px;
+  --huni-leading-t10: 35px;
 }

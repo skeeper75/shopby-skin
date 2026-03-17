@@ -31,4 +31,73 @@
   /* 액센트 색상 */
   --po-accent-gold: #E6B93F;
   --po-accent-teal: #7AC8C4;
+
+  /* === 후니 Primitive 팔레트 === */
+  --huni-purple-50: #F3F0FA;
+  --huni-purple-100: #E0D9F2;
+  --huni-purple-200: #C9C2DF;
+  --huni-purple-300: #9580D9;
+  --huni-purple-400: #7A5FCC;
+  --huni-purple-500: #5538B6;
+  --huni-purple-600: #3B2573;
+  --huni-purple-700: #2A1A52;
+
+  --huni-gray-0: #FFFFFF;
+  --huni-gray-50: #F9FAFB;
+  --huni-gray-100: #F6F6F6;
+  --huni-gray-200: #E9E9E9;
+  --huni-gray-300: #DCDEE3;
+  --huni-gray-400: #CACACA;
+  --huni-gray-500: #B0B3BA;
+  --huni-gray-600: #979797;
+  --huni-gray-700: #868B94;
+  --huni-gray-800: #565656;
+  --huni-gray-900: #424242;
+
+  --huni-red-500: #EF4444;
+  --huni-green-500: #22C55E;
+  --huni-blue-500: #3B82F6;
+  --huni-yellow-500: #EAB308;
+  --huni-orange-500: #F97316;
+  --huni-gold-500: #E6B93F;
+  --huni-teal-500: #7AC8C4;
+
+  /* === 후니 Semantic Background === */
+  --huni-bg-brand-solid: var(--huni-purple-500);
+  --huni-bg-brand-solid-pressed: var(--huni-purple-600);
+  --huni-bg-brand-weak: var(--huni-purple-50);
+  --huni-bg-neutral-weak: var(--huni-gray-100);
+  --huni-bg-neutral-inverted: var(--huni-gray-900);
+  --huni-bg-critical-solid: var(--huni-red-500);
+  --huni-bg-positive-solid: var(--huni-green-500);
+  --huni-bg-warning-solid: var(--huni-yellow-500);
+  --huni-bg-informative-solid: var(--huni-blue-500);
+  --huni-bg-layer-default: var(--huni-gray-0);
+  --huni-bg-layer-floating: var(--huni-gray-0);
+  --huni-bg-disabled: var(--huni-gray-200);
+
+  /* === 후니 Semantic Foreground === */
+  --huni-fg-brand: var(--huni-purple-500);
+  --huni-fg-neutral: var(--huni-gray-900);
+  --huni-fg-neutral-subtle: var(--huni-gray-600);
+  --huni-fg-neutral-muted: var(--huni-gray-800);
+  --huni-fg-neutral-inverted: var(--huni-gray-0);
+  --huni-fg-critical: var(--huni-red-500);
+  --huni-fg-positive: var(--huni-green-500);
+  --huni-fg-warning: var(--huni-yellow-500);
+  --huni-fg-informative: var(--huni-blue-500);
+  --huni-fg-disabled: var(--huni-gray-400);
+
+  /* === 후니 Semantic Stroke === */
+  --huni-stroke-brand: var(--huni-purple-500);
+  --huni-stroke-neutral-muted: var(--huni-gray-300);
+  --huni-stroke-neutral-weak: var(--huni-gray-400);
+  --huni-stroke-neutral-contrast: var(--huni-gray-900);
+  --huni-stroke-critical: var(--huni-red-500);
+  --huni-stroke-positive: var(--huni-green-500);
+  --huni-stroke-disabled: var(--huni-gray-300);
+
+  /* === --po-* 호환 레이어 (기존 참조 유지) === */
+  /* 주의: 기존 --po-* 값을 --huni-* 참조로 변경하지 않습니다.
+     기존 하드코딩 값을 유지하고, 별도 alias만 추가합니다. */
 }

@@ -7,6 +7,7 @@ import { cn } from '../../../lib/utils';
  * "!" 아이콘 클릭 시 말풍선 팝오버 표시
  *
  * @MX:NOTE: [AUTO] 옵션 안내 등 추가 정보 표시용 툴팁 팝오버
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -50,8 +51,8 @@ const InfoTooltip = React.forwardRef(
           type="button"
           className={cn(
             triggerVariants({ size }),
-            'bg-[var(--po-bg-light)] text-[var(--po-text-medium)] font-bold',
-            'hover:bg-[var(--po-primary-light-2)] transition-colors'
+            'bg-[var(--huni-gray-200)] text-[var(--huni-fg-neutral-muted)] font-bold',
+            'hover:bg-[var(--huni-purple-100)] transition-colors'
           )}
           style={{ fontFamily: 'var(--po-font-family)' }}
           onClick={handleToggle}
@@ -68,7 +69,7 @@ const InfoTooltip = React.forwardRef(
             className={cn(
               'absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2',
               'px-3 py-2 rounded',
-              'bg-[var(--po-text-dark)] text-white text-[11px] leading-relaxed',
+              'bg-[var(--huni-fg-neutral)] text-white text-[11px] leading-relaxed',
               'whitespace-nowrap shadow-md'
             )}
             style={{ fontFamily: 'var(--po-font-family)' }}
@@ -77,7 +78,7 @@ const InfoTooltip = React.forwardRef(
             {content || children}
             {/* 말풍선 꼬리 */}
             <span
-              className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--po-text-dark)]"
+              className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--huni-fg-neutral)]"
             />
           </div>
         )}

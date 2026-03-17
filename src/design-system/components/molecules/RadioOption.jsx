@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
  * RULE-2: selected = white fill + #5538B6 stroke width 2
  *
  * @MX:NOTE: [AUTO] 라디오 스타일 옵션 선택 버튼 (단면/양면 등)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -18,11 +19,11 @@ const radioOptionVariants = cva(
       // 선택 상태 (RULE-2 적용)
       state: {
         default:
-          'bg-white border border-[var(--po-border-default)] text-[var(--po-text-dark)] hover:border-[var(--po-primary-secondary)]',
+          'bg-white border border-[var(--huni-stroke-neutral-muted)] text-[var(--huni-fg-neutral)] hover:border-[var(--huni-purple-300)]',
         selected:
-          'bg-white border-2 border-[var(--po-primary)] text-[var(--po-primary)] font-medium',
+          'bg-white border-2 border-[var(--huni-stroke-brand)] text-[var(--huni-fg-brand)] font-medium',
         disabled:
-          'bg-[var(--po-bg-section)] border border-[var(--po-border-default)] text-[var(--po-text-muted)] cursor-not-allowed',
+          'bg-[var(--huni-bg-neutral-weak)] border border-[var(--huni-stroke-neutral-muted)] text-[var(--huni-fg-neutral-subtle)] cursor-not-allowed',
       },
       size: {
         default: 'w-[116px] h-[50px] text-[13px]',

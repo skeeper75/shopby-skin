@@ -11,6 +11,7 @@ import { cn } from '../../../lib/utils';
  *
  * @MX:WARN: [AUTO] 조건부 렌더링 복잡도 - R6 상태에 따른 자식 요소 표시/숨김 로직
  * @MX:REASON: R6 조건부 렌더링과 접기 상태가 결합되어 상태 관리 복잡도 증가
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -75,7 +76,7 @@ const CollapsibleSection = React.forwardRef(
         >
           {/* 섹션 제목 */}
           <span
-            className="flex-1 text-left text-[14px] font-bold text-[var(--po-text-dark)]"
+            className="flex-1 text-left text-[14px] font-bold text-[var(--huni-fg-neutral)]"
             style={{ fontFamily: 'var(--po-font-family)' }}
           >
             {title}
@@ -95,7 +96,7 @@ const CollapsibleSection = React.forwardRef(
           {/* 토글 아이콘 */}
           <span
             className={cn(
-              'text-[12px] text-[var(--po-text-muted)] transition-transform duration-200',
+              'text-[12px] text-[var(--huni-fg-neutral-subtle)] transition-transform duration-200',
               isOpen ? 'rotate-0' : 'rotate-180'
             )}
           >

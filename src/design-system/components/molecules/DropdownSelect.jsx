@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
  * Figma 기준: RECT 461x45, "▼" 인디케이터
  *
  * @MX:NOTE: [AUTO] 커스텀 드롭다운 선택 (RULE-1: NO native select)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -17,11 +18,11 @@ const dropdownTriggerVariants = cva(
     variants: {
       state: {
         default:
-          'bg-white border border-[var(--po-border-default)] hover:border-[var(--po-primary-secondary)]',
+          'bg-white border border-[var(--huni-stroke-neutral-muted)] hover:border-[var(--huni-purple-300)]',
         open:
-          'bg-white border-2 border-[var(--po-primary)]',
+          'bg-white border-2 border-[var(--huni-stroke-brand)]',
         disabled:
-          'bg-[var(--po-bg-section)] border border-[var(--po-border-default)] cursor-not-allowed',
+          'bg-[var(--huni-bg-neutral-weak)] border border-[var(--huni-stroke-neutral-muted)] cursor-not-allowed',
       },
       size: {
         default: 'w-[461px] h-[45px] px-3',
@@ -119,15 +120,15 @@ const DropdownSelect = React.forwardRef(
             className={cn(
               'flex-1 text-[13px] truncate',
               selectedLabel
-                ? 'text-[var(--po-text-dark)]'
-                : 'text-[var(--po-text-muted)]'
+                ? 'text-[var(--huni-fg-neutral)]'
+                : 'text-[var(--huni-fg-neutral-subtle)]'
             )}
           >
             {selectedLabel || placeholder}
           </span>
           <span
             className={cn(
-              'text-[10px] text-[var(--po-text-muted)] transition-transform ml-2',
+              'text-[10px] text-[var(--huni-fg-neutral-subtle)] transition-transform ml-2',
               isOpen && 'rotate-180'
             )}
           >
@@ -140,7 +141,7 @@ const DropdownSelect = React.forwardRef(
           <div
             className={cn(
               'absolute z-50 top-full left-0 mt-1 w-full',
-              'bg-white border border-[var(--po-border-default)] rounded shadow-lg',
+              'bg-white border border-[var(--huni-stroke-neutral-muted)] rounded shadow-lg',
               'max-h-[200px] overflow-y-auto'
             )}
           >
@@ -152,9 +153,9 @@ const DropdownSelect = React.forwardRef(
                 className={cn(
                   'px-3 py-2.5 text-[13px] cursor-pointer transition-colors',
                   option.value === value
-                    ? 'bg-[var(--po-primary-light-3)] text-[var(--po-primary)] font-medium'
-                    : 'text-[var(--po-text-dark)] hover:bg-[var(--po-bg-section)]',
-                  option.disabled && 'text-[var(--po-text-muted)] cursor-not-allowed'
+                    ? 'bg-[var(--huni-purple-50)] text-[var(--huni-fg-brand)] font-medium'
+                    : 'text-[var(--huni-fg-neutral)] hover:bg-[var(--huni-bg-neutral-weak)]',
+                  option.disabled && 'text-[var(--huni-fg-neutral-subtle)] cursor-not-allowed'
                 )}
                 style={{ fontFamily: 'var(--po-font-family)' }}
                 onClick={() => !option.disabled && handleSelect(option.value)}

@@ -7,6 +7,7 @@ import { cn } from '../../../lib/utils';
  * Figma 기준: RECT 465x50, primary action (장바구니 담기, 바로 주문 등)
  *
  * @MX:NOTE: [AUTO] 주요 행동 버튼 (장바구니, 바로 주문 등 CTA)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -17,13 +18,13 @@ const ctaButtonVariants = cva(
       // 색상 variant
       variant: {
         primary:
-          'bg-[var(--po-primary)] text-white hover:bg-[var(--po-primary-dark)] active:bg-[var(--po-primary-dark)]',
+          'bg-[var(--huni-bg-brand-solid)] text-white hover:bg-[var(--huni-purple-600)] active:bg-[var(--huni-purple-600)]',
         secondary:
-          'bg-white text-[var(--po-primary)] border-2 border-[var(--po-primary)] hover:bg-[var(--po-primary-light-3)]',
+          'bg-white text-[var(--huni-fg-brand)] border-2 border-[var(--huni-stroke-brand)] hover:bg-[var(--huni-purple-50)]',
         dark:
-          'bg-[var(--po-text-dark)] text-white hover:bg-[var(--po-text-medium)]',
+          'bg-[var(--huni-fg-neutral)] text-white hover:bg-[var(--huni-fg-neutral-muted)]',
         disabled:
-          'bg-[var(--po-bg-light)] text-[var(--po-text-muted)] cursor-not-allowed',
+          'bg-[var(--huni-gray-200)] text-[var(--huni-fg-neutral-subtle)] cursor-not-allowed',
       },
       // 크기 variant
       size: {

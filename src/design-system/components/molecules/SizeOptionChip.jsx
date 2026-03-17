@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
  * RULE-2: 선택 시 white fill + #5538B6 stroke w=2
  *
  * @MX:NOTE: [AUTO] 인쇄 사이즈 선택 칩 (A4, A3 등), CVA 3-state variant
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -18,11 +19,11 @@ const sizeOptionChipVariants = cva(
       // 선택 상태 (RULE-2 적용)
       state: {
         default:
-          'bg-white border border-[var(--po-border-default)] text-[var(--po-text-dark)] hover:border-[var(--po-primary-secondary)]',
+          'bg-white border border-[var(--huni-stroke-neutral-muted)] text-[var(--huni-fg-neutral)] hover:border-[var(--huni-purple-300)]',
         selected:
-          'bg-white border-2 border-[var(--po-primary)] text-[var(--po-primary)]',
+          'bg-white border-2 border-[var(--huni-stroke-brand)] text-[var(--huni-fg-brand)]',
         disabled:
-          'bg-[var(--po-bg-section)] border border-[var(--po-border-default)] text-[var(--po-text-muted)] cursor-not-allowed',
+          'bg-[var(--huni-bg-neutral-weak)] border border-[var(--huni-stroke-neutral-muted)] text-[var(--huni-fg-neutral-subtle)] cursor-not-allowed',
       },
       // 크기 variant
       size: {

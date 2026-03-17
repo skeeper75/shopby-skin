@@ -7,6 +7,7 @@ import { cn } from '../../../lib/utils';
  * 가격 항목 리스트 + 구분선 + 총 금액
  *
  * @MX:NOTE: [AUTO] 주문 가격 요약 정보 (항목별 비용 + 합계)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -34,8 +35,8 @@ const PriceRow = ({ label, value, highlight = false }) => (
       className={cn(
         'text-[13px]',
         highlight
-          ? 'font-bold text-[var(--po-text-dark)]'
-          : 'text-[var(--po-text-medium)]'
+          ? 'font-bold text-[var(--huni-fg-neutral)]'
+          : 'text-[var(--huni-fg-neutral-muted)]'
       )}
       style={{ fontFamily: 'var(--po-font-family)' }}
     >
@@ -44,8 +45,8 @@ const PriceRow = ({ label, value, highlight = false }) => (
     <span
       className={cn(
         highlight
-          ? 'text-[18px] font-bold text-[var(--po-primary)]'
-          : 'text-[13px] font-medium text-[var(--po-text-dark)]'
+          ? 'text-[18px] font-bold text-[var(--huni-fg-brand)]'
+          : 'text-[13px] font-medium text-[var(--huni-fg-neutral)]'
       )}
       style={{ fontFamily: 'var(--po-font-family)' }}
     >
@@ -84,7 +85,7 @@ const PriceSummary = React.forwardRef(
 
         {/* 구분선 */}
         {showDivider && items.length > 0 && (
-          <div className="w-full h-px bg-[var(--po-bg-light)] my-1" />
+          <div className="w-full h-px bg-[var(--huni-gray-200)] my-1" />
         )}
 
         {/* 총 금액 */}

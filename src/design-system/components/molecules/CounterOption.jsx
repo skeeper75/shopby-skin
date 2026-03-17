@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
  * Figma 기준: [34] [155] [34] = 223px 총 너비
  *
  * @MX:NOTE: [AUTO] 수량 조절 카운터 (RULE-3: 직사각형 3-part 구조)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -31,18 +32,18 @@ const counterVariants = cva(
 const counterButtonClass = cn(
   'flex items-center justify-center',
   'w-[34px] h-[50px]',
-  'bg-[var(--po-bg-section)] border border-[var(--po-border-default)]',
-  'text-[var(--po-text-dark)] text-base font-medium',
+  'bg-[var(--huni-bg-neutral-weak)] border border-[var(--huni-stroke-neutral-muted)]',
+  'text-[var(--huni-fg-neutral)] text-base font-medium',
   'cursor-pointer select-none transition-colors',
-  'hover:bg-[var(--po-bg-light)]'
+  'hover:bg-[var(--huni-gray-200)]'
 );
 
 // 값 표시 영역
 const counterValueClass = cn(
   'flex items-center justify-center',
   'w-[155px] h-[50px]',
-  'bg-white border-t border-b border-[var(--po-border-default)]',
-  'text-[var(--po-text-dark)] text-sm font-medium'
+  'bg-white border-t border-b border-[var(--huni-stroke-neutral-muted)]',
+  'text-[var(--huni-fg-neutral)] text-sm font-medium'
 );
 
 const CounterOption = React.forwardRef(

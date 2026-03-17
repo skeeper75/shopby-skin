@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
  * 선택 시 보라색(#5538B6) 테두리, 미선택 시 회색(#CACACA) 테두리
  *
  * @MX:NOTE: [AUTO] 인쇄 색상 선택용 원형 칩 (RULE-4 준수: Ellipse 형태)
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -18,9 +19,9 @@ const colorChipVariants = cva(
     variants: {
       // 선택 상태
       state: {
-        default: 'border border-[var(--po-border-default)]',
-        selected: 'border-2 border-[var(--po-primary)]',
-        disabled: 'border border-[var(--po-border-default)] opacity-50 cursor-not-allowed',
+        default: 'border border-[var(--huni-stroke-neutral-muted)]',
+        selected: 'border-2 border-[var(--huni-stroke-brand)]',
+        disabled: 'border border-[var(--huni-stroke-neutral-muted)] opacity-50 cursor-not-allowed',
       },
       // 크기 variant (RULE-4: 50x50 기본, 32x32 미니)
       size: {

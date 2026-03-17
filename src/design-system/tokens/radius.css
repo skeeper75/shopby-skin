@@ -1,0 +1,19 @@
+/**
+ * 후니 디자인 시스템 토큰 - 모서리 반경(Radius)
+ *
+ * 컴포넌트 모서리 둥글기 토큰. 0부터 완전 원형(full)까지.
+ *
+ * @MX:NOTE: [AUTO] 모서리 반경 토큰 정의
+ * @MX:SPEC: SPEC-DS-006
+ */
+
+:root {
+  --huni-radius-0: 0px;
+  --huni-radius-0_5: 2px;
+  --huni-radius-1: 4px;
+  --huni-radius-1_5: 6px;
+  --huni-radius-2: 8px;
+  --huni-radius-3: 12px;
+  --huni-radius-4: 16px;
+  --huni-radius-full: 9999px;
+}

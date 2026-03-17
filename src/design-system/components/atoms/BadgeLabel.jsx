@@ -7,6 +7,7 @@ import { cn } from '../../../lib/utils';
  * Figma 기준: RECT 32x14, #5538B6 배경, 흰색 텍스트 "추천"
  *
  * @MX:NOTE: [AUTO] 추천/인기 등의 상태를 표시하는 소형 뱃지 라벨
+ * @MX:NOTE: [MIGRATION] SPEC-DS-006 Phase 5 - --po-* → --huni-* 시멘틱 토큰 마이그레이션 완료
  * @MX:SPEC: SPEC-DS-004
  */
 
@@ -17,10 +18,10 @@ const badgeLabelVariants = cva(
     variants: {
       // 색상 variant
       variant: {
-        default: 'bg-[var(--po-primary)] text-white',
-        gold: 'bg-[var(--po-accent-gold)] text-white',
-        teal: 'bg-[var(--po-accent-teal)] text-white',
-        muted: 'bg-[var(--po-bg-light)] text-[var(--po-text-medium)]',
+        default: 'bg-[var(--huni-bg-brand-solid)] text-white',
+        gold: 'bg-[var(--huni-gold-500)] text-white',
+        teal: 'bg-[var(--huni-teal-500)] text-white',
+        muted: 'bg-[var(--huni-gray-200)] text-[var(--huni-fg-neutral-muted)]',
       },
       // 크기 variant
       size: {
