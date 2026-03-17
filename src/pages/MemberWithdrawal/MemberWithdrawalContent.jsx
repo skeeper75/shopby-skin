@@ -8,11 +8,11 @@ import {
   useAuthActionContext,
   useMemberWithdrawalActionContext,
   useModalActionContext,
-  TextField,
-  Checkbox,
   useTermsStateContext,
   useTermsActionContext,
 } from '@shopby/react-components';
+
+import { TextField, Checkbox } from '../../components/ui';
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import Sanitized from '../../components/Sanitized';
@@ -37,8 +37,9 @@ const MemberWithdrawalContent = () => {
     setWithdrawalReason(value);
   };
 
-  const handleWithdrawalAgreementChange = (event) => {
-    event.target.checked ? setWithdrawalAgreement(true) : setWithdrawalAgreement(false);
+  // @MX:NOTE: Huni Checkbox는 onCheckedChange(boolean) 사용 (SPEC-SKIN-002)
+  const handleWithdrawalAgreementChange = (checked) => {
+    setWithdrawalAgreement(checked);
   };
 
   const handleDeleteMember = () => {
@@ -126,7 +127,8 @@ const MemberWithdrawalContent = () => {
             {profile?.providerType ? profile.providerType.replace('_', '-') : '일반'} 아이디 회원
           </label>
           <div className="member-withdrawal-form__input-wrap">
-            <TextField value={profile?.memberId ? profile.memberId : ''} readOnly={true} />
+            {/* @MX:NOTE: Huni TextField로 마이그레이션 (SPEC-SKIN-002) */}
+            <TextField value={profile?.memberId ? profile.memberId : ''} readOnly />
           </div>
         </div>
         <div className="member-withdrawal-form__item">
@@ -148,13 +150,15 @@ const MemberWithdrawalContent = () => {
       )}
       {terms?.WITHDRAWAL_GUIDE?.used && (
         <div className="member-withdrawal__check-wrap">
-          <Checkbox checked={withdrawalAgreement} onChange={handleWithdrawalAgreementChange}>
+          {/* @MX:NOTE: Huni Checkbox로 마이그레이션 (SPEC-SKIN-002) */}
+          <label className="flex items-center gap-2 cursor-pointer">
+            <Checkbox checked={withdrawalAgreement} onCheckedChange={handleWithdrawalAgreementChange} variant="brand" />
             <span className="checkbox-text">
               회원탈퇴 시 처리사항 안내 내용을
               <br />
               확인하였으며, 회원탈퇴에 동의합니다.
             </span>
-          </Checkbox>
+          </label>
         </div>
       )}
       <div className="member-withdrawal__btn-wrap">

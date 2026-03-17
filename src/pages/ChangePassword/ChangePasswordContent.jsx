@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { Button, useFindAccountActionContext, TextField } from '@shopby/react-components';
+import { Button, useFindAccountActionContext } from '@shopby/react-components';
+
+import { Field, FieldLabel, FieldError, TextField } from '../../components/ui';
 import { checkPassword, INVALID_PASSWORD_MESSAGE_MAP } from '@shopby/shared';
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
@@ -72,34 +74,33 @@ export const ChangePasswordContent = () => {
     <>
       <div className="change-password">
         <p className="change-password__tit">비밀번호 변경</p>
+        {/* @MX:NOTE: Huni Field+TextField로 마이그레이션 (SPEC-SKIN-002) */}
         <div className="change-password-form">
-          <div className="change-password-form__item">
-            <div className="change-password-form__input-wrap">
-              <TextField
-                id="password"
-                type="password"
-                placeholder="비밀번호 입력"
-                onChange={handlePasswordChange}
-                onBlur={validatePassword}
-                valid="NO_SPACE"
-              />
-            </div>
-          </div>
+          <Field className="change-password-form__item">
+            <FieldLabel htmlFor="password">새 비밀번호</FieldLabel>
+            <TextField
+              id="password"
+              type="password"
+              placeholder="비밀번호 입력"
+              onChange={handlePasswordChange}
+              onBlur={validatePassword}
+            />
+          </Field>
 
-          <div className="change-password-form__item">
-            <div className="change-password-form__input-wrap">
-              <TextField
-                id="passwordCheck"
-                type="password"
-                placeholder="비밀번호 확인"
-                onChange={handlePasswordCheckChange}
-                onBlur={validatePasswordCheck}
-                valid="NO_SPACE"
-              />
-            </div>
-          </div>
+          <Field className="change-password-form__item">
+            <FieldLabel htmlFor="passwordCheck">비밀번호 확인</FieldLabel>
+            <TextField
+              id="passwordCheck"
+              type="password"
+              placeholder="비밀번호 확인"
+              onChange={handlePasswordCheckChange}
+              onBlur={validatePasswordCheck}
+            />
+          </Field>
 
-          <p className="change-password-form__caution">{cautionMessage}</p>
+          {cautionMessage && (
+            <p className="change-password-form__caution text-sm text-[--huni-fg-error]">{cautionMessage}</p>
+          )}
 
           <div className="change-password-form__btn-wrap">
             <Button

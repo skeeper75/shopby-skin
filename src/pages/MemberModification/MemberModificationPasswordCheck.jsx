@@ -4,8 +4,9 @@ import {
   Button,
   useMemberModificationStateContext,
   useMemberModificationActionContext,
-  TextField,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 
@@ -66,7 +67,6 @@ const MemberModificationPasswordCheck = ({ onModifyBtnClick }) => {
               placeholder="비밀번호"
               onChange={handlePasswordChange}
               type="password"
-              valid="NO_SPACE"
               onKeyDown={handlePasswordKeyDown}
             />
           </div>

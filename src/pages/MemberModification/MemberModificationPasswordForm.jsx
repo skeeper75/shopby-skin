@@ -4,10 +4,11 @@ import { useTranslation } from 'react-i18next';
 import {
   useMemberModificationStateContext,
   useMemberModificationActionContext,
-  TextField,
   useMallStateContext,
   Button,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 import { INVALID_PASSWORD_MESSAGE_MAP, AUTHENTICATION_TYPE, checkPassword } from '@shopby/shared';
 
 import { REQUIRED } from '../../constants/form';
@@ -120,7 +121,6 @@ const MemberModificationPasswordForm = () => {
                 onBlur={handleVerifyNewPassword}
                 minLength={8}
                 maxLength={20}
-                valid="ENGLISH_NUMBER_SPECIAL"
                 value={newPassword ?? ''}
                 autoComplete="off"
               />
@@ -142,7 +142,6 @@ const MemberModificationPasswordForm = () => {
                 onBlur={handleConfirmUserPassword}
                 minLength={8}
                 maxLength={20}
-                valid="NO_SPACE"
                 value={newPasswordCheck ?? ''}
                 autoComplete="off"
               />

@@ -5,6 +5,16 @@ import { pick } from 'lodash-es';
 import { string, arrayOf, object, func } from 'prop-types';
 
 import { Button } from '@shopby/react-components';
+
+import { Chip } from '../../../components/ui';
+
+// @MX:NOTE: 클레임 상태별 Chip variant 매핑 (SPEC-SKIN-002)
+const CLAIM_STATUS_CHIP_VARIANT = (label = '') => {
+  if (label.includes('취소')) return 'error';
+  if (label.includes('반품') || label.includes('교환')) return 'warning';
+  if (label.includes('완료')) return 'success';
+  return 'default';
+};
 import {
   convertToKoreanCurrency,
   getUrlWithAdditionalSearchParams,
@@ -95,7 +105,9 @@ const ClaimSummary = ({ claimYmdt, orderNo, claimedOptions, onWithdrawClaimBtnCl
                     <span className="claims__pay-amount-label">
                       <span className="claims__pay-amount">{convertToKoreanCurrency(buyAmt)}</span> 원
                     </span>
-                    <span className="highlight">{claimStatusTypeLabel}</span>
+                    <Chip variant={CLAIM_STATUS_CHIP_VARIANT(claimStatusTypeLabel)} size="sm">
+                      {claimStatusTypeLabel}
+                    </Chip>
                   </div>
                 </div>
               </div>

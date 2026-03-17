@@ -6,9 +6,11 @@ import {
   ProductReviewProvider,
   ProductReviewFormProvider,
   useTabsStateContext,
+  useTabsActiveContext,
   useProductReviewActionContext,
-  Tabs,
 } from '@shopby/react-components';
+
+import { Tabs, TabsList, TabsTrigger } from '../../../components/ui';
 
 import useLayoutChanger from '../../../hooks/useLayoutChanger';
 
@@ -29,7 +31,8 @@ const LAZY_COMPONENT_MAP = {
 };
 
 const ProductReviewContent = () => {
-  const { currentTab } = useTabsStateContext();
+  const { currentTab, tabs } = useTabsStateContext();
+  const { selectTab } = useTabsActiveContext();
   const { fetchConfiguration: fetchProductReviewConfiguration } = useProductReviewActionContext();
 
   const Component = useMemo(() => LAZY_COMPONENT_MAP[currentTab], [currentTab]);
@@ -44,9 +47,19 @@ const ProductReviewContent = () => {
   }, []);
 
   return (
-    <Suspense fallback={null}>
-      <Component />
-    </Suspense>
+    <>
+      {/* @MX:NOTE: Huni Tabs로 마이그레이션 (SPEC-SKIN-002) */}
+      <Tabs value={currentTab} onValueChange={selectTab} className="profile-product-review__tabs">
+        <TabsList>
+          {tabs.map(({ value, label }) => (
+            <TabsTrigger key={value} value={value}>{label}</TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
+      <Suspense fallback={null}>
+        <Component />
+      </Suspense>
+    </>
   );
 };
 
@@ -69,7 +82,6 @@ const ProductReview = () => {
             }}
           >
             <div className="profile-product-review">
-              <Tabs className="profile-product-review__tabs" />
               <ProductReviewContent />
             </div>
           </TabsProvider>

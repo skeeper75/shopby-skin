@@ -3,7 +3,6 @@
 import { useEffect, useMemo } from 'react';
 
 import {
-  TextField,
   Button,
   useMemberModificationStateContext,
   useMemberModificationActionContext,
@@ -13,6 +12,8 @@ import {
   GlobalPhoneNumberInput,
   VisibleComponent,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 import { AUTHENTICATION_TYPE } from '@shopby/shared/constants';
 
 import IdentificationVerificationBtn from '../../components/IdentificationVerificationBtn/IdentificationVerificationBtn';

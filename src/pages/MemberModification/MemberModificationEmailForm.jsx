@@ -8,8 +8,9 @@ import {
   EmailInput,
   SelectBox,
   useMallStateContext,
-  TextField,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 import { AUTHENTICATION_TYPE } from '@shopby/shared/constants';
 
 import Timer from '../../components/Timer/Timer';

@@ -1,4 +1,14 @@
 import { ThumbList, VisibleComponent, useMyOrderStateContext, useCurrencyStateContext } from '@shopby/react-components';
+
+import { Chip } from '../../components/ui';
+
+// @MX:NOTE: 주문 상태별 Chip variant 매핑 (SPEC-SKIN-002)
+const ORDER_STATUS_CHIP_VARIANT = (label = '') => {
+  if (label.includes('취소') || label.includes('반송')) return 'error';
+  if (label.includes('배송중') || label.includes('배송완료') || label.includes('구매확정')) return 'success';
+  if (label.includes('제작') || label.includes('입금') || label.includes('발주')) return 'warning';
+  return 'default';
+};
 import { sortWithPriority, unescapeHTML } from '@shopby/shared';
 
 import ProductThumbItem from '../../components/ProductThumbItem';
@@ -69,7 +79,14 @@ const OrderDetailProductTable = () => {
           }) => (
             <div key={optionNo} className="order-detail__product">
               <p className="order-detail__product-top-label">
-                <span className="order-detail__status-label">{claimStatusTypeLabel || orderStatusTypeLabel}</span>
+                {/* @MX:NOTE: Huni Chip으로 마이그레이션 (SPEC-SKIN-002) */}
+                <Chip
+                  variant={ORDER_STATUS_CHIP_VARIANT(claimStatusTypeLabel || orderStatusTypeLabel)}
+                  size="sm"
+                  className="order-detail__status-label"
+                >
+                  {claimStatusTypeLabel || orderStatusTypeLabel}
+                </Chip>
                 {(() => {
                   const actionOfViewDelivery = nextActions.find(
                     ({ nextActionType }) => nextActionType === 'VIEW_DELIVERY'

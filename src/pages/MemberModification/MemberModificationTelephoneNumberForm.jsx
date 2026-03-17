@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import {
   useMemberModificationStateContext,
   useMemberModificationActionContext,
-  TextField,
   useMallStateContext,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 
 import { REQUIRED } from '../../constants/form';
 import { getCountryPhoneNumberLength } from '../../utils';

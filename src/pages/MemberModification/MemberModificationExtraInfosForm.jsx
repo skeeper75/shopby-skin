@@ -3,13 +3,14 @@ import { createRef, useEffect, useMemo, useState } from 'react';
 import { first } from 'lodash-es';
 
 import {
-  TextField,
   Radio,
   Checkbox,
   SelectBox,
   useMemberModificationActionContext,
   useMemberModificationStateContext,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 import { EXTRA_INFO_TYPE, TEXT_CONTENT_TYPES } from '@shopby/shared/constants';
 
 import ImageFileUploader from '../../components/ImageFileUploader';

@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import {
   useMemberModificationStateContext,
   useMemberModificationActionContext,
-  TextField,
   useMallStateContext,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 
 import { NICKNAME_MAX_LENGTH, REQUIRED } from '../../constants/form';
 

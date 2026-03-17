@@ -4,12 +4,13 @@ import { useSearchParams } from 'react-router-dom';
 import {
   InfiniteScrollLoader,
   MyOrderProvider,
-  Skeleton,
   useMyOrderActionContext,
   useMyOrderStateContext,
   VisibleComponent,
   useCurrencyStateContext,
 } from '@shopby/react-components';
+
+import { Skeleton } from '../../../components/ui';
 
 import { useErrorBoundaryActionContext } from '../../../components/ErrorBoundary';
 import StartYmdSelector from '../../../components/StartYmdSelector';
@@ -19,14 +20,15 @@ import OrderSummary from './OrderSummary';
 
 const PAGE_SIZE = 10;
 
+// @MX:NOTE: Huni Skeleton으로 마이그레이션 (SPEC-SKIN-002)
 const ListSkeleton = () => (
-  <>
+  <div className="orders__skeleton">
     {Array(4)
       .fill(null)
       .map((_, idx) => (
-        <Skeleton key={idx} type="LIST" />
+        <Skeleton key={idx} variant="card" className="h-20 w-full mb-3" />
       ))}
-  </>
+  </div>
 );
 
 const OrdersContent = () => {

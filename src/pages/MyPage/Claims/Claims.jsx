@@ -7,16 +7,17 @@ import {
   ClaimProvider,
   InfiniteScrollLoader,
   MyClaimProvider,
-  Skeleton,
-  Tabs,
   TabsProvider,
   useClaimActionContext,
   useModalActionContext,
   useMyClaimActionContext,
   useMyClaimStateContext,
   useTabsStateContext,
+  useTabsActiveContext,
   VisibleComponent,
 } from '@shopby/react-components';
+
+import { Skeleton, Tabs, TabsList, TabsTrigger, TabsContent } from '../../../components/ui';
 
 import { useErrorBoundaryActionContext } from '../../../components/ErrorBoundary';
 import StartYmdSelector from '../../../components/StartYmdSelector';
@@ -32,14 +33,15 @@ const CLAIMS_TABS = [
   ['CANCEL', '취소'],
 ].map(([value, label]) => ({ value, label }));
 
+// @MX:NOTE: Huni Skeleton으로 마이그레이션 (SPEC-SKIN-002)
 const ListSkeleton = () => (
-  <>
+  <div className="claims__skeleton">
     {Array(4)
       .fill(null)
       .map((_, idx) => (
-        <Skeleton key={idx} type="LIST" />
+        <Skeleton key={idx} variant="card" className="h-20 w-full mb-3" />
       ))}
-  </>
+  </div>
 );
 
 const ClaimsContent = () => {
@@ -47,7 +49,8 @@ const ClaimsContent = () => {
   const { claimsWithAccumulation, totalClaimsCount } = useMyClaimStateContext();
   const { withdrawClaimByOrderOptionNo } = useClaimActionContext();
   const { openAlert, openConfirm } = useModalActionContext();
-  const { currentTab } = useTabsStateContext();
+  const { currentTab, tabs } = useTabsStateContext();
+  const { selectTab } = useTabsActiveContext();
   const [searchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(true);
   const [isInfiniteScrollLoaderDisabled, setIsInfiniteScrollLoaderDisabled] = useState(true);
@@ -119,9 +122,16 @@ const ClaimsContent = () => {
     });
   };
 
+  // @MX:NOTE: Huni Tabs로 마이그레이션, TabsProvider 상태 연동 (SPEC-SKIN-002)
   return (
     <div className="claims">
-      <Tabs className="claims__tabs" />
+      <Tabs value={currentTab} onValueChange={selectTab} className="claims__tabs">
+        <TabsList>
+          {tabs.map(({ value, label }) => (
+            <TabsTrigger key={value} value={value}>{label}</TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
       <section className="claims__content">
         <StartYmdSelector className="claims__period-select" initialOffsetOption="7d" />
         <VisibleComponent

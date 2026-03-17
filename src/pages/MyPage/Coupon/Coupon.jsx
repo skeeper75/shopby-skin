@@ -13,9 +13,11 @@ import {
   InfiniteScrollLoader,
   TabsProvider,
   useTabsStateContext,
-  Tabs,
+  useTabsActiveContext,
   useCurrencyStateContext,
 } from '@shopby/react-components';
+
+import { Tabs, TabsList, TabsTrigger } from '../../../components/ui';
 
 import { useErrorBoundaryActionContext } from '../../../components/ErrorBoundary/ErrorBoundary';
 import ListSkeleton from '../../../components/ListSkeleton/ListSkeleton';
@@ -120,6 +122,8 @@ const CouponContent = () => {
     coupon: { totalCount },
     profileCouponSummary: { usableCouponCnt },
   } = useCouponStateContext();
+  const { tabs } = useTabsStateContext();
+  const { selectTab } = useTabsActiveContext();
   const isIssuable = currentTab === 'ISSUABLE';
 
   const handleRegistrationButtonClick = () => {
@@ -132,6 +136,14 @@ const CouponContent = () => {
 
   return (
     <>
+      {/* @MX:NOTE: Huni Tabs로 마이그레이션 (SPEC-SKIN-002) */}
+      <Tabs value={currentTab} onValueChange={selectTab} className="my-page-coupon__tabs">
+        <TabsList>
+          {tabs.map(({ value, label }) => (
+            <TabsTrigger key={value} value={value}>{label}</TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
       <div className="my-page-coupon__wrap">
         <VisibleComponent
           shows={isIssuable}
@@ -207,7 +219,7 @@ const Coupon = () => {
         }}
       >
         <div className="my-page-coupon">
-          <Tabs className="my-page-coupon__tabs" />
+          {/* @MX:NOTE: Huni Tabs로 마이그레이션 (SPEC-SKIN-002) */}
           <CouponContent />
         </div>
       </TabsProvider>

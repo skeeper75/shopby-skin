@@ -5,7 +5,6 @@ import { bool, func } from 'prop-types';
 import {
   VisibleComponent,
   Button,
-  TextField,
   useModalActionContext,
   useCheckMemberPasswordActionContext,
   useSignInActionContext,
@@ -13,6 +12,7 @@ import {
 
 import useChangePassword from '../../hooks/useChangePassword';
 import { useErrorBoundaryActionContext } from '../ErrorBoundary';
+import { TextField, Field, FieldLabel, Divider } from '../ui';
 
 const PasswordChanger = ({ useNextChanger = false, onSubmit, onNext }) => {
   const { changePassword } = useSignInActionContext();
@@ -99,39 +99,46 @@ const PasswordChanger = ({ useNextChanger = false, onSubmit, onNext }) => {
 
   return (
     <>
+      {/* @MX:NOTE: Huni TextField+Field로 마이그레이션 (SPEC-SKIN-002) */}
       <div className="password-changer">
-        <TextField
-          className="password-changer__current"
-          placeholder="현재 비밀번호"
-          type="password"
-          onChange={currentPasswordChanger.handleChangePassword}
-        />
-        <hr />
-        <TextField
-          className="password-changer__new"
-          placeholder="새 비밀번호"
-          type="password"
-          onChange={newPasswordChanger.handleChangePassword}
-          onBlur={newPasswordChanger.validatePassword}
-          valid="NO_SPACE"
-        />
-        <VisibleComponent
-          shows={!newPasswordChanger.isValid}
-          TruthyComponent={<p className="password-changer__caution">{newPasswordChanger.message}</p>}
-        />
-        <TextField
-          className="password-changer__new-check"
-          placeholder="새 비밀번호 확인"
-          type="password"
-          onChange={newPasswordCheckChanger.handleChangePassword}
-          valid="NO_SPACE"
-        />
-        <VisibleComponent
-          shows={isInvalidPasswordCheck}
-          TruthyComponent={
-            <p className="password-changer__caution">비밀번호와 비밀번호 확인 값이 일치하지 않습니다.</p>
-          }
-        />
+        <Field className="password-changer__field">
+          <FieldLabel htmlFor="current-password">현재 비밀번호</FieldLabel>
+          <TextField
+            id="current-password"
+            className="password-changer__current"
+            placeholder="현재 비밀번호"
+            type="password"
+            onChange={currentPasswordChanger.handleChangePassword}
+          />
+        </Field>
+        <Divider />
+        <Field className="password-changer__field">
+          <FieldLabel htmlFor="new-password">새 비밀번호</FieldLabel>
+          <TextField
+            id="new-password"
+            className="password-changer__new"
+            placeholder="새 비밀번호"
+            type="password"
+            onChange={newPasswordChanger.handleChangePassword}
+            onBlur={newPasswordChanger.validatePassword}
+          />
+          {!newPasswordChanger.isValid && (
+            <p className="password-changer__caution text-sm text-[--huni-fg-error]">{newPasswordChanger.message}</p>
+          )}
+        </Field>
+        <Field className="password-changer__field">
+          <FieldLabel htmlFor="new-password-check">새 비밀번호 확인</FieldLabel>
+          <TextField
+            id="new-password-check"
+            className="password-changer__new-check"
+            placeholder="새 비밀번호 확인"
+            type="password"
+            onChange={newPasswordCheckChanger.handleChangePassword}
+          />
+          {isInvalidPasswordCheck && (
+            <p className="password-changer__caution text-sm text-[--huni-fg-error]">비밀번호와 비밀번호 확인 값이 일치하지 않습니다.</p>
+          )}
+        </Field>
       </div>
       <div className="password-changer__buttons">
         <VisibleComponent

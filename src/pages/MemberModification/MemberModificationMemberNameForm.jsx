@@ -4,10 +4,11 @@ import { useTranslation } from 'react-i18next';
 import {
   useMemberModificationStateContext,
   useMemberModificationActionContext,
-  TextField,
   useMallStateContext,
   VisibleComponent,
 } from '@shopby/react-components';
+
+import { TextField } from '../../components/ui';
 import { classNames, AUTHENTICATION_TYPE } from '@shopby/shared';
 
 import { JOIN_TIME, REQUIRED } from '../../constants/form';
