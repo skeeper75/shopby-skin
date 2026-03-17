@@ -1,43 +1,19 @@
 import { useState } from 'react';
 
 import InquiryForm from '../../components/InquiryForm';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from '../../components/ui/Dialog';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
 import { cn } from '../../lib/utils';
 
 // @MX:NOTE: [AUTO] BulkInquiry - SPEC-SKIN-004 REQ-SKIN-004-003 대량 문의 페이지 (B2B)
 // @MX:SPEC: SPEC-SKIN-004 REQ-SKIN-004-003
-
-// 문의 접수 완료 모달
-const SuccessModal = ({ onClose }) => (
-  <div className="fixed inset-0 z-50 flex items-center justify-center">
-    {/* 배경 오버레이 */}
-    <div className="absolute inset-0 bg-black/50" onClick={onClose} aria-hidden="true" />
-
-    {/* 모달 본체 */}
-    <div className="relative bg-white rounded-lg shadow-xl p-8 mx-4 max-w-sm w-full text-center z-10">
-      <div className="mb-4">
-        {/* 체크 아이콘 */}
-        <div className="w-14 h-14 bg-[#EEEBF9] rounded-full flex items-center justify-center mx-auto mb-3">
-          <svg className="w-7 h-7 text-[#5538B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <p className="text-base font-semibold text-[#424242]">문의가 접수되었습니다</p>
-        <p className="mt-2 text-sm text-[#979797]">담당자가 확인 후 연락드리겠습니다.</p>
-      </div>
-      <button
-        type="button"
-        onClick={onClose}
-        className={cn(
-          'w-full h-[46px] text-white text-sm font-semibold rounded-[5px]',
-          'bg-[#5538B6] hover:bg-[#4429a0] focus:outline-none transition-colors'
-        )}
-      >
-        확인
-      </button>
-    </div>
-  </div>
-);
 
 const BulkInquiry = () => {
   const [showSuccess, setShowSuccess] = useState(false);
@@ -63,8 +39,33 @@ const BulkInquiry = () => {
       {/* 문의 폼 */}
       <InquiryForm type="bulk-inquiry" onSuccess={() => setShowSuccess(true)} />
 
-      {/* 성공 모달 */}
-      {showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
+      {/* 문의 접수 완료 Dialog */}
+      <Dialog open={showSuccess} onOpenChange={setShowSuccess}>
+        <DialogContent className="max-w-sm text-center">
+          <DialogHeader className="items-center">
+            {/* 체크 아이콘 */}
+            <div className="w-14 h-14 bg-[#EEEBF9] rounded-full flex items-center justify-center mb-3">
+              <svg className="w-7 h-7 text-[#5538B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <DialogTitle>문의가 접수되었습니다</DialogTitle>
+            <DialogDescription>담당자가 확인 후 연락드리겠습니다.</DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="sm:justify-center">
+            <button
+              type="button"
+              onClick={() => setShowSuccess(false)}
+              className={cn(
+                'w-full h-[46px] text-white text-sm font-semibold rounded-[5px]',
+                'bg-[#5538B6] hover:bg-[#4429a0] focus:outline-none transition-colors'
+              )}
+            >
+              확인
+            </button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

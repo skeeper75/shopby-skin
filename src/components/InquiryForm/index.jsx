@@ -1,5 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 
+import { Field, FieldLabel, FieldError } from '../ui/Field';
+import { TextField } from '../ui/TextField';
 import { cn } from '../../lib/utils';
 import { fetchHttpRequest } from '../../utils/api';
 
@@ -213,27 +215,7 @@ const CustomSelect = ({ value, onChange, options, placeholder, hasError }) => {
   );
 };
 
-/**
- * 폼 라벨 컴포넌트
- * 디자인 토큰: Noto Sans 14px 600 #424242
- */
-const FormLabel = ({ children, required }) => (
-  <label className="block text-sm font-semibold text-[#424242] mb-1.5">
-    {children}
-    {required && <span className="text-[#5538B6] ml-0.5">*</span>}
-  </label>
-);
-
-/**
- * 폼 입력 필드 공통 스타일
- * 기본 테두리: #CACACA 1px, 포커스 테두리: #5538B6 2px
- */
-const inputClass = (hasError) =>
-  cn(
-    'w-full h-[46px] px-4 text-sm border rounded bg-white text-[#424242] placeholder-[#979797]',
-    'focus:outline-none focus:border-[#5538B6] focus:border-2',
-    hasError ? 'border-red-500 border-2' : 'border-[#CACACA]'
-  );
+// @MX:NOTE: [AUTO] Field/TextField Huni DS 패턴 사용 - FormLabel/inputClass 제거
 
 /**
  * 공통 문의 폼 컴포넌트
@@ -342,60 +324,64 @@ const InquiryForm = ({ type = 'bulk-inquiry', onSuccess }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       {/* 업체명 */}
-      <div>
-        <FormLabel required>업체명</FormLabel>
-        <input
+      <Field required error={errors.companyName}>
+        <FieldLabel>업체명</FieldLabel>
+        <TextField
           type="text"
           value={formData.companyName}
           onChange={handleChange('companyName')}
           placeholder="업체명을 입력해주세요"
-          className={inputClass(errors.companyName)}
+          error={!!errors.companyName}
+          className="h-[46px]"
         />
-        {errors.companyName && <p className="mt-1 text-xs text-red-500">{errors.companyName}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 담당자명 */}
-      <div>
-        <FormLabel required>담당자명</FormLabel>
-        <input
+      <Field required error={errors.contactPerson}>
+        <FieldLabel>담당자명</FieldLabel>
+        <TextField
           type="text"
           value={formData.contactPerson}
           onChange={handleChange('contactPerson')}
           placeholder="담당자명을 입력해주세요"
-          className={inputClass(errors.contactPerson)}
+          error={!!errors.contactPerson}
+          className="h-[46px]"
         />
-        {errors.contactPerson && <p className="mt-1 text-xs text-red-500">{errors.contactPerson}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 연락처 */}
-      <div>
-        <FormLabel required>연락처</FormLabel>
-        <input
+      <Field required error={errors.phone}>
+        <FieldLabel>연락처</FieldLabel>
+        <TextField
           type="tel"
           value={formData.phone}
           onChange={handleChange('phone')}
           placeholder="연락처를 입력해주세요 (예: 010-1234-5678)"
-          className={inputClass(errors.phone)}
+          error={!!errors.phone}
+          className="h-[46px]"
         />
-        {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 이메일 */}
-      <div>
-        <FormLabel required>이메일</FormLabel>
-        <input
+      <Field required error={errors.email}>
+        <FieldLabel>이메일</FieldLabel>
+        <TextField
           type="email"
           value={formData.email}
           onChange={handleChange('email')}
           placeholder="이메일을 입력해주세요"
-          className={inputClass(errors.email)}
+          error={!!errors.email}
+          className="h-[46px]"
         />
-        {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 인쇄 유형 - 커스텀 셀렉트 */}
-      <div>
-        <FormLabel required>인쇄 유형</FormLabel>
+      <Field required error={errors.printType}>
+        <FieldLabel>인쇄 유형</FieldLabel>
         <CustomSelect
           value={formData.printType}
           onChange={handlePrintTypeChange}
@@ -403,51 +389,53 @@ const InquiryForm = ({ type = 'bulk-inquiry', onSuccess }) => {
           placeholder="인쇄유형 선택"
           hasError={!!errors.printType}
         />
-        {errors.printType && <p className="mt-1 text-xs text-red-500">{errors.printType}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 수량 */}
-      <div>
-        <FormLabel required>수량</FormLabel>
-        <input
+      <Field required error={errors.quantity}>
+        <FieldLabel>수량</FieldLabel>
+        <TextField
           type="text"
           value={formData.quantity}
           onChange={handleChange('quantity')}
           placeholder="수량을 입력해주세요 (예: 1000부)"
-          className={inputClass(errors.quantity)}
+          error={!!errors.quantity}
+          className="h-[46px]"
         />
-        {errors.quantity && <p className="mt-1 text-xs text-red-500">{errors.quantity}</p>}
-      </div>
+        <FieldError />
+      </Field>
 
       {/* 납기일 */}
-      <div>
-        <FormLabel>납기일</FormLabel>
-        <input
+      <Field>
+        <FieldLabel>납기일</FieldLabel>
+        <TextField
           type="date"
           value={formData.deadline}
           onChange={handleChange('deadline')}
-          className={cn(inputClass(false), 'cursor-pointer')}
+          className="h-[46px] cursor-pointer"
         />
-      </div>
+      </Field>
 
       {/* 상세 내용 */}
       <div>
-        <FormLabel>상세 내용</FormLabel>
+        <label className="block text-sm font-medium leading-none mb-2">상세 내용</label>
         <textarea
           value={formData.details}
           onChange={handleChange('details')}
           placeholder="문의하실 내용을 입력해주세요"
           rows={5}
           className={cn(
-            'w-full px-4 py-3 text-sm border rounded bg-white text-[#424242] placeholder-[#979797] resize-none',
-            'focus:outline-none focus:border-[#5538B6] focus:border-2 border-[#CACACA]'
+            'w-full px-3 py-2 text-sm border border-[--huni-stroke-default] rounded-md bg-white',
+            'placeholder:text-[--huni-fg-muted] resize-none',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--huni-stroke-brand] focus-visible:ring-offset-2'
           )}
         />
       </div>
 
       {/* 파일 첨부 */}
       <div>
-        <FormLabel>파일 첨부</FormLabel>
+        <label className="block text-sm font-medium leading-none mb-2">파일 첨부</label>
         <div className="flex items-center gap-3">
           <input
             ref={fileInputRef}
@@ -461,17 +449,17 @@ const InquiryForm = ({ type = 'bulk-inquiry', onSuccess }) => {
             type="button"
             onClick={() => fileInputRef.current?.click()}
             className={cn(
-              'px-4 h-[40px] text-sm border border-[#CACACA] rounded text-[#424242] bg-white',
-              'hover:bg-gray-50 focus:outline-none focus:border-[#5538B6] focus:border-2'
+              'px-4 h-[40px] text-sm border border-[--huni-stroke-default] rounded-md bg-white',
+              'hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--huni-stroke-brand]'
             )}
           >
             파일 선택
           </button>
-          <span className="text-sm text-[#979797]">
+          <span className="text-sm text-[--huni-fg-muted]">
             {file ? file.name : 'PDF, AI, PSD 파일 (최대 30MB)'}
           </span>
         </div>
-        {fileError && <p className="mt-1 text-xs text-red-500">{fileError}</p>}
+        {fileError && <p className="mt-1 text-sm text-[--huni-fg-error]">{fileError}</p>}
       </div>
 
       {/* 제출 버튼 */}

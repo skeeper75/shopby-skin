@@ -14,6 +14,7 @@ import ListSkeleton from '../../components/ListSkeleton/ListSkeleton';
 import Sanitized from '../../components/Sanitized';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../../components/ui/accordion';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs';
+import { TextField } from '../../components/ui/TextField';
 import { cn } from '../../lib/utils';
 import { INFINITY_SCROLL_PAGE_SIZE } from '../../constants/common';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
@@ -187,18 +188,13 @@ const FAQContent = () => {
 
       {/* 검색 바 */}
       <div className="mb-6">
-        <div className="flex gap-2">
-          <input
-            type="text"
-            value={searchInput}
-            onChange={handleSearchInputChange}
-            placeholder="검색어를 입력하세요"
-            className={cn(
-              'flex-1 h-[46px] px-4 text-sm border border-[#CACACA] rounded bg-white text-[#424242] placeholder-[#979797]',
-              'focus:outline-none focus:border-[#5538B6] focus:border-2'
-            )}
-          />
-        </div>
+        <TextField
+          type="text"
+          value={searchInput}
+          onChange={handleSearchInputChange}
+          placeholder="검색어를 입력하세요"
+          className="h-[46px]"
+        />
       </div>
 
       {/* 카테고리 탭 */}
