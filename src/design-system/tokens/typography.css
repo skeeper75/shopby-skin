@@ -1,0 +1,30 @@
+/**
+ * 인쇄 옵션 디자인 토큰 - 타이포그래피
+ *
+ * @MX:NOTE: [AUTO] Noto Sans KR 기반 타이포그래피 스케일 정의
+ * @MX:SPEC: SPEC-DS-004
+ */
+
+:root {
+  /* 폰트 패밀리 */
+  --po-font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+
+  /* 폰트 사이즈 스케일 */
+  --po-text-xs: 11px;
+  --po-text-sm: 12px;
+  --po-text-base: 13px;
+  --po-text-md: 14px;
+  --po-text-lg: 16px;
+  --po-text-xl: 18px;
+  --po-text-2xl: 20px;
+
+  /* 폰트 굵기 */
+  --po-font-normal: 400;
+  --po-font-medium: 500;
+  --po-font-bold: 700;
+
+  /* 라인 높이 */
+  --po-leading-tight: 1.2;
+  --po-leading-normal: 1.5;
+  --po-leading-relaxed: 1.75;
+}

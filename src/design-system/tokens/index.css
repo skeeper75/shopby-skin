@@ -1,0 +1,9 @@
+/**
+ * 디자인 토큰 통합 진입점
+ *
+ * @MX:NOTE: [AUTO] 인쇄 옵션 디자인 토큰 통합 임포트 파일
+ * @MX:SPEC: SPEC-DS-004
+ */
+
+@import './colors.css';
+@import './typography.css';
