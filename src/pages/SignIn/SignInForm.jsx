@@ -8,7 +8,6 @@ import {
   SignInButton,
   useSignInActionContext,
   useSignInValueContext,
-  TextField,
   Button,
   VisibleComponent,
   useMallStateContext,
@@ -21,6 +20,12 @@ import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import FullModal from '../../components/FullModal';
 import OpenIdSignIn from '../../components/OpenIdSignIn';
 import PasswordChanger from '../../components/PasswordChanger';
+
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
+import { Icon } from '../../components/ui/Icon';
+import { Divider } from '../../components/ui/Divider';
 
 const SignInForm = ({ usesOnlySignIn = false, onSignIn }) => {
   const { state } = useLocation();
@@ -48,6 +53,7 @@ const SignInForm = ({ usesOnlySignIn = false, onSignIn }) => {
   const { openIdJoinConfig, mallName } = useMallStateContext();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleMemberIdChange = ({ currentTarget: { value } }) => {
     updateSignInInfo({ memberId: value });
@@ -185,26 +191,53 @@ const SignInForm = ({ usesOnlySignIn = false, onSignIn }) => {
     <>
       <section className="sign-in">
         <div className="normal-sign-in">
+          {/* 이메일 필드 - Huni Field + TextField */}
           <div className="normal-sign-in__input-wrap">
-            <TextField
-              name="memberId"
-              placeholder="아이디"
-              onChange={handleMemberIdChange}
-              value={memberId}
-              valid="NO_SPACE"
-            />
+            <Field.Root required>
+              <Field.Label>아이디</Field.Label>
+              <Field.Control>
+                <TextField.Root>
+                  <TextField.Input
+                    name="memberId"
+                    placeholder="아이디"
+                    onChange={handleMemberIdChange}
+                    value={memberId}
+                  />
+                </TextField.Root>
+              </Field.Control>
+            </Field.Root>
           </div>
+
+          {/* 비밀번호 필드 - Huni Field + TextField + eye toggle */}
           <div className="normal-sign-in__input-wrap">
-            <TextField
-              name="password"
-              placeholder="비밀번호"
-              onChange={handlePasswordChange}
-              onKeyDown={handlePasswordKeyDown}
-              type="password"
-              valid="NO_SPACE"
-              autoComplete="off"
-            />
+            <Field.Root required>
+              <Field.Label>비밀번호</Field.Label>
+              <Field.Control>
+                <TextField.Root>
+                  <TextField.Input
+                    name="password"
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder="비밀번호"
+                    onChange={handlePasswordChange}
+                    onKeyDown={handlePasswordKeyDown}
+                    autoComplete="off"
+                  />
+                  <TextField.SuffixIcon>
+                    <button
+                      type="button"
+                      tabIndex={-1}
+                      aria-label={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      className="flex items-center justify-center cursor-pointer"
+                    >
+                      <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={16} />
+                    </button>
+                  </TextField.SuffixIcon>
+                </TextField.Root>
+              </Field.Control>
+            </Field.Root>
           </div>
+
           <SignInButton label={t('signIn')} onError={(e) => catchError(e)} />
         </div>
 
@@ -233,24 +266,44 @@ const SignInForm = ({ usesOnlySignIn = false, onSignIn }) => {
               {!hasGuestOrderSheetUrl && (
                 <div className="guest-order">
                   <p className="guest-order__title">비회원 주문조회 하기</p>
+
+                  {/* 주문번호 필드 - Huni Field + TextField */}
                   <div className="guest-order__input-wrap">
-                    <TextField
-                      name="orderNo"
-                      placeholder="주문번호 입력"
-                      onChange={handleOrderNoChange}
-                      value={orderNo}
-                    />
+                    <Field.Root>
+                      <Field.Label>주문번호</Field.Label>
+                      <Field.Control>
+                        <TextField.Root>
+                          <TextField.Input
+                            name="orderNo"
+                            placeholder="주문번호 입력"
+                            onChange={handleOrderNoChange}
+                            value={orderNo}
+                          />
+                        </TextField.Root>
+                      </Field.Control>
+                    </Field.Root>
                   </div>
+
+                  {/* 주문비밀번호 필드 - Huni Field + TextField (type="password") */}
                   <div className="guest-order__input-wrap">
-                    <TextField
-                      name="orderPassword"
-                      type="password"
-                      placeholder="주문번호 비밀번호 입력"
-                      onChange={handleOrderPasswordChange}
-                      onKeyDown={handleOrderPasswordKeyDown}
-                      autoComplete="off"
-                    />
+                    <Field.Root>
+                      <Field.Label>주문 비밀번호</Field.Label>
+                      <Field.Control>
+                        <TextField.Root>
+                          <TextField.Input
+                            name="orderPassword"
+                            type="password"
+                            placeholder="주문번호 비밀번호 입력"
+                            onChange={handleOrderPasswordChange}
+                            onKeyDown={handleOrderPasswordKeyDown}
+                            autoComplete="off"
+                          />
+                        </TextField.Root>
+                      </Field.Control>
+                    </Field.Root>
                   </div>
+
+                  {/* TODO: Button을 Huni Button으로 마이그레이션 필요 */}
                   <Button label="조회하기" onClick={handleSearchGuestOrdersBtnClick} />
                 </div>
               )}
@@ -259,6 +312,11 @@ const SignInForm = ({ usesOnlySignIn = false, onSignIn }) => {
         />
         {openIdJoinConfig.providers && (
           <div className="sign-in-open-id">
+            <div className="sign-in-open-id__divider" aria-hidden="true">
+              <Divider />
+              <span className="sign-in-open-id__divider-text">또는 간편로그인</span>
+              <Divider />
+            </div>
             <OpenIdSignIn
               label="로그인"
               orderSheetNo={orderSheetNo}

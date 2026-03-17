@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { shape, object } from 'prop-types';
@@ -6,7 +6,6 @@ import { shape, object } from 'prop-types';
 import {
   useSignUpActionContext,
   useSignUpStateContext,
-  TextField,
   useMallStateContext,
   VisibleComponent,
 } from '@shopby/react-components';
@@ -25,8 +24,15 @@ import SignUpSmsForm from './SignUpSmsForm';
 import SignUpTelephoneNumberForm from './SignUpTelephoneNumberForm';
 import ValidationStatus from './ValidationStatus';
 
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
+import { Icon } from '../../components/ui/Icon';
+
 // eslint-disable-next-line complexity
 const SignUpForm = ({ refs: { emailRef, mobilePhoneNumberInputRef, globalAddressRef, globalAddressJpRef } }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPasswordCheck, setShowPasswordCheck] = useState(false);
   const {
     verifyUserId,
     verifyUserPassword,
@@ -191,114 +197,140 @@ const SignUpForm = ({ refs: { emailRef, mobilePhoneNumberInputRef, globalAddress
     <>
       {memberIdConfig !== NOT_USED && (
         <div className="sign-up-form__item">
-          <label htmlFor="id" className="sign-up-form__tit">
-            {t('id-label')}
-            {memberIdConfig === REQUIRED && <div className="required"></div>}
-          </label>
-          <div className="sign-up-form__input-wrap">
-            <TextField
-              name="memberId"
-              id="id"
-              value={memberId}
-              placeholder={t('id-label')}
-              onChange={handleFormValueChange}
-              onBlur={() => {
-                handleVerifyUserId();
-              }}
-              minLength={5}
-              valid="ENGLISH_NUMBER"
-            />
-          </div>
+          {/* 아이디 필드 - Huni Field + TextField */}
+          <Field.Root required={memberIdConfig === REQUIRED}>
+            <Field.Label>{t('id-label')}</Field.Label>
+            <Field.Control>
+              <TextField.Root>
+                <TextField.Input
+                  name="memberId"
+                  value={memberId}
+                  placeholder={t('id-label')}
+                  onChange={handleFormValueChange}
+                  onBlur={() => {
+                    handleVerifyUserId();
+                  }}
+                  minLength={5}
+                />
+              </TextField.Root>
+            </Field.Control>
+          </Field.Root>
           <ValidationStatus name="memberId" />
         </div>
       )}
       {passwordConfig !== NOT_USED && (
         <>
+          {/* 비밀번호 필드 - Huni Field + TextField + eye toggle */}
           <div className="sign-up-form__item">
-            <label htmlFor="password" className="sign-up-form__tit">
-              {t('password-label')}
-              {passwordConfig === REQUIRED && <div className="required"></div>}
-            </label>
-            <div className="sign-up-form__input-wrap">
-              <TextField
-                name="password"
-                id="password"
-                placeholder={t('password-placeholder')}
-                type="password"
-                onChange={handleFormValueChange}
-                onBlur={handleVerifyUserPassword}
-                minLength={8}
-                maxLength={20}
-                valid="ENGLISH_NUMBER_SPECIAL"
-                autoComplete="off"
-              />
-            </div>
+            <Field.Root required={passwordConfig === REQUIRED}>
+              <Field.Label>{t('password-label')}</Field.Label>
+              <Field.Control>
+                <TextField.Root>
+                  <TextField.Input
+                    name="password"
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder={t('password-placeholder')}
+                    onChange={handleFormValueChange}
+                    onBlur={handleVerifyUserPassword}
+                    minLength={8}
+                    maxLength={20}
+                    autoComplete="off"
+                  />
+                  <TextField.SuffixIcon>
+                    <button
+                      type="button"
+                      tabIndex={-1}
+                      aria-label={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      className="flex items-center justify-center cursor-pointer"
+                    >
+                      <Icon name={showPassword ? 'EyeOff' : 'Eye'} size={16} />
+                    </button>
+                  </TextField.SuffixIcon>
+                </TextField.Root>
+              </Field.Control>
+            </Field.Root>
             <ValidationStatus name="password" />
           </div>
+
+          {/* 비밀번호 확인 필드 - Huni Field + TextField + eye toggle */}
           <div className="sign-up-form__item">
-            <label htmlFor="passwordCheck" className="sign-up-form__tit">
-              {t('passwordCheck-label')}
-              {passwordConfig === REQUIRED && <div className="required"></div>}
-            </label>
-            <div className="sign-up-form__input-wrap">
-              <TextField
-                name="passwordCheck"
-                id="passwordCheck"
-                placeholder={t('passwordCheck-label')}
-                type="password"
-                onChange={handleFormValueChange}
-                onBlur={handleConfirmUserPassword}
-                minLength={8}
-                maxLength={20}
-                valid="NO_SPACE"
-                autoComplete="off"
-              />
-            </div>
+            <Field.Root required={passwordConfig === REQUIRED}>
+              <Field.Label>{t('passwordCheck-label')}</Field.Label>
+              <Field.Control>
+                <TextField.Root>
+                  <TextField.Input
+                    name="passwordCheck"
+                    type={showPasswordCheck ? 'text' : 'password'}
+                    placeholder={t('passwordCheck-label')}
+                    onChange={handleFormValueChange}
+                    onBlur={handleConfirmUserPassword}
+                    minLength={8}
+                    maxLength={20}
+                    autoComplete="off"
+                  />
+                  <TextField.SuffixIcon>
+                    <button
+                      type="button"
+                      tabIndex={-1}
+                      aria-label={showPasswordCheck ? '비밀번호 숨기기' : '비밀번호 보기'}
+                      onClick={() => setShowPasswordCheck((prev) => !prev)}
+                      className="flex items-center justify-center cursor-pointer"
+                    >
+                      <Icon name={showPasswordCheck ? 'EyeOff' : 'Eye'} size={16} />
+                    </button>
+                  </TextField.SuffixIcon>
+                </TextField.Root>
+              </Field.Control>
+            </Field.Root>
             <ValidationStatus name="passwordCheck" />
           </div>
         </>
       )}
       {memberNameConfig !== NOT_USED && (
         <div className="sign-up-form__item">
-          <label htmlFor="memberName" className="sign-up-form__tit">
-            {t('memberName-label')}
-            {memberNameConfig === REQUIRED && <div className="required"></div>}
-          </label>
-          <div className={`${classNames('sign-up-form__input-wrap', { 'global-name-field': isGlobalForm })}`}>
-            <VisibleComponent
-              shows={isGlobalForm}
-              TruthyComponent={
-                <>
-                  <TextField
-                    name="lastName"
-                    id="lastName"
-                    value={lastName}
-                    placeholder={t('lastName-label')}
-                    onChange={handleGlobalNameChange}
-                    onBlur={handleVerifyUserName}
-                  />
-                  <TextField
-                    name="firstName"
-                    id="firstName"
-                    value={firstName}
-                    placeholder={t('firstName-label')}
-                    onChange={handleGlobalNameChange}
-                    onBlur={handleVerifyUserName}
-                  />
-                </>
-              }
-              FalsyComponent={
-                <TextField
-                  name="memberName"
-                  id="memberName"
-                  value={memberName}
-                  placeholder={t('memberName-label')}
-                  onChange={handleFormValueChange}
-                  onBlur={handleVerifyUserName}
-                />
-              }
-            />
-          </div>
+          {/* 이름 필드 - Huni Field + TextField (Global/일반용) */}
+          <Field.Root required={memberNameConfig === REQUIRED}>
+            <Field.Label>{t('memberName-label')}</Field.Label>
+            <Field.Control className={classNames('sign-up-form__input-wrap', { 'global-name-field': isGlobalForm })}>
+              <VisibleComponent
+                shows={isGlobalForm}
+                TruthyComponent={
+                  <>
+                    <TextField.Root>
+                      <TextField.Input
+                        name="lastName"
+                        value={lastName}
+                        placeholder={t('lastName-label')}
+                        onChange={handleGlobalNameChange}
+                        onBlur={handleVerifyUserName}
+                      />
+                    </TextField.Root>
+                    <TextField.Root>
+                      <TextField.Input
+                        name="firstName"
+                        value={firstName}
+                        placeholder={t('firstName-label')}
+                        onChange={handleGlobalNameChange}
+                        onBlur={handleVerifyUserName}
+                      />
+                    </TextField.Root>
+                  </>
+                }
+                FalsyComponent={
+                  <TextField.Root>
+                    <TextField.Input
+                      name="memberName"
+                      value={memberName}
+                      placeholder={t('memberName-label')}
+                      onChange={handleFormValueChange}
+                      onBlur={handleVerifyUserName}
+                    />
+                  </TextField.Root>
+                }
+              />
+            </Field.Control>
+          </Field.Root>
           <ValidationStatus name="memberName" />
         </div>
       )}
