@@ -25,9 +25,39 @@ const MENU_ITEMS = [
   { label: '게시판관리', path: '/admin/boards', icon: 'board' },
   { label: '회원관리', path: '/admin/members', icon: 'member' },
   { label: '쿠폰관리', path: '/admin/coupons', icon: 'coupon' },
-  { label: '거래처관리', path: '/admin/partners', icon: 'partner' },
-  { label: '원장관리', path: '/admin/ledger', icon: 'ledger' },
-  { label: '통계', path: '/admin/statistics', icon: 'stats' },
+  // SPEC-SKIN-008: 거래처관리 (서브메뉴)
+  {
+    label: '거래처관리',
+    icon: 'partner',
+    children: [
+      { label: '거래처 목록', path: '/admin/vendor' },
+      { label: '매장게시판', path: '/admin/vendor/board' },
+    ],
+  },
+  // SPEC-SKIN-008: 원장/계좌 (서브메뉴)
+  {
+    label: '회계관리',
+    icon: 'ledger',
+    children: [
+      { label: '계좌 관리', path: '/admin/accounting/accounts' },
+      { label: '원장 관리', path: '/admin/accounting/ledger' },
+      { label: '미수금 현황', path: '/admin/accounting/receivables' },
+    ],
+  },
+  // SPEC-SKIN-008: 통계 (서브메뉴)
+  {
+    label: '통계',
+    icon: 'stats',
+    children: [
+      { label: '대시보드', path: '/admin/statistics' },
+      { label: '매출 통계', path: '/admin/statistics/sales' },
+      { label: '인쇄 통계', path: '/admin/statistics/print' },
+      { label: '굿즈 통계', path: '/admin/statistics/goods' },
+      { label: '패키지 통계', path: '/admin/statistics/package' },
+      { label: '발주/정산', path: '/admin/statistics/settlement' },
+      { label: '팀별 통계', path: '/admin/statistics/team' },
+    ],
+  },
   { label: '관리자설정', path: '/admin/settings', icon: 'settings' },
 ];
 

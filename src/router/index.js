@@ -82,6 +82,27 @@ const AdminDeferredPayment = lazy(() => import('../pages/admin/DeferredPayment')
 const AdminReceipts = lazy(() => import('../pages/admin/Receipts'));
 const AdminSMS = lazy(() => import('../pages/admin/SMS'));
 
+// SPEC-SKIN-008: 거래처 관리
+const AdminVendorPage = lazy(() => import('../pages/admin/vendor/VendorPage'));
+const AdminVendorCreatePage = lazy(() => import('../pages/admin/vendor/VendorCreatePage'));
+const AdminVendorDetailPage = lazy(() => import('../pages/admin/vendor/VendorDetailPage'));
+const AdminStoreBoardPage = lazy(() => import('../pages/admin/vendor/board/StoreBoardPage'));
+
+// SPEC-SKIN-008: 원장/계좌 관리
+const AdminAccountPage = lazy(() => import('../pages/admin/accounting/AccountPage'));
+const AdminLedgerPage = lazy(() => import('../pages/admin/accounting/LedgerPage'));
+const AdminLedgerCreatePage = lazy(() => import('../pages/admin/accounting/LedgerCreatePage'));
+const AdminReceivablePage = lazy(() => import('../pages/admin/accounting/ReceivablePage'));
+
+// SPEC-SKIN-008: 통계
+const AdminStatsDashboard = lazy(() => import('../pages/admin/statistics/DashboardPage'));
+const AdminSalesPage = lazy(() => import('../pages/admin/statistics/SalesPage'));
+const AdminPrintStatsPage = lazy(() => import('../pages/admin/statistics/product/PrintStatsPage'));
+const AdminGoodsStatsPage = lazy(() => import('../pages/admin/statistics/product/GoodsStatsPage'));
+const AdminPackageStatsPage = lazy(() => import('../pages/admin/statistics/product/PackageStatsPage'));
+const AdminSettlementPage = lazy(() => import('../pages/admin/statistics/SettlementPage'));
+const AdminTeamStatsPage = lazy(() => import('../pages/admin/statistics/TeamStatsPage'));
+
 // ETC
 const NoAccess = lazy(() => import('../pages/NoAccess'));
 const MemberOnly = lazy(() => import('../pages/MemberOnly'));
@@ -399,6 +420,69 @@ const Router = () =>
         {
           path: 'sms',
           element: <AdminSMS />,
+        },
+        // SPEC-SKIN-008: 거래처 관리
+        {
+          path: 'vendor',
+          element: <AdminVendorPage />,
+        },
+        {
+          path: 'vendor/create',
+          element: <AdminVendorCreatePage />,
+        },
+        {
+          path: 'vendor/:id',
+          element: <AdminVendorDetailPage />,
+        },
+        {
+          path: 'vendor/:id/board',
+          element: <AdminStoreBoardPage />,
+        },
+        // SPEC-SKIN-008: 원장/계좌 관리
+        {
+          path: 'accounting/accounts',
+          element: <AdminAccountPage />,
+        },
+        {
+          path: 'accounting/ledger',
+          element: <AdminLedgerPage />,
+        },
+        {
+          path: 'accounting/ledger/create',
+          element: <AdminLedgerCreatePage />,
+        },
+        {
+          path: 'accounting/receivables',
+          element: <AdminReceivablePage />,
+        },
+        // SPEC-SKIN-008: 통계
+        {
+          path: 'statistics',
+          element: <AdminStatsDashboard />,
+        },
+        {
+          path: 'statistics/sales',
+          element: <AdminSalesPage />,
+        },
+        {
+          path: 'statistics/print',
+          element: <AdminPrintStatsPage />,
+        },
+        {
+          path: 'statistics/goods',
+          element: <AdminGoodsStatsPage />,
+        },
+        {
+          path: 'statistics/package',
+          element: <AdminPackageStatsPage />,
+        },
+        {
+          path: 'statistics/settlement',
+          element: <AdminSettlementPage />,
+        },
+        {
+          path: 'statistics/team',
+          element: <AdminTeamStatsPage />,
         },
       ],
     },
