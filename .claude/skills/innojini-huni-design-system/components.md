@@ -371,18 +371,18 @@ import { HuniCustomSelect, type HuniSelectOption } from '@/components/ui/huni-se
 | badge | 색상 | 용도 |
 |---|---|---|
 | 추천 | `bg-[#5538B6] text-white` | 옵션 추천 표시 |
-| BEST | `bg-[#3B2573] text-white` | 인기 상품/옵션 |
-| NEW | `bg-[#FF1493] text-white` | 신규 옵션 |
-| UP | `bg-[#00BCD4] text-white` | 업그레이드 옵션 |
+| BEST | `bg-[#5538B6] text-white` | 인기 상품/옵션 |
+| NEW | `bg-[#E6B93F] text-white` | 신규 옵션 (gold) |
+| UP | `bg-[#7AC8C4] text-white` | 업그레이드 옵션 (teal) |
 
 **Layer Menu Label 배지 4종** (variant: `layer-menu`):
 
 | badge | 색상 | 용도 |
 |---|---|---|
 | BEST | Purple outline `#5538B6` | 카테고리 인기 표시 |
-| NEW | Gold outline `#DAA520` | 신규 카테고리 |
-| UP | Mint outline `#00BCD4` | 업그레이드 카테고리 |
-| DESIGN | Orange outline `#FF5722` | 디자인 카테고리 |
+| NEW | Gold outline `#E6B93F` | 신규 카테고리 |
+| UP | Teal `bg-[#7AC8C4]` 34×12 radius:4 | 업그레이드 카테고리 |
+| DESIGN | Orange `bg-[#DF7838]` 34×12 radius:4 | 디자인 카테고리 |
 
 ```tsx
 // Text Label 배지
@@ -532,4 +532,76 @@ import { HuniCustomSelect, type HuniSelectOption } from '@/components/ui/huni-se
 
 ---
 
-Version: 1.0.0 | Source: Figma REST API (2026-03-05) | Node: 1661:132
+## v5.1.0 Generic UI Components (Component/디자인시스템 Page, 2026-03-17)
+
+Figma Component 페이지(1655:105) 기반 제네릭 UI 컴포넌트 상세. 제품 UI(option_New)와 별도의 범용 사이즈 체계.
+
+### Text Button (node: 1746:345)
+
+| State | Size | Fill | Stroke | Text | Text Color |
+|-------|------|------|--------|------|-----------|
+| Default | 140×40 r:5 | #FFFFFF | #CACACA | 16px w500 | #979797 |
+| Hover | 140×40 r:5 | #F6F6F6 | #CACACA | 16px w500 | #979797 |
+| Active | 140×40 r:5 | #FFFFFF | #5538B6 | 16px w600 | #5538B6 |
+| Active Hover | 140×40 r:5 | #EDEAF8 | #5538B6 | 16px w600 | #5538B6 |
+| Disabled | 140×40 r:5 | #FFFFFF | #E9E9E9 | 16px w600 | #E9E9E9 |
+| CTA Primary | 300×50 r:5 | #5538B6 | — | 16px w600 | #FFFFFF |
+| CTA Dark | 300×50 r:5 | #351D87 | — | 16px w600 | #FFFFFF |
+| CTA Disabled | 300×50 r:5 | #CACACA | — | 16px w600 | #FFFFFF |
+| CTA Outline | 300×50 r:5 | #FFFFFF | #E9E9E9 | 16px w600 | #FFFFFF |
+
+### Select box (node: 1746:456) — 쿠폰 셀렉트 패턴
+
+| Element | Size | Fill | Stroke | Text | Text Color |
+|---------|------|------|--------|------|-----------|
+| Container Default | 400×40 r:5 | #FFFFFF | #CACACA | 16px w500 | #979797 |
+| Container Active | 400×40 r:5 | #FFFFFF | #5538B6 | 16px w500 | #5538B6 |
+| Action Button | 141×40 r:5 | #FFFFFF | #5538B6 | 16px w700 | #5538B6 |
+| Action Disabled | 141×40 r:5 | #FFFFFF | #E9E9E9 | 16px w500 | #E9E9E9 |
+| Dropdown List | 400×131 r:5 | #FFFFFF | #CACACA | — | — |
+| Selected Item BG | — | #F3F0FF | — | 16px w500 | #5538B6 |
+| Caret Default | 18×10 | #CACACA | — | — | — |
+| Caret Active | 18×10 | #5538B6 | — | — | — |
+
+### Text fields (node: 1746:497)
+
+| State | Size | Fill | Stroke | Text Color |
+|-------|------|------|--------|-----------|
+| Default | 331×40 r:5 | transparent | #CACACA | #979797 (placeholder) |
+| Focus | 331×40 r:5 | transparent | #5538B6 | #979797 |
+| Disabled | 331×40 r:5 | #F6F6F6 | #CACACA | #979797 |
+| Warning | 331×40 r:5 | transparent | #E6B93F | #424242 |
+| Textarea | 331×100 r:5 | transparent | #CACACA | #979797 |
+
+Scrollbar: track 8px `#F6F6F6` r:4, thumb `#CACACA` r:4
+
+### Slider (node: 1746:467)
+
+| Element | Size | Fill | Text |
+|---------|------|------|------|
+| Track | 425×2 | #CACACA r:5 | — |
+| Active Handle | 20×20 ellipse | #5538B6 | — |
+| Inactive Dot | 8×8 ellipse | #CACACA | — |
+| Labels | — | — | 14px w400 #979797 |
+
+### Tab (node: 1746:488)
+
+| Element | Size | Fill/Stroke | Text |
+|---------|------|-------------|------|
+| Bottom Border | 500×1 | stroke #CACACA | — |
+| Tab Text | — | — | 16px w600 #979797 |
+| Active Indicator | 100×4 | #5538B6 (active tab 하단) | — |
+
+### Page Counter (node: 1748:278)
+
+| State | Size | Fill | Stroke | Text Color |
+|-------|------|------|--------|-----------|
+| Default | 30×30 r:5 | transparent | #CACACA | #CACACA 16px w500 |
+| Active | 30×30 r:5 | transparent | #5538B6 | #5538B6 16px w500 |
+| Disabled | 30×30 r:5 | #F6F6F6 | #CACACA | #CACACA 16px w500 |
+| Arrow Default | 9×20 | #CACACA | — | — |
+| Arrow Hover | 9×20 | #979797 | — | — |
+
+---
+
+Version: 2.0.0 | Source: Figma REST API (2026-03-17) | Nodes: 1661:132, 1655:105

@@ -9,15 +9,18 @@ description: >
   v4.0.0: Full Figma page exploration complete — option_New (12 sections) + Component (14 sections).
   v4.1.0: SPEC-DS-003 신규 컴포넌트 추가 — BadgeLabel, CalloutPopover, ImageOptionSelector, PageCounterInput, ColorChip 3-mode, QtySlider priceDisplay.
   v4.1.0: Figma text 42개 검증 보정 적용 — 별색인쇄(클리어), 링컬러/링선택, 형압(양각/음각), 박,형압 가공 외 다수.
+  v5.1.0: Figma Component 페이지 전체 재검증 — 컬러 토큰 2건 수정(primary-secondary, primary-light-3),
+  신규 토큰 3건 추가(accent-orange, selected-highlight, disabled), BadgeLabel 색상 Figma 실측값 반영,
+  Text Button/Select box/Text fields/Slider/Tab/Page Counter 제네릭 컴포넌트 상세 문서화.
 license: MIT
 compatibility: Designed for Claude Code
 allowed-tools: Read, Grep, Glob, Bash, Write, Edit
 user-invocable: false
 metadata:
-  version: "5.0.0"
+  version: "5.1.0"
   category: "domain"
   status: "active"
-  updated: "2026-03-10"
+  updated: "2026-03-17"
   modularized: "true"
   figma-file: "gEJhQRtmKI66BPhOpqoW3j"
   figma-page-option-new: "option_New (1647:128)"
@@ -106,10 +109,10 @@ Access Token: `FIGMA_ACCESS_TOKEN` environment variable
 |-------|-----|-----|-------|
 | `primary` | `#5538B6` | rgb(85, 56, 182) | Selected state, CTA buttons, price amount, active tab |
 | `primary-dark` | `#351D87` | rgb(53, 29, 135) | Dark CTA, cart button background |
-| `primary-secondary` | `#9580D9` | rgb(149, 128, 217) | Hover states, secondary accent |
+| `primary-secondary` | `#9480D8` | rgb(148, 128, 216) | Hover states, secondary accent |
 | `primary-light-1` | `#C9C2DF` | rgb(201, 194, 223) | Light purple backgrounds |
 | `primary-light-2` | `#DED7F4` | rgb(222, 215, 244) | Very light purple, tint |
-| `primary-light-3` | `#EEEBF9` | rgb(238, 235, 249) | Hover background overlay |
+| `primary-light-3` | `#EDEAF8` | rgb(237, 234, 248) | Hover background overlay |
 
 **Neutral/Gray Family**
 
@@ -129,7 +132,10 @@ Access Token: `FIGMA_ACCESS_TOKEN` environment variable
 |-------|-----|-----|-------|
 | `accent-gold` | `#E6B93F` | rgb(230, 185, 63) | Gold badge, highlight accent |
 | `accent-teal` | `#7AC8C4` | rgb(122, 200, 196) | Teal accent (secondary CTA) |
-| `badge-highlight` | `#EE00CE` | rgb(238, 0, 206) | "main color" marker (design annotation only) |
+| `accent-orange` | `#DF7838` | rgb(223, 120, 56) | Label "DESIGN" badge, layer menu indicator |
+| `selected-highlight` | `#F3F0FF` | rgb(243, 240, 255) | Select box selected item background |
+| `disabled` | `#E9E9E9` | rgb(233, 233, 233) | Disabled state text and border |
+| `badge-highlight` | `#ED00CE` | rgb(237, 0, 206) | "main color" marker (design annotation only) |
 
 ### Typography (Component page node 1745:142)
 
