@@ -1,0 +1,18 @@
+{
+  "id-label": "아이디",
+  "password-label": "비밀번호",
+  "passwordModify-label": "비밀번호 변경",
+  "password-placeholder": "비밀번호 (영문, 숫자, 특수문자 8-20자)",
+  "passwordCheck-label": "비밀번호 재입력",
+  "memberName-label": "이름",
+  "firstName-label": "이름",
+  "lastName-label": "성",
+  "nickname-label": "닉네임",
+  "phoneNo-label": "전화번호",
+  "birthday-label": "생년월일",
+  "birthYear-label": "년도",
+  "birthMonth-label": "월",
+  "birthDate-label": "일",
+  "sex-label": "성별",
+  "address-label": "주소"
+}

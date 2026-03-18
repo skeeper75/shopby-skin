@@ -1,0 +1,20 @@
+{
+  "report": "신고",
+  "reportCancel": "신고 취소",
+  "reportFormTitle": "신고하기",
+  "reportCancelMessage": "신고를 취소하시겠습니까?",
+  "reportMessage": "신고하시겠습니까?",
+  "reportSuccessMessage": "신고되었습니다.",
+  "reportCancelSuccessMessage": "신고가 취소되었습니다.",
+  "reportTypeRequired": "신고 사유를 선택해 주세요.",
+  "reportContentRequired": "상세 사유를 입력해 주세요.",
+  "reportDescription1": "신고 사유를 선택해 주세요.<br>신고 내용은 이용약관 및 정책에 의하여 처리됩니다.",
+  "reportDescription2": "※ 허위 신고일 경우, 신고자의 서비스 활동이 제한될 수 있으니 유의하시어 신중하게 신고해 주세요.",
+  "reportTypeLabel": "신고 사유",
+  "reportContentLabel": "상세 사유",
+  "reportTypeSelectPlaceholder": "사유를 선택해 주세요.",
+  "reportContentPlaceholder": "내용을 작성해 주세요.",
+  "reportTypeSelectOption1": "저작권 침해",
+  "reportTypeSelectOption2": "욕설 및 비방",
+  "reportTypeSelectOption3": "기타"
+}

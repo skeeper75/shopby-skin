@@ -1,0 +1,118 @@
+/**
+ * 인쇄 옵션 디자인 토큰 - 타이포그래피
+ *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
+ * @MX:NOTE: [AUTO] Noto Sans KR 기반 타이포그래피 스케일 정의
+ * @MX:SPEC: SPEC-DS-009
+ */
+
+:root {
+  /* === 신규 표준 타이포그래피 토큰 (--huni-typo-*) === */
+
+  /* 폰트 패밀리 */
+  --huni-typo-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+
+  /* 폰트 사이즈 스케일 (t1~t10) */
+  --huni-typo-size-t1: 11px;
+  --huni-typo-size-t2: 12px;
+  --huni-typo-size-t3: 13px;
+  --huni-typo-size-t4: 14px;
+  --huni-typo-size-t5: 16px;
+  --huni-typo-size-t6: 18px;
+  --huni-typo-size-t7: 20px;
+  --huni-typo-size-t8: 22px;
+  --huni-typo-size-t9: 24px;
+  --huni-typo-size-t10: 26px;
+
+  /* 폰트 굵기 */
+  --huni-typo-weight-normal: 400;
+  --huni-typo-weight-medium: 500;
+  --huni-typo-weight-bold: 700;
+
+  /* 라인 높이 (배수) */
+  --huni-typo-leading-tight: 1.2;
+  --huni-typo-leading-normal: 1.5;
+  --huni-typo-leading-relaxed: 1.75;
+
+  /* 라인 높이 (고정 px - 스케일별) */
+  --huni-typo-leading-t1: 13px;
+  --huni-typo-leading-t2: 16px;
+  --huni-typo-leading-t3: 20px;
+  --huni-typo-leading-t4: 20px;
+  --huni-typo-leading-t5: 24px;
+  --huni-typo-leading-t6: 26px;
+  --huni-typo-leading-t7: 28px;
+  --huni-typo-leading-t8: 30px;
+  --huni-typo-leading-t9: 32px;
+  --huni-typo-leading-t10: 35px;
+
+  /* === @deprecated --huni-font-family / --huni-text-t* / --huni-leading-* 호환 레이어 === */
+  /* 신규 개발에서는 --huni-typo-* 사용 권장 */
+
+  /* @deprecated - --huni-typo-family 사용 권장 */
+  --huni-font-family: var(--huni-typo-family);
+
+  /* @deprecated - --huni-typo-size-t* 사용 권장 */
+  --huni-text-t1: var(--huni-typo-size-t1);
+  --huni-text-t2: var(--huni-typo-size-t2);
+  --huni-text-t3: var(--huni-typo-size-t3);
+  --huni-text-t4: var(--huni-typo-size-t4);
+  --huni-text-t5: var(--huni-typo-size-t5);
+  --huni-text-t6: var(--huni-typo-size-t6);
+  --huni-text-t7: var(--huni-typo-size-t7);
+  --huni-text-t8: var(--huni-typo-size-t8);
+  --huni-text-t9: var(--huni-typo-size-t9);
+  --huni-text-t10: var(--huni-typo-size-t10);
+
+  /* @deprecated - --huni-typo-weight-* 사용 권장 */
+  --huni-font-weight-normal: var(--huni-typo-weight-normal);
+  --huni-font-weight-medium: var(--huni-typo-weight-medium);
+  --huni-font-weight-bold: var(--huni-typo-weight-bold);
+
+  /* @deprecated - --huni-typo-leading-* 사용 권장 */
+  --huni-leading-tight: var(--huni-typo-leading-tight);
+  --huni-leading-normal: var(--huni-typo-leading-normal);
+  --huni-leading-relaxed: var(--huni-typo-leading-relaxed);
+  --huni-leading-t1: var(--huni-typo-leading-t1);
+  --huni-leading-t2: var(--huni-typo-leading-t2);
+  --huni-leading-t3: var(--huni-typo-leading-t3);
+  --huni-leading-t4: var(--huni-typo-leading-t4);
+  --huni-leading-t5: var(--huni-typo-leading-t5);
+  --huni-leading-t6: var(--huni-typo-leading-t6);
+  --huni-leading-t7: var(--huni-typo-leading-t7);
+  --huni-leading-t8: var(--huni-typo-leading-t8);
+  --huni-leading-t9: var(--huni-typo-leading-t9);
+  --huni-leading-t10: var(--huni-typo-leading-t10);
+
+  /* === @deprecated --po-* 호환 레이어 === */
+  /* 신규 개발에서는 --huni-typo-* 사용 권장 */
+
+  /* @deprecated - --huni-typo-family 사용 권장 */
+  --po-font-family: var(--huni-typo-family);
+  /* @deprecated - --huni-typo-size-t1 사용 권장 */
+  --po-text-xs: var(--huni-typo-size-t1);
+  /* @deprecated - --huni-typo-size-t2 사용 권장 */
+  --po-text-sm: var(--huni-typo-size-t2);
+  /* @deprecated - --huni-typo-size-t3 사용 권장 */
+  --po-text-base: var(--huni-typo-size-t3);
+  /* @deprecated - --huni-typo-size-t4 사용 권장 */
+  --po-text-md: var(--huni-typo-size-t4);
+  /* @deprecated - --huni-typo-size-t5 사용 권장 */
+  --po-text-lg: var(--huni-typo-size-t5);
+  /* @deprecated - --huni-typo-size-t6 사용 권장 */
+  --po-text-xl: var(--huni-typo-size-t6);
+  /* @deprecated - --huni-typo-size-t7 사용 권장 */
+  --po-text-2xl: var(--huni-typo-size-t7);
+  /* @deprecated - --huni-typo-weight-normal 사용 권장 */
+  --po-font-normal: var(--huni-typo-weight-normal);
+  /* @deprecated - --huni-typo-weight-medium 사용 권장 */
+  --po-font-medium: var(--huni-typo-weight-medium);
+  /* @deprecated - --huni-typo-weight-bold 사용 권장 */
+  --po-font-bold: var(--huni-typo-weight-bold);
+  /* @deprecated - --huni-typo-leading-tight 사용 권장 */
+  --po-leading-tight: var(--huni-typo-leading-tight);
+  /* @deprecated - --huni-typo-leading-normal 사용 권장 */
+  --po-leading-normal: var(--huni-typo-leading-normal);
+  /* @deprecated - --huni-typo-leading-relaxed 사용 권장 */
+  --po-leading-relaxed: var(--huni-typo-leading-relaxed);
+}

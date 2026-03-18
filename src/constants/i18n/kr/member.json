@@ -1,0 +1,10 @@
+{
+  "withdrawalSuccessMessage": "회원 탈퇴가 완료되었습니다.",
+  "socialWithdrawalMessage": {
+    "APPLE": "Apple 로그인 회원은 쇼핑몰 탈퇴 후<br>iOS 설정에서 Apple 로그인 연결도 함께 해제해 주세요.",
+    "NAVER": "네이버 로그인 회원은 쇼핑몰 탈퇴 후<br>네이버 설정에서 네이버 로그인 연결도 함께 해제해 주세요.",
+    "KAKAO": "카카오 로그인 회원은 쇼핑몰 탈퇴 후<br>카카오 설정에서 카카오 로그인 연결도 함께 해제해 주세요.",
+    "GOOGLE": "Google 로그인 회원은 쇼핑몰 탈퇴 후<br>Google 설정에서 Google 로그인 연결도 함께 해제해 주세요.",
+    "FACEBOOK": "Facebook 로그인 회원은 쇼핑몰 탈퇴 후<br>Facebook 설정에서 Facebook 로그인 연결도 함께 해제해 주세요."
+  }
+}

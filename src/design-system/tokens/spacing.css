@@ -1,0 +1,30 @@
+/**
+ * 후니 디자인 시스템 토큰 - 간격(Spacing)
+ *
+ * 4px 기반 간격 스케일. 레이아웃 및 컴포넌트 내부 여백에 사용.
+ *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
+ * @MX:NOTE: [AUTO] 4px 기반 간격 토큰 정의
+ * @MX:SPEC: SPEC-DS-009
+ */
+
+:root {
+  /* === 표준 간격 토큰 (--huni-space-*) === */
+  --huni-space-0_5: 2px;
+  --huni-space-1: 4px;
+  --huni-space-1_5: 6px;
+  --huni-space-2: 8px;
+  --huni-space-2_5: 10px;
+  --huni-space-3: 12px;
+  --huni-space-3_5: 14px;
+  --huni-space-4: 16px;
+  --huni-space-4_5: 18px;
+  --huni-space-5: 20px;
+  --huni-space-6: 24px;
+  --huni-space-7: 28px;
+  --huni-space-8: 32px;
+  --huni-space-9: 36px;
+  --huni-space-10: 40px;
+  --huni-space-12: 48px;
+  --huni-space-16: 64px;
+}

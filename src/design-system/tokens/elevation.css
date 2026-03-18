@@ -1,0 +1,17 @@
+/**
+ * 후니 디자인 시스템 토큰 - 그림자(Elevation)
+ *
+ * 컴포넌트 깊이감 표현용 box-shadow 토큰. sm~xl 4단계.
+ *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
+ * @MX:NOTE: [AUTO] 그림자(elevation) 토큰 정의
+ * @MX:SPEC: SPEC-DS-009
+ */
+
+:root {
+  /* === 표준 그림자 토큰 (--huni-shadow-*) === */
+  --huni-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --huni-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --huni-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --huni-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,80 @@
+{
+  "sourceFile": "gEJhQRtmKI66BPhOpqoW3j",
+  "sourceNode": "1647:129",
+  "sectionName": "PRODUCT_PRINT_OPTION",
+  "dimensions": { "width": 2158, "height": 5504 },
+  "elementSummary": {
+    "total": 298,
+    "TEXT": 139,
+    "RECTANGLE": 104,
+    "GROUP": 36,
+    "VECTOR": 17,
+    "ELLIPSE": 2,
+    "FRAME": 0
+  },
+  "colorPalette": {
+    "primary": "#5538B6",
+    "primary-dark": "#3B2573",
+    "primary-secondary": "#9580D9",
+    "primary-light-1": "#C9C2DF",
+    "primary-light-2": "#DED7F4",
+    "primary-light-3": "#EEEBF9",
+    "text-dark": "#424242",
+    "text-medium": "#565656",
+    "text-muted": "#979797",
+    "border-default": "#CACACA",
+    "bg-light": "#E9E9E9",
+    "bg-section": "#F6F6F6",
+    "bg-white": "#FFFFFF",
+    "accent-gold": "#E6B93F",
+    "accent-teal": "#7AC8C4"
+  },
+  "typography": {
+    "fontFamily": "Noto Sans KR",
+    "scales": {
+      "xs": 11,
+      "sm": 12,
+      "base": 13,
+      "md": 14,
+      "lg": 16,
+      "xl": 18,
+      "2xl": 20
+    }
+  },
+  "rectanglePatterns": [
+    { "size": "155x50", "count": 45, "component": "SizeOptionChip", "description": "인쇄 사이즈 옵션 칩" },
+    { "size": "116x50", "count": 14, "component": "RadioOption", "description": "라디오 스타일 옵션 버튼 (116px)" },
+    { "size": "115x50", "count": 4, "component": "RadioOption", "description": "라디오 스타일 옵션 버튼 (115px)" },
+    { "size": "461x45", "count": 4, "component": "DropdownSelect", "description": "드롭다운 선택 컴포넌트" },
+    { "size": "140x50", "count": 6, "component": "CounterOption", "description": "수량 조절 컴포넌트 (140px 영역)" },
+    { "size": "465x50", "count": 2, "component": "CTAButton", "description": "주요 행동 버튼" },
+    { "size": "32x14", "count": 2, "component": "BadgeLabel", "description": "추천 뱃지 라벨" },
+    { "size": "116x116", "count": 0, "component": "ImageOptionCard", "description": "이미지 옵션 카드 (범위 외)" }
+  ],
+  "statePatterns": {
+    "selected": {
+      "fill": "#FFFFFF",
+      "stroke": "#5538B6",
+      "strokeWidth": 2
+    },
+    "default": {
+      "fill": "#FFFFFF",
+      "stroke": "#CACACA",
+      "strokeWidth": 1
+    },
+    "disabled": {
+      "fill": "#F6F6F6",
+      "stroke": "#CACACA",
+      "strokeWidth": 1,
+      "textColor": "#979797"
+    }
+  },
+  "counterLayout": {
+    "minusButton": { "width": 34, "height": 50 },
+    "valueDisplay": { "width": 155, "height": 50 },
+    "plusButton": { "width": 34, "height": 50 },
+    "shape": "rectangular"
+  },
+  "extractedAt": "2026-03-16T00:00:00Z",
+  "extractionMethod": "SPEC-DS-004 specification-based"
+}

@@ -1,0 +1,136 @@
+/**
+ * 인쇄 옵션 디자인 토큰 - 색상 변수
+ *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
+ * @MX:ANCHOR: [AUTO] [colors.css] 인쇄 옵션 전체 컴포넌트의 색상 토큰 정의
+ * @MX:REASON: fan_in >= 13, 모든 design-system 컴포넌트에서 참조
+ * @MX:SPEC: SPEC-DS-009
+ */
+
+:root {
+  /* === Huni Primitive 팔레트 === */
+  --huni-purple-50: #F3F0FA;
+  --huni-purple-100: #E0D9F2;
+  --huni-purple-200: #C9C2DF;
+  --huni-purple-300: #9580D9;
+  --huni-purple-400: #7A5FCC;
+  --huni-purple-500: #5538B6;
+  --huni-purple-600: #3B2573;
+  --huni-purple-700: #2A1A52;
+
+  --huni-gray-0: #FFFFFF;
+  --huni-gray-50: #F9FAFB;
+  --huni-gray-100: #F6F6F6;
+  --huni-gray-200: #E9E9E9;
+  --huni-gray-300: #DCDEE3;
+  --huni-gray-400: #CACACA;
+  --huni-gray-500: #B0B3BA;
+  --huni-gray-600: #979797;
+  --huni-gray-700: #868B94;
+  --huni-gray-800: #565656;
+  --huni-gray-900: #424242;
+
+  --huni-red-500: #EF4444;
+  --huni-green-500: #22C55E;
+  --huni-blue-500: #3B82F6;
+  --huni-yellow-500: #EAB308;
+  --huni-orange-500: #F97316;
+  --huni-gold-500: #E6B93F;
+  --huni-teal-500: #7AC8C4;
+
+  /* === 신규 표준 색상 토큰 (--huni-color-*) === */
+  /* 브랜드 기본 색상 */
+  --huni-color-primary: #5538B6;
+  --huni-color-primary-dark: #3B2573;
+  --huni-color-primary-secondary: #9580D9;
+
+  /* 브랜드 보조 색상 (밝은 계열) */
+  --huni-color-primary-light-1: #C9C2DF;
+  --huni-color-primary-light-2: #DED7F4;
+  --huni-color-primary-light-3: #EEEBF9;
+
+  /* 텍스트 색상 */
+  --huni-color-text-dark: #424242;
+  --huni-color-text-medium: #565656;
+  --huni-color-text-muted: #979797;
+
+  /* 테두리 및 배경 */
+  --huni-color-border-default: #CACACA;
+  --huni-color-bg-light: #E9E9E9;
+  --huni-color-bg-section: #F6F6F6;
+  --huni-color-bg-white: #FFFFFF;
+
+  /* 액센트 색상 */
+  --huni-color-accent-gold: #E6B93F;
+  --huni-color-accent-teal: #7AC8C4;
+
+  /* === Huni Semantic Background === */
+  --huni-bg-brand-solid: var(--huni-purple-500);
+  --huni-bg-brand-solid-pressed: var(--huni-purple-600);
+  --huni-bg-brand-weak: var(--huni-purple-50);
+  --huni-bg-neutral-weak: var(--huni-gray-100);
+  --huni-bg-neutral-inverted: var(--huni-gray-900);
+  --huni-bg-critical-solid: var(--huni-red-500);
+  --huni-bg-positive-solid: var(--huni-green-500);
+  --huni-bg-warning-solid: var(--huni-yellow-500);
+  --huni-bg-informative-solid: var(--huni-blue-500);
+  --huni-bg-layer-default: var(--huni-gray-0);
+  --huni-bg-layer-floating: var(--huni-gray-0);
+  --huni-bg-disabled: var(--huni-gray-200);
+
+  /* === Huni Semantic Foreground === */
+  --huni-fg-brand: var(--huni-purple-500);
+  --huni-fg-neutral: var(--huni-gray-900);
+  --huni-fg-neutral-subtle: var(--huni-gray-600);
+  --huni-fg-neutral-muted: var(--huni-gray-800);
+  --huni-fg-neutral-inverted: var(--huni-gray-0);
+  --huni-fg-critical: var(--huni-red-500);
+  --huni-fg-positive: var(--huni-green-500);
+  --huni-fg-warning: var(--huni-yellow-500);
+  --huni-fg-informative: var(--huni-blue-500);
+  --huni-fg-disabled: var(--huni-gray-400);
+
+  /* === Huni Semantic Stroke === */
+  --huni-stroke-brand: var(--huni-purple-500);
+  --huni-stroke-neutral-muted: var(--huni-gray-300);
+  --huni-stroke-neutral-weak: var(--huni-gray-400);
+  --huni-stroke-neutral-contrast: var(--huni-gray-900);
+  --huni-stroke-critical: var(--huni-red-500);
+  --huni-stroke-positive: var(--huni-green-500);
+  --huni-stroke-disabled: var(--huni-gray-300);
+
+  /* === @deprecated --po-* 호환 레이어 (하위 호환성 유지) === */
+  /* 주의: 기존 컴포넌트에서 --po-* 사용 시 하위 호환을 위해 유지
+     신규 개발에서는 --huni-color-* 사용 권장 */
+
+  /* @deprecated - --huni-color-primary 사용 권장 */
+  --po-primary: var(--huni-color-primary);
+  /* @deprecated - --huni-color-primary-dark 사용 권장 */
+  --po-primary-dark: var(--huni-color-primary-dark);
+  /* @deprecated - --huni-color-primary-secondary 사용 권장 */
+  --po-primary-secondary: var(--huni-color-primary-secondary);
+  /* @deprecated - --huni-color-primary-light-1 사용 권장 */
+  --po-primary-light-1: var(--huni-color-primary-light-1);
+  /* @deprecated - --huni-color-primary-light-2 사용 권장 */
+  --po-primary-light-2: var(--huni-color-primary-light-2);
+  /* @deprecated - --huni-color-primary-light-3 사용 권장 */
+  --po-primary-light-3: var(--huni-color-primary-light-3);
+  /* @deprecated - --huni-color-text-dark 사용 권장 */
+  --po-text-dark: var(--huni-color-text-dark);
+  /* @deprecated - --huni-color-text-medium 사용 권장 */
+  --po-text-medium: var(--huni-color-text-medium);
+  /* @deprecated - --huni-color-text-muted 사용 권장 */
+  --po-text-muted: var(--huni-color-text-muted);
+  /* @deprecated - --huni-color-border-default 사용 권장 */
+  --po-border-default: var(--huni-color-border-default);
+  /* @deprecated - --huni-color-bg-light 사용 권장 */
+  --po-bg-light: var(--huni-color-bg-light);
+  /* @deprecated - --huni-color-bg-section 사용 권장 */
+  --po-bg-section: var(--huni-color-bg-section);
+  /* @deprecated - --huni-color-bg-white 사용 권장 */
+  --po-bg-white: var(--huni-color-bg-white);
+  /* @deprecated - --huni-color-accent-gold 사용 권장 */
+  --po-accent-gold: var(--huni-color-accent-gold);
+  /* @deprecated - --huni-color-accent-teal 사용 권장 */
+  --po-accent-teal: var(--huni-color-accent-teal);
+}
