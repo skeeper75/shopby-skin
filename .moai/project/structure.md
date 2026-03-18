@@ -10,6 +10,9 @@ shopby.skin/
 │   ├── public/                # 정적 파일 및 환경 설정
 │   ├── src/                   # 소스 코드 루트
 │   ├── config/                # 빌드 설정 파일
+│   ├── .vendors/              # @shopby 벤더링 패키지 (.tgz)
+│   ├── scripts/               # 빌드/배포 유틸리티 스크립트
+│   ├── vercel.json            # Vercel 배포 설정
 │   ├── .eslintrc.json         # ESLint 설정
 │   ├── .prettierrc.json       # Prettier 설정
 │   ├── babel.config.js        # Babel 변환 설정

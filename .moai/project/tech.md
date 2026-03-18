@@ -192,6 +192,17 @@ lint-staged: 스테이징된 파일 대상
 - Webpack 빌드 시 생성된 파일 해시로 캐시 무효화
 - 전국 CDN 엣지 서버를 통한 빠른 정적 파일 서빙
 
+### Vercel 배포 (SPEC-INFRA-001)
+
+**플랫폼**: Vercel (프리뷰 배포 용도)
+
+- `vercel.json`: SPA 리라이트, API 프록시, 캐시 헤더 설정
+- `scripts/generate-env.js`: Vercel 환경변수 → `public/environment.json` + `config/.env.production` 동적 생성
+- `scripts/vendor-packages.sh`: `@shopby/react-components`, `@shopby/shared` 패키지 `.tgz` 벤더링
+- `.vendors/`: 벤더링된 패키지 보관 디렉토리 (Git 추적)
+- API 프록시: `/api/shopby/*` → Shopby API 서버로 리라이트 (CORS 우회)
+- 외부 스크립트: Vercel 프리뷰 환경에서 Naver Pay, Netfunnel 스크립트 조건부 비활성화
+
 ### 환경 분리
 
 | 환경 | profile 값 | 용도 |

@@ -841,6 +841,7 @@ graph LR
 | SPEC-SKIN-007 | 상품 상세 페이지 | ✅ 완료 | 2026-01-22 | 옵션 선택, 미리보기 |
 | SPEC-SKIN-008 | 관리자 거래처/원장/통계 기능 | ✅ 완료 | 2026-01-22 | 통계 대시보드 |
 | SPEC-SKIN-009 | 인쇄 옵션 전환 (v1 → v2) | 🔄 진행중 | 2026-01-22 | usePrintOptionsV2 훅 |
+| SPEC-INFRA-001 | Vercel 배포 환경 구성 | ✅ 완료 | 2026-03-18 | 프리뷰 배포, API 프록시, 벤더링 |
 
 ---
 
@@ -961,6 +962,28 @@ npm run test:coverage
 yarn test:coverage
 ```
 
+### Vercel 배포
+
+Vercel 프리뷰 배포를 위한 설정이 포함되어 있습니다 (SPEC-INFRA-001).
+
+```bash
+# @shopby 내부 패키지 벤더링 (최초 1회 또는 패키지 업데이트 시)
+npm run vendor
+
+# Vercel 빌드 (환경변수 필수: SHOPBY_CLIENT_ID, SHOPBY_PROFILE, SHOPBY_TC)
+npm run vercel-build
+```
+
+**Vercel 환경변수 설정:**
+
+| 환경변수 | 필수 | 설명 |
+|---------|------|------|
+| `SHOPBY_CLIENT_ID` | 필수 | shopby 클라이언트 ID |
+| `SHOPBY_PROFILE` | 필수 | 환경 프로필 (dev/stage) |
+| `SHOPBY_TC` | 필수 | API 서버 URL |
+| `PUBLIC_PATH` | 선택 | Webpack publicPath (기본: `/`) |
+| `NAVER_PAY_BUTTON_SCRIPT` | 선택 | 네이버페이 스크립트 URL |
+
 ---
 
 ## 스크립트 참고
@@ -977,6 +1000,8 @@ yarn test:coverage
 | **storybook** | Storybook 개발 서버 | `npm run storybook` |
 | **build-storybook** | Storybook 빌드 | `npm run build-storybook` |
 | **chromatic** | Chromatic 배포 | `npm run chromatic` |
+| **vercel-build** | Vercel 배포 빌드 | `npm run vercel-build` |
+| **vendor** | @shopby 패키지 벤더링 | `npm run vendor` |
 | **admin-analyzer** | 관리자 모듈 분석 | `node scripts/admin-analyzer/index.js --all` |
 
 ---
