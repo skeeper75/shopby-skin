@@ -35,8 +35,8 @@ import MallLogo from './MallLogo';
 // 검색 관련 컴포넌트
 // =============================================
 
-/** 데스크톱 검색바 */
-const DesktopSearchBar = () => {
+/** 데스크톱 검색바 내부 (Provider 안에서 hook 호출) */
+const DesktopSearchBarContent = () => {
   const { openAlert } = useModalActionContext();
   const { keyword, searchProductsByKeyword, removeKeyword, updateKeyword } = useSearchKeyword('');
 
@@ -50,19 +50,24 @@ const DesktopSearchBar = () => {
   };
 
   return (
-    <RecentKeywordProvider>
-      <div className="hidden lg:flex items-center">
-        <SearchField
-          className="w-[240px] xl:w-[320px]"
-          searchValue={keyword}
-          onSearchBtnClick={() => handleSearch(keyword)}
-          onClearBtnClick={removeKeyword}
-          onChange={({ target }) => updateKeyword(target.value)}
-        />
-      </div>
-    </RecentKeywordProvider>
+    <div className="hidden lg:flex items-center">
+      <SearchField
+        className="w-[240px] xl:w-[320px]"
+        searchValue={keyword}
+        onSearchBtnClick={() => handleSearch(keyword)}
+        onClearBtnClick={removeKeyword}
+        onChange={({ target }) => updateKeyword(target.value)}
+      />
+    </div>
   );
 };
+
+/** 데스크톱 검색바 (Provider로 래핑) */
+const DesktopSearchBar = () => (
+  <RecentKeywordProvider>
+    <DesktopSearchBarContent />
+  </RecentKeywordProvider>
+);
 
 /** 검색 키워드 헤더 (서브 페이지용, 기존 기능 보존) */
 const SearchKeywordHeader = ({ title }) => {
@@ -155,7 +160,7 @@ const MobileSheetMenu = () => {
         <div className="bg-primary/10 p-6 pt-10">
           {userName ? (
             <div className="flex items-center gap-2">
-              <IconSVG name="person" size={20} />
+              <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <Link to="/my-page" className="font-semibold text-foreground hover:underline">
                 {userName}
               </Link>
@@ -184,7 +189,7 @@ const MobileSheetMenu = () => {
             to="/my-page"
             className="flex items-center gap-3 px-6 py-3 text-sm text-foreground hover:bg-accent transition-colors"
           >
-            <IconSVG name="person" size={18} />
+            <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             마이페이지
           </Link>
           <Link
@@ -198,7 +203,7 @@ const MobileSheetMenu = () => {
             to="/cart"
             className="flex items-center gap-3 px-6 py-3 text-sm text-foreground hover:bg-accent transition-colors"
           >
-            <IconSVG name="cart" size={18} />
+            <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             장바구니
           </Link>
           <Link
@@ -325,7 +330,7 @@ const Header = () => {
                 className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 aria-label={isSignedIn() ? '마이페이지' : '로그인'}
               >
-                <IconSVG name="person" size={20} />
+                <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 <span className="hidden xl:inline">
                   {isSignedIn() ? '마이페이지' : '로그인'}
                 </span>
@@ -366,7 +371,7 @@ const Header = () => {
           {/* 검색 + 장바구니 (우측) */}
           <div className="flex items-center gap-2">
             <Link to="/search" className="p-2" aria-label="검색">
-              <IconSVG name="search" size={20} />
+              <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             </Link>
             {canShowShoppingBasket && (
               <Link to="/cart" className="relative" aria-label={`장바구니 (${cartCount}개)`}>
