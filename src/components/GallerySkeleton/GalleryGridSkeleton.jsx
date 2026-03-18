@@ -1,7 +1,7 @@
 import { bool, number } from 'prop-types';
 
 import { cn } from '../../lib/utils';
-import { Skeleton } from '../ui/skeleton';
+import { Skeleton } from '../ui/Skeleton';
 
 // @MX:NOTE: [AUTO] 반응형 그리드에 맞춘 스켈레톤 - GalleryListPage와 동일한 grid 설정 유지
 const GRID_CLASSES = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4';
