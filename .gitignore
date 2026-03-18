@@ -119,6 +119,11 @@ logs/
 *_backup_*/
 
 # ===========================================
+# Admin Analyzer Screenshots (로컬 참조용, git 제외)
+# ===========================================
+ref/shopby/admin-screenshots/
+
+# ===========================================
 # Secrets and Credentials (CRITICAL)
 # ===========================================
 # Environment files
