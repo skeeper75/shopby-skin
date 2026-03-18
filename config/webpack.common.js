@@ -48,6 +48,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    // @shopby/shared 모듈 중복 방지: react-components 내부의 nested copy 대신
+    // 프로젝트 루트의 단일 인스턴스를 우선 사용하여 apiCreator 초기화 공유
+    modules: [resolve(__dirname, '../node_modules')],
     fallback: {
       sys: false,
       http: false,
