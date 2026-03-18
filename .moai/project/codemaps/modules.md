@@ -1,6 +1,6 @@
 # 모듈 설명 - @shopby/react-skin (Aurora Skin)
 
-> 생성일: 2026-03-14
+> 생성일: 2026-03-17
 
 ---
 
@@ -67,7 +67,27 @@
 
 ## 컴포넌트 모듈 (`src/components/`)
 
-총 73개 디렉토리. 각 디렉토리는 `index.js` + `ComponentName.jsx` 패턴으로 구성.
+총 92개 디렉토리. 각 디렉토리는 `index.js` + `ComponentName.jsx` 패턴으로 구성.
+
+### 새로 추가된 컴포넌트 디렉토리
+
+#### `components/product/` (NEW)
+상품 구성/주문 관련 컴포넌트:
+- **PrintConfigurator**: 인쇄 커스터마이징 UI
+- **HuniPriceCalculator**: 후니 가격 계산기
+- **OptionActions**: 옵션 작업 버튼 그룹
+- **PrintFileUpload**: 인쇄 파일 업로드
+
+#### `components/ui/` (NEW - Shadcn/ui 기반)
+재사용 가능한 UI 프리미티브 (barrel export via index.js):
+- **Button**: 기본 버튼 컴포넌트
+- **Card**: 카드 컨테이너
+- **Input**: 입력 필드
+- **Dialog**: 모달 다이얼로그
+- **Checkbox**: 체크박스
+- **Radio**: 라디오 버튼
+- **Tabs**: 탭 네비게이션
+- **Snackbar**: 토스트 알림
 
 ### 레이아웃 관련 컴포넌트
 
@@ -123,6 +143,27 @@
 | `AppCardAuthenticate` | 앱 카드 인증 |
 | `IdentificationVerificationBtn` | 본인인증 버튼 |
 | `MarketingReceiveAgreement` | 마케팅 수신 동의 |
+
+### 관리자 관련 컴포넌트 (확장)
+
+**AdminLayout & Structure**:
+- `AdminLayout` - 관리자 페이지 레이아웃
+- `AdminSidebar` - 관리자 사이드바 네비게이션
+- `DataTable` - 데이터 테이블
+- `DatePicker` - 날짜 선택
+- `SearchBar` - 검색 바
+- `StatusBadge` - 상태 배지
+- `BulkActionBar` - 일괄 작업 바
+- `OrderDetailPanel` - 주문 상세 패널
+
+**Admin Subdirectories**:
+- `components/admin/board/` - 게시판 관리 컴포넌트
+- `components/admin/coupon/` - 쿠폰 관리 컴포넌트
+- `components/admin/member/` - 회원 관리 컴포넌트
+- `components/admin/product/` - 상품 관리 컴포넌트
+- `components/admin/accounting/` - 회계/원장 컴포넌트
+- `components/admin/statistics/` - 통계 컴포넌트
+- `components/admin/vendor/` - 거래처 관리 컴포넌트
 
 ### 게시판/컨텐츠 관련 컴포넌트
 
@@ -186,7 +227,28 @@
 
 ## 페이지 모듈 (`src/pages/`)
 
-총 34개 디렉토리.
+총 37개+ 디렉토리 (확장됨)
+
+### 새로 추가된 페이지
+
+#### `pages/ProductDetail/` (확장)
+- **index.jsx**: ProductDetail 메인 페이지
+- **ProductSummary.jsx**: 상품 요약 섹션
+
+**5개 주요 섹션**:
+1. Summary - 상품 정보 요약
+2. Content - 상품 상세 콘텐츠
+3. Purchase - 구매 옵션
+4. Review - 리뷰 영역
+5. Inquiry - 문의 영역
+
+#### `pages/Cart/` (NEW)
+- **index.jsx**: 장바구니 페이지
+- 상품 목록, 수량 조정, 결제 정보 표시
+
+#### `pages/OrderSheet/` (NEW)
+- **index.jsx**: 주문서 작성 페이지
+- 배송 정보, 결제 수단 선택, 주문 완료
 
 ### 메인/탐색 페이지
 
@@ -260,6 +322,36 @@
 | `ExpiredMall` | `/expired-mall` | 만료된 쇼핑몰 안내 |
 | `NotFound` | `/not-found` | 404 페이지 |
 
+### 관리자 페이지 (13개+)
+
+**기본 관리자 페이지**:
+| 페이지 | 경로 |
+|---|---|
+| `AdminLogin` | `/admin/login` |
+| `AdminDashboard` | `/admin/dashboard` |
+
+**관리자 서브디렉토리 페이지**:
+
+- `pages/admin/board/` - 게시판 관리 페이지
+- `pages/admin/coupon/` - 쿠폰 관리 페이지
+- `pages/admin/member/` - 회원 관리 페이지
+- `pages/admin/product/` - 상품 관리 페이지
+  - ProductGeneral - 일반 상품
+  - ProductMaster - 마스터 상품
+- `pages/admin/accounting/` - 회계/원장/응수금
+  - Account - 거래처 통장
+  - Ledger - 원장
+  - Receivable - 응수금
+- `pages/admin/statistics/` - 통계
+  - ProductStatistics - 상품 통계
+  - SalesStatistics - 판매 통계
+  - SettlementStatistics - 정산 통계
+  - TeamStatistics - 팀 통계
+- `pages/admin/vendor/` - 거래처 관리
+  - VendorPage - 거래처 목록
+  - VendorDetail - 거래처 상세
+  - StoreBoard - 가맹점 게시판
+
 ---
 
 ## 커스텀 훅 모듈 (`src/hooks/`)
@@ -271,6 +363,33 @@
 | `useLayoutChanger` | 레이아웃 동적 변경 (헤더 표시 여부 등) |
 | `useDragAndDrop` | 드래그 앤 드롭 인터랙션 처리 |
 | `useSyncTokenExpiryWithLocation` | 라우트 변경 시 토큰 만료 시간 자동 갱신 |
+| `usePrintOptions` | 인쇄 옵션 관리 |
+| `usePrintOptionsV2` | 인쇄 옵션 관리 (V2 개선 버전) |
+| `useResponsive` | 반응형 미디어 쿼리 훅 |
+| `useAdminAuth` | 관리자 인증 상태 관리 |
+
+---
+
+## 서비스 레이어 모듈 (`src/services/admin/`)
+
+14개 관리자 서비스 모듈:
+
+| 서비스 | 책임 |
+|---|---|
+| `auth.js` | 관리자 인증 (로그인, 로그아웃, 토큰 관리) |
+| `product.js` | 상품 관리 (CRUD, 목록, 검색) |
+| `orders.js` | 주문 관리 (주문 조회, 상태 변경) |
+| `member.js` | 회원 정보 조회 |
+| `members.js` | 회원 목록 관리 |
+| `accounting.js` | 회계/원장 관리 |
+| `statistics.js` | 통계 데이터 조회 |
+| `vendor.js` | 거래처 관리 |
+| `board.js` | 게시판 관리 |
+| `coupon.js` | 쿠폰 관리 |
+| `printPrice.js` | 인쇄 가격 계산 |
+| `printOptions.js` | 인쇄 옵션 조회 |
+| `inventory.js` | 인벤토리 관리 |
+| `settlement.js` | 정산 관리 |
 
 ---
 
@@ -293,6 +412,49 @@
 
 ---
 
+## 타입 정의 모듈 (`src/types/`)
+
+### `print-options.js` (NEW)
+
+**책임**: 인쇄 옵션 타입 정의
+
+**주요 타입**:
+- PrintOption - 개별 옵션
+- PrintOptions - 전체 옵션 집합
+- PrintPriceDetails - 가격 상세 정보
+
+---
+
 ## 상수 모듈 (`src/constants/`)
 
 공통 상수 정의. 구체적인 내용은 `@shopby/shared` 패키지와 연계하여 사용.
+
+---
+
+## 디자인 시스템 모듈 (`src/design-system/`)
+
+### 컴포넌트 구성
+
+**Atoms (8개)**:
+- BadgeLabel, InfoTooltip, ColorChip, Divider, Icon, Skeleton, Checkbox, RadioGroup, Switch, Chip
+
+**Molecules (10개)**:
+- OptionLabel, SizeOptionChip, RadioOption, DropdownSelect, CounterOption
+- SizeInput, QuantityInput, CTAButton, Field, TextField, Tabs, Pagination
+
+**Organisms (5개)**:
+- CollapsibleSection, PriceSummary, Dialog, Snackbar, SnackbarProvider/useSnackbar
+
+**Utilities (4개)**:
+- createSlotRecipeContext - 슬롯 기반 레시피 컨텍스트 생성
+- getStateDataAttributes/dataSelectors - 상태 데이터 속성
+- useFocusVisible/focusRingClass/focusRingStyle - 포커스 가시성
+- cn - 클래스 병합 유틸리티
+
+### 토큰 및 유틸
+
+**tokens/**:
+- typography.css - 타이포그래피 정의
+
+**utils/**:
+- index.js (@MX:ANCHOR, fan_in >= 13)

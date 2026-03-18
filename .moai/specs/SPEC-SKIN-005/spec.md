@@ -1,332 +1,319 @@
-# SPEC-SKIN-005: 관리자 기반/주문관리
+# SPEC-SKIN-005 v2: 관리자 기반/주문관리 디자인시스템 마이그레이션
 
 > **SPEC ID**: SPEC-SKIN-005
+> **버전**: 2.0.0
 > **상태**: Draft
 > **작성일**: 2026-03-14
+> **갱신일**: 2026-03-17
 > **우선순위**: High
+> **유형**: Migration (M)
 > **Phase**: 2
 > **IA 항목**: No. 44, 86~94
-> **기술 스택**: React 18 + @shopby/react-components + shadcn/ui + Tailwind CSS
-
-## 1. 개요
-
-관리자 백오피스의 기반 시스템(관리자 등록/관리, 인증)과 핵심 주문관리 기능(주문 목록/상세, 파일확인, 상태변경, 주문서출력, 후불결제, SMS 발송)을 구현한다. 관리자 대시보드 레이아웃을 정의하고, 주문 관리의 전체 운영 플로우를 제공한다.
-
-## 2. IA 기능 목록
-
-| No | 영역 | 기능 | 우선순위 | 비고 |
-|----|------|------|----------|------|
-| 44 | 관리자 | 관리자 등록/관리 | P0 | 권한 관리 |
-| 86 | 주문 | 주문관리 (인쇄/제본/굿즈 상세) | P0 | 통합 주문 목록 |
-| 87 | 주문 | 파일확인처리 | P0 | 인쇄 파일 검수 |
-| 88 | 주문 | 재업로드요청 문자 발송 | P0 | SMS/알림톡 연동 |
-| 89 | 주문 | 주문서출력 | P0 | 인쇄용 주문서 |
-| 90 | 주문 | 주문상태변경 처리 (+문자) | P0 | 제작진행/완료 변경시 문자 |
-| 91 | 주문 | 후불결제 | P1 | 미결제/결제완료 상태 |
-| 92 | 주문 | 증빙서류발급 관리 | P1 | |
-| 93 | 주문 | 주문상태변경 (일괄) | P0 | 다건 일괄 처리 |
-| 94 | 주문 | 고객 SMS 발송 | P1 | 알림톡 통합 |
-
-## 3. UI/UX 레이아웃 설계
-
-### 3.1 관리자 대시보드 레이아웃
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│  [후니프린팅 Admin]                  [관리자명] [로그아웃]   │
-├────────────┬─────────────────────────────────────────────────┤
-│            │                                                 │
-│  대시보드   │  오늘의 현황              2026.03.14           │
-│            │  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐         │
-│  주문관리   │  │신규주문│ │파일대기│ │제작중 │ │배송중 │         │
-│  ├ 전체목록 │  │  12  │ │  5   │ │  8   │ │  3   │         │
-│  ├ 파일확인 │  └──────┘ └──────┘ └──────┘ └──────┘         │
-│  ├ 상태변경 │  ┌──────┐ ┌──────┐                            │
-│  ├ 주문서출력│  │문의대기│ │미수금 │                            │
-│  ├ 후불결제 │  │  5   │ │  2   │                            │
-│  ├ 증빙서류 │  └──────┘ └──────┘                            │
-│  ├ SMS발송  │                                                │
-│            │  --- 최근 주문 ---                              │
-│  상품관리   │  ┌────────────────────────────────────────┐   │
-│  게시판관리 │  │ No | 주문번호 | 주문자 | 상품 | 상태 | 날짜│   │
-│  회원관리   │  │ 1  | HN..001 | 홍길동 | 전단 | 접수 | 3/14│   │
-│  쿠폰관리   │  │ 2  | HN..002 | 김영희 | 명함 | 제작 | 3/14│   │
-│  거래처관리 │  │ 3  | HN..003 | 박철수 | 카탈 | 파일 | 3/13│   │
-│  원장관리   │  └────────────────────────────────────────┘   │
-│  통계      │                                                │
-│            │  --- 월별 매출 ---                              │
-│  관리자설정 │  [=== 차트 ===] 3월 예상: 12,500,000원        │
-│            │                                                │
-├────────────┴─────────────────────────────────────────────────┤
-│  (c) 후니프린팅 Admin v1.0                                   │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### 3.1.1 주문관리 - 전체 목록
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  주문관리                                                    │
-├─────────────────────────────────────────────────────────────┤
-│  [검색] 주문번호/주문자/상품명  ┌──────────────────┐       │
-│                                └──────────────────┘       │
-│  기간: [시작일] ~ [종료일]  상태: [전체 v]  상품: [전체 v] │
-│  [검색] [초기화]                                            │
-│                                                             │
-│  [v] 선택  [일괄 상태변경]  [주문서 출력]  [Excel 다운]     │
-│                                                             │
-│  ┌───┬────────┬──────┬──────┬──────┬──────┬──────┬─────┐  │
-│  │[v]│ 주문번호│ 주문자│ 상품  │ 금액  │ 상태  │ 파일  │ 날짜│  │
-│  ├───┼────────┼──────┼──────┼──────┼──────┼──────┼─────┤  │
-│  │[ ]│ HN001  │ 홍길동│ 전단지│ 45K  │ 접수  │ 확인  │03/14│  │
-│  │[ ]│ HN002  │ 김영희│ 명함  │ 12K  │ 제작중│ 완료  │03/14│  │
-│  │[ ]│ HN003  │ 박철수│ 카탈로그│180K │ 파일대기│미확인│03/13│  │
-│  └───┴────────┴──────┴──────┴──────┴──────┴──────┴─────┘  │
-│                                                             │
-│  [< 1 2 3 ... 10 >]                                        │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### 3.2 UI 컴포넌트 목록
-
-| 컴포넌트 | shadcn/ui | 설명 |
-|---------|-----------|------|
-| DataTable | Table + Checkbox | 주문 목록 테이블 |
-| DatePicker | Calendar + Popover | 기간 필터 |
-| StatusBadge | Badge | 주문 상태 뱃지 (색상 구분) |
-| SearchBar | Input + Button | 통합 검색 |
-| BulkActionBar | (커스텀) | 일괄 처리 액션 바 |
-| OrderDetailPanel | Sheet | 주문 상세 슬라이드 패널 |
-| FilePreview | Dialog | 인쇄 파일 미리보기 |
-| SMSDialog | Dialog | SMS/알림톡 발송 모달 |
-| PrintSheet | (커스텀) | 주문서 인쇄 레이아웃 |
-| AdminSidebar | (커스텀) | 관리자 좌측 네비게이션 |
-| StatCard | Card | 현황 카드 (숫자+라벨) |
-
-### 3.3 반응형 브레이크포인트
-
-- **Mobile**: 관리자 페이지는 Desktop 전용 (최소 1024px)
-- **Tablet (1024~1280px)**: 사이드바 접힘 모드
-- **Desktop (>= 1280px)**: 사이드바 펼침 + 넓은 테이블
-
-## 4. Shopby API 연동
-
-| 기능 | API 엔드포인트 | 분류 | 비고 |
-|------|---------------|------|------|
-| 관리자 로그인 | POST /admin/login | [C] | 관리자 전용 인증 |
-| 관리자 목록 | GET /admin/members | [C] | |
-| 관리자 등록 | POST /admin/members | [C] | 권한 설정 |
-| 주문 목록 | GET /admin/orders | [SH] | 필터/검색/페이징 |
-| 주문 상세 | GET /admin/orders/{orderNo} | [SH] | |
-| 주문 상태 변경 | PUT /admin/orders/{orderNo}/status | [SH] | |
-| 일괄 상태 변경 | PUT /admin/orders/batch-status | [SH] | |
-| 파일 확인 처리 | PUT /admin/orders/{orderNo}/file-check | [C] | |
-| 주문서 출력 데이터 | GET /admin/orders/{orderNo}/print | [C] | 인쇄용 HTML |
-| 후불결제 목록 | GET /admin/orders/deferred-payment | [C] | |
-| 후불결제 처리 | PUT /admin/orders/{orderNo}/payment | [C] | |
-| 증빙서류 목록 | GET /admin/receipts | [C] | |
-| 증빙서류 발급 처리 | PUT /admin/receipts/{id}/issue | [C] | |
-| SMS 발송 | POST /admin/sms/send | [C] | NHN 알림톡 API |
-| 재업로드 요청 | POST /admin/orders/{orderNo}/reupload | [C] | SMS+상태변경 |
-
-## 5. 갭 분석 (Gap Analysis)
-
-### 5.1 Aurora Skin 기존 구현 활용 가능 항목
-
-Aurora Skin은 프론트엔드(사용자) 전용이므로, 관리자 페이지는 **전체 신규 개발**이다.
-
-다만, 다음 패턴은 재사용 가능:
-- API 호출 유틸리티 (fetchHttpRequest 패턴)
-- 컴포넌트 구조 (디렉토리 패턴)
-- shadcn/ui + Tailwind CSS 기반 설계
-
-### 5.2 커스텀 개발 필요 항목
-
-| 기능 | 규모 |
-|------|------|
-| 관리자 레이아웃 (사이드바 + 헤더) | L |
-| 관리자 인증/권한 시스템 | M |
-| 주문 목록 (DataTable + 필터) | L |
-| 주문 상세 패널 | M |
-| 파일확인/미리보기 | M |
-| 주문상태 변경 (단건/일괄) | M |
-| 주문서 인쇄 (HTML to Print) | M |
-| 후불결제 관리 | M |
-| 증빙서류 관리 | M |
-| SMS/알림톡 발송 | M |
-| 대시보드 현황 카드 | M |
-
-## 6. 인수 조건 (EARS Format)
-
-### REQ-SKIN-005-001: 관리자 로그인
-
-**WHEN** 관리자가 ID와 비밀번호를 입력하고 로그인하면
-**THE SYSTEM SHALL** 관리자 권한을 확인하고 대시보드로 이동한다
-
-**수용 기준**:
-- [ ] 관리자 전용 로그인 페이지
-- [ ] 권한별 메뉴 접근 제한
-
-### REQ-SKIN-005-002: 주문관리 목록
-
-**WHEN** 관리자가 주문관리 메뉴에 접속하면
-**THE SYSTEM SHALL** 전체 주문 목록을 날짜 역순으로 표시하고, 검색/필터/정렬/일괄처리를 제공한다
-
-**수용 기준**:
-- [ ] 검색: 주문번호, 주문자명, 상품명
-- [ ] 필터: 기간, 주문상태, 상품분류
-- [ ] 체크박스 선택 후 일괄 상태 변경
-- [ ] Excel 다운로드
-
-### REQ-SKIN-005-003: 파일확인처리
-
-**WHEN** 관리자가 주문의 "파일확인" 버튼을 클릭하면
-**THE SYSTEM SHALL** 업로드된 인쇄 파일을 미리보기로 표시하고, 확인/재업로드요청을 처리한다
-
-**수용 기준**:
-- [ ] PDF/이미지 미리보기
-- [ ] "확인완료" 시 주문 상태 자동 변경
-- [ ] "재업로드 요청" 시 고객에게 SMS/알림톡 발송
-
-### REQ-SKIN-005-004: 주문상태변경
-
-**WHEN** 관리자가 주문 상태를 변경하면
-**THE SYSTEM SHALL** 상태를 업데이트하고, 제작진행/완료 시 고객에게 알림 문자를 발송한다
-
-**수용 기준**:
-- [ ] 상태: 접수 -> 파일확인 -> 제작진행 -> 제작완료 -> 배송중 -> 배송완료
-- [ ] 일괄 변경: 선택 주문 다건 동시 변경
-- [ ] 제작진행중/제작완료 변경 시 자동 SMS
-
-### REQ-SKIN-005-005: 주문서출력
-
-**WHEN** 관리자가 "주문서 출력" 버튼을 클릭하면
-**THE SYSTEM SHALL** 선택한 주문의 인쇄용 주문서를 새 창에 표시하고 인쇄 기능을 제공한다
-
-**수용 기준**:
-- [ ] A4 인쇄 최적화 레이아웃
-- [ ] 상품명, 옵션, 수량, 금액, 배송지 포함
-- [ ] 다건 선택 시 연속 인쇄
-
-### REQ-SKIN-005-006: SMS 발송
-
-**WHEN** 관리자가 SMS 발송 메뉴에서 고객을 선택하고 메시지를 작성하면
-**THE SYSTEM SHALL** 선택한 고객에게 SMS 또는 알림톡을 발송한다
-
-**수용 기준**:
-- [ ] 개별/다건 발송 지원
-- [ ] 템플릿 메시지 선택 기능
-- [ ] 발송 결과 확인 (성공/실패)
-
-## 7. 개발 규모 산정
-
-| 기능 | 규모 | 담당 | 비고 |
-|------|------|------|------|
-| 관리자 레이아웃 (사이드바+헤더) | L | FE | 신규 |
-| 관리자 인증/권한 | M | FE+BE | 신규 |
-| 대시보드 현황 | M | FE | 통계 카드 |
-| 주문 목록 DataTable | L | FE | 검색/필터/페이징 |
-| 주문 상세 패널 | M | FE | 슬라이드 패널 |
-| 파일확인/미리보기 | M | FE | PDF 뷰어 |
-| 상태변경 (단건+일괄) | M | FE+BE | SMS 연동 |
-| 주문서 인쇄 | M | FE | HTML to Print |
-| 후불결제 관리 | M | FE+BE | 상태 관리 |
-| 증빙서류 관리 | M | FE+BE | 발급 처리 |
-| SMS/알림톡 발송 | M | FE+BE | NHN Cloud API |
-
-## UI/UX 개선사항
-
-### 관리자 기반/주문관리 (IA No. 44, 86~94) Improvements
-
-#### Dashboard improvements
-
-1. **KPI summary row**: 관리자 대시보드 상단에 핵심 지표 4개 카드를 한 줄로 배치: 오늘 주문 N건 | 처리대기 N건 | 매출 N원 | 신규회원 N명
-2. **Order status pipeline**: 주문관리에 Kanban 스타일 컬럼뷰 옵션 제공 (접수→인쇄중→완료)
-3. **Quick actions**: 주문 테이블 행에서 우클릭 컨텍스트 메뉴 지원 (파일확인, 상태변경, 인쇄)
-4. **Bulk operations**: 체크박스 다중선택 + 상단 일괄 상태변경 툴바
-5. **Search + filter bar**: 검색 입력 + 드롭다운 필터를 하나의 바로 결합
-
-#### Huni Design Tokens for Admin
-
-| 요소 | 속성 | 값 |
-|------|------|----|
-| Sidebar active | text | `#5538B6` |
-| Sidebar active | background | `#EEEBF9` |
-| Sidebar active | left border | 3px `#5538B6` |
-| Table header | background | `#F6F6F6` |
-| Table header | text | `#424242` 600 weight |
-| Table header | bottom border | `#CACACA` |
-| Table row hover | background | `#EEEBF9` |
-| Status badge - 접수중 | bg / text | `#EEEBF9` / `#5538B6` |
-| Status badge - 제작중 | bg / text | `#FFF8E1` / `#E6B93F` |
-| Status badge - 배송중 | bg / text | `#E0F7F6` / `#7AC8C4` |
-| Status badge - 완료 | bg / text | `#F6F6F6` / `#979797` |
-| Pagination active | color | `#5538B6` |
-| Pagination inactive | color | `#CACACA` |
-| Action button primary | fill / text / radius / height | `#5538B6` / white / 4px / h-[36px] |
-| Action button outline | fill / border / text | white / `#CACACA` / `#424242` |
+> **기술 스택**: React 18 + @shopby/react-components + Huni Design System v2 (SPEC-DS-006) + Tailwind CSS
+> **관련 정책**: POLICY-B1-ADMIN, POLICY-A6B8-ORDER
 
 ---
 
-## 8. 구현 노트 (Implementation Notes)
+## HISTORY
 
-> **작성일**: 2026-03-15
-> **구현 상태**: 프론트엔드 프로토타입 완료
-> **SPEC 상태**: Completed (Level 1 - spec-first)
+| 버전 | 날짜 | 변경 내용 |
+|------|------|-----------|
+| 1.0.0 | 2026-03-14 | 초기 SPEC 작성 |
+| 1.1.0 | 2026-03-15 | 프론트엔드 프로토타입 완료 (9/9 IA, UI 80-85%, 백엔드 0%) |
+| 2.0.0 | 2026-03-17 | Huni 디자인시스템 마이그레이션 + 백엔드 API 연동 계획 재작성 |
 
-### 8.1 구현 요약
+---
 
-SPEC-SKIN-005의 모든 IA 항목(No. 44, 86~94)에 대한 **프론트엔드 UI**가 구현되었습니다.
+## 1. 개요
 
-| 구분 | 계획 | 실제 구현 | 비고 |
-|------|------|-----------|------|
-| 컴포넌트 | 11개 | 12개 (14 파일) | DatePicker 추가 |
-| 페이지 | 10개 | 10개 (13 파일) | 계획과 일치 |
-| 훅 | 1개 | 1개 | useAdminAuth |
-| 라우터 | 1개 | 1개 | 9개 관리자 라우트 |
-| **총 파일** | - | **31개 (3,854줄)** | |
+SPEC-SKIN-005의 기존 프론트엔드 프로토타입(9/9 IA UI 완료, 31파일/3,854줄)을 Huni Design System v2(SPEC-DS-006) 컴포넌트로 마이그레이션하고, 미완료 백엔드 API 연동을 포함하는 중규모 마이그레이션이다.
 
-### 8.2 구현 범위
+### 1.1 마이그레이션 범위
 
-**완료된 기능 (UI 프로토타입):**
-- 관리자 레이아웃 (사이드바 + 헤더 + 대시보드)
-- 관리자 로그인/인증 (Mock)
-- 주문 목록 DataTable (검색/필터/페이징)
-- 주문 상세 패널
-- 파일확인/미리보기 (Mock PDF URL)
-- 주문상태 변경 (단건/일괄)
-- 주문서 인쇄 (브라우저 Print)
-- 후불결제 관리
-- 증빙서류 관리
-- SMS/알림톡 발송 (Mock)
-- 관리자 등록/관리
+- **UI 마이그레이션**: 이전 패턴 -> Huni 컴포넌트 대체 (12 컴포넌트, 10 페이지)
+- **백엔드 연동**: 14개 API 엔드포인트 Mock -> 실제 연동
+- **변경 파일 예상**: 31+ 파일
+- **테스트 커버리지 목표**: 85% (현재 0% -> 85%)
 
-**미완료 항목 (백엔드 연동 필요):**
-- 실제 API 연동 (14개 엔드포인트 전체 Mock)
-- JWT 기반 실제 인증
-- NHN 알림톡 실제 발송
-- 파일 업로드/검증 백엔드
-- Excel 다운로드 기능
-- 데이터 영속성 (현재 메모리 상태만)
+### 1.2 현재 상태
 
-### 8.3 아키텍처 변경
+| 항목 | 상태 | 비고 |
+|------|------|------|
+| UI 프로토타입 | 80-85% 완료 | 12 컴포넌트, 10 페이지 |
+| 백엔드 API | 0% (전체 Mock) | 14개 엔드포인트 |
+| 테스트 커버리지 | 0% | 프로토타입 단계 |
+| MX 태그 | 43개 추가됨 | ANCHOR 3, WARN 2, NOTE 18, TODO 8, SPEC 12 |
+
+---
+
+## 2. 정책 기반 구현 방식
+
+| 영역 | 정책 분류 | 구현 방식 | 근거 |
+|------|-----------|-----------|------|
+| 관리자 등록/관리 | NATIVE | shopby 운영자관리 + Huni 컴포넌트 스킨 | POLICY-B1-ADMIN: RBAC 4단계, shopby 네이티브 |
+| 관리자 인증 | NATIVE | shopby 관리자 인증 + Huni 컴포넌트 | POLICY-B1-ADMIN: 슈퍼관리자 2FA, 비밀번호 90일 |
+| 주문관리 (인쇄/제본) | SKIN | shopby 주문관리 API + 커스텀 상태 트래킹 | POLICY-A6B8-ORDER: 커스텀 인쇄 상태 |
+| 주문관리 (굿즈) | NATIVE | shopby 기본 주문관리 | POLICY-A6B8-ORDER: 네이티브 |
+| 파일확인처리 | CUSTOM | 파일 검수 워크플로우 자체 개발 | POLICY-A6B8-ORDER: 자동+수동 검수 |
+| 주문서출력 | SKIN | PDF 커스텀 생성 | POLICY-A6B8-ORDER: 작업지시서 |
+| 후불결제 | CUSTOM | B2B 후불/정산 자체 개발 | POLICY-A6B8-ORDER: B2B 승인 고객 |
+| SMS/알림톡 | NATIVE | shopby 알림 + NHN 알림톡 API | POLICY-A6B8-ORDER: 11종 알림톡 |
+
+---
+
+## 3. 컴포넌트 마이그레이션 매핑
+
+### 3.1 대체표 (이전 -> 신규)
+
+| 이전 패턴 | 신규 Huni 컴포넌트 | 적용 위치 | 비고 |
+|----------|-------------------|-----------|------|
+| shadcn Tabs | `Tabs` | 관리자 섹션 네비, 주문 상세 탭 | line/chip, Radix 기반 |
+| 커스텀 페이지네이션 | `Pagination` | 주문 목록, 후불결제 목록, 증빙 목록 | numbered |
+| shadcn Dialog | `Dialog` | 주문 상세, 파일 미리보기, 상태변경 확인, SMS 발송 | lazyMount/unmountOnExit |
+| `<input>` 직접/shadcn Input | `TextField` | 검색 바, 필터 입력, SMS 메시지 작성 | clearable |
+| label+input 조합 | `Field` | 관리자 등록 폼, SMS 발송 폼 | 10 slots, auto aria-* |
+| 커스텀 토글 | `Switch` | 설정 토글 (알림, 자동발송 등) | Radix 기반 |
+| alert/toast | `Snackbar` | 상태변경 완료, SMS 발송 결과, 오류 알림 | useSnackbar hook |
+| 커스텀 로딩 스피너 | `Skeleton` | 주문 목록 로딩, 대시보드 카드 로딩 | wave |
+| shadcn Badge | `Chip` | 주문 상태 뱃지 (접수/제작중/배송중/완료) | data-selected |
+| `<hr>` 직접 | `Divider` | 섹션 구분 | full/inset |
+| lucide 직접 import | `Icon` | 사이드바 아이콘, 액션 버튼 아이콘 | xs~xl |
+| `--po-*` CSS 변수 | `--huni-*` 토큰 | 전체 파일 | 시맨틱 토큰 |
+
+### 3.2 미대체 항목 (기존 유지)
+
+| 기존 컴포넌트 | 유지 사유 |
+|-------------|-----------|
+| DataTable (TanStack Table) | 테이블 프레임워크, 디자인시스템 범위 외 |
+| DatePicker | 기간 필터, Radix Calendar 기반 유지 |
+| AdminSidebar (커스텀) | 레이아웃 컴포넌트, 내부 요소만 대체 |
+| PrintSheet (커스텀) | 인쇄용 레이아웃, 디자인시스템 범위 외 |
+| StatCard (커스텀) | 대시보드 카드, 내부 요소만 대체 |
+
+---
+
+## 4. 요구사항 (EARS Format)
+
+### 4.1 UI 마이그레이션 요구사항
+
+#### REQ-SKIN-005-V2-001: CSS 토큰 마이그레이션
+
+시스템은 **항상** 모든 관리자 UI 요소에서 `--po-*` CSS 변수 대신 `--huni-*` 시맨틱 토큰을 사용해야 한다
+
+**관리자 토큰 매핑**:
+- Sidebar active 텍스트 `#5538B6` -> `--huni-fg-brand`
+- Sidebar active 배경 `#EEEBF9` -> `--huni-bg-brand-subtle`
+- Table header 배경 `#F6F6F6` -> `--huni-bg-neutral-subtle`
+- Table row hover `#EEEBF9` -> `--huni-bg-brand-subtle`
+- Pagination active `#5538B6` -> `--huni-fg-brand`
+
+#### REQ-SKIN-005-V2-002: Tabs 마이그레이션
+
+**WHEN** 관리자가 주문 상세 패널에서 탭을 클릭하면
+**THEN** Huni `Tabs` 컴포넌트가 indicator animation과 함께 콘텐츠를 전환해야 한다
+
+#### REQ-SKIN-005-V2-003: Pagination 마이그레이션
+
+**WHEN** 주문 목록, 후불결제 목록, 증빙서류 목록이 페이지 크기를 초과하면
+**THEN** Huni `Pagination` 컴포넌트로 페이지 네비게이션을 제공해야 한다
+
+#### REQ-SKIN-005-V2-004: Dialog 마이그레이션
+
+**WHEN** 관리자가 주문 상세, 파일 미리보기, 상태변경 확인, SMS 발송 모달을 열면
+**THEN** Huni `Dialog` 컴포넌트가 lazyMount/unmountOnExit 패턴으로 렌더링되어야 한다
+
+#### REQ-SKIN-005-V2-005: TextField/Field 마이그레이션
+
+**WHEN** 관리자가 검색, 필터, SMS 메시지 등 텍스트를 입력하면
+**THEN** Huni `TextField` + `Field` 컴포넌트가 동일한 UX를 제공해야 한다
+
+#### REQ-SKIN-005-V2-006: Switch 마이그레이션
+
+**WHEN** 관리자가 설정 토글(알림 설정, 자동발송 등)을 조작하면
+**THEN** Huni `Switch` 컴포넌트가 Radix 기반으로 동작해야 한다
+
+#### REQ-SKIN-005-V2-007: Snackbar 마이그레이션
+
+**WHEN** 관리자 작업(상태변경, SMS 발송, 일괄처리)이 완료되거나 실패하면
+**THEN** Huni `Snackbar` 컴포넌트로 피드백을 제공해야 한다
+
+#### REQ-SKIN-005-V2-008: Skeleton 마이그레이션
+
+**WHEN** 관리자 페이지 데이터가 로딩 중이면
+**THEN** Huni `Skeleton` 컴포넌트로 로딩 상태를 표시해야 한다
+
+#### REQ-SKIN-005-V2-009: Chip 주문 상태 뱃지
+
+**WHEN** 주문 목록에서 주문 상태를 표시하면
+**THEN** Huni `Chip` 컴포넌트로 상태별 색상 구분된 뱃지를 표시해야 한다
+
+**상태별 Chip 매핑** (POLICY-A6B8-ORDER 기반):
+- 접수중: `--huni-bg-brand-subtle` / `--huni-fg-brand`
+- 제작중: 경고 토큰 계열
+- 배송중: 성공 토큰 계열
+- 완료: `--huni-bg-neutral-subtle` / `--huni-fg-neutral`
+
+#### REQ-SKIN-005-V2-010: Divider/Icon 마이그레이션
+
+시스템은 **항상** `<hr>` 대신 Huni `Divider`, lucide 직접 import 대신 Huni `Icon`을 사용해야 한다
+
+### 4.2 백엔드 API 연동 요구사항
+
+#### REQ-SKIN-005-V2-011: 관리자 인증 API 연동
+
+**WHEN** 관리자가 ID/비밀번호로 로그인하면
+**THEN** 실제 관리자 인증 API(POST /admin/login)와 연동하여 JWT 토큰을 발급받아야 한다
+
+**IF** 비밀번호가 90일 이상 미변경이면 **THEN** 변경 안내 화면을 표시해야 한다
+
+**세부 사항** (POLICY-B1-ADMIN 기반):
+- RBAC 4단계: 슈퍼관리자/관리자/운영자/뷰어
+- 로그인 실패 5회 시 30분 잠금
+- 권한별 메뉴 접근 제한
+
+#### REQ-SKIN-005-V2-012: 주문관리 API 연동
+
+**WHEN** 관리자가 주문관리 메뉴에 접속하면
+**THEN** 실제 주문 API(GET /admin/orders)와 연동하여 주문 목록을 표시해야 한다
+
+**세부 사항**:
+- 검색: 주문번호, 주문자명, 상품명
+- 필터: 기간, 주문상태, 상품분류
+- 페이징: Pagination 컴포넌트 연동
+- Excel 다운로드 (xlsx 형식)
+
+#### REQ-SKIN-005-V2-013: 파일검수 워크플로우 연동
+
+**WHEN** 관리자가 파일확인 버튼을 클릭하면
+**THEN** 파일검수 API(PUT /admin/orders/{orderNo}/file-check)와 연동하여 검수를 처리해야 한다
+
+**세부 사항** (POLICY-A6B8-ORDER 기반):
+- 자동검수: 해상도(300dpi), 색상모드(CMYK) 확인
+- 수동검수: 재단선, 여백, 서체 확인 (체크리스트)
+- 재업로드 요청: 3회 제한, 5일 기한
+- 승인 후 작업지시서 자동 생성
+
+#### REQ-SKIN-005-V2-014: 주문상태 변경 + 알림
+
+**WHEN** 관리자가 주문 상태를 변경하면
+**THEN** 상태 API(PUT /admin/orders/{orderNo}/status)와 연동하고, 해당 알림톡을 발송해야 한다
+
+**주문 상태** (POLICY-A6B8-ORDER Section 5):
+- 내부 11단계: 주문접수 -> 결제완료 -> 파일확인중 -> 재업로드대기 -> 파일승인 -> 작업지시 -> 인쇄중 -> 후가공 -> 포장 -> 출고 -> 배송중 -> 배송완료
+- 고객 노출 9단계: 주문접수/결제완료/파일확인중/파일재업로드요청/파일확인완료/제작중/출고완료/배송중/배송완료
+
+**알림톡 연동** (POLICY-A6B8-ORDER Section 9):
+- 11종 알림톡 자동 발송
+- 재업로드 요청(003): 알림톡 + 이메일
+- 제작중(005): 알림톡
+- 출고완료(008/009): 알림톡 (송장번호 포함)
+
+#### REQ-SKIN-005-V2-015: 일괄 상태변경
+
+**WHEN** 관리자가 주문 목록에서 다건을 선택하고 일괄 상태변경을 실행하면
+**THEN** 일괄 API(PUT /admin/orders/batch-status)와 연동하여 선택 주문 전체의 상태를 변경해야 한다
+
+**세부 사항**:
+- 동시 최대 50건 처리
+- 각 주문별 알림톡 개별 발송
+- 실패 건 목록 표시
+
+#### REQ-SKIN-005-V2-016: SMS/알림톡 발송
+
+**WHEN** 관리자가 SMS 발송 메뉴에서 메시지를 작성하고 발송하면
+**THEN** NHN 알림톡 API(POST /admin/sms/send)와 연동하여 발송해야 한다
+
+**세부 사항**:
+- 개별/다건 발송 지원
+- 템플릿 메시지 선택 기능
+- 발송 결과 확인 (성공/실패 로그)
+
+#### REQ-SKIN-005-V2-017: 테스트 커버리지
+
+시스템은 **항상** 85% 이상의 테스트 커버리지를 유지해야 한다
+
+시스템은 마이그레이션으로 인해 기존 UI 동작이 **변경되지 않아야 한다**
+
+---
+
+## 5. 기술 명세
+
+### 5.1 Compound Component 패턴
 
 ```
-src/components/admin/    ← 신규 (12 컴포넌트)
-src/pages/admin/         ← 신규 (10 페이지)
-src/hooks/useAdminAuth.js ← 신규
-src/router/index.js      ← 신규 (관리자 라우트)
+// Dialog 사용 예시 (주문 상세)
+<Dialog.Root lazyMount unmountOnExit>
+  <Dialog.Trigger>주문 상세</Dialog.Trigger>
+  <Dialog.Content>
+    <Dialog.Header>주문 HN-001</Dialog.Header>
+    <Tabs.Root defaultValue="info">
+      <Tabs.List>
+        <Tabs.Trigger value="info">주문 정보</Tabs.Trigger>
+        <Tabs.Trigger value="file">파일 확인</Tabs.Trigger>
+        <Tabs.Trigger value="history">변경 이력</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="info">...</Tabs.Content>
+    </Tabs.Root>
+    <Dialog.Footer>
+      <Dialog.Close>닫기</Dialog.Close>
+    </Dialog.Footer>
+  </Dialog.Content>
+</Dialog.Root>
 ```
 
-### 8.4 품질 현황
+### 5.2 Chip 상태 뱃지 매핑
 
-- **코드 리뷰**: 34개 이슈 (Critical 보안 이슈 수정 완료)
-- **MX 태그**: 43개 태그 추가 (ANCHOR 3, WARN 2, NOTE 18, TODO 8, SPEC 12)
-- **테스트 커버리지**: 0% (프론트엔드 프로토타입 단계, 별도 SPEC으로 테스트 추가 예정)
+| 내부 상태 | 고객 노출 | Chip variant | 색상 토큰 |
+|----------|----------|-------------|----------|
+| 주문접수 | 주문접수 | default | neutral |
+| 결제완료 | 결제완료 | brand | brand-subtle |
+| 파일확인중 | 파일확인중 | brand | brand |
+| 재업로드대기 | 파일재업로드요청 | warning | warning |
+| 파일승인 | 파일확인완료 | success | success |
+| 작업지시~포장 | 제작중 | warning | warning |
+| 출고 | 출고완료 | info | info |
+| 배송중 | 배송중 | success | success-subtle |
+| 배송완료 | 배송완료 | neutral | neutral-subtle |
+| 주문취소 | 주문취소 | danger | danger |
 
-### 8.5 후속 작업
+### 5.3 파일검수 워크플로우
 
-1. 백엔드 API 연동 (Shopby Admin API + Custom API)
-2. 테스트 커버리지 확보 (별도 SPEC)
-3. 접근성 (ARIA) 보강
-4. 성능 최적화 (가상 스크롤, React.memo)
+```
+파일 업로드 -> 자동검수(해상도+색상모드)
+  -> [통과] -> 수동검수(재단선+여백+서체)
+      -> [통과] -> 파일승인 -> 작업지시서 생성
+      -> [불통과] -> 재업로드 요청 (알림톡+이메일)
+  -> [불통과] -> 재업로드 요청 (알림톡+이메일)
+      -> 재업로드 횟수 확인 (3회 제한)
+      -> [3회 초과] -> 1:1 문의 유도
+      -> [3회 미만] -> 재업로드 대기 (5일 기한)
+```
+
+### 5.4 RBAC 권한 매트릭스 (POLICY-B1-ADMIN 기반)
+
+| 메뉴 | 슈퍼관리자 | 관리자 | 운영자 | 뷰어 |
+|------|-----------|--------|--------|------|
+| 관리자 계정 | CRUD | R(하위) | - | - |
+| 주문 관리 | CRUD | CRUD | RU | R |
+| 파일확인 | CRUD | CRUD | RU | R |
+| 상태변경 | CRUD | CRUD | RU | - |
+| 후불결제 | CRUD | CRU | R | R |
+| 증빙서류 | CRUD | CRU | R | R |
+| SMS 발송 | CRUD | CRUD | CRU | - |
+| 감사 로그 | R | R(본인) | - | - |
+
+---
+
+## 6. 트레이서빌리티
+
+| 요구사항 ID | 정책 문서 | IA 항목 |
+|------------|----------|---------|
+| REQ-SKIN-005-V2-001 | SPEC-DS-006 토큰 체계 | 전체 |
+| REQ-SKIN-005-V2-002~010 | SPEC-DS-006 컴포넌트 | 44, 86~94 |
+| REQ-SKIN-005-V2-011 | POLICY-B1-ADMIN (RBAC 4단계) | 44 |
+| REQ-SKIN-005-V2-012 | POLICY-A6B8-ORDER (주문관리) | 86 |
+| REQ-SKIN-005-V2-013 | POLICY-A6B8-ORDER (파일검수) | 87 |
+| REQ-SKIN-005-V2-014 | POLICY-A6B8-ORDER (상태변경+알림) | 90 |
+| REQ-SKIN-005-V2-015 | POLICY-A6B8-ORDER (일괄처리) | 93 |
+| REQ-SKIN-005-V2-016 | POLICY-A6B8-ORDER (SMS/알림톡) | 88, 94 |
+| REQ-SKIN-005-V2-017 | TRUST 5 (Tested) | 전체 |
