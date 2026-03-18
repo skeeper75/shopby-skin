@@ -1,0 +1,21 @@
+## SPEC-LAYOUT-002 Progress
+
+- Started: 2026-03-19T00:00:00+09:00
+- Mode: DDD (ANALYZE-PRESERVE-IMPROVE)
+- Flags: --team --loop --auto --mx --all --ultrathink
+- Phase 1: Strategy validated (existing plan.md adopted, auto-approved)
+- Phase 1.5: 7 tasks decomposed (5 implementation + 1 checklist + 1 verification)
+- Phase 1.6: 7 acceptance criteria registered as pending tasks
+- Phase 1.7: Skipped (no new files)
+- Phase 1.8: MX context scan delegated to implementation agent
+- Phase 2: DDD implementation complete (frontend-dev, worktree isolation)
+  - C01: globals.css CSS overrides for @shopby content width (1280px)
+  - C02: 5 auth pages card style with Tailwind lg: classes
+  - C03: Header.jsx back arrow lg:hidden, title lg:text-left
+  - H01: FAQ.jsx defensive access (boardPosts?.totalCount ?? 0, boardsCategories = [])
+  - H02: react-device-detect removed from package.json
+  - V01: acceptance.md updated
+- Phase 2.5: Quality validation - BUILD PASS (0 errors, 2 pre-existing bundle warnings)
+- Phase 2.9: MX tags added (@MX:WARN on !important CSS overrides)
+- Phase 3: Git commit 1cf092c (main branch, auto_branch: false)
+- Phase 4: Complete

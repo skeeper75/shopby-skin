@@ -102,6 +102,12 @@
 - **모바일-태블릿-데스크톱 최적화**: 모든 페이지에서 자동 레이아웃 전환
 - **react-device-detect 제거**: useResponsive hook으로 통일된 반응형 상태 관리
 
+### 시각 검증 기반 레이아웃 개선 (SPEC-LAYOUT-002)
+- **메인 페이지 데스크톱 폭 확장**: @shopby 벤더 CSS 오버라이드로 1280px 전체 폭 활용
+- **인증 페이지 카드 스타일**: SignIn/SignUp/FindId/FindPassword/ChangePassword 데스크톱 카드 UI
+- **서브페이지 데스크톱 헤더**: 뒤로가기 숨김 + 좌측 정렬 제목으로 데스크톱 UX 개선
+- **FAQ 런타임 에러 수정**: 방어적 데이터 접근으로 안정성 향상
+
 ---
 
 ## 비즈니스 로직 요약
