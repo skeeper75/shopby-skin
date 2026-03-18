@@ -5,8 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <%# NAVER_PAY_BUTTON_SCRIPT 가 비어있으면 script 태그 자체를 생략 %>
+        <% if (htmlWebpackPlugin.options.env.NAVER_PAY_BUTTON_SCRIPT) { %>
         <script type="text/javascript" src="<%= htmlWebpackPlugin.options.env.NAVER_PAY_BUTTON_SCRIPT %>"></script>
+        <% } %>
+
+        <%# Vercel 배포 환경에서는 네이버 WCS 분석 스크립트를 제외 (preview 도메인에서 동작 불가) %>
+        <% if (!htmlWebpackPlugin.options.env.VERCEL_ENV) { %>
         <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+        <% } %>
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <link rel="shortcut icon" href="/icon.png" />
