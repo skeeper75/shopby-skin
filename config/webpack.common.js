@@ -90,7 +90,10 @@ module.exports = {
       env: process.env,
     }),
     new CopyPlugin({
-      patterns: [{ from: `${__dirname}/../public/favicon.ico`, to: 'favicon.ico' }],
+      patterns: [
+        { from: `${__dirname}/../public/favicon.ico`, to: 'favicon.ico' },
+        { from: `${__dirname}/../public/environment.json`, to: 'environment.json' },
+      ],
     }),
     new DotenvPlugin({ path: resolve(__dirname, `../config/.env.${NODE_ENV}`) }),
     new ProvidePlugin({
