@@ -2,7 +2,7 @@
 id: SPEC-INFRA-001
 title: Vercel Deployment Configuration
 version: 1.0.0
-status: draft
+status: completed
 created: 2026-03-18
 updated: 2026-03-18
 author: MoAI
@@ -179,9 +179,97 @@ Vercel Rewrites를 통한 API 프록시:
 
 | 요구사항 ID | 관련 파일 | 구현 상태 |
 |------------|----------|----------|
-| REQ-INFRA-001-01 | vercel.json | 미구현 |
-| REQ-INFRA-001-02 | vercel.json (rewrites) | 미구현 |
-| REQ-INFRA-001-04~06 | .vendors/, package.json | 미구현 |
-| REQ-INFRA-001-07~09 | scripts/generate-env.js, Vercel Dashboard | 미구현 |
-| REQ-INFRA-001-10~12 | Vercel GitHub Integration | 미구현 |
-| REQ-INFRA-001-13~15 | vercel.json, webpack config | 미구현 |
+| REQ-INFRA-001-01 | vercel.json | 구현완료 |
+| REQ-INFRA-001-02 | vercel.json (rewrites) | 구현완료 |
+| REQ-INFRA-001-03 | config/webpack.prod.js | 구현완료 |
+| REQ-INFRA-001-04~06 | .vendors/, package.json, scripts/vendor-packages.sh | 구현완료 |
+| REQ-INFRA-001-07~09 | scripts/generate-env.js, config/.env.production | 구현완료 |
+| REQ-INFRA-001-10~12 | Vercel GitHub Integration (자동), vercel.json | 구현완료 (AC-04는 수동 설정) |
+| REQ-INFRA-001-13~15 | vercel.json, webpack.prod.js, public/index.html | 구현완료 |
+
+---
+
+## 6. 구현 노트 (Implementation Notes)
+
+### 6.1 범위 확대 (Scope Expansions)
+
+원래 계획에서 다음 항목들이 추가로 구현되었습니다:
+
+1. **config/.env.production 자동 생성**:
+   - 발견: webpack.common.js의 dotenv 의존성이 `.env.production` 파일을 로드함
+   - 해결: generate-env.js에서 Vercel 환경 변수로부터 이 파일을 동적 생성하도록 확대
+   - 파일 경로: `config/.env.production` (런타임에 생성)
+
+2. **vendor-packages.sh 자동화 스크립트**:
+   - 발견: npm pack으로 .tgz 생성과 버전 관리의 반복 수작업 필요성 확인
+   - 해결: 단순 수동 npm pack 대신, 전체 벤더링 프로세스를 자동화하는 쉘 스크립트 작성
+   - 용도: 로컬 개발 환경에서 `npm run vendor` 명령으로 패키지 업데이트 시 사용
+
+3. **vercel.json에 $schema 추가**:
+   - IDE 자동완성 및 유효성 검사 지원을 위해 공식 Vercel JSON 스키마 참조 추가
+   - IDE와 개발 경험 개선
+
+### 6.2 기술적 결정사항 (Technical Decisions)
+
+1. **벤더링 방식: 로컬 .tgz 파일 커밋**
+   - 대안 검토: npm-shrinkwrap.json 사용, private npm registry, git submodule
+   - 선택 이유:
+     - Vercel 빌드 서버에서 사내 GitLab 접근 불가능 (HARD 제약)
+     - 로컬 .tgz 커밋이 가장 간단하고 신뢰할 수 있는 해결책
+     - .gitkeep으로 디렉토리 구조 보존
+
+2. **환경 변수 매핑 계층화**:
+   - Vercel 환경 변수 → .env.production (webpack.common.js 로드)
+   - .env.production → webpack 컴파일 타임 치환 → environment.json (런타임 접근)
+   - 이중 계층화로 안정성과 명확성 확보
+
+3. **SPA 라우팅: vercel.json의 rewrites 사용**:
+   - 정규식 기반 라우팅으로 `index.html` 폴백 처리
+   - 정적 에셋(js, css, json 등)은 제외하여 성능 보장
+
+4. **외부 스크립트 조건부 로드**:
+   - VERCEL_ENV 환경 변수로 런타임 판단
+   - webpack HtmlWebpackPlugin 템플릿에서 조건 처리
+   - 프리뷰/개발 환경에서만 비활성화 (프로덕션은 기존 동작 유지)
+
+5. **API 프록시 전략**:
+   - Vercel Rewrites로 `/api/shopby/*` → `shop-api.e-ncp.com` 프록시
+   - CORS 에러 우회 및 보안성 확보 (API 서버 URL 노출 방지)
+
+### 6.3 보류된 항목 (Deferred Items)
+
+1. **AC-04: PR 프리뷰 배포 자동 생성**
+   - 상태: ⏳ 수동 설정 필요
+   - 이유: Vercel Dashboard에서 GitHub Integration 설정이 필수 (API로 자동화 불가)
+   - 설정 단계:
+     1. Vercel 대시보드 로그인
+     2. 프로젝트 설정 → Git 탭
+     3. "Connect Git Repository" 클릭
+     4. GitHub 저장소 선택 및 인증
+   - 이후: PR 생성 시 자동으로 프리뷰 배포 생성 및 코멘트 추가됨
+
+### 6.4 MX 태그 적용 현황
+
+구현된 파일에 다음 MX 태그가 적용되었습니다:
+
+**generate-env.js**
+- `@MX:ANCHOR`: 빌드 프로세스의 중요 진입점 (npm run vercel-build 직접 호출)
+- `@MX:WARN`: dotenv 로드 실패 시 프로세스 크래시 위험 (환경 변수 누락 감지)
+- `@MX:NOTE`: 환경 변수 검증 로직과 TypeScript enum 일관성 유지 필요
+
+**webpack.prod.js**
+- `@MX:ANCHOR`: Webpack 플러그인 팩토리 (고 fan-in 함수)
+- `@MX:NOTE`: VERCEL_ENV 환경 변수 조건부 처리로 배포 환경별 동작 제어
+
+### 6.5 테스트 및 검증
+
+로컬 검증 완료:
+- vercel.json 유효성 검사 (JSON 스키마 준수)
+- generate-env.js 환경 변수 검증 로직 테스트
+- SPA 라우팅 rewrites 정규식 검증
+- 벤더링된 패키지 npm install 동작 확인
+
+Vercel 빌드 검증:
+- 빌드 성공 여부 (environment.json 생성 확인)
+- 프리뷰 배포 기본 동작 (메인 페이지 로드)
+- SPA 라우팅 동작 (주요 경로 직접 접속 테스트)

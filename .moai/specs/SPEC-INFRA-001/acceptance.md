@@ -138,13 +138,13 @@ Then @shopby/react-components가 node_modules에 정상 설치되고
 
 ## 5. Definition of Done
 
-- [ ] `vercel.json` 파일이 생성되고 SPA rewrites가 설정됨
-- [ ] `.vendors/` 디렉토리에 @shopby 패키지 .tgz 파일이 커밋됨
-- [ ] `package.json`의 @shopby 의존성이 `file:` 프로토콜로 변경됨
-- [ ] `scripts/generate-env.js`가 작성되고 환경 변수 검증 포함
-- [ ] Vercel 프리뷰 빌드가 성공적으로 완료됨
-- [ ] 프리뷰 URL에서 메인 페이지가 정상 로드됨
-- [ ] SPA 라우팅이 5개 이상 주요 경로에서 정상 동작
-- [ ] PR 생성 시 자동 프리뷰 배포 URL이 코멘트됨
-- [ ] 외부 스크립트가 프리뷰 환경에서 비활성화됨
-- [ ] API 프록시가 프리뷰 환경에서 정상 동작함
+- [x] `vercel.json` 파일이 생성되고 SPA rewrites가 설정됨
+- [x] `.vendors/` 디렉토리에 @shopby 패키지 .tgz 파일이 커밋됨
+- [x] `package.json`의 @shopby 의존성이 `file:` 프로토콜로 변경됨
+- [x] `scripts/generate-env.js`가 작성되고 환경 변수 검증 포함
+- [x] Vercel 프리뷰 빌드가 성공적으로 완료됨
+- [x] 프리뷰 URL에서 메인 페이지가 정상 로드됨
+- [x] SPA 라우팅이 5개 이상 주요 경로에서 정상 동작
+- [ ] PR 생성 시 자동 프리뷰 배포 URL이 코멘트됨 *(Vercel Dashboard 수동 설정 필요)*
+- [x] 외부 스크립트가 프리뷰 환경에서 비활성화됨
+- [x] API 프록시가 프리뷰 환경에서 정상 동작함

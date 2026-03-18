@@ -19,3 +19,8 @@
   - Files created: 4 (vercel.json, scripts/generate-env.js, scripts/vendor-packages.sh, .vendors/.gitkeep)
   - Files modified: 3 (package.json, config/webpack.prod.js, public/index.html)
   - AC status: 7/8 completed (AC-04 requires Vercel Dashboard manual setup)
+- Phase 3 complete: Documentation synchronization
+  - Updated SPEC-INFRA-001/spec.md: status draft → completed, traceability table updated, implementation notes added
+  - Updated SPEC-INFRA-001/acceptance.md: DoD checklist marked [x] for completed items, AC-04 marked [ ] with note
+  - Committed: 1c8444a (feat(infra): SPEC-INFRA-001 Vercel 배포 환경 구성)
+  - Sync phase timestamp: 2026-03-18T14:30:00
