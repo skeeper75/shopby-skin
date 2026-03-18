@@ -48,7 +48,7 @@ const RadioOption = React.forwardRef(
         role="radio"
         aria-checked={state === 'selected'}
         className={cn(radioOptionVariants({ state, size, className }))}
-        style={{ fontFamily: 'var(--po-font-family)' }}
+        style={{ fontFamily: 'var(--huni-font-family)' }}
         onClick={isDisabled ? undefined : () => onClick?.(value)}
         disabled={isDisabled}
         {...props}

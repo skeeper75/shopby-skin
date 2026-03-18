@@ -4,12 +4,15 @@ import {
   Button,
   useFindAccountStateContext,
   useFindAccountActionContext,
-  TextField,
   SelectBox,
   EmailInput,
 } from '@shopby/react-components';
 
 import { EMAIL_DOMAIN_OPTIONS } from '../../constants/form';
+
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
 
 export const FindIdEmailForm = () => {
   const {
@@ -37,27 +40,43 @@ export const FindIdEmailForm = () => {
 
   return (
     <>
+      {/* 이름 필드 - Huni Field + TextField */}
       <div className="find-id-form__item">
-        <div className="find-id-form__input-wrap">
-          <TextField id="memberId" value={memberName} placeholder="이름 입력" onChange={handleMemberNameChange} />
-        </div>
+        <Field.Root>
+          <Field.Label>이름</Field.Label>
+          <Field.Control className="find-id-form__input-wrap">
+            <TextField.Root>
+              <TextField.Input
+                id="memberId"
+                value={memberName}
+                placeholder="이름 입력"
+                onChange={handleMemberNameChange}
+              />
+            </TextField.Root>
+          </Field.Control>
+        </Field.Root>
       </div>
+
+      {/* 이메일 필드 - EmailInput 사용 (Huni 이메일 컴포넌트는 후속 작업) */}
       <div className="find-id-form__item">
-        <div className="find-id-form__input-wrap">
-          <EmailInput
-            id={emailId}
-            domain={emailDomain}
-            onIdChange={handleEmailIdInputChange}
-            onDomainChange={handleEmailDomainInputChange}
-          />
-          <SelectBox
-            hasEmptyOption={true}
-            emptyOptionLabel="직접 입력"
-            value={domainSelectorValue}
-            onSelect={handleEmailDomainSelect}
-            options={EMAIL_DOMAIN_OPTIONS}
-          />
-        </div>
+        <Field.Root>
+          <Field.Label>이메일</Field.Label>
+          <Field.Control className="find-id-form__input-wrap">
+            <EmailInput
+              id={emailId}
+              domain={emailDomain}
+              onIdChange={handleEmailIdInputChange}
+              onDomainChange={handleEmailDomainInputChange}
+            />
+            <SelectBox
+              hasEmptyOption={true}
+              emptyOptionLabel="직접 입력"
+              value={domainSelectorValue}
+              onSelect={handleEmailDomainSelect}
+              options={EMAIL_DOMAIN_OPTIONS}
+            />
+          </Field.Control>
+        </Field.Root>
       </div>
 
       {isNotExistMemberInfo && <p className="find-id-form__caution">회원정보를 찾을 수 없습니다.</p>}

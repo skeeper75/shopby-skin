@@ -110,7 +110,7 @@ const DropdownSelect = React.forwardRef(
           role="listbox"
           tabIndex={disabled ? -1 : 0}
           className={cn(dropdownTriggerVariants({ state: currentState, size }))}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           onClick={handleToggle}
           onKeyDown={handleKeyDown}
           aria-expanded={isOpen}
@@ -157,7 +157,7 @@ const DropdownSelect = React.forwardRef(
                     : 'text-[var(--huni-fg-neutral)] hover:bg-[var(--huni-bg-neutral-weak)]',
                   option.disabled && 'text-[var(--huni-fg-neutral-subtle)] cursor-not-allowed'
                 )}
-                style={{ fontFamily: 'var(--po-font-family)' }}
+                style={{ fontFamily: 'var(--huni-font-family)' }}
                 onClick={() => !option.disabled && handleSelect(option.value)}
               >
                 {option.label}

@@ -70,7 +70,7 @@ const SizeInput = React.forwardRef(
         <input
           type="number"
           className={inputFieldClass}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           value={width}
           onChange={(e) => onWidthChange?.(e.target.value)}
           placeholder={widthPlaceholder}
@@ -82,7 +82,7 @@ const SizeInput = React.forwardRef(
         {/* X 구분자 */}
         <span
           className="text-[13px] font-medium text-[var(--huni-fg-neutral)] flex-shrink-0"
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
         >
           X
         </span>
@@ -91,7 +91,7 @@ const SizeInput = React.forwardRef(
         <input
           type="number"
           className={inputFieldClass}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           value={height}
           onChange={(e) => onHeightChange?.(e.target.value)}
           placeholder={heightPlaceholder}

@@ -54,7 +54,7 @@ const InfoTooltip = React.forwardRef(
             'bg-[var(--huni-gray-200)] text-[var(--huni-fg-neutral-muted)] font-bold',
             'hover:bg-[var(--huni-purple-100)] transition-colors'
           )}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           onClick={handleToggle}
           onBlur={handleBlur}
           aria-label="정보 보기"
@@ -72,7 +72,7 @@ const InfoTooltip = React.forwardRef(
               'bg-[var(--huni-fg-neutral)] text-white text-[11px] leading-relaxed',
               'whitespace-nowrap shadow-md'
             )}
-            style={{ fontFamily: 'var(--po-font-family)' }}
+            style={{ fontFamily: 'var(--huni-font-family)' }}
             role="tooltip"
           >
             {content || children}

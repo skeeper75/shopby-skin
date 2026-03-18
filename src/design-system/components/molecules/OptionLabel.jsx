@@ -22,8 +22,8 @@ const OptionLabel = React.forwardRef(
         {...props}
       >
         <span
-          className="text-[var(--po-text-md)] font-bold text-[var(--huni-fg-neutral)]"
-          style={{ fontFamily: 'var(--po-font-family)', fontSize: 'var(--po-text-md)' }}
+          className="text-[var(--huni-text-t4)] font-bold text-[var(--huni-fg-neutral)]"
+          style={{ fontFamily: 'var(--huni-font-family)', fontSize: 'var(--huni-text-t4)' }}
         >
           {children}
         </span>

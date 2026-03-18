@@ -90,7 +90,7 @@ const CounterOption = React.forwardRef(
         <button
           type="button"
           className={cn(counterButtonClass, 'rounded-l border-r-0')}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           onClick={handleDecrement}
           disabled={isDisabled || value <= min}
           aria-label="수량 감소"
@@ -101,7 +101,7 @@ const CounterOption = React.forwardRef(
         {/* RULE-3: 직사각형 값 표시 */}
         <span
           className={counterValueClass}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
         >
           {value}
         </span>
@@ -110,7 +110,7 @@ const CounterOption = React.forwardRef(
         <button
           type="button"
           className={cn(counterButtonClass, 'rounded-r border-l-0')}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           onClick={handleIncrement}
           disabled={isDisabled || value >= max}
           aria-label="수량 증가"

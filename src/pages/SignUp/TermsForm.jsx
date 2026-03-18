@@ -5,7 +5,6 @@ import { func } from 'prop-types';
 import {
   useSignUpActionContext,
   useSignUpStateContext,
-  Checkbox,
   Button,
   useCustomTermsActionContext,
   useCustomTermsStateContext,
@@ -19,6 +18,9 @@ import { MarketingReceiveAgreement } from '../../components/MarketingReceiveAgre
 import { DEFAULT_REQUIRED_TERMS_KEYS } from '../../constants/common';
 import { NOT_USED } from '../../constants/form';
 import { createRequiredTermStatus, getUsedRequiredTermsTypes } from '../../utils/terms';
+
+// Huni Design System Components
+import { Checkbox } from '../../design-system/components/atoms/Checkbox/Checkbox';
 
 const TermsForm = ({ setIsTermsFullModalOpen }) => {
   const {
@@ -110,27 +112,33 @@ const TermsForm = ({ setIsTermsFullModalOpen }) => {
       <div className="sign-up-form__item sign-up-form__agree-wrap">
         <p className="sign-up-form__tit">약관동의</p>
         <div className="sign-up-form__input-wrap">
+          {/* 전체 동의 체크박스 - Huni Checkbox Compound Component */}
           <div className="sign-up-form__checkbox--all">
-            <Checkbox
-              onChange={(e) => {
-                handleAllCheck(e.target.checked);
-              }}
+            <Checkbox.Root
               checked={isAllChecked}
-              name="checkAll"
-              label={'아래 약관에 모두 동의합니다.'}
-            />
+              onCheckedChange={(checked) => {
+                handleAllCheck(checked);
+              }}
+            >
+              <Checkbox.Control />
+              <Checkbox.Label>아래 약관에 모두 동의합니다.</Checkbox.Label>
+            </Checkbox.Root>
           </div>
+
+          {/* 개별 약관 체크박스 - Huni Checkbox Compound Component */}
           <ul className="sign-up-form__agree-list">
             {termStatus?.map((item) => (
               <li key={item.id}>
                 <div className="sign-up-form__checkbox--partial">
-                  <Checkbox
-                    onChange={(e) => {
-                      handleSingleCheck(e.target.checked, item.id);
-                    }}
+                  <Checkbox.Root
                     checked={item.checked}
-                    label={item.title}
-                  />
+                    onCheckedChange={(checked) => {
+                      handleSingleCheck(checked, item.id);
+                    }}
+                  >
+                    <Checkbox.Control />
+                    <Checkbox.Label>{item.title}</Checkbox.Label>
+                  </Checkbox.Root>
                   {item.hasDetailView && (
                     <Button
                       label={'보기'}

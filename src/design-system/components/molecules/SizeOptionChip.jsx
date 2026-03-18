@@ -47,7 +47,7 @@ const SizeOptionChip = React.forwardRef(
         ref={ref}
         type="button"
         className={cn(sizeOptionChipVariants({ state, size, className }))}
-        style={{ fontFamily: 'var(--po-font-family)', fontWeight: 'var(--po-font-medium)' }}
+        style={{ fontFamily: 'var(--huni-font-family)', fontWeight: 'var(--huni-font-weight-medium)' }}
         onClick={isDisabled ? undefined : onClick}
         disabled={isDisabled}
         aria-pressed={state === 'selected'}

@@ -77,7 +77,7 @@ const QuantityInput = React.forwardRef(
             'text-[14px] font-medium text-[var(--huni-fg-neutral)]',
             'placeholder:text-[var(--huni-fg-neutral-subtle)]'
           )}
-          style={{ fontFamily: 'var(--po-font-family)' }}
+          style={{ fontFamily: 'var(--huni-font-family)' }}
           value={value}
           onChange={handleChange}
           placeholder={placeholder}
@@ -88,7 +88,7 @@ const QuantityInput = React.forwardRef(
         {value !== '' && (
           <span
             className="text-[13px] text-[var(--huni-fg-neutral-subtle)] ml-1 flex-shrink-0"
-            style={{ fontFamily: 'var(--po-font-family)' }}
+            style={{ fontFamily: 'var(--huni-font-family)' }}
           >
             {unit}
           </span>

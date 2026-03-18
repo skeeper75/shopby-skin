@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 
-import { Button, useFindAccountStateContext, useFindAccountActionContext, TextField } from '@shopby/react-components';
+import { Button, useFindAccountStateContext, useFindAccountActionContext } from '@shopby/react-components';
 
 import FullModal from '../../components/FullModal';
 
 import FindPasswordAuthentication from './FindPasswordAuthentication';
+
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
 
 export const FindPasswordSmsForm = () => {
   const {
@@ -26,17 +30,22 @@ export const FindPasswordSmsForm = () => {
 
   return (
     <>
+      {/* 아이디 필드 - Huni Field + TextField */}
       <div className="find-password-form__item">
-        <div className="find-password-form__input-wrap">
-          <TextField
-            id="memberId"
-            value={memberId}
-            placeholder="아이디 입력"
-            onChange={handleMemberIdChange}
-            valid="NO_SPACE"
-            onKeyDown={handleFindPasswordKeyDown}
-          />
-        </div>
+        <Field.Root>
+          <Field.Label>아이디</Field.Label>
+          <Field.Control className="find-password-form__input-wrap">
+            <TextField.Root>
+              <TextField.Input
+                id="memberId"
+                value={memberId}
+                placeholder="아이디 입력"
+                onChange={handleMemberIdChange}
+                onKeyDown={handleFindPasswordKeyDown}
+              />
+            </TextField.Root>
+          </Field.Control>
+        </Field.Root>
       </div>
 
       {isNotExistMemberInfo && <p className="find-password-form__caution">회원정보를 찾을 수 없습니다.</p>}

@@ -2,10 +2,13 @@ import {
   Button,
   useFindAccountStateContext,
   useFindAccountActionContext,
-  TextField,
   PhoneNumberInput,
   useModalActionContext,
 } from '@shopby/react-components';
+
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
 
 export const FindIdSmsForm = () => {
   const {
@@ -54,24 +57,40 @@ export const FindIdSmsForm = () => {
 
   return (
     <>
+      {/* 이름 필드 - Huni Field + TextField */}
       <div className="find-id-form__item">
-        <div className="find-id-form__input-wrap">
-          <TextField id="memberName" value={memberName} placeholder="이름 입력" onChange={handleMemberNameChange} />
-        </div>
+        <Field.Root>
+          <Field.Label>이름</Field.Label>
+          <Field.Control className="find-id-form__input-wrap">
+            <TextField.Root>
+              <TextField.Input
+                id="memberName"
+                value={memberName}
+                placeholder="이름 입력"
+                onChange={handleMemberNameChange}
+              />
+            </TextField.Root>
+          </Field.Control>
+        </Field.Root>
       </div>
+
+      {/* 휴대폰번호 필드 - PhoneNumberInput 사용 */}
       <div className="find-id-form__item">
-        <div className="find-id-form__input-wrap">
-          <PhoneNumberInput
-            name="mobileNo"
-            id="mobileNo"
-            carrierNumber={carrierNumber}
-            firstSerial={firstSerial}
-            secondSerial={secondSerial}
-            onCarrierNumberSelect={handlePhoneCarrierNumberSelect}
-            onFirstSerialChange={handlePhoneFirstSerialNumberChange}
-            onSecondSerialChange={handlePhoneSecondSerialNumberChange}
-          />
-        </div>
+        <Field.Root>
+          <Field.Label>휴대폰번호</Field.Label>
+          <Field.Control className="find-id-form__input-wrap">
+            <PhoneNumberInput
+              name="mobileNo"
+              id="mobileNo"
+              carrierNumber={carrierNumber}
+              firstSerial={firstSerial}
+              secondSerial={secondSerial}
+              onCarrierNumberSelect={handlePhoneCarrierNumberSelect}
+              onFirstSerialChange={handlePhoneFirstSerialNumberChange}
+              onSecondSerialChange={handlePhoneSecondSerialNumberChange}
+            />
+          </Field.Control>
+        </Field.Root>
       </div>
 
       {isNotExistMemberInfo && <p className="find-id-form__caution">회원정보를 찾을 수 없습니다.</p>}

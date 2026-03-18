@@ -77,7 +77,7 @@ const CollapsibleSection = React.forwardRef(
           {/* 섹션 제목 */}
           <span
             className="flex-1 text-left text-[14px] font-bold text-[var(--huni-fg-neutral)]"
-            style={{ fontFamily: 'var(--po-font-family)' }}
+            style={{ fontFamily: 'var(--huni-font-family)' }}
           >
             {title}
           </span>

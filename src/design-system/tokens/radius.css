@@ -3,11 +3,13 @@
  *
  * 컴포넌트 모서리 둥글기 토큰. 0부터 완전 원형(full)까지.
  *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
  * @MX:NOTE: [AUTO] 모서리 반경 토큰 정의
- * @MX:SPEC: SPEC-DS-006
+ * @MX:SPEC: SPEC-DS-009
  */
 
 :root {
+  /* === 표준 모서리 반경 토큰 (--huni-radius-*) === */
   --huni-radius-0: 0px;
   --huni-radius-0_5: 2px;
   --huni-radius-1: 4px;

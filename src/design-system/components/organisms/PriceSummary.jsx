@@ -38,7 +38,7 @@ const PriceRow = ({ label, value, highlight = false }) => (
           ? 'font-bold text-[var(--huni-fg-neutral)]'
           : 'text-[var(--huni-fg-neutral-muted)]'
       )}
-      style={{ fontFamily: 'var(--po-font-family)' }}
+      style={{ fontFamily: 'var(--huni-font-family)' }}
     >
       {label}
     </span>
@@ -48,7 +48,7 @@ const PriceRow = ({ label, value, highlight = false }) => (
           ? 'text-[18px] font-bold text-[var(--huni-fg-brand)]'
           : 'text-[13px] font-medium text-[var(--huni-fg-neutral)]'
       )}
-      style={{ fontFamily: 'var(--po-font-family)' }}
+      style={{ fontFamily: 'var(--huni-font-family)' }}
     >
       {value}
     </span>

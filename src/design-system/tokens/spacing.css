@@ -3,11 +3,13 @@
  *
  * 4px 기반 간격 스케일. 레이아웃 및 컴포넌트 내부 여백에 사용.
  *
+ * @MX:NOTE: [AUTO] SPEC-DS-009 토큰 표준화 마이그레이션
  * @MX:NOTE: [AUTO] 4px 기반 간격 토큰 정의
- * @MX:SPEC: SPEC-DS-006
+ * @MX:SPEC: SPEC-DS-009
  */
 
 :root {
+  /* === 표준 간격 토큰 (--huni-space-*) === */
   --huni-space-0_5: 2px;
   --huni-space-1: 4px;
   --huni-space-1_5: 6px;

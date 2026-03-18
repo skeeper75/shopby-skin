@@ -42,7 +42,7 @@ const BadgeLabel = React.forwardRef(
       <span
         ref={ref}
         className={cn(badgeLabelVariants({ variant, size, className }))}
-        style={{ fontFamily: 'var(--po-font-family)' }}
+        style={{ fontFamily: 'var(--huni-font-family)' }}
         {...props}
       >
         {children}

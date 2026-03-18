@@ -4,7 +4,6 @@ import {
   useMallStateContext,
   useSignUpActionContext,
   useSignUpStateContext,
-  TextField,
   EmailInput,
   Button,
   SelectBox,
@@ -14,6 +13,10 @@ import { AUTHENTICATION_TYPE } from '@shopby/shared/constants';
 import { EMAIL_DOMAIN_OPTIONS, REQUIRED } from '../../constants/form';
 
 import ValidationStatus from './ValidationStatus';
+
+// Huni Design System Components
+import { TextField } from '../../design-system/components/molecules/TextField/TextField';
+import { Field } from '../../design-system/components/molecules/Field/Field';
 
 // eslint-disable-next-line complexity
 const SignUpEmailForm = forwardRef((_, ref) => {
@@ -147,21 +150,22 @@ const SignUpEmailForm = forwardRef((_, ref) => {
       {mallJoinConfig.authenticationType === AUTHENTICATION_TYPE.AUTHENTICATION_BY_EMAIL &&
       authenticationsRemainTimeBySeconds ? (
         <div className="sign-up-form__item">
-          <label htmlFor="certificatedNumber" className="sign-up-form__tit">
-            인증번호
-          </label>
-          <div className="sign-up-form__input-wrap">
-            <TextField
-              name="certificatedNumber"
-              id="certificatedNumber"
-              value={certificatedNumber}
-              placeholder="인증번호를 입력해주세요."
-              onChange={handleFormValueChange}
-              maxLength={6}
-              valid="NO_SPACE"
-            />
-            <Button label={'확인'} onClick={handleConfirmEmailAuthentication} />
-          </div>
+          {/* 인증번호 필드 - Huni Field + TextField */}
+          <Field.Root>
+            <Field.Label>인증번호</Field.Label>
+            <Field.Control className="sign-up-form__input-wrap">
+              <TextField.Root>
+                <TextField.Input
+                  name="certificatedNumber"
+                  value={certificatedNumber}
+                  placeholder="인증번호를 입력해주세요."
+                  onChange={handleFormValueChange}
+                  maxLength={6}
+                />
+              </TextField.Root>
+            </Field.Control>
+          </Field.Root>
+          <Button label={'확인'} onClick={handleConfirmEmailAuthentication} />
           {timerTime ? (
             <span className="timer">
               <span className="timer__text">유효시간</span>

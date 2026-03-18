@@ -49,7 +49,7 @@ const CTAButton = React.forwardRef(
         ref={ref}
         type="button"
         className={cn(ctaButtonVariants({ variant: resolvedVariant, size, className }))}
-        style={{ fontFamily: 'var(--po-font-family)' }}
+        style={{ fontFamily: 'var(--huni-font-family)' }}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
         {...props}
