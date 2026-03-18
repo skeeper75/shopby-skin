@@ -1,6 +1,8 @@
 import { Fragment, useEffect, useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import { PageShell } from '../../components/Layout';
+
 import {
   MyOrderProvider,
   useMyOrderStateContext,
@@ -269,15 +271,17 @@ const OrderDetailContent = () => {
 };
 
 const OrderDetail = () => (
-  <ClaimProvider>
-    <MyOrderProvider>
-      <NextActionProvider>
-        <CashReceiptProvider>
-          <OrderDetailContent />
-        </CashReceiptProvider>
-      </NextActionProvider>
-    </MyOrderProvider>
-  </ClaimProvider>
+  <PageShell maxWidth="5xl">
+    <ClaimProvider>
+      <MyOrderProvider>
+        <NextActionProvider>
+          <CashReceiptProvider>
+            <OrderDetailContent />
+          </CashReceiptProvider>
+        </NextActionProvider>
+      </MyOrderProvider>
+    </ClaimProvider>
+  </PageShell>
 );
 
 export default OrderDetail;

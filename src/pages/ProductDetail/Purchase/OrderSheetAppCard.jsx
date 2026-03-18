@@ -1,6 +1,4 @@
 import { createRef, lazy, useEffect, useMemo, useState } from 'react';
-import { isMobile } from 'react-device-detect';
-
 import { func } from 'prop-types';
 
 import {
@@ -22,6 +20,7 @@ import {
 import { convertToKoreanCurrency, isSignedIn, parsePhoneNumber, PG_TYPES_MAP } from '@shopby/shared';
 
 import { useErrorBoundaryActionContext } from '../../../components/ErrorBoundary';
+import useResponsive from '../../../hooks/useResponsive';
 import { convertBooleanToYorN } from '../../../utils';
 import TermsChecker from '../../OrderSheet/TermsChecker';
 
@@ -37,6 +36,7 @@ const OrderSheetAppCard = ({ onClose }) => {
     termsCheckerRef: createRef(),
   };
 
+  const { isMobile } = useResponsive();
   const { totalPrice, quantities } = useProductOptionStateContextV2();
   const { setOrderResponse } = useAppCardActionContext();
   const { openAlert, openConfirm } = useModalActionContext();

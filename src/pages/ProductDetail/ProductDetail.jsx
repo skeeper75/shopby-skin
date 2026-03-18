@@ -1,5 +1,4 @@
 import { useEffect, useMemo } from 'react';
-import { isMobile } from 'react-device-detect';
 import { useSearchParams } from 'react-router-dom';
 
 import {
@@ -33,6 +32,7 @@ import {
 import AdminBanner from '../../components/AdminBanner';
 import { EXTERNAL_CUSTOM_ORDER_SHEET_TERMS } from '../../constants';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
+import useResponsive from '../../hooks/useResponsive';
 
 import Content from './Content';
 import ImageSlider from './ImageSlider';
@@ -242,6 +242,7 @@ const ProductDetailContent = () => {
 const ProductDetail = () => {
   const { clientId, mallProfile } = useMallStateContext();
   const [searchParams] = useSearchParams();
+  const { isMobile } = useResponsive();
   const productNo = Number(searchParams.get('productNo'));
 
   const initialTabs = useMemo(() => makeTabs(), []);

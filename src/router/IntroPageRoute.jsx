@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { node } from 'prop-types';
@@ -8,7 +7,7 @@ import { useMallStateContext } from '@shopby/react-components';
 import { INTRO_PAGE_TYPE_MAP, isAgeVerified, isSignedIn } from '@shopby/shared';
 import { isPreview } from '@shopby/shared/utils';
 
-const platformType = isMobile ? 'mobile' : 'pc';
+import useResponsive from '../hooks/useResponsive';
 
 const exceptPaths = [
   '/adult-certification',
@@ -49,6 +48,8 @@ const IntroPageRoute = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const { mall } = useMallStateContext();
+  const { isMobile } = useResponsive();
+  const platformType = isMobile ? 'mobile' : 'pc';
 
   const condition = INTRO_PAGE_ROUTING_MAP[mall.introRedirection[platformType]];
 

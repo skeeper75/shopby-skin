@@ -10,6 +10,7 @@ import {
 
 import { PI_TERMS_MAP, PI_TERMS_KEYS } from '../../constants/common';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
+import { PageShell } from '../../components/Layout';
 
 import GuestOrderForm from './GuestOrderForm';
 
@@ -28,11 +29,14 @@ const GuestOrder = () => {
   }, []);
 
   return (
-    <SignInProvider>
-      <OpenIdSignInProvider PI_TERMS_MAP={PI_TERMS_MAP} terms={terms}>
-        <GuestOrderForm />
-      </OpenIdSignInProvider>
-    </SignInProvider>
+    // 비회원 주문 조회 폼 최대 너비 제한 및 반응형 패딩 적용
+    <PageShell maxWidth="5xl">
+      <SignInProvider>
+        <OpenIdSignInProvider PI_TERMS_MAP={PI_TERMS_MAP} terms={terms}>
+          <GuestOrderForm />
+        </OpenIdSignInProvider>
+      </SignInProvider>
+    </PageShell>
   );
 };
 

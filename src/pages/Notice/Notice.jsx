@@ -9,6 +9,8 @@ import {
   InfiniteScrollLoader,
 } from '@shopby/react-components';
 
+import { PageShell } from '../../components/Layout';
+
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import ListSkeleton from '../../components/ListSkeleton/ListSkeleton';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
@@ -214,9 +216,11 @@ const NoticeContent = () => {
 };
 
 const Notice = () => (
-  <ArticleProvider>
-    <NoticeContent />
-  </ArticleProvider>
+  <PageShell maxWidth="5xl">
+    <ArticleProvider>
+      <NoticeContent />
+    </ArticleProvider>
+  </PageShell>
 );
 
 export default Notice;

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { isMobile } from 'react-device-detect';
 
 import {
   OrderConfirmProvider,
@@ -9,12 +8,17 @@ import {
   useOrderConfigStateContext,
 } from '@shopby/react-components';
 
+import { PageShell } from '../../components/Layout';
+
+import useResponsive from '../../hooks/useResponsive';
+
 import OrderFail from './OrderFail';
 import OrderSuccess from './OrderSuccess';
 
 const OrderConfirmContent = () => {
   const { orderInfo, orderNo, message, isSuccess } = useOrderConfirmStateContext();
   const { orderConfig } = useOrderConfigStateContext();
+  const { isMobile } = useResponsive();
 
   useEffect(() => {
     if (!isMobile && opener) {
@@ -35,13 +39,15 @@ const OrderConfirmContent = () => {
 };
 
 const OrderConfirm = () => (
-  <OrderConfirmProvider>
-    <MyOrderProvider>
-      <CashReceiptProvider>
-        <OrderConfirmContent />
-      </CashReceiptProvider>
-    </MyOrderProvider>
-  </OrderConfirmProvider>
+  <PageShell maxWidth="5xl">
+    <OrderConfirmProvider>
+      <MyOrderProvider>
+        <CashReceiptProvider>
+          <OrderConfirmContent />
+        </CashReceiptProvider>
+      </MyOrderProvider>
+    </OrderConfirmProvider>
+  </PageShell>
 );
 
 export default OrderConfirm;

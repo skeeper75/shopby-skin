@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -16,7 +15,9 @@ import {
 } from '@shopby/react-components';
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
+import { PageShell, SplitLayout } from '../../components/Layout';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
+import useResponsive from '../../hooks/useResponsive';
 
 import CartPriceTag from './CartPriceTag';
 import CartTopSelectManager from './CartTopSelectManager';
@@ -142,26 +143,40 @@ const CartContent = () => {
   }, [checkedProducts]);
 
   return (
-    <div className="cart">
-      <CartTopSelectManager />
-      <DeliverySection />
-      <section className="l-panel cart__payment-info">
-        <CartPriceTag />
-        <Button className="cart__order-btn" label="주문하기" onClick={handleOrderBtnClick} />
-        <div className="cart__naver-pay-btn" id="naver-pay" />
-      </section>
-      <FixedOrderBtn onOrderBtnClick={handleOrderBtnClick} />
-    </div>
+    // 반응형 2단 레이아웃: 데스크톱에서 좌측 8/12 본문, 우측 4/12 결제 정보
+    <PageShell maxWidth="5xl" padding="responsive">
+      <div className="cart">
+        <SplitLayout
+          main={
+            <>
+              <CartTopSelectManager />
+              <DeliverySection />
+            </>
+          }
+          aside={
+            <section className="l-panel cart__payment-info">
+              <CartPriceTag />
+              <Button className="cart__order-btn" label="주문하기" onClick={handleOrderBtnClick} />
+              <div className="cart__naver-pay-btn" id="naver-pay" />
+            </section>
+          }
+          asideSticky
+        />
+        {/* FixedOrderBtn은 모바일 고정 버튼이므로 SplitLayout 외부에 배치 */}
+        <FixedOrderBtn onOrderBtnClick={handleOrderBtnClick} />
+      </div>
+    </PageShell>
   );
 };
 
 const Cart = () => {
   const { clientId, mallProfile } = useMallStateContext();
   const { cartConfig } = useMallStateContext();
+  const { platformType } = useResponsive();
 
   return (
     <OrderSheetProvider>
-      <NaverPayProvider clientId={clientId} mallProfile={mallProfile} platform={isMobile ? 'MOBILE_WEB' : 'PC'}>
+      <NaverPayProvider clientId={clientId} mallProfile={mallProfile} platform={platformType}>
         <CartProvider
           dividesInvalidProducts={true}
           guestCartOption={{

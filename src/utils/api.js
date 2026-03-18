@@ -1,8 +1,8 @@
-import { isMobile } from 'react-device-detect';
-
 import { apiCreator, PLATFORM_TYPE } from '@shopby/shared';
 import { API_TYPE, API_BASE_URL_MAP, HTTP_REQUEST_METHOD, AUTHORIZATION_HEADER } from '@shopby/shared/constants';
 import { memberAuth } from '@shopby/shared/utils';
+
+import { getIsMobile } from './common';
 
 let clientId = '';
 let profile = 'real';
@@ -21,7 +21,7 @@ const fetchEnvironment = async () => {
  * shop sdk 에서 제공하는 api 사용을 위해 초기 세팅을 합니다.
  * @returns { clientId: string, profile: 'alpha' | 'real' }
  */
-export const initializeShopApi = async ({ platform = isMobile ? PLATFORM_TYPE.MOBILE_WEB : PLATFORM_TYPE.PC } = {}) => {
+export const initializeShopApi = async ({ platform = getIsMobile() ? PLATFORM_TYPE.MOBILE_WEB : PLATFORM_TYPE.PC } = {}) => {
   if (!clientId) {
     await fetchEnvironment();
   }
@@ -59,7 +59,7 @@ const makeHeaderOption = (headers, isFormData, baseURL) => {
     'Content-Type': 'application/json',
     clientId,
     version: '1.0',
-    platform: isMobile ? PLATFORM_TYPE.MOBILE_WEB : PLATFORM_TYPE.PC,
+    platform: getIsMobile() ? PLATFORM_TYPE.MOBILE_WEB : PLATFORM_TYPE.PC,
     ...headers,
   };
 

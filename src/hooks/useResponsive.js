@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import useMediaQuery, { BREAKPOINTS } from './useMediaQuery';
 
 /**
@@ -15,14 +17,16 @@ const useResponsive = () => {
   const isMdUp = useMediaQuery(BREAKPOINTS.md); // >= 768px
   const isLgUp = useMediaQuery(BREAKPOINTS.lg); // >= 1024px
 
-  const isMobile = !isMdUp; // < 768px
-  const isTablet = isMdUp && !isLgUp; // 768px ~ 1023px
-  const isDesktop = isLgUp; // >= 1024px
+  return useMemo(() => {
+    const isMobile = !isMdUp; // < 768px
+    const isTablet = isMdUp && !isLgUp; // 768px ~ 1023px
+    const isDesktop = isLgUp; // >= 1024px
 
-  // Shopby API 플랫폼 타입 (PC/MOBILE_WEB 섹션 코드 구분용)
-  const platformType = isDesktop ? 'PC' : 'MOBILE_WEB';
+    // Shopby API 플랫폼 타입 (PC/MOBILE_WEB 섹션 코드 구분용)
+    const platformType = isDesktop ? 'PC' : 'MOBILE_WEB';
 
-  return { isMobile, isTablet, isDesktop, platformType };
+    return { isMobile, isTablet, isDesktop, platformType };
+  }, [isMdUp, isLgUp]);
 };
 
 export default useResponsive;

@@ -1,6 +1,5 @@
 /* eslint-disable complexity */
 import { useEffect, useMemo, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 import { Helmet } from 'react-helmet';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
@@ -15,7 +14,7 @@ import {
 } from '@shopby/react-components';
 import { PLATFORM_TYPE, initializeNaverShoppingConfiguration } from '@shopby/shared';
 
-import { platformType } from '../../utils';
+import useResponsive from '../../hooks/useResponsive';
 
 import ExternalServiceConfig from './ExternalServiceConfig';
 import { removedDuplicateMetas, getPageScriptTitleTag } from './utils';
@@ -50,6 +49,7 @@ const Meta = () => {
   const { mallName, mall, externalServiceConfig, isLoading: isMallLoading } = useMallStateContext();
   const { productDetail } = useProductDetailStateContext();
   const { bannerMap, isLoading: isBannerLoading } = useBannerStateContext();
+  const { isMobile, platformType } = useResponsive();
   const platform = isMobile ? PLATFORM_TYPE.MOBILE_WEB : PLATFORM_TYPE.PC;
   const mallUrl = mall.url?.[platform.toLocaleLowerCase()];
 

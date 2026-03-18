@@ -19,6 +19,7 @@ import { CLAIM_TYPE_MAP } from '@shopby/shared';
 import OrderNoLabel from '../../components/OrderNoLabel';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
 import { deliverableProduct } from '../../utils';
+import { PageShell } from '../../components/Layout';
 
 import ClaimAccountForm from './ClaimAccountForm';
 import ClaimButtons from './ClaimButtons';
@@ -168,13 +169,16 @@ const Claim = () => {
 
   const claimType = useMemo(() => searchParams.get('claimType'), [searchParams]);
   return (
-    <ClaimProvider claimType={claimType} isGlobal={isGlobalForm}>
-      <NextActionProvider>
-        <FileProvider>
-          <ClaimContent claimType={claimType} />
-        </FileProvider>
-      </NextActionProvider>
-    </ClaimProvider>
+    // 클레임 폼 최대 너비 제한 및 반응형 패딩 적용
+    <PageShell maxWidth="4xl">
+      <ClaimProvider claimType={claimType} isGlobal={isGlobalForm}>
+        <NextActionProvider>
+          <FileProvider>
+            <ClaimContent claimType={claimType} />
+          </FileProvider>
+        </NextActionProvider>
+      </ClaimProvider>
+    </PageShell>
   );
 };
 

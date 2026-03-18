@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { isIOS } from 'react-device-detect';
 
 import { func } from 'prop-types';
 
@@ -36,7 +35,9 @@ const AppCardMobileAuthenticateInMember = ({ onClose, onComplete }) => {
       const { data } = await fetchOauthOpenIdAppCardTransNo();
       const { transNo } = data;
 
-      const deviceType = isIOS ? '1' : '3'; // 1: IOS WEB, 2: IOS APP, 3: AOS WEB, 4: AOS APP, 5: PC
+      // iOS 기기 감지: navigator.userAgent를 사용 (react-device-detect 의존성 제거)
+      const getIsIOS = () => typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const deviceType = getIsIOS() ? '1' : '3'; // 1: IOS WEB, 2: IOS APP, 3: AOS WEB, 4: AOS APP, 5: PC
       const nativeYN = 'N'; // ios/aos 에서 웹뷰를 통해 모듈을 바로 호출 시 Y 로 설정
       const storeTermYN = 'Y'; // 가맹점 약관 노출 시 Y 로 설정
       const url = `${APP_CARD_URL[mallProfile]}/APPCARD-AUTH/index.html#/?transNo=${transNo}&deviceType=${deviceType}&nativeYN=${nativeYN}&storeTermYN=${storeTermYN}`;

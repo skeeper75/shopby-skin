@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import ReviewCard from '../../components/ReviewCard';
+import { PageShell } from '../../components/Layout';
 import { fetchHttpRequest } from '../../utils/api';
 import { cn } from '../../lib/utils';
 
@@ -48,7 +49,8 @@ const Reviews = () => {
     : '0.0';
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 py-12">
+    <PageShell maxWidth="7xl">
+    <div className="px-4 py-12">
       {/* 페이지 제목 */}
       <div className="text-center mb-10">
         <h1 className="text-[28px] font-[700] text-[#424242] mb-3">고객 리뷰</h1>
@@ -125,6 +127,7 @@ const Reviews = () => {
         <ReviewPlaceholderGrid />
       )}
     </div>
+    </PageShell>
   );
 };
 

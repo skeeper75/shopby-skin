@@ -20,6 +20,7 @@ import CheckMemberPassword from '../../components/CheckMemberPassword';
 import { PI_TERMS_KEYS, PI_TERMS_MAP } from '../../constants/common';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
 import CheckOpenIdMember from '../MemberWithdrawal/CheckOpenIdMember';
+import { PageShell } from '../../components/Layout';
 
 import MemberModificationForm from './MemberModificationForm';
 
@@ -46,42 +47,45 @@ const MemberModification = () => {
   }, [visibleProfileForm]);
 
   return (
-    <MemberModificationProvider terms={terms} PI_TERMS_MAP={PI_TERMS_MAP}>
-      <OpenIdSignInProvider PI_TERMS_MAP={PI_TERMS_MAP} terms={terms}>
-        <IdentificationVerificationProvider>
-          <AgeVerificationProvider>
-            <CheckMemberPasswordProvider>
-              <MarketingReceiveAgreementProvider>
-                <VisibleComponent
-                  shows={visibleProfileForm}
-                  TruthyComponent={
-                    <>
-                      <CustomTermsProvider customCategoryType={CUSTOM_TERMS_CATEGORY_TYPE.MEMBER}>
-                        <MemberModificationForm />
-                      </CustomTermsProvider>
-                    </>
-                  }
-                  FalsyComponent={
-                    profile && (
-                      <VisibleComponent
-                        shows={profile.memberType === 'MALL'}
-                        TruthyComponent={<CheckMemberPassword onAuthenticationBtnClick={onAuthenticationBtnClick} />}
-                        FalsyComponent={
-                          <CheckOpenIdMember
-                            onAuthenticationBtnClick={onAuthenticationBtnClick}
-                            reauthenticate={true}
-                          />
-                        }
-                      />
-                    )
-                  }
-                />
-              </MarketingReceiveAgreementProvider>
-            </CheckMemberPasswordProvider>
-          </AgeVerificationProvider>
-        </IdentificationVerificationProvider>
-      </OpenIdSignInProvider>
-    </MemberModificationProvider>
+    // 회원 정보 수정 폼 최대 너비 제한 및 반응형 패딩 적용
+    <PageShell maxWidth="4xl">
+      <MemberModificationProvider terms={terms} PI_TERMS_MAP={PI_TERMS_MAP}>
+        <OpenIdSignInProvider PI_TERMS_MAP={PI_TERMS_MAP} terms={terms}>
+          <IdentificationVerificationProvider>
+            <AgeVerificationProvider>
+              <CheckMemberPasswordProvider>
+                <MarketingReceiveAgreementProvider>
+                  <VisibleComponent
+                    shows={visibleProfileForm}
+                    TruthyComponent={
+                      <>
+                        <CustomTermsProvider customCategoryType={CUSTOM_TERMS_CATEGORY_TYPE.MEMBER}>
+                          <MemberModificationForm />
+                        </CustomTermsProvider>
+                      </>
+                    }
+                    FalsyComponent={
+                      profile && (
+                        <VisibleComponent
+                          shows={profile.memberType === 'MALL'}
+                          TruthyComponent={<CheckMemberPassword onAuthenticationBtnClick={onAuthenticationBtnClick} />}
+                          FalsyComponent={
+                            <CheckOpenIdMember
+                              onAuthenticationBtnClick={onAuthenticationBtnClick}
+                              reauthenticate={true}
+                            />
+                          }
+                        />
+                      )
+                    }
+                  />
+                </MarketingReceiveAgreementProvider>
+              </CheckMemberPasswordProvider>
+            </AgeVerificationProvider>
+          </IdentificationVerificationProvider>
+        </OpenIdSignInProvider>
+      </MemberModificationProvider>
+    </PageShell>
   );
 };
 

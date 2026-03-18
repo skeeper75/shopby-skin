@@ -1,0 +1,27 @@
+/**
+ * 후니 디자인 시스템 토큰 - 브레이크포인트(Breakpoints)
+ *
+ * 반응형 레이아웃 경계값 정의. Tailwind CSS 기본 브레이크포인트와 동일.
+ *
+ * @MX:NOTE: [AUTO] SPEC-LAYOUT-001 반응형 브레이크포인트 토큰
+ * @MX:SPEC: SPEC-LAYOUT-001
+ */
+
+:root {
+  /* === 브레이크포인트 토큰 (--huni-breakpoint-*) === */
+  --huni-breakpoint-sm: 640px;
+  --huni-breakpoint-md: 768px;
+  --huni-breakpoint-lg: 1024px;
+  --huni-breakpoint-xl: 1280px;
+
+  /* === 컨테이너 최대 너비 토큰 (--huni-container-*) === */
+  --huni-container-sm: 640px;
+  --huni-container-md: 768px;
+  --huni-container-lg: 1024px;
+  --huni-container-xl: 1280px;
+
+  /* === 반응형 패딩 토큰 (--huni-padding-*) === */
+  --huni-padding-mobile: 16px;
+  --huni-padding-tablet: 24px;
+  --huni-padding-desktop: 32px;
+}

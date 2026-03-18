@@ -1,12 +1,14 @@
 import React from 'react';
 
+import { PageShell } from '../../components/Layout';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 import { cn } from '../../lib/utils';
 
 // 이용약관 + 개인정보처리방침 탭 전환 페이지
 const Terms = () => {
   return (
-    <div className="max-w-[900px] mx-auto px-4 py-12">
+    <PageShell maxWidth="5xl">
+    <div className="px-4 py-12">
       {/* 페이지 제목 */}
       <h1 className="text-[24px] font-[700] text-[#424242] mb-8 text-center">약관 및 정책</h1>
 
@@ -38,6 +40,7 @@ const Terms = () => {
         </TabsContent>
       </Tabs>
     </div>
+    </PageShell>
   );
 };
 

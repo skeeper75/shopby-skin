@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 
 import { ProductSearchProvider, CategoriesProvider, VisibleComponent } from '@shopby/react-components';
 
+import { PageShell } from '../../components/Layout';
 import PrintFilterSidebar from '../../components/PrintFilter/PrintFilterSidebar';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
 
@@ -40,6 +41,7 @@ const DisplayCategoryList = () => {
   }
 
   return (
+    <PageShell maxWidth="7xl">
     <ProductSearchProvider>
       <VisibleComponent
         shows={!keyword}
@@ -81,6 +83,7 @@ const DisplayCategoryList = () => {
         </div>
       </div>
     </ProductSearchProvider>
+    </PageShell>
   );
 };
 

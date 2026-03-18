@@ -70,6 +70,21 @@ assets/
 
 ---
 
+### `src/design-system/tokens/` (SPEC-LAYOUT-001)
+
+```
+design-system/tokens/
+├── index.css               # 모든 토큰 import
+├── breakpoints.css         # 반응형 브레이크포인트 CSS 변수 (sm: 640px, md: 768px, lg: 1024px, xl: 1280px)
+└── responsive.css          # 반응형 타이포그래피 유틸리티 클래스 (.huni-heading-xl, .huni-heading-lg, .huni-heading-md)
+```
+
+**역할**: 반응형 디자인을 위한 표준 브레이크포인트와 반응형 타이포그래피를 관리합니다.
+- **breakpoints.css**: Tailwind 호환 브레이크포인트를 CSS 변수로 정의 (모든 페이지에서 일관된 반응형 기준점 제공)
+- **responsive.css**: clamp()를 활용한 유동적 타이포그래피 (모바일~데스크톱 자동 스케일)
+
+---
+
 ### `src/components/`
 
 재사용 가능한 UI 컴포넌트를 도메인별로 분류하여 보관합니다. 75개 컴포넌트 디렉토리가 존재하며, 각 디렉토리는 `index.jsx`와 관련 CSS 파일로 구성됩니다.
@@ -78,7 +93,7 @@ assets/
 
 | 카테고리 | 예시 컴포넌트 | 설명 |
 |---------|-------------|------|
-| Layout | Header, Footer, Nav | 공통 레이아웃 구성 요소 |
+| Layout | Header, Footer, Nav, **PageShell, ResponsiveGrid, SplitLayout, FormLayout** | 공통 레이아웃 구성 요소 + 반응형 레이아웃 컴포넌트 (SPEC-LAYOUT-001) |
 | Product | ProductList, ProductCard, ProductDetail | 상품 표시 컴포넌트 |
 | Cart | CartItem, CartSummary | 장바구니 UI |
 | Order | OrderForm, PaymentMethod | 주문 폼 컴포넌트 |
@@ -87,6 +102,23 @@ assets/
 | Banner | AdminBanner, CustomBanner | 배너 표시 |
 | Popup | DesignPopup | 디자인 팝업 |
 | **Admin** | AdminLayout, AdminSidebar, DataTable, StatusBadge, SearchBar, DatePicker, BulkActionBar, FilePreview, OrderDetailPanel, PrintSheet, SMSDialog, StatCard | **관리자 백오피스 UI (SPEC-SKIN-005)** |
+
+#### 반응형 레이아웃 컴포넌트 (SPEC-LAYOUT-001)
+
+```
+components/Layout/
+├── PageShell.jsx           # 페이지 컨테이너 (max-width, 중앙 정렬, 반응형 패딩)
+├── ResponsiveGrid.jsx      # 반응형 그리드 (뷰포트별 컬럼 수 자동 조정)
+├── SplitLayout.jsx         # 좌우 분할 레이아웃 (main + sidebar, 데스크톱 lg: 활성화)
+├── FormLayout.jsx          # 반응형 폼 레이아웃 (모바일 스택 / 데스크톱 수평)
+└── index.js                # re-export
+```
+
+**주요 기능**:
+- **PageShell**: 모든 페이지의 컨테이너 역할, maxWidth prop으로 4xl~7xl 지원, 반응형 패딩 자동 적용
+- **ResponsiveGrid**: cols prop으로 브레이크포인트별 컬럼 수 지정 (기본: mobile 1, tablet 2, desktop 3-4)
+- **SplitLayout**: Cart, OrderSheet 등에서 데스크톱 2단 레이아웃 제공
+- **FormLayout**: Claim, MemberModification 등 폼 페이지에서 모바일 스택 / 데스크톱 수평 배치
 
 ---
 
@@ -152,7 +184,7 @@ router/
 
 ### `src/hooks/`
 
-React 상태 로직을 재사용 가능하게 추출한 커스텀 훅 5개가 위치합니다.
+React 상태 로직을 재사용 가능하게 추출한 커스텀 훅 7개가 위치합니다.
 
 ```
 hooks/
@@ -161,10 +193,14 @@ hooks/
 ├── useModal.js                # 모달 제어 훅
 ├── useCart.js                 # 장바구니 상태 훅
 ├── useScroll.js               # 스크롤 이벤트 처리 훅
-└── useAdminAuth.js            # 관리자 인증 상태 훅 (SPEC-SKIN-005)
+├── useAdminAuth.js            # 관리자 인증 상태 훅 (SPEC-SKIN-005)
+├── useMediaQuery.js           # 미디어 쿼리 기반 뷰포트 감지 훅 (SPEC-LAYOUT-001)
+└── useResponsive.js           # 반응형 상태 관리 훅 (isMobile, isTablet, isDesktop) (SPEC-LAYOUT-001)
 ```
 
 **역할**: 컴포넌트에서 반복되는 상태 로직을 훅으로 분리하여 코드 재사용성을 높입니다.
+- **useMediaQuery**: window.matchMedia를 래핑하여 미디어 쿼리 변화 감지
+- **useResponsive**: useMediaQuery 기반으로 현재 뷰포트(mobile/tablet/desktop)의 boolean 값 제공
 
 ---
 

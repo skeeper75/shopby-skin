@@ -9,6 +9,8 @@ import {
   InfiniteScrollLoader,
 } from '@shopby/react-components';
 
+import { PageShell } from '../../components/Layout';
+
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import ListSkeleton from '../../components/ListSkeleton/ListSkeleton';
 import Sanitized from '../../components/Sanitized';
@@ -249,9 +251,11 @@ const FAQContent = () => {
 };
 
 const FAQ = () => (
-  <ArticleProvider>
-    <FAQContent />
-  </ArticleProvider>
+  <PageShell maxWidth="5xl">
+    <ArticleProvider>
+      <FAQContent />
+    </ArticleProvider>
+  </PageShell>
 );
 
 export default FAQ;

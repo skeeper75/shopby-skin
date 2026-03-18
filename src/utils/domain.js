@@ -1,9 +1,11 @@
-import { isMobile } from 'react-device-detect';
+import { getIsMobile } from './common';
 
 const shouldRedirect = () => {
   const { pathname, hostname } = location;
 
   if (hostname === 'localhost') return false;
+
+  const isMobile = getIsMobile();
 
   if (isMobile && pathname.startsWith('/m')) return false;
 
@@ -17,7 +19,7 @@ export const getRedirectUri = (mallUrl) => {
 
   const { pathname, search } = location;
 
-  return `${mallUrl[isMobile ? 'mobile' : 'pc']}${pathname.replace('/m', '')}${search}`;
+  return `${mallUrl[getIsMobile() ? 'mobile' : 'pc']}${pathname.replace('/m', '')}${search}`;
 };
 
 export const goTo = (uri) => {

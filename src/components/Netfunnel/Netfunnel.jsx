@@ -1,14 +1,16 @@
 /* eslint-disable new-cap */
 /* eslint-disable camelcase */
 import { useEffect } from 'react';
-import { isMobile } from 'react-device-detect';
 
 import cookie from 'js-cookie';
 import PropTypes from 'prop-types';
 
+import useResponsive from '../../hooks/useResponsive';
+
 const skinId = 'netfunnel-skin-id';
 
 const Netfunnel = ({ tc, activeNetfunnel, setActiveNetfunnel, children }) => {
+  const { isMobile } = useResponsive();
   const { TS_COOKIE_ID } = window.NetFunnel;
   const enableNetfunnel = tc?.use && tc?.id;
   const isActiveNetfunnel = enableNetfunnel && activeNetfunnel;

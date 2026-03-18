@@ -1,5 +1,4 @@
 import { createRef, lazy, useEffect, useMemo, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 import { useTranslation } from 'react-i18next';
 import { useParams, useLocation } from 'react-router-dom';
 
@@ -28,10 +27,12 @@ import {
 import { getPlatformByMobile, isSignedIn, parsePhoneNumber, PG_TYPES_MAP } from '@shopby/shared';
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
+import { PageShell, SplitLayout } from '../../components/Layout';
 import PrintFileUpload from '../../components/PrintFileUpload/PrintFileUpload';
 import { EXTERNAL_CUSTOM_ORDER_SHEET_TERMS } from '../../constants';
 import useIslandShipping from '../../hooks/useIslandShipping';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
+import useResponsive from '../../hooks/useResponsive';
 import { convertBooleanToYorN, getDefaultCountryCode } from '../../utils';
 
 import CashReceipt from './CashReceipt';
@@ -51,6 +52,7 @@ const AppCardAuthenticateInOrder = lazy(() =>
 
 const OrderSheetContent = () => {
   const { state } = useLocation();
+  const { isMobile } = useResponsive();
   const [printFiles, setPrintFiles] = useState([]);
   const orderSheetRef = {
     ordererInfoFormRef: {
@@ -261,7 +263,7 @@ const OrderSheetContent = () => {
       const freeGiftInfos = Array.from(selectedFreeGiftInfoMap?.values() || []);
 
       await order({
-        platform: isMobile ? 'MOBILE_WEB' : 'PC',
+        platform: isMobile ? 'MOBILE_WEB' : 'PC', // useResponsive의 isMobile 사용
         confirmUrl: `${location.origin}/order/confirm?deliverable=${convertBooleanToYorN(hasDeliverableProduct)}`,
         customTermsAgrees,
         agreementTermsAgrees,
@@ -294,62 +296,77 @@ const OrderSheetContent = () => {
   const visibleCashReceipt = orderConfig?.cashReceipt && selectedPayMethod?.payType === 'ACCOUNT';
 
   return (
-    <div className="order-sheet">
-      <div className="order-sheet__item">
-        <VisibleComponent
-          shows={isSignedIn() && mallJoinConfig?.isMemberInfoUpdatableWithOrdererInfo}
-          TruthyComponent={
-            <Checkbox
-              label="주문자의 이메일, 전화번호와 배송지 주소를 회원 정보에 반영합니다."
-              className="order-sheet__notice-checkbox"
-              onChange={handleCheckboxChange}
-            />
+    // 반응형 2단 레이아웃: 데스크톱에서 좌측 8/12 주문 폼, 우측 4/12 결제 정보
+    <PageShell maxWidth="5xl" padding="responsive">
+      <div className="order-sheet">
+        <SplitLayout
+          main={
+            <>
+              <div className="order-sheet__item">
+                <VisibleComponent
+                  shows={isSignedIn() && mallJoinConfig?.isMemberInfoUpdatableWithOrdererInfo}
+                  TruthyComponent={
+                    <Checkbox
+                      label="주문자의 이메일, 전화번호와 배송지 주소를 회원 정보에 반영합니다."
+                      className="order-sheet__notice-checkbox"
+                      onChange={handleCheckboxChange}
+                    />
+                  }
+                />
+              </div>
+              <OrdererInfoForm refs={orderSheetRef.ordererInfoFormRef} />
+              {hasDeliverableProduct && <ShippingAddressInfoForm refs={orderSheetRef.shippingAddressInfoFormRef} />}
+              <OrderProductTable />
+
+              {/* 인쇄 파일 업로드 섹션 */}
+              <section className="l-panel order-sheet__print-file">
+                <p className="order-sheet__section-title" style={{ fontWeight: 'bold', marginBottom: '12px' }}>
+                  인쇄 원고 파일 업로드
+                </p>
+                <p className="text-xs text-[#979797] tracking-[-0.05em] mb-3">
+                  주문하신 인쇄 상품의 원고 파일을 업로드해주세요. (PDF / AI / PSD / JPG / PNG, 최대 100MB)
+                </p>
+                <PrintFileUpload onFilesChange={setPrintFiles} />
+              </section>
+
+              <PromotionController />
+              <FreeGiftInfos />
+              <PayMethodSelector refs={orderSheetRef.depositBankFormRef} />
+              {visibleCashReceipt && <CashReceipt cashReceiptRequired={orderConfig.cashReceiptRequired} />}
+              <TermsChecker ref={orderSheetRef.termsCheckerRef} />
+            </>
           }
+          aside={
+            <>
+              <PaymentInfo />
+              <Button
+                shopby-script-action="PURCHASE_PRODUCT"
+                className="order-sheet__pay-btn"
+                label={'결제 하기'}
+                onClick={handleOrderBtnClick}
+              />
+            </>
+          }
+          asideSticky
         />
+        {/* AppCardAuthenticateInOrder는 전체 화면 모달이므로 SplitLayout 외부에 배치 */}
+        {isAppCardAuthenticateFullModalOpen && (
+          <AppCardAuthenticateInOrder
+            onClose={() => setAppCardAuthenticateFullModalOpen(false)}
+            onRetry={() => {
+              setAppCardAuthenticateFullModalOpen(false);
+              handleOrderBtnClick();
+            }}
+          />
+        )}
       </div>
-      <OrdererInfoForm refs={orderSheetRef.ordererInfoFormRef} />
-      {hasDeliverableProduct && <ShippingAddressInfoForm refs={orderSheetRef.shippingAddressInfoFormRef} />}
-      <OrderProductTable />
-
-      {/* 인쇄 파일 업로드 섹션 */}
-      <section className="l-panel order-sheet__print-file">
-        <p className="order-sheet__section-title" style={{ fontWeight: 'bold', marginBottom: '12px' }}>
-          인쇄 원고 파일 업로드
-        </p>
-        <p className="text-xs text-[#979797] tracking-[-0.05em] mb-3">
-          주문하신 인쇄 상품의 원고 파일을 업로드해주세요. (PDF / AI / PSD / JPG / PNG, 최대 100MB)
-        </p>
-        <PrintFileUpload onFilesChange={setPrintFiles} />
-      </section>
-
-      <PromotionController />
-      <FreeGiftInfos />
-      <PaymentInfo />
-      <PayMethodSelector refs={orderSheetRef.depositBankFormRef} />
-      {visibleCashReceipt && <CashReceipt cashReceiptRequired={orderConfig.cashReceiptRequired} />}
-      <TermsChecker ref={orderSheetRef.termsCheckerRef} />
-      <Button
-        shopby-script-action="PURCHASE_PRODUCT"
-        className="order-sheet__pay-btn"
-        label={'결제 하기'}
-        onClick={handleOrderBtnClick}
-      />
-
-      {isAppCardAuthenticateFullModalOpen && (
-        <AppCardAuthenticateInOrder
-          onClose={() => setAppCardAuthenticateFullModalOpen(false)}
-          onRetry={() => {
-            setAppCardAuthenticateFullModalOpen(false);
-            handleOrderBtnClick();
-          }}
-        />
-      )}
-    </div>
+    </PageShell>
   );
 };
 
 const OrderSheet = () => {
   const { clientId, mallProfile, exchangeTo } = useMallStateContext();
+  const { isMobile } = useResponsive();
 
   const defaultShippingAddressInfo = {
     countryCd: getDefaultCountryCode(exchangeTo),

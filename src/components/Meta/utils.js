@@ -1,8 +1,7 @@
-import { isMobile } from 'react-device-detect';
-
 import { sanitizeHTMLToNoTags, unescapeHTML } from '@shopby/shared';
 
 import { META_TAG_KEY } from '../../constants/common';
+import { getIsMobile } from '../../utils/common';
 
 const META_PATTERN = /<meta\s+[^>]*\/?>/g;
 const TITLE_PATTERN = /<title[^>]*>[^<]*<\/title>/g;
@@ -30,7 +29,7 @@ const metaTagCreatorMap = {
   },
   [META_TAG_KEY.EVENT]: ({ eventInfo, mallName, bannerMap }) => {
     const title = eventInfo?.label ? eventInfo.label : mallName;
-    const imageUrl = isMobile ? eventInfo?.mobileImageUrl : eventInfo?.pcImageUrl;
+    const imageUrl = getIsMobile() ? eventInfo?.mobileImageUrl : eventInfo?.pcImageUrl;
     const banner = bannerMap.get('LOGO') ?? {};
 
     return {

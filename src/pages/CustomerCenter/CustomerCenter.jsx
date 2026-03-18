@@ -11,6 +11,8 @@ import {
   useAuthStateContext,
   useModalActionContext,
 } from '@shopby/react-components';
+
+import { PageShell } from '../../components/Layout';
 import { isSignedIn } from '@shopby/shared';
 
 import { FAQ_BOARD_ID } from '../../constants/board';
@@ -293,9 +295,11 @@ const CustomerCenterHubContent = () => {
 };
 
 const CustomerCenter = () => (
-  <ArticleProvider>
-    <CustomerCenterHubContent />
-  </ArticleProvider>
+  <PageShell maxWidth="5xl">
+    <ArticleProvider>
+      <CustomerCenterHubContent />
+    </ArticleProvider>
+  </PageShell>
 );
 
 export default CustomerCenter;

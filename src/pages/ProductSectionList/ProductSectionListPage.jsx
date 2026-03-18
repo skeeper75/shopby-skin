@@ -1,9 +1,13 @@
 import { ProductSectionListProvider } from '@shopby/react-components';
 
+import { PageShell } from '../../components/Layout';
+
 import ProductSectionListWrap from './ProductSectionListWrap';
 
 export const ProductSectionListPage = () => (
-  <ProductSectionListProvider>
-    <ProductSectionListWrap />
-  </ProductSectionListProvider>
+  <PageShell maxWidth="7xl">
+    <ProductSectionListProvider>
+      <ProductSectionListWrap />
+    </ProductSectionListProvider>
+  </PageShell>
 );

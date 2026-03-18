@@ -235,80 +235,89 @@ const MyPage = () => {
   if (!profile) return <></>;
 
   return (
-    <>
-      <ProfileGradeProvider>
-        <MemberInformation />
-      </ProfileGradeProvider>
-      <CouponProvider>
-        <ProfileLikeProvider>
-          <ProfileAccumulationProvider>
-            <InquiryProvider>
-              <ProfileProductInquiryProvider>
-                <ProfileProductReviewProvider>
-                  <MyOrderProvider willOrdersBeAccumulated={true}>
-                    <MyPageSummary />
-                  </MyOrderProvider>
-                </ProfileProductReviewProvider>
-              </ProfileProductInquiryProvider>
-            </InquiryProvider>
-          </ProfileAccumulationProvider>
-        </ProfileLikeProvider>
-      </CouponProvider>
-      <div className="my-orders">
-        <Link className="my-orders__link" to="/orders">
-          주문/배송 조회
-        </Link>
-        <Link className="my-orders__link" to="/claims">
-          클레임 내역
-        </Link>
-      </div>
+    // @MX:NOTE: [AUTO] REQ-R10 - 데스크톱에서 3/12 사이드바 + 9/12 콘텐츠 2컬럼 레이아웃, 모바일은 기존 단일 컬럼 유지
+    <div className="my-page max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+        {/* 사이드바: 데스크톱에서 좌측 3/12 네비게이션, 모바일에서는 콘텐츠 하단에 표시 */}
+        <aside className="lg:col-span-3 order-last lg:order-first">
+          <div className="l-panel">
+            <VisibleComponent
+              shows={boardConfig.productReviewConfig?.name}
+              TruthyComponent={
+                <Link className="my-link" to="/my-page/product-review">
+                  {boardConfig.productReviewConfig?.name ?? '상품후기'}
+                  <IconBtn className="my-link__ico" iconType="angle-down" />
+                </Link>
+              }
+            />
 
-      <div className="l-panel">
-        <VisibleComponent
-          shows={boardConfig.productReviewConfig?.name}
-          TruthyComponent={
-            <Link className="my-link" to="/my-page/product-review">
-              {boardConfig.productReviewConfig?.name ?? '상품후기'}
+            <VisibleComponent
+              shows={boardConfig.productInquiryConfig?.name}
+              TruthyComponent={
+                <Link className="my-link" to="/my-page/product-inquiry">
+                  {boardConfig.productInquiryConfig?.name ?? '상품문의'}
+                  <IconBtn className="my-link__ico" iconType="angle-down" />
+                </Link>
+              }
+            />
+            <VisibleComponent
+              shows={boardConfig.inquiryConfig?.name}
+              TruthyComponent={
+                <Link className="my-link" to="/my-page/personal-inquiry">
+                  {boardConfig.inquiryConfig?.name ?? '1:1문의'}
+                  <IconBtn className="my-link__ico" iconType="angle-down" />
+                </Link>
+              }
+            />
+            <Link className="my-link" to="/member-modification">
+              회원정보 수정
               <IconBtn className="my-link__ico" iconType="angle-down" />
             </Link>
-          }
-        />
-
-        <VisibleComponent
-          shows={boardConfig.productInquiryConfig?.name}
-          TruthyComponent={
-            <Link className="my-link" to="/my-page/product-inquiry">
-              {boardConfig.productInquiryConfig?.name ?? '상품문의'}
+            <Link className="my-link" to="/my-page/shipping-address">
+              배송지 관리
               <IconBtn className="my-link__ico" iconType="angle-down" />
             </Link>
-          }
-        />
-        <VisibleComponent
-          shows={boardConfig.inquiryConfig?.name}
-          TruthyComponent={
-            <Link className="my-link" to="/my-page/personal-inquiry">
-              {boardConfig.inquiryConfig?.name ?? '1:1문의'}
-              <IconBtn className="my-link__ico" iconType="angle-down" />
-            </Link>
-          }
-        />
-        <Link className="my-link" to="/member-modification">
-          회원정보 수정
-          <IconBtn className="my-link__ico" iconType="angle-down" />
-        </Link>
-        <Link className="my-link" to="/my-page/shipping-address">
-          배송지 관리
-          <IconBtn className="my-link__ico" iconType="angle-down" />
-        </Link>
-      </div>
+          </div>
 
-      <div className="my-membership">
-        <Button className="my-membership__btn" label="로그아웃" onClick={logoutBtnClick} />
-        <Link className="my-membership__btn btn" to="/member-withdrawal">
-          회원 탈퇴
-        </Link>
+          <div className="my-membership">
+            <Button className="my-membership__btn" label="로그아웃" onClick={logoutBtnClick} />
+            <Link className="my-membership__btn btn" to="/member-withdrawal">
+              회원 탈퇴
+            </Link>
+          </div>
+        </aside>
+
+        {/* 메인 콘텐츠: 데스크톱에서 우측 9/12 영역 */}
+        <main className="lg:col-span-9">
+          <ProfileGradeProvider>
+            <MemberInformation />
+          </ProfileGradeProvider>
+          <CouponProvider>
+            <ProfileLikeProvider>
+              <ProfileAccumulationProvider>
+                <InquiryProvider>
+                  <ProfileProductInquiryProvider>
+                    <ProfileProductReviewProvider>
+                      <MyOrderProvider willOrdersBeAccumulated={true}>
+                        <MyPageSummary />
+                      </MyOrderProvider>
+                    </ProfileProductReviewProvider>
+                  </ProfileProductInquiryProvider>
+                </InquiryProvider>
+              </ProfileAccumulationProvider>
+            </ProfileLikeProvider>
+          </CouponProvider>
+          <div className="my-orders">
+            <Link className="my-orders__link" to="/orders">
+              주문/배송 조회
+            </Link>
+            <Link className="my-orders__link" to="/claims">
+              클레임 내역
+            </Link>
+          </div>
+        </main>
       </div>
-    </>
+    </div>
   );
 };
 
