@@ -7,3 +7,31 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/* SPEC-LAYOUT-002 REQ-C01: 데스크탑(1024px+) @shopby 컴포넌트 너비 확장 오버라이드
+ * @MX:NOTE: [AUTO] @shopby aurora.css가 .page__content를 max-width:500px, .page-inner를 max-width:1000px으로 제한함
+ * @MX:WARN: !important 사용 - @shopby 벤더 CSS 명시도(specificity) 우선순위 극복을 위해 불가피
+ * @MX:REASON: 벤더 CSS를 직접 수정할 수 없으므로 globals.css에서 오버라이드 필요
+ */
+@media (min-width: 1024px) {
+  /* 내부 페이지 컨테이너를 1280px까지 확장 */
+  .page-inner {
+    max-width: 1280px !important;
+  }
+
+  /* 콘텐츠 영역 너비를 전체로 확장 */
+  .page__content.site {
+    width: 100% !important;
+    max-width: 1280px !important;
+  }
+
+  /* 하단 네비게이션 너비 동기화 */
+  .page .bottom-nav {
+    max-width: 1280px !important;
+  }
+
+  /* 오프캔버스 오버레이 너비 동기화 */
+  .page .offcanvas__dim {
+    max-width: 1280px !important;
+  }
+}

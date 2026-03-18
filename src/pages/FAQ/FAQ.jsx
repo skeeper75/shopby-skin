@@ -109,10 +109,10 @@ const FAQContent = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [openItem, setOpenItem] = useState('');
 
-  const { boardsCategories } = useMallStateContext();
-  const {
-    boardPosts: { totalCount },
-  } = useArticleStateContext();
+  const { boardsCategories = [] } = useMallStateContext();
+  const { boardPosts } = useArticleStateContext();
+  // boardPosts가 초기화 전에 null/undefined일 수 있어 방어적 기본값 적용
+  const totalCount = boardPosts?.totalCount ?? 0;
   const { fetchBoardPosts } = useArticleActionContext();
   const { catchError } = useErrorBoundaryActionContext();
 

@@ -278,12 +278,16 @@ const Header = () => {
     [isMain, hasCartBtnOnHeader, hasCancelBtnOnHeader]
   );
 
-  // 서브 페이지 (기존 모바일 전용 레이아웃 유지)
+  // 서브 페이지 - 모바일: 뒤로가기 + 중앙 제목, 데스크톱: 제목 좌측 정렬
   if (!isMain) {
     return (
       <header className={cn('header header--sub', 'sticky top-0 z-40 bg-white border-b')}>
-        {hasBackBtnOnHeader && <BackButton label="페이지 뒤로 가기" className="header__left-btn" />}
-        <Content isMain={isMain} hasSearchKeywordHeader={hasSearchKeywordHeader} title={title} />
+        {/* 모바일에서만 뒤로가기 버튼 표시 */}
+        {hasBackBtnOnHeader && <BackButton label="페이지 뒤로 가기" className="header__left-btn lg:hidden" />}
+        {/* 데스크톱에서 제목 좌측 정렬, 모바일에서 중앙 정렬(기존 유지) */}
+        <div className="lg:text-left">
+          <Content isMain={isMain} hasSearchKeywordHeader={hasSearchKeywordHeader} title={title} />
+        </div>
         {canShowShoppingBasket && (
           <div className="header__cart-btn">
             <Link to="/cart">

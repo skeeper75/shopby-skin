@@ -44,24 +44,26 @@ const SignUp = () => {
   }, []);
 
   return (
-    // 데스크탑에서 카드 스타일 중앙 정렬 (최대 448px), 모바일은 전체 너비
+    // 데스크탑에서 카드 스타일 중앙 정렬 (최대 480px), 모바일은 전체 너비
     <PageShell maxWidth="md" className="lg:py-12">
-      <SignUpProvider terms={terms} PI_TERMS_MAP={PI_TERMS_MAP}>
-        <AgeVerificationProvider>
-          <IdentificationVerificationProvider>
-            <CustomTermsProvider customCategoryType={CUSTOM_TERMS_CATEGORY_TYPE.MEMBER}>
-              <MarketingReceiveAgreementProvider>
-                <div className="sign-up-form">
-                  <SignUpForm refs={refs} />
-                  <TermsForm setIsTermsFullModalOpen={() => setIsTermsFullModalOpen(true)} />
-                  <SignUpButton refs={refs} />
-                </div>
-              </MarketingReceiveAgreementProvider>
-            </CustomTermsProvider>
-            {isTermsFullModalOpen && <TermsModal onClose={() => setIsTermsFullModalOpen(false)} />}
-          </IdentificationVerificationProvider>
-        </AgeVerificationProvider>
-      </SignUpProvider>
+      <div className="lg:max-w-[480px] lg:mx-auto lg:shadow-md lg:rounded-lg lg:bg-white lg:p-8">
+        <SignUpProvider terms={terms} PI_TERMS_MAP={PI_TERMS_MAP}>
+          <AgeVerificationProvider>
+            <IdentificationVerificationProvider>
+              <CustomTermsProvider customCategoryType={CUSTOM_TERMS_CATEGORY_TYPE.MEMBER}>
+                <MarketingReceiveAgreementProvider>
+                  <div className="sign-up-form">
+                    <SignUpForm refs={refs} />
+                    <TermsForm setIsTermsFullModalOpen={() => setIsTermsFullModalOpen(true)} />
+                    <SignUpButton refs={refs} />
+                  </div>
+                </MarketingReceiveAgreementProvider>
+              </CustomTermsProvider>
+              {isTermsFullModalOpen && <TermsModal onClose={() => setIsTermsFullModalOpen(false)} />}
+            </IdentificationVerificationProvider>
+          </AgeVerificationProvider>
+        </SignUpProvider>
+      </div>
     </PageShell>
   );
 };
