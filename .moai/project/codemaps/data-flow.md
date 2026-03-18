@@ -1,39 +1,35 @@
-# 데이터 흐름 - @shopby/react-skin (Aurora Skin)
-
-> 생성일: 2026-03-17
-
----
+# 데이터 흐름 - @shopby/react-skin
 
 ## 전체 데이터 흐름 개요
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│ 1. 앱 초기화                                                          │
-│    public/environment.json → clientId, profile, tc 획득              │
-│    → apiCreator() SDK 초기화 → React DOM 마운트                       │
-└──────────────────────────┬──────────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│ 2. Provider 체인 초기화                                               │
-│    MallProvider → AuthProvider → OrderConfigProvider → ...           │
-│    각 Provider가 Shopby API 호출하여 초기 상태 로드                    │
-└──────────────────────────┬──────────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│ 3. 페이지 렌더링                                                       │
-│    Router → 현재 경로에 맞는 페이지 컴포넌트 렌더                       │
-│    페이지는 useXxxStateContext()로 Context 상태 구독                    │
-└──────────────────────────┬──────────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│ 4. 사용자 인터랙션                                                     │
-│    액션 발생 → useXxxActionContext().someAction() 호출                │
-│    → fetchHttpRequest() API 호출                                     │
-│    → 응답으로 Context 상태 업데이트 → 리렌더링                          │
-└─────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│ 1. 앱 초기화                                              │
+│    public/environment.json → clientId, profile, tc 획득  │
+│    → apiCreator() SDK 초기화 → React DOM 마운트          │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│ 2. Provider 체인 초기화                                   │
+│    MallProvider → AuthProvider → OrderConfig → ...      │
+│    각 Provider가 Shopby API 호출하여 초기 상태 로드      │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│ 3. 페이지 렌더링                                          │
+│    Router → 현재 경로에 맞는 페이지 컴포넌트 렌더       │
+│    페이지는 useXxxStateContext()로 Context 상태 구독    │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│ 4. 사용자 인터랙션                                        │
+│    액션 발생 → useXxxActionContext().someAction() 호출  │
+│    → fetchHttpRequest() API 호출                        │
+│    → 응답으로 Context 상태 업데이트 → 리렌더링          │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -60,25 +56,25 @@ setPolyfill()
         │
         ▼
 createRoot(document.getElementById('app'))
-  .render(<BrowserRouter><App clientId profile tc /></BrowserRouter>)
+  .render(<BrowserRouter><App .../></BrowserRouter>)
 ```
 
 ---
 
 ## 2단계: Provider 체인 상태 초기화
 
-각 Provider는 마운트 시 또는 필요 시점에 Shopby API를 호출하여 상태를 채웁니다.
+각 Provider는 마운트 시 또는 필요 시점에 Shopby API를 호출하여 상태를 채움.
 
 | Provider | 로드 시점 | 로드 데이터 |
-|---|---|---|
-| `MallProvider` | 마운트 즉시 | 쇼핑몰 기본 정보 (이름, 로고, 테마 등) |
-| `AuthProvider` | 마운트 즉시 | 로그인 상태, 회원 프로필 |
-| `OrderConfigProvider` | `BannerContent` 마운트 시 | 주문 관련 설정값 |
-| `BoardConfigurationProvider` | `Layout` 마운트 시 | 게시판 설정 |
-| `NaverShoppingConfigurationProvider` | `Layout` 마운트 시 | 네이버 쇼핑 연동 설정 |
-| `BannerProvider` | `BannerContent` 마운트 시 | 배너 데이터 (메모리 캐시 180초) |
-| `CartProvider` | 인증 상태 변경 시 | 장바구니 상품 수 |
-| `ProductDetailProvider` | ProductDetail 페이지 마운트 시 | 상품 상세 정보 |
+|----------|----------|-----------|
+| MallProvider | 마운트 즉시 | 쇼핑몰 기본 정보 (이름, 로고, 테마) |
+| AuthProvider | 마운트 즉시 | 로그인 상태, 회원 프로필 |
+| OrderConfigProvider | BannerContent 마운트 시 | 주문 관련 설정값 |
+| BoardConfigurationProvider | Layout 마운트 시 | 게시판 설정 |
+| NaverShoppingConfigurationProvider | Layout 마운트 시 | 네이버 쇼핑 연동 설정 |
+| BannerProvider | BannerContent 마운트 시 | 배너 데이터 (메모리 캐시 180초) |
+| CartProvider | 인증 상태 변경 시 | 장바구니 상품 수 |
+| ProductDetailProvider | ProductDetail 페이지 마운트 시 | 상품 상세 정보 |
 
 ---
 
@@ -260,7 +256,7 @@ useAdminAuth 훅으로 인증 확인
   ├── services/admin/vendor.js (거래처)
   ├── services/admin/board.js (게시판)
   ├── services/admin/coupon.js (쿠폰)
-  └── [기타 14개 서비스]
+  └── [기타 6개 서비스]
         │
         ▼
 Shopby API 호출
@@ -272,7 +268,7 @@ Shopby API 호출
         ▼
 응답 처리
   → 성공: 상태 업데이트 → UI 리렌더링
-  → 실패: 에러 메시지 표시 (useModalActionContext().openAlert())
+  → 실패: 에러 메시지 표시
 ```
 
 ---
@@ -290,10 +286,10 @@ makeApiUrl() - URL 구성
         ▼
 makeHeaderOption() - 헤더 구성
   ├── Content-Type: application/json
-  ├── clientId (environment.json에서 로드된 값)
+  ├── clientId (environment.json에서 로드)
   ├── version: '1.0'
-  ├── platform: 'MOBILE_WEB' | 'PC' (react-device-detect)
-  └── Authorization: {JWT 토큰} (로그인 상태이고 Shop API 요청인 경우)
+  ├── platform: 'MOBILE_WEB' | 'PC'
+  └── Authorization: {JWT 토큰}
         │
         ▼
 fetch(uri, request) 실행
@@ -318,7 +314,7 @@ fetch(uri, request) 실행
                       ▼             ▼
                  토큰 갱신 후    response.ok?
                  재요청          ┌───┴───┐
-                 (reRequestShop) │       │
+                                 │       │
                                  ▼       ▼
                               return   throw data
                               data     (에러 처리)
@@ -330,34 +326,31 @@ fetch(uri, request) 실행
 
 ### Context 기반 전역 상태
 
-Aurora Skin은 전용 상태 관리 라이브러리(Redux, Zustand 등)를 사용하지 않습니다. 모든 전역 상태는 `@shopby/react-components`에서 제공하는 Context Provider를 통해 관리합니다.
+Aurora Skin은 Redux/Zustand 미사용. 모든 전역 상태는 `@shopby/react-components` Context로 관리.
 
 **상태 읽기 패턴**:
-```
-컴포넌트 내부
-  const { profile, isSignedIn } = useAuthStateContext();
+```javascript
+const { profile, isSignedIn } = useAuthStateContext();
+const { cartItems } = useCartStateContext();
 ```
 
 **상태 변경 패턴**:
-```
-컴포넌트 내부
-  const { signIn, signOut } = useAuthActionContext();
-  // 이벤트 핸들러에서
-  await signIn({ loginId, password });
+```javascript
+const { signIn, signOut } = useAuthActionContext();
+const { addToCart, removeItem } = useCartActionContext();
+// 이벤트 핸들러에서
+await signIn({ loginId, password });
 ```
 
 ### 로컬 상태 (useState)
 
-각 페이지/컴포넌트 내부의 폼 입력, UI 토글 등 페이지 수명과 같은 상태는 `useState`로 관리합니다.
-
-**예시**:
+페이지/컴포넌트 내부의 폼 입력, UI 토글 등:
 - OrderSheet 페이지: 주문자 정보, 배송지, 결제 수단 폼 입력
 - ProductDetail 페이지: 선택된 옵션, 수량
 - Cart 페이지: 각 상품의 수량 토글
 
 ### 캐시 전략
 
-Layout 내 BannerContent와 CartContent에서 메모리 캐시를 활용합니다:
 - `cacheOption: { type: 'MEMORY', timeBySeconds: 180 }` - 배너 및 주문 설정을 3분간 캐시
 - 캐시 처리는 `@shopby/react-components` Provider 내부에서 수행
 
@@ -552,7 +545,7 @@ useCallback() 훅 확인
         ▼
 Context 업데이트
   ├─ 변경된 값만 구독하는 컴포넌트만 리렌더링
-  └── 구독하지 않는 컴포넌트는 리렌더링 스킵
+  └─ 구독하지 않는 컴포넌트는 리렌더링 스킵
 ```
 
 ---
