@@ -13,7 +13,7 @@ import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import ListSkeleton from '../../components/ListSkeleton/ListSkeleton';
 import Sanitized from '../../components/Sanitized';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../../components/ui/accordion';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 import { TextField } from '../../components/ui/TextField';
 import { cn } from '../../lib/utils';
 import { INFINITY_SCROLL_PAGE_SIZE } from '../../constants/common';

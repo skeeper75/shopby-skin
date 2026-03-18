@@ -11,7 +11,7 @@ import {
 
 import { useErrorBoundaryActionContext } from '../../components/ErrorBoundary';
 import ListSkeleton from '../../components/ListSkeleton/ListSkeleton';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 import { Badge } from '../../components/ui/badge';
 import { cn } from '../../lib/utils';
 import { INFINITY_SCROLL_PAGE_SIZE } from '../../constants/common';

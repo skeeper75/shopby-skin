@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 import { cn } from '../../lib/utils';
 
 // 이용약관 + 개인정보처리방침 탭 전환 페이지

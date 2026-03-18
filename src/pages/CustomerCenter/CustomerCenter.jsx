@@ -16,7 +16,7 @@ import { isSignedIn } from '@shopby/shared';
 import { FAQ_BOARD_ID } from '../../constants/board';
 import useLayoutChanger from '../../hooks/useLayoutChanger';
 import { cn } from '../../lib/utils';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/Tabs';
 
 // @MX:NOTE: [AUTO] CustomerCenter 허브 페이지 - SPEC-SKIN-004 탭 메뉴, 최근 공지/FAQ 요약, 연락처 섹션
 // @MX:SPEC: SPEC-SKIN-004
