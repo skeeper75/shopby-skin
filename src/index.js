@@ -14,6 +14,12 @@ import App from './App.jsx';
 import './i18n';
 import { initializeShopApi } from './utils';
 
+// Vercel 배포 환경에서 CDN 스크립트(shopby-external-script.js) 미로드 시
+// ShopbyExternalScript ReferenceError 방지
+if (typeof window.ShopbyExternalScript === 'undefined') {
+  window.ShopbyExternalScript = null;
+}
+
 const renderApp = async () => {
   const { clientId, profile, tc } = await initializeShopApi();
 
