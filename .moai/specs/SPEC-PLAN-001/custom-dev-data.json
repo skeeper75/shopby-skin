@@ -1,0 +1,101 @@
+[
+  {
+    "num": "1.0",
+    "feature": "인쇄 파일 업로드/검수 모듈",
+    "reason": "인쇄 전용 기능, shopby 완전 미지원",
+    "size": "XL",
+    "priority": "1순위",
+    "dependency": "주문 프로세스 전체",
+    "timeline": "",
+    "team": "FE+BE",
+    "notes": "PitStop 연동 포함"
+  },
+  {
+    "num": "2.0",
+    "feature": "출력상품 종속옵션 + 가격 엔진",
+    "reason": "다단계 종속옵션, 동적 가격 매트릭스",
+    "size": "XL",
+    "priority": "1순위",
+    "dependency": "상품관리, DB 정규화",
+    "timeline": "",
+    "team": "위젯+BE",
+    "notes": "8종 가격관리 팝업"
+  },
+  {
+    "num": "3.0",
+    "feature": "옵션보관함 (재주문)",
+    "reason": "shopby 장바구니에 인쇄옵션 저장 불가",
+    "size": "L",
+    "priority": "1순위",
+    "dependency": "파일업로드, 상품옵션",
+    "timeline": "",
+    "team": "FE+BE",
+    "notes": "레드프린팅 1개월 보관 참고"
+  },
+  {
+    "num": "4.0",
+    "feature": "프린팅머니 충전",
+    "reason": "PG 결제→적립금 전환 로직 없음",
+    "size": "M",
+    "priority": "1순위",
+    "dependency": "결제(PG) 연동",
+    "timeline": "",
+    "team": "FE+BE",
+    "notes": "shopby 적립금 API 활용"
+  },
+  {
+    "num": "5.0",
+    "feature": "체험단 관리 시스템",
+    "reason": "모집/신청/당첨/후기 전체 미지원",
+    "size": "L",
+    "priority": "3순위",
+    "dependency": "없음",
+    "timeline": "",
+    "team": "FE+BE",
+    "notes": "html DB직접입력"
+  },
+  {
+    "num": "6.0",
+    "feature": "원장관리 시스템",
+    "reason": "온/오프라인 통합 원장 완전 미지원",
+    "size": "XL",
+    "priority": "2순위",
+    "dependency": "shopby 주문API, 거래처",
+    "timeline": "",
+    "team": "BE",
+    "notes": "ERP 도입 시기 결정 필요"
+  },
+  {
+    "num": "7.0",
+    "feature": "B2B 후불결제",
+    "reason": "후불/정산 시스템 미지원",
+    "size": "L",
+    "priority": "2순위",
+    "dependency": "원장, 거래처",
+    "timeline": "",
+    "team": "BE",
+    "notes": "미결제/결제완료 상태관리"
+  },
+  {
+    "num": "8.0",
+    "feature": "인쇄 주문상태 트래킹",
+    "reason": "shopby 기본 상태로 인쇄 공정 표현 불가",
+    "size": "L",
+    "priority": "1순위",
+    "dependency": "주문관리",
+    "timeline": "",
+    "team": "FE+BE",
+    "notes": "커스텀 상태 코드 매핑"
+  },
+  {
+    "num": "9.0",
+    "feature": "팀별 통계",
+    "reason": "shopby 통계에 팀/공정 개념 없음",
+    "size": "M",
+    "priority": "3순위",
+    "dependency": "주문관리, 원장",
+    "timeline": "",
+    "team": "BE",
+    "notes": "공정관리와 연계"
+  }
+]
