@@ -1,0 +1,823 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "QbN0K",
+      "x": 0,
+      "y": 0,
+      "name": "SCR-A8-GUIDE 작업가이드 목록",
+      "width": 1920,
+      "height": 2000,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "c64hG",
+          "name": "hdr",
+          "width": "fill_container",
+          "height": 131,
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "hIvUX",
+              "name": "top",
+              "width": "fill_container",
+              "height": 90,
+              "padding": [
+                0,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FT4gn",
+                  "name": "logo",
+                  "fill": "$color-primary",
+                  "content": "후니프린팅",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "UO9qe",
+                  "name": "sb",
+                  "width": 408,
+                  "height": 45,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VLKFi",
+                      "name": "sbp",
+                      "fill": "$color-text-muted",
+                      "content": "검색어를 입력해주세요",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "BlYTL",
+                      "name": "sbi",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "search",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color-text-muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bSppD",
+              "name": "cat",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 24,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5UJCB",
+                  "name": "ct1",
+                  "fill": "$color-text-dark",
+                  "content": "엽서 + 스티커 + 인쇄홍보물 + 책자 + 포스터 + ...",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wopM6",
+              "name": "hdiv",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "68qen",
+          "name": "bread",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "$color-bg-white",
+          "gap": 8,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "fpTLA",
+              "name": "br1",
+              "fill": "$color-text-muted",
+              "content": "홈 > 작업가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "49tia",
+          "name": "title",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$color-bg-white",
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "VJi24",
+              "name": "tt",
+              "fill": "$color-text-dark",
+              "content": "작업가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PW51T",
+          "name": "catTabs",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "$color-bg-white",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$color-border"
+          },
+          "gap": 16,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "T0vps",
+              "name": "tab1",
+              "fill": "$color-primary",
+              "content": "전체",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "mloQY",
+              "name": "tab2",
+              "fill": "$color-text-muted",
+              "content": "인쇄 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ImFtj",
+              "name": "tab3",
+              "fill": "$color-text-muted",
+              "content": "제본 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "oWVOX",
+              "name": "tab4",
+              "fill": "$color-text-muted",
+              "content": "후가공 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "DHQXG",
+              "name": "tab5",
+              "fill": "$color-text-muted",
+              "content": "파일 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "hKvSq",
+              "name": "tab6",
+              "fill": "$color-text-muted",
+              "content": "배송 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dALq4",
+          "name": "GuideGrid",
+          "width": "fill_container",
+          "fill": "$color-bg-section",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            24,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "wyQd2",
+              "name": "row1",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IqCdZ",
+                  "name": "g1",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "72rvK",
+                      "name": "g1img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iwxlA",
+                      "name": "g1info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "es9sx",
+                          "name": "g1cat",
+                          "fill": "$color-primary",
+                          "content": "인쇄 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "432ZV",
+                          "name": "g1title",
+                          "fill": "$color-text-dark",
+                          "content": "명함 인쇄 시 주의사항",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Pf2d9",
+                          "name": "g1desc",
+                          "fill": "$color-text-muted",
+                          "content": "도련, 재단선, 안전영역 설정 방법",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Kx63B",
+                  "name": "g2",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lX3hd",
+                      "name": "g2img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6muFn",
+                      "name": "g2info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IUlze",
+                          "name": "g2cat",
+                          "fill": "$color-primary",
+                          "content": "인쇄 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zX3cv",
+                          "name": "g2title",
+                          "fill": "$color-text-dark",
+                          "content": "CMYK vs RGB 차이점",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Md3mM",
+                          "name": "g2desc",
+                          "fill": "$color-text-muted",
+                          "content": "인쇄용 색상 모드 설정 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XxI0u",
+                  "name": "g3",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qVv0C",
+                      "name": "g3img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "671B4",
+                      "name": "g3info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RDGO6",
+                          "name": "g3cat",
+                          "fill": "$color-primary",
+                          "content": "제본 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "whQCq",
+                          "name": "g3title",
+                          "fill": "$color-text-dark",
+                          "content": "중철제본 vs 무선제본",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tdbJA",
+                          "name": "g3desc",
+                          "fill": "$color-text-muted",
+                          "content": "용도별 제본 방식 선택 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1mxPW",
+              "name": "row2",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "1LV3D",
+                  "name": "g4",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pDfb7",
+                      "name": "g4img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "djSUr",
+                      "name": "g4info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Zhnsc",
+                          "name": "g4cat",
+                          "fill": "$color-primary",
+                          "content": "후가공 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yRBmz",
+                          "name": "g4title",
+                          "fill": "$color-text-dark",
+                          "content": "코팅 종류와 특징",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ljFsQ",
+                          "name": "g4desc",
+                          "fill": "$color-text-muted",
+                          "content": "무광/유광/벨벳 코팅 비교",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rmIEF",
+                  "name": "g5",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gkoIp",
+                      "name": "g5img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uFefG",
+                      "name": "g5info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XbHWn",
+                          "name": "g5cat",
+                          "fill": "$color-primary",
+                          "content": "파일 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VU4iw",
+                          "name": "g5title",
+                          "fill": "$color-text-dark",
+                          "content": "인쇄용 PDF 저장 방법",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KcHk0",
+                          "name": "g5desc",
+                          "fill": "$color-text-muted",
+                          "content": "일러스트/포토샵 PDF 내보내기",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JyHYQ",
+                  "name": "g6",
+                  "width": 380,
+                  "height": 240,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kANVn",
+                      "name": "g6img",
+                      "width": "fill_container",
+                      "height": 140,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a53to",
+                      "name": "g6info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "954dZ",
+                          "name": "g6cat",
+                          "fill": "$color-primary",
+                          "content": "배송 가이드",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "eMsBc",
+                          "name": "g6title",
+                          "fill": "$color-text-dark",
+                          "content": "배송 일정 및 택배사 안내",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jHQgr",
+                          "name": "g6desc",
+                          "fill": "$color-text-muted",
+                          "content": "주문~출고~배송 소요 시간",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LSBVq",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 160,
+          "fill": "#808080",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "F48Mo",
+              "name": "ftL",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FeV0S",
+                  "name": "fla",
+                  "fill": "$color-bg-white",
+                  "content": "이용약관",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cdRhy",
+                  "name": "flb",
+                  "fill": "$color-bg-white",
+                  "content": "개인정보처리방침",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "41IOD",
+                  "name": "flc",
+                  "fill": "$color-bg-white",
+                  "content": "오시는길",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "f9gtF",
+              "name": "ftD",
+              "fill": "#CCCCCC",
+              "content": "후니프린팅 서울 중구 필동로 80 대표 채훈희 | 02-3409-8853",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-primary-light": {
+      "type": "color",
+      "value": "#EDE9FB"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    }
+  }
+}

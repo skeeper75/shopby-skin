@@ -1,0 +1,1072 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "cdIQN",
+      "x": 0,
+      "y": 0,
+      "name": "CMP-TextField",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "text",
+          "id": "lQ9ym",
+          "name": "Label",
+          "fill": "$color-text-dark",
+          "content": "라벨",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "eadBN",
+          "name": "InputBox",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "$color-bg-white",
+          "cornerRadius": 4,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$color-border"
+          },
+          "gap": 8,
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jZQvT",
+              "name": "Placeholder",
+              "fill": "$color-text-muted",
+              "content": "placeholder text",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "iGuCp",
+          "x": 0,
+          "y": 0,
+          "name": "ErrorMessage",
+          "enabled": false,
+          "fill": "$color-error",
+          "content": "오류 메시지",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "ieDgh",
+          "x": 0,
+          "y": 0,
+          "name": "SuccessMessage",
+          "enabled": false,
+          "fill": "$color-success",
+          "content": "성공 메시지",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "G66Ik",
+      "x": 0,
+      "y": 160,
+      "name": "CMP-Button",
+      "reusable": true,
+      "width": 320,
+      "height": 50,
+      "fill": "$color-primary",
+      "cornerRadius": 5,
+      "gap": 8,
+      "padding": [
+        0,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "4nSd9",
+          "name": "ButtonLabel",
+          "fill": "#FFFFFF",
+          "content": "버튼",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "C1IhC",
+      "x": 0,
+      "y": 240,
+      "name": "CMP-Button-Secondary",
+      "reusable": true,
+      "width": 320,
+      "height": 50,
+      "fill": "$color-bg-white",
+      "cornerRadius": 5,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-primary"
+      },
+      "gap": 8,
+      "padding": [
+        0,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "ZEnId",
+          "name": "ButtonLabel",
+          "fill": "$color-primary",
+          "content": "버튼",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "91unE",
+      "x": 0,
+      "y": 320,
+      "name": "CMP-Button-Small",
+      "reusable": true,
+      "height": 32,
+      "fill": "$color-primary",
+      "cornerRadius": 4,
+      "gap": 4,
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "y3zzz",
+          "name": "ButtonLabel",
+          "fill": "#FFFFFF",
+          "content": "버튼",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KtC8U",
+      "x": 400,
+      "y": 0,
+      "name": "CMP-Checkbox",
+      "reusable": true,
+      "gap": 8,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "5HW4o",
+          "name": "CheckBox",
+          "width": 20,
+          "height": 20,
+          "fill": "$color-bg-white",
+          "cornerRadius": 4,
+          "stroke": {
+            "thickness": 2,
+            "fill": "$color-border"
+          }
+        },
+        {
+          "type": "text",
+          "id": "kVKoq",
+          "name": "CheckLabel",
+          "fill": "$color-text-dark",
+          "content": "체크박스 라벨",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tVMWS",
+      "x": 400,
+      "y": 50,
+      "name": "CMP-Checkbox-Checked",
+      "reusable": true,
+      "gap": 8,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "4vnRL",
+          "name": "CheckBox",
+          "width": 20,
+          "height": 20,
+          "fill": "$color-primary",
+          "cornerRadius": 4,
+          "stroke": {
+            "thickness": 2,
+            "fill": "$color-primary"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Zmxwy",
+              "name": "CheckIcon",
+              "fill": "#FFFFFF",
+              "content": "✓",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "tMTm5",
+          "name": "CheckLabel",
+          "fill": "$color-text-dark",
+          "content": "체크박스 라벨",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Z1xNq",
+      "x": 400,
+      "y": 120,
+      "name": "CMP-MEM-SNSButtonKakao",
+      "reusable": true,
+      "width": 320,
+      "height": 50,
+      "fill": "$color-kakao",
+      "cornerRadius": 5,
+      "gap": 8,
+      "padding": [
+        0,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "G4IRZ",
+          "name": "KakaoIcon",
+          "fill": "#191919",
+          "content": "💬",
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "vwxUw",
+          "name": "ButtonLabel",
+          "fill": "#191919",
+          "content": "카카오로 시작하기",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lqOwN",
+      "x": 400,
+      "y": 200,
+      "name": "CMP-MEM-SNSButtonNaver",
+      "reusable": true,
+      "width": 320,
+      "height": 50,
+      "fill": "$color-naver",
+      "cornerRadius": 5,
+      "gap": 8,
+      "padding": [
+        0,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "L5sEx",
+          "name": "NaverIcon",
+          "fill": "#FFFFFF",
+          "content": "N",
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "jmQ0V",
+          "name": "ButtonLabel",
+          "fill": "#FFFFFF",
+          "content": "네이버로 시작하기",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "bLne3",
+      "x": 400,
+      "y": 280,
+      "name": "CMP-MEM-PasswordStrength",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "frame",
+          "id": "fUXME",
+          "name": "StrengthBar",
+          "width": "fill_container",
+          "height": 4,
+          "cornerRadius": 2,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kjb1m",
+              "name": "Bar1",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-error",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "tc4jX",
+              "name": "Bar2",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-border",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "O81ay",
+              "name": "Bar3",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-border",
+              "cornerRadius": 2
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "ZDbVF",
+          "name": "StrengthLabel",
+          "fill": "$color-error",
+          "content": "약함",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "7pp00",
+      "x": 400,
+      "y": 340,
+      "name": "CMP-MEM-SmsAuthField",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 8,
+      "children": [
+        {
+          "type": "frame",
+          "id": "N2opn",
+          "name": "PhoneRow",
+          "width": "fill_container",
+          "gap": 8,
+          "children": [
+            {
+              "type": "frame",
+              "id": "M7Cax",
+              "name": "PhoneInput",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color-bg-white",
+              "cornerRadius": 4,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color-border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lKkVd",
+                  "name": "PhonePlaceholder",
+                  "fill": "$color-text-muted",
+                  "content": "휴대전화 번호",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "klU11",
+              "name": "SendButton",
+              "height": 44,
+              "fill": "$color-primary",
+              "cornerRadius": 4,
+              "padding": [
+                0,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GpJ22",
+                  "name": "SendLabel",
+                  "fill": "#FFFFFF",
+                  "content": "인증번호 발송",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rTOhQ",
+          "name": "AuthRow",
+          "width": "fill_container",
+          "gap": 8,
+          "children": [
+            {
+              "type": "frame",
+              "id": "3fyKS",
+              "name": "AuthInput",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$color-bg-white",
+              "cornerRadius": 4,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color-border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "W1Xnk",
+                  "name": "AuthPlaceholder",
+                  "fill": "$color-text-muted",
+                  "content": "인증번호 6자리",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "33AVh",
+                  "name": "Timer",
+                  "fill": "$color-error",
+                  "content": "02:59",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8evJb",
+              "name": "VerifyButton",
+              "height": 44,
+              "fill": "$color-primary",
+              "cornerRadius": 4,
+              "padding": [
+                0,
+                16
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3bW1Z",
+                  "name": "VerifyLabel",
+                  "fill": "#FFFFFF",
+                  "content": "확인",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "bQsy6",
+      "x": 0,
+      "y": 420,
+      "name": "CMP-MEM-StepIndicator",
+      "reusable": true,
+      "width": 480,
+      "padding": [
+        16,
+        0
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "INS1o",
+          "name": "Step1",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "b8fIX",
+              "name": "StepCircle1",
+              "width": 32,
+              "height": 32,
+              "fill": "$color-primary",
+              "cornerRadius": 9999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "q5T3m",
+                  "name": "StepNum1",
+                  "fill": "#FFFFFF",
+                  "content": "1",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "899kN",
+              "name": "StepLabel1",
+              "fill": "$color-text-dark",
+              "content": "약관동의",
+              "fontFamily": "Noto Sans",
+              "fontSize": 12,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pRvJn",
+          "name": "Line1",
+          "width": 80,
+          "height": 2,
+          "fill": "$color-border"
+        },
+        {
+          "type": "frame",
+          "id": "GRm2u",
+          "name": "Step2",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "47CIm",
+              "name": "StepCircle2",
+              "width": 32,
+              "height": 32,
+              "fill": "$color-border",
+              "cornerRadius": 9999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ecZef",
+                  "name": "StepNum2",
+                  "fill": "$color-text-muted",
+                  "content": "2",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "d4uaH",
+              "name": "StepLabel2",
+              "fill": "$color-text-muted",
+              "content": "정보입력",
+              "fontFamily": "Noto Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "esDTS",
+          "name": "Line2",
+          "width": 80,
+          "height": 2,
+          "fill": "$color-border"
+        },
+        {
+          "type": "frame",
+          "id": "LAxrq",
+          "name": "Step3",
+          "layout": "vertical",
+          "gap": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "MWedK",
+              "name": "StepCircle3",
+              "width": 32,
+              "height": 32,
+              "fill": "$color-border",
+              "cornerRadius": 9999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X7J5r",
+                  "name": "StepNum3",
+                  "fill": "$color-text-muted",
+                  "content": "3",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "PIMC3",
+              "name": "StepLabel3",
+              "fill": "$color-text-muted",
+              "content": "가입완료",
+              "fontFamily": "Noto Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "SfqbN",
+      "x": 800,
+      "y": 0,
+      "name": "CMP-MEM-InlineError",
+      "reusable": true,
+      "gap": 4,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Ih8pe",
+          "name": "ErrorIcon",
+          "fill": "$color-error",
+          "content": "!",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "LfGV9",
+          "name": "ErrorText",
+          "fill": "$color-error",
+          "content": "오류 메시지",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "9uXn8",
+      "x": 800,
+      "y": 40,
+      "name": "CMP-MEM-InlineSuccess",
+      "reusable": true,
+      "gap": 4,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "zuKjQ",
+          "name": "SuccessIcon",
+          "fill": "$color-success",
+          "content": "✓",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "5toXu",
+          "name": "SuccessText",
+          "fill": "$color-success",
+          "content": "성공 메시지",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XAaVI",
+      "x": 800,
+      "y": 100,
+      "name": "CMP-MEM-AuthCard",
+      "reusable": true,
+      "width": 480,
+      "fill": "$color-bg-white",
+      "cornerRadius": 4,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "v3G1z",
+          "name": "CardTitle",
+          "fill": "$color-text-dark",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "제목",
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 24,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oqviW",
+      "x": 800,
+      "y": 300,
+      "name": "CMP-MEM-TermsAccordion",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "bgegS",
+          "name": "AccordionHeader",
+          "width": "fill_container",
+          "height": 50,
+          "fill": "$color-bg-section",
+          "cornerRadius": 4,
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "t0fdJ",
+              "name": "TermsLabel",
+              "fill": "$color-text-dark",
+              "content": "이용약관 동의 (필수)",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "9ZPqz",
+              "name": "Arrow",
+              "fill": "$color-text-muted",
+              "content": "▼",
+              "fontFamily": "Noto Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "v3Awq",
+          "name": "AccordionBody",
+          "width": "fill_container",
+          "cornerRadius": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": "$color-border"
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "qpZjd",
+              "name": "TermsContent",
+              "fill": "$color-text-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "약관 내용이 여기에 표시됩니다. 스크롤하여 전체 내용을 확인하세요.",
+              "fontFamily": "Noto Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "u9tu3",
+              "name": "AgreeRow",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MyjVW",
+                  "name": "Box",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 3,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "arKsI",
+                  "name": "AgreeLabel",
+                  "fill": "$color-text-dark",
+                  "content": "동의합니다",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oBUjk",
+      "x": 800,
+      "y": 600,
+      "name": "CMP-MEM-SignUpComplete",
+      "reusable": true,
+      "width": 480,
+      "fill": "$color-bg-white",
+      "cornerRadius": 4,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "8d1vQ",
+          "name": "SuccessCircle",
+          "width": 80,
+          "height": 80,
+          "fill": "$color-primary",
+          "cornerRadius": 9999,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3Qclb",
+              "name": "CheckMark",
+              "fill": "#FFFFFF",
+              "content": "✓",
+              "fontFamily": "Noto Sans",
+              "fontSize": 32,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "qENCf",
+          "name": "Title",
+          "fill": "$color-text-dark",
+          "content": "회원가입이 완료되었습니다!",
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "U3KF0",
+          "name": "Description",
+          "fill": "$color-text-muted",
+          "content": "후니프린팅의 다양한 서비스를 이용해 보세요.",
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "XlNf3",
+          "name": "GoHomeButton",
+          "width": 200,
+          "height": 50,
+          "fill": "$color-primary",
+          "cornerRadius": 5,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KgTvF",
+              "name": "BtnLabel",
+              "fill": "#FFFFFF",
+              "content": "홈으로 가기",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-kakao": {
+      "type": "color",
+      "value": "#FEE500"
+    },
+    "color-naver": {
+      "type": "color",
+      "value": "#03C75A"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    }
+  }
+}

@@ -1,0 +1,1123 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "v3SVC",
+      "x": 0,
+      "y": 0,
+      "name": "SCR-PG-021 회사소개",
+      "width": 1920,
+      "height": 2400,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "8fGaF",
+          "name": "Header",
+          "width": "fill_container",
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "NfCSt",
+              "name": "TopBar",
+              "width": "fill_container",
+              "height": 90,
+              "padding": [
+                0,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YY7bq",
+                  "name": "lg",
+                  "fill": "$color-primary",
+                  "content": "후니프린팅",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "3rD1U",
+                  "name": "sb",
+                  "width": 408,
+                  "height": 45,
+                  "fill": "$color-bg-white",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D7aqn",
+                      "name": "sbp",
+                      "fill": "$color-text-muted",
+                      "content": "검색어를 입력해주세요",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "x9Ht9",
+                      "name": "sbi",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "search",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color-text-muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YeDJb",
+              "name": "catNav",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 24,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iPeSN",
+                  "name": "c1",
+                  "fill": "$color-text-dark",
+                  "content": "엽서 + 스티커 + 인쇄홍보물 + 책자 + 포스터 + 사인 + 캘린더 + 문구 + 아크릴 + 라이프",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Gbn6B",
+              "name": "hdrDiv",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gZP9Y",
+          "name": "bread",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "$color-bg-white",
+          "gap": 8,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "4dGTl",
+              "name": "br1",
+              "fill": "$color-text-muted",
+              "content": "홈 > 회사소개",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NMP0y",
+          "name": "pageTitle",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$color-bg-white",
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "b1qvS",
+              "name": "ptText",
+              "fill": "$color-text-dark",
+              "content": "회사소개",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VhZE9",
+          "name": "ContentArea",
+          "width": "fill_container",
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "chYNW",
+              "name": "Overview",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nBBkh",
+                  "name": "ovTitle",
+                  "fill": "$color-text-dark",
+                  "content": "회사 개요",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "Fh7uO",
+                  "name": "ovDiv",
+                  "width": 40,
+                  "height": 3,
+                  "fill": "$color-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "os7LW",
+                  "name": "ovText",
+                  "fill": "$color-text-dark",
+                  "content": "후니프린팅은 2015년 설립된 인쇄 전문 기업으로, 엽서, 스티커, 포스터, 책자 등 다양한 인쇄 제품을 합리적인 가격에 제공합니다. 최첨단 인쇄 장비와 숙련된 전문 인력을 갖추고 있으며, 고객 만족을 최우선 가치로 삼고 있습니다.",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MSrt1",
+              "name": "History",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SK4ct",
+                  "name": "hiTitle",
+                  "fill": "$color-text-dark",
+                  "content": "연혁",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "4FKtK",
+                  "name": "hiDiv",
+                  "width": 40,
+                  "height": 3,
+                  "fill": "$color-primary"
+                },
+                {
+                  "type": "frame",
+                  "id": "0kCPS",
+                  "name": "hiList",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "H9o5Y",
+                      "name": "h1",
+                      "fill": "$color-text-dark",
+                      "content": "2026  shopby Enterprise 플랫폼 전환",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "empQh",
+                      "name": "h2",
+                      "fill": "$color-text-dark",
+                      "content": "2023  자동화 인쇄 라인 도입",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KpyW5",
+                      "name": "h3",
+                      "fill": "$color-text-dark",
+                      "content": "2020  온라인 주문 시스템 구축",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CFxRo",
+                      "name": "h4",
+                      "fill": "$color-text-dark",
+                      "content": "2015  후니프린팅 설립",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uIJed",
+              "name": "Equipment",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JWxme",
+                  "name": "eqTitle",
+                  "fill": "$color-text-dark",
+                  "content": "보유 장비",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "pfNcN",
+                  "name": "eqDiv",
+                  "width": 40,
+                  "height": 3,
+                  "fill": "$color-primary"
+                },
+                {
+                  "type": "frame",
+                  "id": "jFzld",
+                  "name": "eqGrid",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FGlQk",
+                      "name": "eq1",
+                      "width": 280,
+                      "height": 200,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "qnKBN",
+                          "name": "eq1i",
+                          "width": 40,
+                          "height": 40,
+                          "iconFontName": "printer",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vLgff",
+                          "name": "eq1t",
+                          "fill": "$color-text-dark",
+                          "content": "디지털 인쇄기",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a8555",
+                          "name": "eq1d",
+                          "fill": "$color-text-muted",
+                          "content": "HP Indigo 7900",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Xk94Y",
+                      "name": "eq2",
+                      "width": 280,
+                      "height": 200,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "HCBaq",
+                          "name": "eq2i",
+                          "width": 40,
+                          "height": 40,
+                          "iconFontName": "layers",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5cFbp",
+                          "name": "eq2t",
+                          "fill": "$color-text-dark",
+                          "content": "옵셋 인쇄기",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "1i8T7",
+                          "name": "eq2d",
+                          "fill": "$color-text-muted",
+                          "content": "Heidelberg SM 102",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n6CS7",
+                      "name": "eq3",
+                      "width": 280,
+                      "height": 200,
+                      "fill": "$color-bg-section",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "ekYAi",
+                          "name": "eq3i",
+                          "width": 40,
+                          "height": 40,
+                          "iconFontName": "scissors",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LPRet",
+                          "name": "eq3t",
+                          "fill": "$color-text-dark",
+                          "content": "후가공 장비",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XC91N",
+                          "name": "eq3d",
+                          "fill": "$color-text-muted",
+                          "content": "자동 코팅/박/형압기",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oycbO",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 160,
+          "fill": "#808080",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "v9dLr",
+              "name": "ft1l",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Bro1T",
+                  "name": "ft1a",
+                  "fill": "$color-bg-white",
+                  "content": "이용약관",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pHOvQ",
+                  "name": "ft1b",
+                  "fill": "$color-bg-white",
+                  "content": "개인정보처리방침",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "I2fYC",
+                  "name": "ft1c",
+                  "fill": "$color-bg-white",
+                  "content": "오시는길",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "n0f7J",
+              "name": "ft1d",
+              "fill": "#CCCCCC",
+              "content": "후니프린팅 서울 중구 필동로 80 대표 채훈희 | 02-3409-8853",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NF78Z",
+      "x": 0,
+      "y": 2500,
+      "name": "SCR-PG-022 이용약관",
+      "width": 1920,
+      "height": 1400,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Siwzm",
+          "name": "tHdr",
+          "width": "fill_container",
+          "height": 131,
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Tyv8g",
+              "name": "tTop",
+              "width": "fill_container",
+              "height": 90,
+              "padding": [
+                0,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZK8YY",
+                  "name": "tLogo",
+                  "fill": "$color-primary",
+                  "content": "후니프린팅",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aIaBt",
+              "name": "tCat",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 24,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k6KnH",
+                  "name": "tC1",
+                  "fill": "$color-text-dark",
+                  "content": "엽서 + 스티커 + 인쇄홍보물 + ...",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZkSUx",
+              "name": "tDiv",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Rrgmf",
+          "name": "tBread",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "$color-bg-white",
+          "gap": 8,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "5jVnE",
+              "name": "tBr",
+              "fill": "$color-text-muted",
+              "content": "홈 > 이용약관",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "j2V1v",
+          "name": "tTitle",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$color-bg-white",
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "1n18H",
+              "name": "tTt",
+              "fill": "$color-text-dark",
+              "content": "이용약관",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KZnDj",
+          "name": "tContent",
+          "width": "fill_container",
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "TnPEX",
+              "name": "tSec1",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2SfQI",
+                  "name": "tSec1t",
+                  "fill": "$color-text-dark",
+                  "content": "제1조 (목적)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "GJFiz",
+                  "name": "tSec1b",
+                  "fill": "$color-text-dark",
+                  "content": "이 약관은 후니프린팅(이하 '회사')이 제공하는 인쇄 서비스 및 관련 제반 서비스의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 합니다.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vhufY",
+              "name": "tSec2",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x1BD4",
+                  "name": "tSec2t",
+                  "fill": "$color-text-dark",
+                  "content": "제2조 (정의)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "6KjCj",
+                  "name": "tSec2b",
+                  "fill": "$color-text-dark",
+                  "content": "1. '서비스'란 회사가 제공하는 온라인 인쇄 주문, 디자인 편집, 배송 등 일체의 서비스를 의미합니다.\n2. '회원'이란 회사에 개인정보를 제공하여 회원등록을 한 자를 의미합니다.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qs92D",
+              "name": "tSec3",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QxKxf",
+                  "name": "tSec3t",
+                  "fill": "$color-text-dark",
+                  "content": "제3조 (약관의 효력 및 변경)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "4QBzQ",
+                  "name": "tSec3b",
+                  "fill": "$color-text-dark",
+                  "content": "회사는 이 약관의 내용을 회원이 쉽게 알 수 있도록 서비스 초기 화면에 게시합니다. 약관을 변경할 경우 적용일자 및 변경사유를 명시하여 7일 전 공지합니다.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "pxaoK",
+      "x": 0,
+      "y": 4000,
+      "name": "SCR-PG-024 찾아오시는길",
+      "width": 1920,
+      "height": 1400,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "4bK3U",
+          "name": "lHdr",
+          "width": "fill_container",
+          "height": 131,
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "T7Aon",
+              "name": "lTop",
+              "width": "fill_container",
+              "height": 90,
+              "padding": [
+                0,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eUGXp",
+                  "name": "lLogo",
+                  "fill": "$color-primary",
+                  "content": "후니프린팅",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Min44",
+              "name": "lCat",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 24,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5eSfl",
+                  "name": "lC1",
+                  "fill": "$color-text-dark",
+                  "content": "엽서 + 스티커 + 인쇄홍보물 + ...",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p5sTn",
+              "name": "lDiv",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RsIDB",
+          "name": "lBread",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "$color-bg-white",
+          "gap": 8,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Pl4qC",
+              "name": "lBr",
+              "fill": "$color-text-muted",
+              "content": "홈 > 찾아오시는 길",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rARMi",
+          "name": "lTitle",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$color-bg-white",
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "oba5D",
+              "name": "lTt",
+              "fill": "$color-text-dark",
+              "content": "찾아오시는 길",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rn4Is",
+          "name": "lContent",
+          "width": "fill_container",
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Xu44d",
+              "name": "MapEmbed",
+              "width": "fill_container",
+              "height": 400,
+              "fill": "$color-bg-section",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color-border"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "8O7NU",
+                  "name": "mapIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "map-pin",
+                  "iconFontFamily": "lucide",
+                  "fill": "$color-text-muted"
+                },
+                {
+                  "type": "text",
+                  "id": "tJHof",
+                  "name": "mapText",
+                  "fill": "$color-text-muted",
+                  "content": "카카오맵 지도 영역",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H4HWG",
+              "name": "AddressInfo",
+              "width": "fill_container",
+              "fill": "$color-bg-section",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                24,
+                32
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OoMqW",
+                  "name": "addrRow",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "3n7EK",
+                      "name": "addrIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qp8KP",
+                      "name": "addrText",
+                      "fill": "$color-text-dark",
+                      "content": "서울특별시 중구 필동로 80 낙원빌딩 2층",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LYz6x",
+                  "name": "telRow",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "rwAws",
+                      "name": "telIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "phone",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B6mtG",
+                      "name": "telText",
+                      "fill": "$color-text-dark",
+                      "content": "TEL: 02-3409-8853 / FAX: 02-3409-8854",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MHPlq",
+                  "name": "transRow",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "STzVG",
+                      "name": "transIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "train-front",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "1rryc",
+                      "name": "transText",
+                      "fill": "$color-text-dark",
+                      "content": "지하철 3호선 충무로역 4번 출구 도보 5분",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-primary-light": {
+      "type": "color",
+      "value": "#EDE9FB"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    }
+  }
+}

@@ -1,0 +1,875 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "text",
+      "id": "I6TUn",
+      "x": 20,
+      "y": 20,
+      "name": "title",
+      "fill": "$color-text-dark",
+      "content": "Pages Domain Components",
+      "fontFamily": "Noto Sans",
+      "fontSize": 24,
+      "fontWeight": "600"
+    },
+    {
+      "type": "text",
+      "id": "LSGji",
+      "x": 20,
+      "y": 52,
+      "name": "subtitle",
+      "fill": "$color-text-muted",
+      "content": "SPEC-PAGE-001 기반 도메인 특화 컴포넌트 (CMP-PG-*)",
+      "fontFamily": "Noto Sans",
+      "fontSize": 13,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "text",
+      "id": "b4P9B",
+      "x": 20,
+      "y": 100,
+      "name": "sec1",
+      "fill": "$color-primary",
+      "content": "Section 1: 메인 페이지 컴포넌트",
+      "fontFamily": "Noto Sans",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "frame",
+      "id": "V5JN1",
+      "x": 20,
+      "y": 140,
+      "name": "CMP-PG-HeroBanner",
+      "reusable": true,
+      "width": 1200,
+      "height": 400,
+      "fill": "$color-primary-light",
+      "children": [
+        {
+          "type": "frame",
+          "id": "uT7dD",
+          "name": "heroImage",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#E0D6F8"
+        },
+        {
+          "type": "frame",
+          "id": "QjNQE",
+          "name": "heroOverlay",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            60
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "BTZ8t",
+              "name": "heroTitle",
+              "fill": "$color-bg-white",
+              "content": "인쇄의 모든 것, 후니프린팅",
+              "fontFamily": "Noto Sans",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "H4zMH",
+              "name": "heroSubtitle",
+              "fill": "$color-bg-white",
+              "content": "합리적인 가격, 빠른 배송, 최고의 품질",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FJdhR",
+          "name": "heroDots",
+          "width": "fill_container",
+          "height": 40,
+          "gap": 8,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "CXZy7",
+              "name": "dot1",
+              "fill": "$color-bg-white",
+              "width": 10,
+              "height": 10
+            },
+            {
+              "type": "ellipse",
+              "id": "O15Eg",
+              "name": "dot2",
+              "fill": "$color-border",
+              "width": 8,
+              "height": 8
+            },
+            {
+              "type": "ellipse",
+              "id": "IB1oU",
+              "name": "dot3",
+              "fill": "$color-border",
+              "width": 8,
+              "height": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "PBygT",
+      "x": 20,
+      "y": 580,
+      "name": "CMP-PG-CategoryIcon",
+      "reusable": true,
+      "width": 100,
+      "height": 100,
+      "layout": "vertical",
+      "gap": 8,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "5QX8Y",
+          "name": "iconCircle",
+          "fill": "$color-primary-light",
+          "width": 56,
+          "height": 56
+        },
+        {
+          "type": "text",
+          "id": "cBDcz",
+          "name": "categoryName",
+          "fill": "$color-text-dark",
+          "content": "인쇄",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "4UZYt",
+      "x": 20,
+      "y": 700,
+      "name": "CMP-PG-SectionTitle",
+      "reusable": true,
+      "width": 1200,
+      "height": 40,
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "z8D3R",
+          "name": "sectionName",
+          "fill": "$color-text-dark",
+          "content": "인기 상품",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "qHcKX",
+          "name": "moreLink",
+          "fill": "$color-text-muted",
+          "content": "더보기 >",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wCxzp",
+      "x": 20,
+      "y": 760,
+      "name": "CMP-PG-ProductCard",
+      "reusable": true,
+      "width": 280,
+      "height": 380,
+      "fill": "$color-bg-white",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "frame",
+          "id": "pZSXW",
+          "name": "productImage",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "$color-bg-section",
+          "cornerRadius": 8
+        },
+        {
+          "type": "frame",
+          "id": "lY8lN",
+          "name": "productInfo",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "khWNh",
+              "name": "badgeRow",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mIVTy",
+                  "name": "badge",
+                  "width": 32,
+                  "height": 14,
+                  "fill": "$color-primary",
+                  "cornerRadius": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cbK0z",
+                      "name": "badge1t",
+                      "fill": "$color-bg-white",
+                      "content": "추천",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 9,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "jRWn4",
+              "name": "productName",
+              "fill": "$color-text-dark",
+              "content": "명함 인쇄 (양면컬러)",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "YxhJd",
+              "name": "productPrice",
+              "fill": "$color-text-dark",
+              "content": "5,000원~",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "ZeVnN",
+              "name": "ratingRow",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "usbRH",
+                  "name": "star1",
+                  "fill": "$color-gold",
+                  "content": "★★★★★",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "o2Bsq",
+                  "name": "rCount",
+                  "fill": "$color-text-muted",
+                  "content": "(128)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "eSmWv",
+      "x": 20,
+      "y": 1180,
+      "name": "sec2",
+      "fill": "$color-primary",
+      "content": "Section 2: 목록/검색 컴포넌트",
+      "fontFamily": "Noto Sans",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "frame",
+      "id": "fFWRh",
+      "x": 20,
+      "y": 1220,
+      "name": "CMP-PG-FilterBar",
+      "reusable": true,
+      "width": 1200,
+      "height": 44,
+      "fill": "$color-bg-white",
+      "cornerRadius": 4,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "2hKVi",
+          "name": "filterLeft",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "tnnps",
+              "name": "filterLabel",
+              "fill": "$color-text-muted",
+              "content": "정렬:",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ah3u3",
+              "name": "filterOpt1",
+              "fill": "$color-primary",
+              "content": "인기순",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "79syL",
+              "name": "filterSep",
+              "fill": "$color-border",
+              "content": "|",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "MslAq",
+              "name": "filterOpt2",
+              "fill": "$color-text-muted",
+              "content": "가격순",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "EV6F0",
+              "name": "filterSep2",
+              "fill": "$color-border",
+              "content": "|",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Mz9lI",
+              "name": "filterOpt3",
+              "fill": "$color-text-muted",
+              "content": "최신순",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "572pr",
+          "name": "resultCount",
+          "fill": "$color-text-muted",
+          "content": "총 248개 상품",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "uwjpj",
+      "x": 20,
+      "y": 1300,
+      "name": "CMP-PG-EmptyState",
+      "reusable": true,
+      "width": 600,
+      "height": 240,
+      "fill": "$color-bg-white",
+      "cornerRadius": 8,
+      "layout": "vertical",
+      "gap": 16,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon_font",
+          "id": "yMuLC",
+          "name": "emptyIcon",
+          "width": 48,
+          "height": 48,
+          "iconFontName": "search-x",
+          "iconFontFamily": "lucide",
+          "fill": "$color-border"
+        },
+        {
+          "type": "text",
+          "id": "83TLV",
+          "name": "emptyTitle",
+          "fill": "$color-text-dark",
+          "content": "검색 결과가 없습니다",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "UKsq4",
+          "name": "emptyDesc",
+          "fill": "$color-text-muted",
+          "content": "다른 검색어를 입력하거나 카테고리를 변경해 보세요.",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "pFKw0",
+      "x": 20,
+      "y": 1580,
+      "name": "sec3",
+      "fill": "$color-primary",
+      "content": "Section 3: 콘텐츠/가이드 컴포넌트",
+      "fontFamily": "Noto Sans",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "frame",
+      "id": "ya8bP",
+      "x": 20,
+      "y": 1620,
+      "name": "CMP-PG-ReviewCard",
+      "reusable": true,
+      "width": 280,
+      "height": 200,
+      "fill": "$color-bg-white",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "layout": "vertical",
+      "gap": 8,
+      "padding": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "htsyn",
+          "name": "reviewHeader",
+          "width": "fill_container",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "aA41Y",
+              "name": "avatar",
+              "fill": "$color-bg-section",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "yFBPY",
+              "name": "reviewerInfo",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZswOl",
+                  "name": "revName",
+                  "fill": "$color-text-dark",
+                  "content": "김**",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "QwLYA",
+                  "name": "revDate",
+                  "fill": "$color-text-muted",
+                  "content": "2026.03.15",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "9WRrZ",
+          "name": "reviewStars",
+          "fill": "$color-gold",
+          "content": "★★★★★",
+          "fontFamily": "Noto Sans",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "KpIcE",
+          "name": "reviewText",
+          "fill": "$color-text-dark",
+          "content": "명함 퀄리티가 정말 좋아요. 배송도 빠르고 재주문하려고요!",
+          "lineHeight": 1.5,
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "3jTiY",
+      "x": 320,
+      "y": 1620,
+      "name": "CMP-PG-GuideCard",
+      "reusable": true,
+      "width": 280,
+      "height": 180,
+      "fill": "$color-bg-white",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "layout": "vertical",
+      "gap": 8,
+      "children": [
+        {
+          "type": "frame",
+          "id": "rgALA",
+          "name": "guideImage",
+          "width": "fill_container",
+          "height": 100,
+          "fill": "$color-bg-section",
+          "cornerRadius": 8
+        },
+        {
+          "type": "frame",
+          "id": "lYFhD",
+          "name": "guideInfo",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "V11g7",
+              "name": "guideCat",
+              "fill": "$color-primary",
+              "content": "인쇄 가이드",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "D1eL3",
+              "name": "guideTitle",
+              "fill": "$color-text-dark",
+              "content": "명함 인쇄 시 주의사항",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "GQLPy",
+      "x": 20,
+      "y": 1860,
+      "name": "sec4",
+      "fill": "$color-primary",
+      "content": "Section 4: 특수 컴포넌트",
+      "fontFamily": "Noto Sans",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "frame",
+      "id": "tKLev",
+      "x": 20,
+      "y": 1900,
+      "name": "CMP-PG-MapEmbed",
+      "reusable": true,
+      "width": 800,
+      "height": 400,
+      "fill": "$color-bg-section",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "layout": "vertical",
+      "gap": 8,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon_font",
+          "id": "WRMbI",
+          "name": "mapIcon",
+          "width": 40,
+          "height": 40,
+          "iconFontName": "map-pin",
+          "iconFontFamily": "lucide",
+          "fill": "$color-text-muted"
+        },
+        {
+          "type": "text",
+          "id": "WZelL",
+          "name": "mapText",
+          "fill": "$color-text-muted",
+          "content": "카카오맵 지도 영역",
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "zc6xn",
+          "name": "mapAddr",
+          "fill": "$color-text-dark",
+          "content": "서울특별시 중구 을지로 OOO",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "u3Q3H",
+      "x": 20,
+      "y": 2340,
+      "name": "CMP-PG-LegalSection",
+      "reusable": true,
+      "width": 800,
+      "height": 200,
+      "fill": "$color-bg-white",
+      "cornerRadius": 8,
+      "stroke": {
+        "thickness": 1,
+        "fill": "$color-border"
+      },
+      "layout": "vertical",
+      "gap": 12,
+      "padding": [
+        24,
+        32
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "WzOYG",
+          "name": "sectionTitle",
+          "fill": "$color-text-dark",
+          "content": "제1조 (목적)",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "xvztx",
+          "name": "sectionBody",
+          "fill": "$color-text-dark",
+          "content": "이 약관은 후니프린팅(이하 '회사')이 제공하는 인쇄 서비스 및 관련 제반 서비스의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 합니다.",
+          "lineHeight": 1.7,
+          "fontFamily": "Noto Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "8Wazt",
+      "x": 20,
+      "y": 2580,
+      "name": "CMP-PG-PromoBanner",
+      "reusable": true,
+      "width": 1200,
+      "height": 160,
+      "fill": "$color-primary-light",
+      "cornerRadius": 8,
+      "padding": [
+        0,
+        40
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "QVSgF",
+          "name": "promoContent",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "t5zYZ",
+              "name": "promoTitle",
+              "fill": "$color-primary-dark",
+              "content": "봄맞이 명함 할인 이벤트",
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "g0zNF",
+              "name": "promoDesc",
+              "fill": "$color-text-dark",
+              "content": "3월 한정 — 전 품목 20% 할인",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hcYXw",
+          "name": "promoButton",
+          "width": 140,
+          "height": 44,
+          "fill": "$color-primary",
+          "cornerRadius": 5,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mKMI4",
+              "name": "promoBtnT",
+              "fill": "$color-bg-white",
+              "content": "자세히 보기",
+              "fontFamily": "Noto Sans",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-primary-light": {
+      "type": "color",
+      "value": "#EDE9FB"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    }
+  }
+}

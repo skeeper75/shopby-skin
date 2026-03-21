@@ -1,0 +1,5271 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "58Qzu",
+      "x": 0,
+      "y": 0,
+      "name": "SCR-MBR-011_Terms",
+      "width": 1280,
+      "height": 1000,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Xi9tA",
+          "name": "card",
+          "width": 480,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "q1XPW",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vXlVP",
+                  "name": "s1",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "#5538B6",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "suZtW",
+                      "name": "s1t",
+                      "fill": "#FFFFFF",
+                      "content": "1",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h6LE2",
+                  "name": "line1",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "FolNb",
+                  "name": "s2",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "$color-bg-section",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5idFu",
+                      "name": "s2t",
+                      "fill": "$color-text-muted",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zwMKx",
+                  "name": "line2",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "vdJXP",
+                  "name": "s3",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "$color-bg-section",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BJ53G",
+                      "name": "s3t",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Yu8k8",
+              "name": "title1",
+              "fill": "$color-text-dark",
+              "content": "약관동의",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "tKYhi",
+              "name": "all-agree",
+              "width": "fill_container",
+              "fill": "$color-bg-section",
+              "cornerRadius": 8,
+              "gap": 12,
+              "padding": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wzphx",
+                  "name": "chk0",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#5538B6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "F3WGG",
+                  "name": "lbl0",
+                  "fill": "$color-text-dark",
+                  "content": "전체 동의합니다",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7qwB2",
+              "name": "div1",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            },
+            {
+              "type": "frame",
+              "id": "cKaLl",
+              "name": "terms-list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "s9Tk3",
+                  "name": "t1",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Fn05p",
+                      "name": "c1",
+                      "width": 18,
+                      "height": 18,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1.5,
+                        "fill": "$color-border"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "aiO3o",
+                      "name": "l1",
+                      "fill": "$color-text-dark",
+                      "content": "이용약관 동의",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3NRdD",
+                      "name": "r1",
+                      "fill": "#5538B6",
+                      "content": "(필수)",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1S4NS",
+                  "name": "t2",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "IQgMt",
+                      "name": "c2",
+                      "width": 18,
+                      "height": 18,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1.5,
+                        "fill": "$color-border"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "TEAsy",
+                      "name": "l2",
+                      "fill": "$color-text-dark",
+                      "content": "개인정보 수집 및 이용 동의",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6S9OF",
+                      "name": "r2",
+                      "fill": "#5538B6",
+                      "content": "(필수)",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vQTez",
+                  "name": "t3",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DTDUO",
+                      "name": "c3",
+                      "width": 18,
+                      "height": 18,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1.5,
+                        "fill": "$color-border"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "tFHyG",
+                      "name": "l3",
+                      "fill": "$color-text-dark",
+                      "content": "마케팅 정보 수신 동의",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lcp3E",
+                      "name": "r3",
+                      "fill": "$color-text-muted",
+                      "content": "(선택)",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JSykf",
+                  "name": "t4",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Se7vG",
+                      "name": "c4",
+                      "width": 18,
+                      "height": 18,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1.5,
+                        "fill": "$color-border"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "xJ4AJ",
+                      "name": "l4",
+                      "fill": "$color-text-dark",
+                      "content": "만 14세 이상입니다",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BgpDA",
+                      "name": "r4",
+                      "fill": "#5538B6",
+                      "content": "(필수)",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Kjqfg",
+              "name": "btnRow",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "w9dxh",
+                  "name": "btnPrev",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sDcA1",
+                      "name": "btnPrevT",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B7zJD",
+                  "name": "btnNext",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#5538B6",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8MF2f",
+                      "name": "btnNextT",
+                      "fill": "#FFFFFF",
+                      "content": "다음",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Odymy",
+              "name": "loginLink",
+              "fill": "$color-text-muted",
+              "content": "이미 회원이신가요? 로그인",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "J7XRJ",
+      "x": 0,
+      "y": 1200,
+      "name": "SCR-MBR-012_SignUpForm",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "4ygaI",
+          "name": "card",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "EpVI5",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Noda9",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "bOT1D",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VF90d",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "R48iI",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TRW69",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Zo95L",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "U5TOy",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BJSxY",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ikQ3T",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "svljr",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "roChb",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Nq6jh",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VAaoL",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CFQC3",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "example@email.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zv0td",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BdCaZ",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FfMzA",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wH9vp",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BdiWh",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "axUqu",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "egCjJ",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SQLof",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Oae8h",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pjy8v",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yU02B",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wb9XU",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oWeb0",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4vXW6",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DcDdy",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nDWt2",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EqVmf",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RpI6d",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7ntdU",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "GRyOZ",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mrTIT",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "010-0000-0000",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VafXq",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8sTFR",
+                              "name": "smsBtnText",
+                              "fill": "#FFFFFF",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ng8V8",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QQfIO",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xHgma",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rZBLG",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 6자리",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "FjFC3",
+                              "name": "smsTimer",
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "4bfFf",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Uhwqz",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Q7UhA",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LopeH",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aiA97",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WELyZ",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "egZpn",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "i0njq",
+      "x": 1380,
+      "y": 1200,
+      "name": "SCR-MBR-012_SignUpForm_EmailOk",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "RrYBP",
+          "name": "card-emailok",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Tc168",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "D6tCI",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Axgcj",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8BAZV",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "eNaiW",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2xIJL",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LYgeA",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "qBIHJ",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rRWfb",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "eA4D2",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "jWaIu",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TiPKi",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "awPKN",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xtyum",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#16A34A"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "S1ptP",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-dark",
+                          "content": "user@example.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "5kwSQ",
+                      "name": "emailOkMsg",
+                      "fill": "#16A34A",
+                      "content": "사용 가능한 이메일입니다.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VIODl",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "j27Sy",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YCvO0",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XGetM",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "5n21Z",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "H3REo",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ar2x7",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "1LesD",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "poaKP",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "c1UDC",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YbBJE",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oVbbC",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ko7By",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zRyS4",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dH2pS",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MZKxX",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AfWop",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "J5yPm",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yqcwr",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yvBz2",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "DMCJv",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "010-0000-0000",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kI6xw",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lAFfT",
+                              "name": "smsBtnText",
+                              "fill": "#FFFFFF",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FA21j",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "2uPvw",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dzLay",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "9OvO7",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 6자리",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GQCw6",
+                              "name": "smsTimer",
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HhwWe",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "X3q6c",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fKtuK",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UbE2e",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ccNrm",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mqlHw",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "grZcH",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "j6Kxz",
+      "x": 2760,
+      "y": 1200,
+      "name": "SCR-MBR-012_SignUpForm_EmailDup",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gLDgk",
+          "name": "card-emaildup",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "cUW7O",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0gnTg",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "bkVEE",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zgQZi",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "ah9Cr",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Zx7S4",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A70Zy",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "XZly3",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dr0Mn",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "m0hvN",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "kjwxU",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LZSCO",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jb66K",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Zug9J",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#DC2626"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "P06mm",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-dark",
+                          "content": "user@example.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "pmH2A",
+                      "name": "emailDupMsg",
+                      "fill": "#DC2626",
+                      "content": "이미 사용 중인 이메일입니다.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nDrJ6",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UPB2E",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pJjKt",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hv6Wc",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h5WmP",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IQPPH",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gZ3QW",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EoYa5",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Uik78",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lV5PX",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8Nsba",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FjBRZ",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Oc04y",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fZxo1",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fGYQD",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kdV61",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Nqyke",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rN8Nr",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HSU0e",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "LfHXU",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PElhq",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "010-0000-0000",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Gm0w7",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nKYoJ",
+                              "name": "smsBtnText",
+                              "fill": "#FFFFFF",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PXNYT",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "judMe",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fgZdB",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "146o3",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 6자리",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nNmm1",
+                              "name": "smsTimer",
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "DBq6Q",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hby21",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zQt2S",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "2Qd18",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3fRpd",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G1s0P",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LDt8k",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MOEg9",
+      "x": 0,
+      "y": 2700,
+      "name": "SCR-MBR-012_SignUpForm_SmsActive",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Q0ea2",
+          "name": "card-smsactive",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZC59f",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "S4oUX",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "wC74Q",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WSuHi",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "G0KnR",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "beZGK",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jZQvW",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "urTdR",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2zthc",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "iXEDG",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "7pvYS",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RQFO8",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7gdHm",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8lgyJ",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NbepG",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "example@email.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RDR9M",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QzvnS",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4qOk0",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KG0nE",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Yb7Q9",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "vX8YD",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "C9MnD",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nJTSt",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1ZwTE",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d3W8q",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "aWUW8",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cu5zC",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lTKLT",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1x69M",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z1zC5",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "srzk6",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i8oFT",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xisRN",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ve3ge",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Fm9BW",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "63pjp",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-dark",
+                              "content": "010-1234-5678",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "U1wcn",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "$color-border",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IM6cB",
+                              "name": "smsBtnText",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4mgAz",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "z0WP4",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fj6VM",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#5538B6"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "V7iDE",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-dark",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SfR87",
+                              "name": "smsTimer",
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "1QSFP",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LZpMu",
+                              "name": "smsConfirmText",
+                              "fill": "#FFFFFF",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CQI1Y",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "q2vNY",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wRM3b",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K8V3t",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xXKDO",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "IX1AV",
+      "x": 1380,
+      "y": 2700,
+      "name": "SCR-MBR-012_SignUpForm_SmsOk",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "bq9wq",
+          "name": "card-smsok",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fCyf7",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dTiIE",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "mJxZv",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dPOeD",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "kWow4",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "78i63",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gw6CA",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "NBLic",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ePjXD",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "3wddJ",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "ccYiY",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "emwhh",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "H3ktG",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Q9pFF",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jfRKm",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "example@email.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g7fBY",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZKqFc",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YtEX8",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MQ2CX",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Tcj0t",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "1h1kP",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Elf3t",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eTXav",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "R7wMK",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "la1L5",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "77Wlz",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mg4PX",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XwdzH",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Xz1Fx",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7ZaXT",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mjRiR",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YLgz7",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "92i46",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kCOQf",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zwSSQ",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "avX7O",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-dark",
+                              "content": "010-1234-5678",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SZlkv",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "$color-border",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "B9z3I",
+                              "name": "smsBtnText",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gFWyV",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Es1ih",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "FeBgX",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#16A34A"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lIdQ3",
+                              "name": "smsPlaceholder",
+                              "fill": "#16A34A",
+                              "content": "인증 완료",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "DydZl",
+                              "x": 340,
+                              "y": 13.5,
+                              "name": "smsTimer",
+                              "enabled": false,
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jOLQo",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "E4VLj",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "BfIVM",
+                      "name": "smsOkMsg",
+                      "fill": "#16A34A",
+                      "content": "휴대전화 인증이 완료되었습니다.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7HK7H",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xEofq",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TlpPi",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "96XpF",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "#5538B6",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f07eQ",
+                      "name": "submitBtnText",
+                      "fill": "#FFFFFF",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "I2IS0",
+      "x": 2760,
+      "y": 2700,
+      "name": "SCR-MBR-012_SignUpForm_SmsExpired",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ZS9N3",
+          "name": "card-smsexpired",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "0ofut",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Utwh4",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "HRS0N",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aK7RZ",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "V4tku",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7UpZX",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ySlMP",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "K8kg8",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qj8bt",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "h7fSn",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "FINWg",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gFFR9",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "048F2",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Jx1Bu",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IRbB6",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "example@email.com",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ecRev",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AW1hl",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "p5IiV",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lwn4y",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "8자 이상, 영문+숫자+특수문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G6v6v",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Aqo5F",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JwQlC",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Nduek",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t1Usq",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E81wC",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Op6kZ",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QfEJn",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "비밀번호를 다시 입력해주세요",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KiohB",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tABzz",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "75jkA",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color-border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JCV6D",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "851Cb",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IpTzO",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zxkwK",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "D74jg",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n1OuN",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-dark",
+                              "content": "010-1234-5678",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "khBfe",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "5ouyT",
+                              "name": "smsBtnText",
+                              "fill": "#FFFFFF",
+                              "content": "재발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k77zF",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "w2XfZ",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KRKX0",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#DC2626"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "N2wtg",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-dark",
+                              "content": "123456",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Hexka",
+                              "name": "smsTimer",
+                              "fill": "#DC2626",
+                              "content": "00:00",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BWz3d",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "fill": "$color-bg-section",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zQtMW",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "lsgXH",
+                      "name": "smsExpMsg",
+                      "fill": "#DC2626",
+                      "content": "인증번호가 만료되었습니다. 재발송해주세요.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "021f2",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9hLEL",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6GoWD",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QAHME",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WyykI",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rMn79",
+      "x": 0,
+      "y": 4200,
+      "name": "SCR-MBR-012_SignUpForm_FormError",
+      "width": 1280,
+      "height": 1300,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zme8P",
+          "name": "card-formerror",
+          "width": 560,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "HEHNV",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vljcY",
+                  "name": "dot1done",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "E6uUX",
+                      "name": "check1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xaVXe",
+                  "name": "line1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "81KiO",
+                  "name": "dot2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DUVkQ",
+                      "name": "dot2num",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9B9V4",
+                  "name": "line2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "$color-border"
+                },
+                {
+                  "type": "frame",
+                  "id": "jKUJE",
+                  "name": "dot3",
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Clm7f",
+                      "name": "dot3num",
+                      "fill": "$color-text-muted",
+                      "content": "3",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "XFJbe",
+              "name": "title",
+              "fill": "$color-text-dark",
+              "content": "회원정보 입력",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "3WJzQ",
+              "name": "form-fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZhwEG",
+                  "name": "email-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "onrc3",
+                      "name": "emailLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이메일 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qj2Wt",
+                      "name": "email-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#DC2626"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lup28",
+                          "name": "emailPlaceholder",
+                          "fill": "$color-text-dark",
+                          "content": "invalid-email",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "8dBuK",
+                      "name": "emailErr",
+                      "fill": "#DC2626",
+                      "content": "올바른 이메일 형식이 아닙니다.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "furrZ",
+                  "name": "pw-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NytdP",
+                      "name": "pwLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yWatf",
+                      "name": "pw-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#DC2626"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AOHSR",
+                          "name": "pwPlaceholder",
+                          "fill": "$color-text-dark",
+                          "content": "abc",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4Kgul",
+                      "name": "pw-strength-bar",
+                      "width": "fill_container",
+                      "height": 4,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MaadO",
+                          "name": "bar1",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "#DC2626",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "j4NhW",
+                          "name": "bar2",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        },
+                        {
+                          "type": "frame",
+                          "id": "85cyH",
+                          "name": "bar3",
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "$color-border",
+                          "cornerRadius": 2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "VaUpf",
+                      "name": "pwErr",
+                      "fill": "#DC2626",
+                      "content": "8자 이상 입력해주세요.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LXjow",
+                  "name": "pw-confirm-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o85Kg",
+                      "name": "pwConfLabel",
+                      "fill": "$color-text-dark",
+                      "content": "비밀번호 확인 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IkMmX",
+                      "name": "pw-confirm-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#DC2626"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "B3iE6",
+                          "name": "pwConfPlaceholder",
+                          "fill": "$color-text-dark",
+                          "content": "abc123",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZB969",
+                      "name": "pwConfErr",
+                      "fill": "#DC2626",
+                      "content": "비밀번호가 일치하지 않습니다.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NQs0i",
+                  "name": "name-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EPAHb",
+                      "name": "nameLabel",
+                      "fill": "$color-text-dark",
+                      "content": "이름 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dcduW",
+                      "name": "name-input",
+                      "width": "fill_container",
+                      "height": 44,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#DC2626"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Hl8YN",
+                          "name": "namePlaceholder",
+                          "fill": "$color-text-muted",
+                          "content": "홍길동",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "2WM1w",
+                      "name": "nameErr",
+                      "fill": "#DC2626",
+                      "content": "이름을 입력해주세요.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aS2TP",
+                  "name": "phone-field",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ksAT8",
+                      "name": "phoneLabel",
+                      "fill": "$color-text-dark",
+                      "content": "휴대전화 *",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eLAYv",
+                      "name": "phone-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "2epXv",
+                          "name": "phone-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#DC2626"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BKNKD",
+                              "name": "phonePlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "010-0000-0000",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "1cOnz",
+                          "name": "sms-btn",
+                          "width": 120,
+                          "height": 44,
+                          "fill": "#5538B6",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LBL7l",
+                              "name": "smsBtnText",
+                              "fill": "#FFFFFF",
+                              "content": "인증번호 발송",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "hLNlr",
+                      "name": "phoneErr",
+                      "fill": "#DC2626",
+                      "content": "휴대전화 번호를 입력해주세요.",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5nEEW",
+                  "name": "sms-auth",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zSRwB",
+                      "name": "sms-row",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yUNUU",
+                          "name": "sms-input",
+                          "width": "fill_container",
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Torta",
+                              "name": "smsPlaceholder",
+                              "fill": "$color-text-muted",
+                              "content": "인증번호 6자리",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "PXX1i",
+                              "name": "smsTimer",
+                              "fill": "#5538B6",
+                              "content": "02:59",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "rXykj",
+                          "name": "sms-confirm-btn",
+                          "width": 80,
+                          "height": 44,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$color-border"
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uFT4B",
+                              "name": "smsConfirmText",
+                              "fill": "$color-text-muted",
+                              "content": "확인",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wUYCr",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8Sqvt",
+                  "name": "prev-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nPy3Z",
+                      "name": "prevBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "이전",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LNSQJ",
+                  "name": "submit-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$color-border",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vGUFa",
+                      "name": "submitBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "가입하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tnC3O",
+      "x": 1380,
+      "y": 4200,
+      "name": "SCR-MBR-019_SignUpComplete",
+      "width": 1280,
+      "height": 1000,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "V4J73",
+          "name": "card",
+          "width": 480,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 40,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Snhts",
+              "name": "step-indicator",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "2Kmvj",
+                  "name": "s2d1",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "BpyxL",
+                      "name": "s2c1",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MlLk4",
+                  "name": "s2l1",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "0UeJr",
+                  "name": "s2d2",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "FTAJf",
+                      "name": "s2c2",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pZ5tk",
+                  "name": "s2l2",
+                  "width": 60,
+                  "height": 2,
+                  "fill": "#5538B6"
+                },
+                {
+                  "type": "frame",
+                  "id": "2eSxB",
+                  "name": "s2d3",
+                  "width": 28,
+                  "height": 28,
+                  "fill": "#5538B6",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "mWQ5q",
+                      "name": "s2c3",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2f0Hf",
+              "name": "checkCircle",
+              "width": 80,
+              "height": 80,
+              "fill": "#5538B6",
+              "cornerRadius": 40,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "HwzLi",
+                  "name": "checkIcon",
+                  "width": 36,
+                  "height": 36,
+                  "iconFontName": "check",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sp2C7",
+              "name": "completeTitle",
+              "fill": "$color-text-dark",
+              "content": "회원가입이 완료되었습니다!",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "G2JaQ",
+              "name": "completeDesc",
+              "fill": "$color-text-muted",
+              "content": "홍길동님, 환영합니다.",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "C8Bz9",
+              "name": "coupon-card",
+              "width": "fill_container",
+              "fill": "#F0ECFA",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xk4Su",
+                  "name": "couponTitle",
+                  "fill": "$color-text-muted",
+                  "content": "신규 가입 축하 쿠폰",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "2z8cC",
+                  "name": "couponAmount",
+                  "fill": "#5538B6",
+                  "content": "5,000원 할인",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 30,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "xG1Nm",
+                  "name": "couponCond",
+                  "fill": "$color-text-muted",
+                  "content": "30,000원 이상 주문 시",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "NIIXi",
+                  "name": "couponExpiry",
+                  "fill": "$color-text-muted",
+                  "content": "유효기간: 30일",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zPdI3",
+              "name": "btn-row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FEOQr",
+                  "name": "login-btn",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "#5538B6",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8zXu7",
+                      "name": "loginBtnText",
+                      "fill": "#FFFFFF",
+                      "content": "로그인하기",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uKQdX",
+                  "name": "main-btn",
+                  "width": "fill_container",
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color-border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cJhxz",
+                      "name": "mainBtnText",
+                      "fill": "$color-text-muted",
+                      "content": "메인으로",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "22T3X",
+      "x": 0,
+      "y": 5400,
+      "name": "SCR-MBR-018_PasswordStrength",
+      "width": 400,
+      "height": 300,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "Kidt4",
+          "name": "weakLabel",
+          "fill": "#DC2626",
+          "content": "약함 (Weak)",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "H6ZTp",
+          "name": "weak-bars",
+          "width": "fill_container",
+          "height": 4,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "dbEpy",
+              "name": "wb1",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#DC2626",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "kfgf8",
+              "name": "wb2",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-border",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "P60Lt",
+              "name": "wb3",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-border",
+              "cornerRadius": 2
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Tvyj3",
+          "name": "medLabel",
+          "fill": "#F59E0B",
+          "content": "보통 (Medium)",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "cewo9",
+          "name": "med-bars",
+          "width": "fill_container",
+          "height": 4,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "1e92j",
+              "name": "mb1",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#F59E0B",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "4Cp8j",
+              "name": "mb2",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#F59E0B",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "vRLY5",
+              "name": "mb3",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$color-border",
+              "cornerRadius": 2
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "mJaD0",
+          "name": "strLabel",
+          "fill": "#16A34A",
+          "content": "강함 (Strong)",
+          "fontFamily": "Noto Sans",
+          "fontSize": 13,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "uNYJ8",
+          "name": "str-bars",
+          "width": "fill_container",
+          "height": 4,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "FxFAH",
+              "name": "sb1",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#16A34A",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "alZ39",
+              "name": "sb2",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#16A34A",
+              "cornerRadius": 2
+            },
+            {
+              "type": "frame",
+              "id": "KPK9J",
+              "name": "sb3",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#16A34A",
+              "cornerRadius": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    },
+    "color-primary-light": {
+      "type": "color",
+      "value": "#EDE9FB"
+    }
+  }
+}
