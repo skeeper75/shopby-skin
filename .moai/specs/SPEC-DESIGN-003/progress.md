@@ -62,3 +62,12 @@
 - [x] 3-2: page-list.pen — 2026-03-21 완료 (SCR-PG-004: Header SSOT+Breadcrumb+CategoryHeader+FilterBar+4열그리드+Pagination+Footer SSOT)
 - [x] 3-3: page-content.pen — 2026-03-21 완료 (SCR-PG-021 회사소개(개요/연혁/장비) + SCR-PG-022 이용약관(3개조) + SCR-PG-024 찾아오시는길(MapEmbed+주소/전화/교통))
 - [x] 3-4: page-guide.pen — 2026-03-21 완료 (SCR-A8-GUIDE: 6개 가이드 카드(인쇄/제본/후가공/파일/배송)+카테고리탭+Footer SSOT)
+
+### 완료
+- [x] 2026-03-21: SPEC-DESIGN-003 Phase 1~3 전체 완료 처리
+  - Phase 1: 5개 도메인 *-components.pen 표준화 (102개 reusable 컴포넌트)
+  - Phase 2: 19개 화면 .pen 일관성 정리 (181개 화면)
+  - Phase 2.5: 전수 감사 (색상 26건 + cornerRadius 268건 + 높이 76건)
+  - Phase 3: Pages 도메인 5개 .pen 신규 작성
+  - Phase 4(Stats): SPEC-STATS-001 확정 후 별도 진행 예정
+  - 수용 기준: AC-DS3-001~004 모두 충족

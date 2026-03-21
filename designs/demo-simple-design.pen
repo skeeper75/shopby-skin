@@ -1,0 +1,167 @@
+{
+  "document": {
+    "name": "Simple Design Demo",
+    "version": "3.0",
+    "width": 800,
+    "height": 600,
+    "units": "px",
+    "pages": [
+      {
+        "id": "page-1",
+        "name": "Page 1",
+        "width": 800,
+        "height": 600,
+        "children": [
+          {
+            "id": "shape-rectangle-1",
+            "name": "Rectangle 1",
+            "type": "rectangle",
+            "x": 50,
+            "y": 50,
+            "width": 200,
+            "height": 150,
+            "fill": {
+              "color": "#3498db",
+              "opacity": 1
+            },
+            "stroke": {
+              "color": "#2980b9",
+              "width": 2
+            },
+            "cornerRadius": 8
+          },
+          {
+            "id": "shape-circle-1",
+            "name": "Circle 1",
+            "type": "ellipse",
+            "x": 300,
+            "y": 80,
+            "width": 120,
+            "height": 120,
+            "fill": {
+              "color": "#e74c3c",
+              "opacity": 0.8
+            },
+            "stroke": {
+              "color": "#c0392b",
+              "width": 2
+            }
+          },
+          {
+            "id": "shape-rectangle-2",
+            "name": "Rectangle 2",
+            "type": "rectangle",
+            "x": 500,
+            "y": 50,
+            "width": 250,
+            "height": 100,
+            "fill": {
+              "color": "#2ecc71",
+              "opacity": 1
+            },
+            "stroke": {
+              "color": "#27ae60",
+              "width": 2
+            },
+            "cornerRadius": 0
+          },
+          {
+            "id": "shape-circle-2",
+            "name": "Circle 2",
+            "type": "ellipse",
+            "x": 100,
+            "y": 280,
+            "width": 100,
+            "height": 100,
+            "fill": {
+              "color": "#f39c12",
+              "opacity": 0.9
+            },
+            "stroke": {
+              "color": "#d68910",
+              "width": 3
+            }
+          },
+          {
+            "id": "shape-line-1",
+            "name": "Line 1",
+            "type": "line",
+            "x1": 50,
+            "y1": 450,
+            "x2": 750,
+            "y2": 450,
+            "stroke": {
+              "color": "#34495e",
+              "width": 3
+            }
+          },
+          {
+            "id": "shape-triangle",
+            "name": "Triangle",
+            "type": "polygon",
+            "points": [
+              {"x": 400, "y": 300},
+              {"x": 500, "y": 450},
+              {"x": 300, "y": 450}
+            ],
+            "fill": {
+              "color": "#9b59b6",
+              "opacity": 1
+            },
+            "stroke": {
+              "color": "#8e44ad",
+              "width": 2
+            }
+          },
+          {
+            "id": "shape-rectangle-3",
+            "name": "Text Box",
+            "type": "rectangle",
+            "x": 300,
+            "y": 500,
+            "width": 300,
+            "height": 80,
+            "fill": {
+              "color": "#ecf0f1",
+              "opacity": 1
+            },
+            "stroke": {
+              "color": "#95a5a6",
+              "width": 1
+            },
+            "cornerRadius": 4
+          },
+          {
+            "id": "text-1",
+            "name": "Title Text",
+            "type": "text",
+            "x": 320,
+            "y": 515,
+            "width": 260,
+            "height": 30,
+            "content": "간단한 디자인 데모",
+            "fontSize": 24,
+            "fontFamily": "Arial",
+            "fontWeight": "bold",
+            "color": "#2c3e50",
+            "align": "center"
+          },
+          {
+            "id": "text-2",
+            "name": "Description Text",
+            "type": "text",
+            "x": 320,
+            "y": 550,
+            "width": 260,
+            "height": 20,
+            "content": "Pencil에서 생성된 여러 도형 디자인",
+            "fontSize": 14,
+            "fontFamily": "Arial",
+            "color": "#7f8c8d",
+            "align": "center"
+          }
+        ]
+      }
+    ]
+  }
+}

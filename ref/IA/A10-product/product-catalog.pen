@@ -1,0 +1,5449 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "7FoiR",
+      "x": 0,
+      "y": 0,
+      "name": "Component/GlobalHeader",
+      "reusable": true,
+      "width": 1280,
+      "height": 64,
+      "fill": "$--background",
+      "stroke": {
+        "align": "inside",
+        "thickness": {
+          "bottom": 1
+        },
+        "fill": "$--border"
+      },
+      "padding": [
+        0,
+        40
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "OuCxn",
+          "name": "logoArea",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 6,
+              "id": "WSfu7",
+              "name": "logoIcon",
+              "fill": "$--primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "type": "text",
+              "id": "gXMoH",
+              "name": "logoText",
+              "fill": "$--primary",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gmUF5",
+          "name": "navArea",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "38qa4",
+              "name": "nav1",
+              "fill": "$--foreground",
+              "content": "명함",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "rfOhu",
+              "name": "nav2",
+              "fill": "$--foreground",
+              "content": "전단/리플렛",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "yXZUt",
+              "name": "nav3",
+              "fill": "$--foreground",
+              "content": "포스터",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "3Wecb",
+              "name": "nav4",
+              "fill": "$--foreground",
+              "content": "스티커",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "YQiZc",
+              "name": "nav5",
+              "fill": "$--foreground",
+              "content": "제본",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "3I4Dg",
+              "name": "nav6",
+              "fill": "$--foreground",
+              "content": "포장재",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HActs",
+          "name": "rightArea",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "3KeYl",
+              "name": "searchIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "search",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "icon_font",
+              "id": "0oHQa",
+              "name": "cartIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "shopping-cart",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "icon_font",
+              "id": "MVXFF",
+              "name": "userIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "user",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hIS1d",
+      "x": 0,
+      "y": 150,
+      "name": "Component/ProductCard",
+      "reusable": true,
+      "clip": true,
+      "width": 280,
+      "fill": "$--background",
+      "cornerRadius": 8,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1,
+        "fill": "$--border"
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gaVIX",
+          "name": "thumbnail",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "$--card"
+        },
+        {
+          "type": "frame",
+          "id": "Vbq8T",
+          "name": "info",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "9VkYY",
+              "name": "productName",
+              "fill": "$--foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "명함 인쇄 (양면 컬러)",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "tmTTd",
+              "name": "productPrice",
+              "fill": "$--foreground",
+              "content": "5,900원~",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "0Hnng",
+              "name": "badgeRow",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NDFfm",
+                  "name": "badge1",
+                  "height": 20,
+                  "fill": "$--primary-light",
+                  "cornerRadius": 4,
+                  "padding": [
+                    0,
+                    6
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ii0I7",
+                      "name": "badge1t",
+                      "fill": "$--primary",
+                      "content": "BEST",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 10,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fzVx1",
+      "x": 0,
+      "y": 550,
+      "name": "Component/MobileHeader",
+      "reusable": true,
+      "width": 375,
+      "height": 56,
+      "fill": "$--background",
+      "stroke": {
+        "align": "inside",
+        "thickness": {
+          "bottom": 1
+        },
+        "fill": "$--border"
+      },
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon_font",
+          "id": "M5OdF",
+          "name": "mhMenu",
+          "width": 24,
+          "height": 24,
+          "iconFontName": "menu",
+          "iconFontFamily": "lucide",
+          "fill": "$--foreground"
+        },
+        {
+          "type": "text",
+          "id": "3UiES",
+          "name": "mhLogo",
+          "fill": "$--primary",
+          "content": "후니프린팅",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 16,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "TKOsS",
+          "name": "mhRight",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "Ba3hV",
+              "name": "mhSearch",
+              "width": 22,
+              "height": 22,
+              "iconFontName": "search",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "icon_font",
+              "id": "o3jYX",
+              "name": "mhCart",
+              "width": 22,
+              "height": 22,
+              "iconFontName": "shopping-cart",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "sXCCT",
+      "x": 0,
+      "y": 680,
+      "name": "Component/CategoryItem",
+      "reusable": true,
+      "width": 72,
+      "layout": "vertical",
+      "gap": 8,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "fkLwN",
+          "name": "catIcon",
+          "width": 48,
+          "height": 48,
+          "fill": "$--primary-light",
+          "cornerRadius": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "h53jE",
+              "name": "catIconInner",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "file-text",
+              "iconFontFamily": "lucide",
+              "fill": "$--primary"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "nsWWz",
+          "name": "catName",
+          "fill": "$--foreground",
+          "content": "명함",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fEPR3",
+      "x": 1400,
+      "y": 0,
+      "name": "SCR-A10-MAIN / PC",
+      "width": 1280,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "ZXkoK",
+          "name": "mainLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-MAIN: 메인 페이지 (PC 1280px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "khPLD",
+          "type": "ref",
+          "ref": "7FoiR",
+          "width": "fill_container",
+          "name": "headerInst",
+          "y": 16,
+          "descendants": {
+            "OuCxn": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 40,
+              "y": 16
+            },
+            "gXMoH": {
+              "x": 40,
+              "y": 3
+            },
+            "gmUF5": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 476,
+              "y": 22
+            },
+            "rfOhu": {
+              "x": 50
+            },
+            "yXZUt": {
+              "x": 144
+            },
+            "3Wecb": {
+              "x": 207
+            },
+            "YQiZc": {
+              "x": 270
+            },
+            "3I4Dg": {
+              "x": 320
+            },
+            "HActs": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 1148,
+              "y": 22
+            },
+            "0oHQa": {
+              "x": 36
+            },
+            "MVXFF": {
+              "x": 72
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "axb1G",
+          "name": "HeroBanner",
+          "width": "fill_container",
+          "height": 400,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "$--primary",
+                "position": 0
+              },
+              {
+                "color": "$--primary-dark",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KFwas",
+              "name": "heroTitle",
+              "fill": "$--primary-foreground",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "zUn6X",
+              "name": "heroSub",
+              "fill": "$--primary-foreground",
+              "content": "고품질 인쇄물을 합리적인 가격으로",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "8gHOC",
+              "name": "heroBtnRow",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vo48C",
+                  "name": "heroBtn1",
+                  "width": 140,
+                  "height": 44,
+                  "fill": "$--primary-foreground",
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary-foreground"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Rjac8",
+                      "name": "heroBtn1t",
+                      "fill": "$--primary",
+                      "content": "지금 주문하기",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GP3dk",
+                  "name": "heroBtn2",
+                  "width": 120,
+                  "height": 44,
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary-foreground"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "h17pW",
+                      "name": "heroBtn2t",
+                      "fill": "$--primary-foreground",
+                      "content": "샘플 신청",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aUmbj",
+              "name": "heroDots",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "2QXaS",
+                  "name": "dot1",
+                  "fill": "$--primary-foreground",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "GZCrc",
+                  "name": "dot2",
+                  "fill": "$--primary-secondary",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "LkKEV",
+                  "name": "dot3",
+                  "fill": "$--primary-secondary",
+                  "width": 8,
+                  "height": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "czLWO",
+          "name": "CategorySection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "cOL18",
+              "name": "catHeader",
+              "fill": "$--foreground",
+              "content": "카테고리 탐색",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "T4vK5",
+              "name": "catRow",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "tTfm1",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat1",
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "kEhBk",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat2",
+                  "x": 96,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "전단",
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "3tkWK",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat3",
+                  "x": 192,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "포스터",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "s6tsc",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat4",
+                  "x": 288,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "스티커",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "tsBOg",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat5",
+                  "x": 384,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "캘린더",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "22vtm",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat6",
+                  "x": 480,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "제본",
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "rmhSx",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat7",
+                  "x": 576,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "파우치",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "5SmFa",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "cat8",
+                  "x": 672,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "굿즈",
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fMryz",
+          "name": "RecommendSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            40,
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ve1p9",
+              "name": "recHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "az3wv",
+                  "name": "recTitle",
+                  "fill": "$--foreground",
+                  "content": "추천 상품",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Nln4O",
+                  "name": "recMore",
+                  "fill": "$--primary",
+                  "content": "더보기 →",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mbtg7",
+              "name": "ProductGrid",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "id": "rP9ZZ",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "pc1",
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "gaVIX": {
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "y": 200
+                    },
+                    "9VkYY": {
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                },
+                {
+                  "id": "QDvMI",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "pc2",
+                  "x": 305,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "gaVIX": {
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "y": 200
+                    },
+                    "9VkYY": {
+                      "content": "전단지 A4 (양면 컬러)",
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "content": "12,000원~",
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                },
+                {
+                  "id": "is70Z",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "pc3",
+                  "x": 610,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "gaVIX": {
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "y": 200
+                    },
+                    "9VkYY": {
+                      "content": "포스터 A3 (단면 컬러)",
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "content": "8,500원~",
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                },
+                {
+                  "id": "I1nOW",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "pc4",
+                  "x": 915,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "gaVIX": {
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "y": 200
+                    },
+                    "9VkYY": {
+                      "content": "스티커 원형 (도무송)",
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "content": "3,200원~",
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "OrBO4",
+      "x": 2780,
+      "y": 0,
+      "name": "SCR-A10-MAIN / Mobile",
+      "width": 375,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "7IEeW",
+          "name": "mobLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-MAIN: 메인 페이지 (Mobile 375px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "9WxJi",
+          "type": "ref",
+          "ref": "fzVx1",
+          "width": "fill_container",
+          "name": "mobHeader",
+          "y": 16,
+          "descendants": {
+            "M5OdF": {
+              "x": 16,
+              "y": 16
+            },
+            "3UiES": {
+              "x": 134.5,
+              "y": 16.5
+            },
+            "TKOsS": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 303,
+              "y": 17
+            },
+            "o3jYX": {
+              "x": 34
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "rBExJ",
+          "name": "MobileHero",
+          "width": "fill_container",
+          "height": 220,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "$--primary",
+                "position": 0
+              },
+              {
+                "color": "$--primary-dark",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ELGad",
+              "name": "mobHeroT",
+              "fill": "$--primary-foreground",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "cT7q3",
+              "name": "mobHeroSub",
+              "fill": "$--primary-foreground",
+              "content": "고품질 인쇄물을 합리적인 가격으로",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "5X7Hv",
+              "name": "mobHeroBtn",
+              "width": 130,
+              "height": 40,
+              "fill": "$--primary-foreground",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zjJmg",
+                  "name": "mobHeroBtnT",
+                  "fill": "$--primary",
+                  "content": "지금 주문하기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "i8a7n",
+              "name": "mobDots",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "ESOMP",
+                  "name": "md1",
+                  "fill": "$--primary-foreground",
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "type": "ellipse",
+                  "id": "5HBgF",
+                  "name": "md2",
+                  "fill": "$--primary-secondary",
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "type": "ellipse",
+                  "id": "7kwZE",
+                  "name": "md3",
+                  "fill": "$--primary-secondary",
+                  "width": 6,
+                  "height": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xafic",
+          "name": "mobCatSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            20,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "PamCt",
+              "name": "mobCatTitle",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GOOTq",
+                  "name": "mobCatT",
+                  "fill": "$--foreground",
+                  "content": "카테고리",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "cn83g",
+                  "name": "mobCatMore",
+                  "fill": "$--primary",
+                  "content": "모두보기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UMDWo",
+              "name": "mobCatRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "6dc4X",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "mc1",
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "yUMsb",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "mc2",
+                  "x": 88,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "전단",
+                      "x": 24.5,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "W2fdN",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "mc3",
+                  "x": 176,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "포스터",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                },
+                {
+                  "id": "0yRuu",
+                  "type": "ref",
+                  "ref": "sXCCT",
+                  "name": "mc4",
+                  "x": 264,
+                  "y": 0,
+                  "height": "fit_content",
+                  "descendants": {
+                    "fkLwN": {
+                      "x": 12
+                    },
+                    "h53jE": {
+                      "x": 12,
+                      "y": 12
+                    },
+                    "nsWWz": {
+                      "content": "스티커",
+                      "x": 19,
+                      "y": 56
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PlYJN",
+          "name": "mobRecSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            0,
+            16,
+            20,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EbxOf",
+              "name": "mobRecHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2adpJ",
+                  "name": "mobRecT",
+                  "fill": "$--foreground",
+                  "content": "추천 상품",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "sNR5O",
+                  "name": "mobRecMore",
+                  "fill": "$--primary",
+                  "content": "더보기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fOfgw",
+              "name": "mobRecGrid",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "sfOFg",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "mpc1",
+                  "height": "fit_content",
+                  "y": 0,
+                  "descendants": {
+                    "gaVIX": {
+                      "height": 140,
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "y": 140,
+                      "height": "fit_content"
+                    },
+                    "9VkYY": {
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                },
+                {
+                  "id": "CgHcS",
+                  "type": "ref",
+                  "ref": "hIS1d",
+                  "width": "fill_container",
+                  "name": "mpc2",
+                  "height": "fit_content",
+                  "x": 177.5,
+                  "y": 0,
+                  "descendants": {
+                    "gaVIX": {
+                      "height": 140,
+                      "width": "fill_container"
+                    },
+                    "Vbq8T": {
+                      "width": "fill_container",
+                      "y": 140,
+                      "height": "fit_content"
+                    },
+                    "9VkYY": {
+                      "content": "전단지 인쇄",
+                      "width": "fill_container",
+                      "x": 16,
+                      "y": 16
+                    },
+                    "tmTTd": {
+                      "content": "12,000원~",
+                      "x": 16,
+                      "y": 44
+                    },
+                    "0Hnng": {
+                      "width": "fit_content",
+                      "height": "fit_content",
+                      "x": 16,
+                      "y": 75
+                    },
+                    "NDFfm": {
+                      "width": "fit_content"
+                    },
+                    "Ii0I7": {
+                      "x": 6,
+                      "y": 3
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "g9wf0",
+      "x": 1400,
+      "y": 1100,
+      "name": "SCR-A10-LIST / PC",
+      "width": 1280,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "3MSEJ",
+          "name": "listLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-LIST: 상품 목록 (PC 1280px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "FDMq7",
+          "type": "ref",
+          "ref": "7FoiR",
+          "width": "fill_container",
+          "name": "listHeader",
+          "y": 16,
+          "descendants": {
+            "OuCxn": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 40,
+              "y": 16
+            },
+            "gXMoH": {
+              "x": 40,
+              "y": 3
+            },
+            "gmUF5": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 476,
+              "y": 22
+            },
+            "rfOhu": {
+              "x": 50
+            },
+            "yXZUt": {
+              "x": 144
+            },
+            "3Wecb": {
+              "x": 207
+            },
+            "YQiZc": {
+              "x": 270
+            },
+            "3I4Dg": {
+              "x": 320
+            },
+            "HActs": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 1148,
+              "y": 22
+            },
+            "0oHQa": {
+              "x": 36
+            },
+            "MVXFF": {
+              "x": 72
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "J14Nu",
+          "name": "ListBody",
+          "width": "fill_container",
+          "gap": 24,
+          "padding": [
+            24,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EUNhD",
+              "name": "FilterSidebar",
+              "width": 240,
+              "fill": "$--background",
+              "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9rXZf",
+                  "name": "filterTitle",
+                  "fill": "$--foreground",
+                  "content": "필터",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "GAVde",
+                  "name": "FilterGroup1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dDrKd",
+                      "name": "fg1title",
+                      "fill": "$--foreground",
+                      "content": "용지",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3MENQ",
+                      "name": "fg1opt1",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "DmLnB",
+                          "name": "fg1chk1",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "RuMEm",
+                          "name": "fg1lbl1",
+                          "fill": "$--foreground",
+                          "content": "스노우화이트",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oVAd2",
+                      "name": "fg1opt2",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "ZObhz",
+                          "name": "fg1chk2",
+                          "fill": "$--primary",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--primary"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "qaSLe",
+                          "name": "fg1lbl2",
+                          "fill": "$--foreground",
+                          "content": "아트지",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "emvYJ",
+                      "name": "fg1opt3",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "hYC53",
+                          "name": "fg1chk3",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "Byj86",
+                          "name": "fg1lbl3",
+                          "fill": "$--foreground",
+                          "content": "모조지",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fMNUa",
+                  "name": "FilterGroup2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xTDTo",
+                      "name": "fg2title",
+                      "fill": "$--foreground",
+                      "content": "코팅",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "j7ogG",
+                      "name": "fg2opt1",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "qeqvL",
+                          "name": "fg2chk1",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "OjPFt",
+                          "name": "fg2lbl1",
+                          "fill": "$--foreground",
+                          "content": "무광",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "AFooL",
+                      "name": "fg2opt2",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "Qcpaa",
+                          "name": "fg2chk2",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "0XQ8W",
+                          "name": "fg2lbl2",
+                          "fill": "$--foreground",
+                          "content": "유광",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "20gPc",
+              "name": "ContentArea",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "sVOso",
+                  "name": "listTopBar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NXrDD",
+                      "name": "totalCount",
+                      "fill": "$--foreground",
+                      "content": "총 48개 상품",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QTPNf",
+                      "name": "sortSelect",
+                      "width": 140,
+                      "height": 36,
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bXxIE",
+                          "name": "sortText",
+                          "fill": "$--foreground",
+                          "content": "최신순",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "EqNmf",
+                          "name": "sortArrow",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "chevron-down",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--muted-foreground"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HKuXr",
+                  "name": "ProductGrid3Col",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "id": "Aww7U",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc1",
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    },
+                    {
+                      "id": "t0Ot2",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc2",
+                      "x": 318.6666666666667,
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "content": "전단지 A4 (양면 컬러)",
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "content": "12,000원~",
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    },
+                    {
+                      "id": "F1abA",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc3",
+                      "x": 637.3333333333334,
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "content": "포스터 A3 (단면)",
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "content": "8,500원~",
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FNUUP",
+                  "name": "ProductGridRow2",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "id": "oWg9r",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc4",
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "content": "스티커 원형 50mm",
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "content": "3,200원~",
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    },
+                    {
+                      "id": "iu2WL",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc5",
+                      "x": 318.6666666666667,
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "content": "리플렛 3단 접지",
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "content": "15,000원~",
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    },
+                    {
+                      "id": "L950d",
+                      "type": "ref",
+                      "ref": "hIS1d",
+                      "width": "fill_container",
+                      "name": "gpc6",
+                      "x": 637.3333333333334,
+                      "y": 0,
+                      "height": "fit_content",
+                      "descendants": {
+                        "gaVIX": {
+                          "width": "fill_container"
+                        },
+                        "Vbq8T": {
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "y": 200
+                        },
+                        "9VkYY": {
+                          "content": "포장 박스 B형",
+                          "width": "fill_container",
+                          "x": 16,
+                          "y": 16
+                        },
+                        "tmTTd": {
+                          "content": "2,800원~",
+                          "x": 16,
+                          "y": 44
+                        },
+                        "0Hnng": {
+                          "width": "fit_content",
+                          "height": "fit_content",
+                          "x": 16,
+                          "y": 75
+                        },
+                        "NDFfm": {
+                          "width": "fit_content"
+                        },
+                        "Ii0I7": {
+                          "x": 6,
+                          "y": 3
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4vQ5z",
+                  "name": "Pagination",
+                  "width": "fill_container",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LzHGO",
+                      "name": "pgPrev",
+                      "width": 32,
+                      "height": 32,
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Hhs8I",
+                          "name": "pgPrevIcon",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "chevron-left",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--muted-foreground"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l4J5S",
+                      "name": "pg1",
+                      "width": 32,
+                      "height": 32,
+                      "fill": "$--primary",
+                      "cornerRadius": 6,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oEKTc",
+                          "name": "pg1t",
+                          "fill": "$--primary-foreground",
+                          "content": "1",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d0NCx",
+                      "name": "pg2",
+                      "width": 32,
+                      "height": 32,
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WITvO",
+                          "name": "pg2t",
+                          "fill": "$--foreground",
+                          "content": "2",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WoAmt",
+                      "name": "pg3",
+                      "width": 32,
+                      "height": 32,
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XvtaD",
+                          "name": "pg3t",
+                          "fill": "$--foreground",
+                          "content": "3",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hx4Zk",
+                      "name": "pgNext",
+                      "width": 32,
+                      "height": 32,
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "djfJv",
+                          "name": "pgNextIcon",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "chevron-right",
+                          "iconFontFamily": "lucide",
+                          "fill": "$--foreground"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "i1nwn",
+      "x": 2780,
+      "y": 1100,
+      "name": "SCR-A10-LIST / Mobile",
+      "width": 375,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "KRtHJ",
+          "name": "lmLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-LIST: 상품 목록 (Mobile 375px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "XJ3V9",
+          "name": "lmTopBar",
+          "width": "fill_container",
+          "height": 48,
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "qSgQU",
+              "name": "lmBack",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "arrow-left",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "text",
+              "id": "Db5MS",
+              "name": "lmTitle",
+              "fill": "$--foreground",
+              "content": "명함 인쇄",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "wOpuc",
+              "name": "lmActions",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "f67k9",
+                  "name": "lmFilter",
+                  "height": 32,
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--border"
+                  },
+                  "gap": 4,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "6S74Y",
+                      "name": "lmFilterIcon",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "sliders-horizontal",
+                      "iconFontFamily": "lucide",
+                      "fill": "$--foreground"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zeyPS",
+                      "name": "lmFilterT",
+                      "fill": "$--foreground",
+                      "content": "필터",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o7ROg",
+                  "name": "lmSort",
+                  "height": 32,
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--border"
+                  },
+                  "gap": 4,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3dNoF",
+                      "name": "lmSortT",
+                      "fill": "$--foreground",
+                      "content": "최신순",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "90SZX",
+                      "name": "lmSortIcon",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "$--muted-foreground"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oZucL",
+          "name": "lmCount",
+          "width": "fill_container",
+          "padding": [
+            8,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "q0PPK",
+              "name": "lmCountT",
+              "fill": "$--muted-foreground",
+              "content": "총 48개 상품",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "f5aSP",
+          "name": "lmGrid",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "id": "GVVHd",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "lmpc1",
+              "height": "fit_content",
+              "x": 16,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "RczWz",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "lmpc2",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "전단지 인쇄",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "12,000원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zs7Tx",
+          "name": "lmGrid2",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            8,
+            16,
+            0,
+            16
+          ],
+          "children": [
+            {
+              "id": "a8IEK",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "lmpc3",
+              "height": "fit_content",
+              "x": 16,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "포스터 A3",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "8,500원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "h6W5d",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "lmpc4",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "스티커 원형",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "3,200원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "N351J",
+      "x": 1400,
+      "y": 2300,
+      "name": "SCR-A10-SUB-MAIN / PC",
+      "width": 1280,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "u1Dyk",
+          "name": "subLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-SUB-MAIN: 서브 메인 (PC 1280px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "qRxFL",
+          "type": "ref",
+          "ref": "7FoiR",
+          "width": "fill_container",
+          "name": "subHeader",
+          "y": 16,
+          "descendants": {
+            "OuCxn": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 40,
+              "y": 16
+            },
+            "gXMoH": {
+              "x": 40,
+              "y": 3
+            },
+            "gmUF5": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 476,
+              "y": 22
+            },
+            "rfOhu": {
+              "x": 50
+            },
+            "yXZUt": {
+              "x": 144
+            },
+            "3Wecb": {
+              "x": 207
+            },
+            "YQiZc": {
+              "x": 270
+            },
+            "3I4Dg": {
+              "x": 320
+            },
+            "HActs": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 1148,
+              "y": 22
+            },
+            "0oHQa": {
+              "x": 36
+            },
+            "MVXFF": {
+              "x": 72
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "XY2fs",
+          "name": "SubBanner",
+          "width": "fill_container",
+          "height": 240,
+          "fill": "$--primary-light",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 40,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "0YpXq",
+              "name": "subBannerT",
+              "fill": "$--primary",
+              "content": "명함 인쇄",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "IlOC1",
+              "name": "subBannerSub",
+              "fill": "$--foreground",
+              "content": "다양한 용지와 코팅으로 나만의 명함을 만들어보세요",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XpuEh",
+          "name": "subCatRow",
+          "width": "fill_container",
+          "gap": 16,
+          "padding": [
+            20,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "g9uaV",
+              "name": "subCat1",
+              "height": 36,
+              "fill": "$--primary",
+              "cornerRadius": 18,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--primary"
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6kiw9",
+                  "name": "subCat1t",
+                  "fill": "$--primary-foreground",
+                  "content": "전체",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DqnR1",
+              "name": "subCat2",
+              "height": 36,
+              "cornerRadius": 18,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y47KY",
+                  "name": "subCat2t",
+                  "fill": "$--foreground",
+                  "content": "일반 명함",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pTVEc",
+              "name": "subCat3",
+              "height": 36,
+              "cornerRadius": 18,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VJ0HE",
+                  "name": "subCat3t",
+                  "fill": "$--foreground",
+                  "content": "고급 명함",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "X7H1a",
+              "name": "subCat4",
+              "height": 36,
+              "cornerRadius": 18,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gyCmi",
+                  "name": "subCat4t",
+                  "fill": "$--foreground",
+                  "content": "미니 명함",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZPbyd",
+          "name": "subGrid",
+          "width": "fill_container",
+          "gap": 20,
+          "padding": [
+            0,
+            40,
+            24,
+            40
+          ],
+          "children": [
+            {
+              "id": "s0aa8",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "spc1",
+              "x": 40,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "2Vit7",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "spc2",
+              "x": 345,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "고급 명함 (양면 컬러)",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "9,800원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "O99x8",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "spc3",
+              "x": 650,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "미니 명함 (단면)",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "4,500원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "frX3f",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "spc4",
+              "x": 955,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "특수지 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "12,000원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "aV1jD",
+      "x": 2780,
+      "y": 2300,
+      "name": "SCR-A10-SUB-MAIN / Mobile",
+      "width": 375,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "NEjRq",
+          "name": "smLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-SUB-MAIN: 서브 메인 (Mobile 375px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "0ARHQ",
+          "type": "ref",
+          "ref": "fzVx1",
+          "width": "fill_container",
+          "name": "smHeader",
+          "y": 16,
+          "descendants": {
+            "M5OdF": {
+              "x": 16,
+              "y": 16
+            },
+            "3UiES": {
+              "x": 134.5,
+              "y": 16.5
+            },
+            "TKOsS": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 303,
+              "y": 17
+            },
+            "o3jYX": {
+              "x": 34
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "uwIGh",
+          "name": "smBanner",
+          "width": "fill_container",
+          "height": 160,
+          "fill": "$--primary-light",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 20,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zt5tu",
+              "name": "smBannerT",
+              "fill": "$--primary",
+              "content": "명함 인쇄",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "NsOSH",
+              "name": "smBannerSub",
+              "fill": "$--foreground",
+              "content": "나만의 명함을 만들어보세요",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MQTsj",
+          "name": "smChips",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            12,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "O99X5",
+              "name": "smChip1",
+              "height": 32,
+              "fill": "$--primary",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--primary"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GYq3v",
+                  "name": "smChip1t",
+                  "fill": "$--primary-foreground",
+                  "content": "전체",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NKbA8",
+              "name": "smChip2",
+              "height": 32,
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NlRWy",
+                  "name": "smChip2t",
+                  "fill": "$--foreground",
+                  "content": "일반",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hGLfb",
+              "name": "smChip3",
+              "height": 32,
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3ap61",
+                  "name": "smChip3t",
+                  "fill": "$--foreground",
+                  "content": "고급",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0BUX8",
+              "name": "smChip4",
+              "height": 32,
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d0NUx",
+                  "name": "smChip4t",
+                  "fill": "$--foreground",
+                  "content": "미니",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "15Zwh",
+          "name": "smGrid",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "id": "0muYr",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smpc1",
+              "height": "fit_content",
+              "x": 16,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "a1MXU",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smpc2",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "고급 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "9,800원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "q9QR1",
+          "name": "smGrid2",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            8,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "id": "I3CTu",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smpc3",
+              "height": "fit_content",
+              "x": 16,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "미니 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "4,500원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "gOdO2",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smpc4",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "특수지 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "12,000원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "d4avT",
+      "x": 1400,
+      "y": 3400,
+      "name": "SCR-A10-DETAIL / PC",
+      "width": 1280,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "iGEPZ",
+          "name": "detLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-DETAIL: 상품 상세 (PC 1280px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "XaIRe",
+          "type": "ref",
+          "ref": "7FoiR",
+          "width": "fill_container",
+          "name": "detHeader",
+          "y": 16,
+          "descendants": {
+            "OuCxn": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 40,
+              "y": 16
+            },
+            "gXMoH": {
+              "x": 40,
+              "y": 3
+            },
+            "gmUF5": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 476,
+              "y": 22
+            },
+            "rfOhu": {
+              "x": 50
+            },
+            "yXZUt": {
+              "x": 144
+            },
+            "3Wecb": {
+              "x": 207
+            },
+            "YQiZc": {
+              "x": 270
+            },
+            "3I4Dg": {
+              "x": 320
+            },
+            "HActs": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 1148,
+              "y": 22
+            },
+            "0oHQa": {
+              "x": 36
+            },
+            "MVXFF": {
+              "x": 72
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Yh1bn",
+          "name": "detBread",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            12,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "G5Vxh",
+              "name": "detB1",
+              "fill": "$--primary",
+              "content": "홈",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "wtTM0",
+              "name": "detBsep1",
+              "fill": "$--muted-foreground",
+              "content": ">",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "fdzUx",
+              "name": "detB2",
+              "fill": "$--primary",
+              "content": "명함",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ZoTb8",
+              "name": "detBsep2",
+              "fill": "$--muted-foreground",
+              "content": ">",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "VUqdL",
+              "name": "detB3",
+              "fill": "$--foreground",
+              "content": "명함 인쇄 (양면 컬러)",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fCQzn",
+          "name": "SplitLayout",
+          "width": "fill_container",
+          "gap": 32,
+          "padding": [
+            0,
+            40,
+            24,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Qaawi",
+              "name": "MainArea",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Q3iU7",
+                  "name": "ImageGallery",
+                  "width": "fill_container",
+                  "height": 480,
+                  "fill": "$--card",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--border"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "10JX8",
+                      "name": "detImgPlaceholder",
+                      "fill": "$--muted-foreground",
+                      "content": "상품 이미지",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nuAzW",
+                  "name": "detThumbRow",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u4PT5",
+                      "name": "detThumb1",
+                      "width": 72,
+                      "height": 72,
+                      "fill": "$--card",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 2,
+                        "fill": "$--primary"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b4a2u",
+                      "name": "detThumb2",
+                      "width": 72,
+                      "height": 72,
+                      "fill": "$--card",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CyRaQ",
+                      "name": "detThumb3",
+                      "width": 72,
+                      "height": 72,
+                      "fill": "$--card",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9KK0o",
+                      "name": "detThumb4",
+                      "width": 72,
+                      "height": 72,
+                      "fill": "$--card",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--border"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fb8aI",
+              "name": "Sidebar",
+              "width": 400,
+              "fill": "$--background",
+              "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ojwhU",
+                  "name": "detProdName",
+                  "fill": "$--foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "명함 인쇄 (양면 컬러)",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "b2mW6",
+                  "name": "detProdDesc",
+                  "fill": "$--muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "고품질 스노우화이트 용지에 양면 컬러 인쇄",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QIuQS",
+                  "name": "detPriceRow",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e1nTP",
+                      "name": "detPrice",
+                      "fill": "$--primary",
+                      "content": "5,900원~",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EgDpf",
+                      "name": "detPriceUnit",
+                      "fill": "$--muted-foreground",
+                      "content": "100매 기준",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fbbSG",
+                  "name": "OptionSection",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "b12Jp",
+                      "name": "opt1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "c4GaY",
+                          "name": "opt1Label",
+                          "fill": "$--foreground",
+                          "content": "용지 선택",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "9sJ3n",
+                          "name": "opt1Select",
+                          "width": "fill_container",
+                          "height": 40,
+                          "cornerRadius": 6,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xiKxI",
+                              "name": "opt1Val",
+                              "fill": "$--foreground",
+                              "content": "스노우화이트 250g",
+                              "fontFamily": "Noto Sans KR",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "pXEIP",
+                              "name": "opt1Arrow",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "chevron-down",
+                              "iconFontFamily": "lucide",
+                              "fill": "$--muted-foreground"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EJZJ7",
+                      "name": "opt2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "f3xfR",
+                          "name": "opt2Label",
+                          "fill": "$--foreground",
+                          "content": "코팅",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oE5B5",
+                          "name": "opt2Chips",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "FBjY8",
+                              "name": "opt2c1",
+                              "height": 36,
+                              "fill": "$--primary",
+                              "cornerRadius": 6,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1,
+                                "fill": "$--primary"
+                              },
+                              "padding": [
+                                0,
+                                14
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "qBHCO",
+                                  "name": "opt2c1t",
+                                  "fill": "$--primary-foreground",
+                                  "content": "무광",
+                                  "fontFamily": "Noto Sans KR",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "qX8Ho",
+                              "name": "opt2c2",
+                              "height": 36,
+                              "cornerRadius": 6,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1,
+                                "fill": "$--border"
+                              },
+                              "padding": [
+                                0,
+                                14
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "yWHzF",
+                                  "name": "opt2c2t",
+                                  "fill": "$--foreground",
+                                  "content": "유광",
+                                  "fontFamily": "Noto Sans KR",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "aUbes",
+                              "name": "opt2c3",
+                              "height": 36,
+                              "cornerRadius": 6,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1,
+                                "fill": "$--border"
+                              },
+                              "padding": [
+                                0,
+                                14
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DR1ch",
+                                  "name": "opt2c3t",
+                                  "fill": "$--foreground",
+                                  "content": "벨벳",
+                                  "fontFamily": "Noto Sans KR",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l3saV",
+                      "name": "opt3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PVdzT",
+                          "name": "opt3Label",
+                          "fill": "$--foreground",
+                          "content": "수량",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "5zbwN",
+                          "name": "opt3Select",
+                          "width": "fill_container",
+                          "height": 40,
+                          "cornerRadius": 6,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$--border"
+                          },
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lCM5j",
+                              "name": "opt3Val",
+                              "fill": "$--foreground",
+                              "content": "200매",
+                              "fontFamily": "Noto Sans KR",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "SaZEN",
+                              "name": "opt3Arrow",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "chevron-down",
+                              "iconFontFamily": "lucide",
+                              "fill": "$--muted-foreground"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sNiMk",
+                  "name": "totalRow",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "$--border"
+                  },
+                  "padding": [
+                    16,
+                    0,
+                    0,
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8UFv6",
+                      "name": "totalLabel",
+                      "fill": "$--foreground",
+                      "content": "총 금액",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iOAum",
+                      "name": "totalPrice",
+                      "fill": "$--primary",
+                      "content": "11,800원",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qqY9E",
+                  "name": "orderBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$--primary",
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7MbKV",
+                      "name": "orderBtnT",
+                      "fill": "$--primary-foreground",
+                      "content": "장바구니 담기",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nWjzC",
+      "x": 2780,
+      "y": 3400,
+      "name": "SCR-A10-DETAIL / Mobile",
+      "width": 375,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "qOcej",
+          "name": "dmLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-DETAIL: 상품 상세 (Mobile 375px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "bSldG",
+          "name": "dmTopBar",
+          "width": "fill_container",
+          "height": 48,
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "OWyE7",
+              "name": "dmBack",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "arrow-left",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "text",
+              "id": "h2JSa",
+              "name": "dmTitle",
+              "fill": "$--foreground",
+              "content": "상품 상세",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "icon_font",
+              "id": "ecXZh",
+              "name": "dmShare",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "share-2",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iGQqs",
+          "name": "dmImg",
+          "width": "fill_container",
+          "height": 300,
+          "fill": "$--card",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "2D1W9",
+              "name": "dmImgT",
+              "fill": "$--muted-foreground",
+              "content": "상품 이미지",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2KiGi",
+          "name": "dmInfo",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "80hMU",
+              "name": "dmName",
+              "fill": "$--foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "명함 인쇄 (양면 컬러)",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "IpIjN",
+              "name": "dmDesc",
+              "fill": "$--muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "고품질 스노우화이트 용지에 양면 컬러 인쇄",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "MJzVa",
+              "name": "dmPriceRow",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fUgql",
+                  "name": "dmPrice",
+                  "fill": "$--primary",
+                  "content": "5,900원~",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "zKkca",
+                  "name": "dmUnit",
+                  "fill": "$--muted-foreground",
+                  "content": "100매 기준",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fCTl6",
+          "name": "dmOpts",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "OcGgX",
+              "name": "dmOpt1",
+              "width": "fill_container",
+              "height": 40,
+              "cornerRadius": 6,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bRQMh",
+                  "name": "dmOpt1t",
+                  "fill": "$--foreground",
+                  "content": "용지: 스노우화이트 250g",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "x1c1f",
+                  "name": "dmOpt1a",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "chevron-down",
+                  "iconFontFamily": "lucide",
+                  "fill": "$--muted-foreground"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "60Xhg",
+              "name": "dmOpt2",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SsV9p",
+                  "name": "dmC1",
+                  "height": 36,
+                  "fill": "$--primary",
+                  "cornerRadius": 6,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8U94m",
+                      "name": "dmC1t",
+                      "fill": "$--primary-foreground",
+                      "content": "무광",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ad2Ww",
+                  "name": "dmC2",
+                  "height": 36,
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--border"
+                  },
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "65O6P",
+                      "name": "dmC2t",
+                      "fill": "$--foreground",
+                      "content": "유광",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lqFN8",
+          "name": "dmBottom",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "wn41I",
+              "name": "dmTotalRow",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uRsy2",
+                  "name": "dmTotalL",
+                  "fill": "$--foreground",
+                  "content": "총 금액",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "831e3",
+                  "name": "dmTotalP",
+                  "fill": "$--primary",
+                  "content": "11,800원",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wNRaN",
+              "name": "dmOrderBtn",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$--primary",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZPczy",
+                  "name": "dmOrderT",
+                  "fill": "$--primary-foreground",
+                  "content": "장바구니 담기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "HQF1K",
+      "x": 1400,
+      "y": 4800,
+      "name": "SCR-A10-SEARCH / PC",
+      "width": 1280,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "musLw",
+          "name": "srLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-SEARCH: 검색 결과 (PC 1280px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "id": "UhBHy",
+          "type": "ref",
+          "ref": "7FoiR",
+          "width": "fill_container",
+          "name": "srHeader",
+          "y": 16,
+          "descendants": {
+            "OuCxn": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 40,
+              "y": 16
+            },
+            "gXMoH": {
+              "x": 40,
+              "y": 3
+            },
+            "gmUF5": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 476,
+              "y": 22
+            },
+            "rfOhu": {
+              "x": 50
+            },
+            "yXZUt": {
+              "x": 144
+            },
+            "3Wecb": {
+              "x": 207
+            },
+            "YQiZc": {
+              "x": 270
+            },
+            "3I4Dg": {
+              "x": 320
+            },
+            "HActs": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 1148,
+              "y": 22
+            },
+            "0oHQa": {
+              "x": 36
+            },
+            "MVXFF": {
+              "x": 72
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nvCJt",
+          "name": "srSearchBar",
+          "width": "fill_container",
+          "padding": [
+            20,
+            40
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "eDHeP",
+              "name": "srInput",
+              "width": 640,
+              "height": 48,
+              "cornerRadius": 24,
+              "stroke": {
+                "align": "inside",
+                "thickness": 2,
+                "fill": "$--primary"
+              },
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "fJuKk",
+                  "name": "srIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "search",
+                  "iconFontFamily": "lucide",
+                  "fill": "$--primary"
+                },
+                {
+                  "type": "text",
+                  "id": "AhSxX",
+                  "name": "srText",
+                  "fill": "$--foreground",
+                  "content": "명함",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "N4aHi",
+          "name": "srResultInfo",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            0,
+            40,
+            16,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EeyXS",
+              "name": "srKeyword",
+              "fill": "$--primary",
+              "content": "\"명함\"",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "WU7dy",
+              "name": "srCount",
+              "fill": "$--foreground",
+              "content": "검색 결과 12개",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FkARd",
+          "name": "srGrid",
+          "width": "fill_container",
+          "gap": 20,
+          "padding": [
+            0,
+            40,
+            24,
+            40
+          ],
+          "children": [
+            {
+              "id": "tQgrG",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "srpc1",
+              "x": 40,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "1kuEt",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "srpc2",
+              "x": 345,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "고급 명함 (양면)",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "9,800원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "s4HVg",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "srpc3",
+              "x": 650,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "미니 명함 (단면)",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "4,500원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "uFZ1H",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "srpc4",
+              "x": 955,
+              "y": 0,
+              "height": "fit_content",
+              "descendants": {
+                "gaVIX": {
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "y": 200
+                },
+                "9VkYY": {
+                  "content": "명함 케이스",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "1,200원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "8wghL",
+      "x": 2780,
+      "y": 4800,
+      "name": "SCR-A10-SEARCH / Mobile",
+      "width": 375,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "GnTRp",
+          "name": "smrLabel",
+          "fill": "$--muted-foreground",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SCR-A10-SEARCH: 검색 결과 (Mobile 375px)",
+          "fontFamily": "Noto Sans KR",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "ZffTf",
+          "name": "smrTopBar",
+          "width": "fill_container",
+          "height": 48,
+          "gap": 8,
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "FdNxy",
+              "name": "smrBack",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "arrow-left",
+              "iconFontFamily": "lucide",
+              "fill": "$--foreground"
+            },
+            {
+              "type": "frame",
+              "id": "3GVRE",
+              "name": "smrInput",
+              "width": "fill_container",
+              "height": 36,
+              "cornerRadius": 18,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--primary"
+              },
+              "gap": 8,
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "oibDg",
+                  "name": "smrIcon",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "search",
+                  "iconFontFamily": "lucide",
+                  "fill": "$--primary"
+                },
+                {
+                  "type": "text",
+                  "id": "CBqCx",
+                  "name": "smrText",
+                  "fill": "$--foreground",
+                  "content": "명함",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FrnVn",
+          "name": "smrInfo",
+          "width": "fill_container",
+          "gap": 4,
+          "padding": [
+            8,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SHiaK",
+              "name": "smrKw",
+              "fill": "$--primary",
+              "content": "\"명함\"",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "o2eg0",
+              "name": "smrCnt",
+              "fill": "$--foreground",
+              "content": "12개",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ugff2",
+          "name": "smrGrid",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "children": [
+            {
+              "id": "eIklb",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smrpc1",
+              "height": "fit_content",
+              "x": 16,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "J1ECo",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smrpc2",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 0,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "고급 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "9,800원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "epQZ3",
+          "name": "smrGrid2",
+          "width": "fill_container",
+          "gap": 8,
+          "padding": [
+            8,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "id": "Grs3V",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smrpc3",
+              "height": "fit_content",
+              "x": 16,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "미니 명함",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "4,500원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            },
+            {
+              "id": "vSCoG",
+              "type": "ref",
+              "ref": "hIS1d",
+              "width": "fill_container",
+              "name": "smrpc4",
+              "height": "fit_content",
+              "x": 191.5,
+              "y": 8,
+              "descendants": {
+                "gaVIX": {
+                  "height": 140,
+                  "width": "fill_container"
+                },
+                "Vbq8T": {
+                  "width": "fill_container",
+                  "y": 140,
+                  "height": "fit_content"
+                },
+                "9VkYY": {
+                  "content": "명함 케이스",
+                  "width": "fill_container",
+                  "x": 16,
+                  "y": 16
+                },
+                "tmTTd": {
+                  "content": "1,200원~",
+                  "x": 16,
+                  "y": 44
+                },
+                "0Hnng": {
+                  "width": "fit_content",
+                  "height": "fit_content",
+                  "x": 16,
+                  "y": 75
+                },
+                "NDFfm": {
+                  "width": "fit_content"
+                },
+                "Ii0I7": {
+                  "x": 6,
+                  "y": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "--accent-gold": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E6B93F"
+        },
+        {
+          "value": "#E6B93F"
+        },
+        {
+          "value": "#E6B93F"
+        }
+      ]
+    },
+    "--accent-teal": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#7AC8C4"
+        },
+        {
+          "value": "#7AC8C4"
+        },
+        {
+          "value": "#7AC8C4"
+        }
+      ]
+    },
+    "--background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "--border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CACACA"
+        },
+        {
+          "value": "#CACACA"
+        },
+        {
+          "value": "#CACACA"
+        }
+      ]
+    },
+    "--card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F6F6F6"
+        },
+        {
+          "value": "#F6F6F6"
+        },
+        {
+          "value": "#F6F6F6"
+        }
+      ]
+    },
+    "--color-info": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#3B82F6"
+        },
+        {
+          "value": "#3B82F6"
+        },
+        {
+          "value": "#3B82F6"
+        }
+      ]
+    },
+    "--color-success": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#22C55E"
+        },
+        {
+          "value": "#22C55E"
+        },
+        {
+          "value": "#22C55E"
+        }
+      ]
+    },
+    "--color-warning": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#EAB308"
+        },
+        {
+          "value": "#EAB308"
+        },
+        {
+          "value": "#EAB308"
+        }
+      ]
+    },
+    "--destructive": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#EF4444"
+        },
+        {
+          "value": "#EF4444"
+        },
+        {
+          "value": "#EF4444"
+        }
+      ]
+    },
+    "--foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#424242"
+        },
+        {
+          "value": "#424242"
+        },
+        {
+          "value": "#424242"
+        }
+      ]
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#979797"
+        },
+        {
+          "value": "#979797"
+        },
+        {
+          "value": "#979797"
+        }
+      ]
+    },
+    "--primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#5538B6"
+        },
+        {
+          "value": "#5538B6"
+        },
+        {
+          "value": "#5538B6"
+        }
+      ]
+    },
+    "--primary-dark": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#3B2573"
+        },
+        {
+          "value": "#3B2573"
+        },
+        {
+          "value": "#3B2573"
+        }
+      ]
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "--primary-light": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#EEEBF9"
+        },
+        {
+          "value": "#EEEBF9"
+        },
+        {
+          "value": "#EEEBF9"
+        }
+      ]
+    },
+    "--primary-secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#9580D9"
+        },
+        {
+          "value": "#9580D9"
+        },
+        {
+          "value": "#9580D9"
+        }
+      ]
+    }
+  }
+}

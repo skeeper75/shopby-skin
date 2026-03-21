@@ -1,0 +1,3457 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "1GO4k",
+      "x": 0,
+      "y": 0,
+      "name": "Screen1-Login-PC",
+      "width": 1280,
+      "height": 900,
+      "fill": "#F6F6F6",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "d6L8B",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Header",
+          "width": 1280,
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "abToL",
+              "name": "Logo",
+              "fill": "#5538B6",
+              "content": "후니프린팅",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "ZQrWG",
+              "name": "Nav",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jM5lS",
+                  "name": "nav1",
+                  "fill": "#424242",
+                  "content": "제품",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "PmfGT",
+                  "name": "nav2",
+                  "fill": "#424242",
+                  "content": "서비스",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "whMTd",
+                  "name": "nav3",
+                  "fill": "#424242",
+                  "content": "고객지원",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2foh5",
+          "name": "LoginCard",
+          "width": 448,
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#00000014",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 16
+          },
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "XDaWL",
+              "name": "CardTitle",
+              "fill": "#424242",
+              "content": "로그인",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "wpGew",
+              "name": "EmailInput",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GeQfR",
+                  "name": "emailPh",
+                  "fill": "#979797",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "이메일",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5x1iy",
+              "name": "PwInput",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "txZTb",
+                  "name": "pwPh",
+                  "fill": "#979797",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "비밀번호",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "juU2y",
+              "name": "FindLink",
+              "width": "fill_container",
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DSodi",
+                  "name": "findLinkTxt",
+                  "fill": "#979797",
+                  "content": "아이디/비밀번호 찾기",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WNmNw",
+              "name": "LoginBtn",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "y0XdD",
+                  "name": "loginBtnTxt",
+                  "fill": "#FFFFFF",
+                  "content": "로그인",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WoL0s",
+              "name": "DividerRow",
+              "width": "fill_container",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "d8Iuf",
+                  "name": "DivLine1",
+                  "fill": "#CACACA",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "c1te3",
+                  "name": "DivText",
+                  "fill": "#979797",
+                  "content": "SNS 간편로그인",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "n4D0Z",
+                  "name": "DivLine2",
+                  "fill": "#CACACA",
+                  "width": "fill_container",
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Xj4MH",
+              "name": "SNSRow",
+              "width": "fill_container",
+              "gap": 16,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "H1q3Z",
+                  "name": "KakaoBtn",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#FEE500",
+                  "cornerRadius": 22,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jiERK",
+                      "name": "kakaoTxt",
+                      "fill": "#3C1E1E",
+                      "content": "K",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "q0RUd",
+                  "name": "NaverBtn",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#03C75A",
+                  "cornerRadius": 22,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uHqwx",
+                      "name": "naverTxt",
+                      "fill": "#FFFFFF",
+                      "content": "N",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZegXR",
+                  "name": "GoogleBtn",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 22,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "saCn8",
+                      "name": "googleTxt",
+                      "fill": "#424242",
+                      "content": "G",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "JWUcq",
+              "name": "SignupAsk",
+              "fill": "#979797",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "아직 후니프린팅 회원이 아니신가요?",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "AA14j",
+              "name": "SignupBtn",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#5538B6"
+              },
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "u0dKX",
+                  "name": "signupBtnTxt",
+                  "fill": "#5538B6",
+                  "content": "회원가입",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Vpjjj",
+      "x": 1380,
+      "y": 0,
+      "name": "Screen1-Login-Mobile",
+      "width": 375,
+      "height": 800,
+      "fill": "#F6F6F6",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "M1SJJ",
+          "name": "MbTitle",
+          "fill": "#424242",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "로그인",
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "ZaEtA",
+          "name": "MbEmailInp",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "vDR1M",
+              "name": "mbEmailPh",
+              "fill": "#979797",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "이메일",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "S8Mqk",
+          "name": "MbPwInp",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "5fSQ9",
+              "name": "mbPwPh",
+              "fill": "#979797",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "비밀번호",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yMzWD",
+          "name": "MbFindRow",
+          "width": "fill_container",
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "B5RqB",
+              "name": "mbFindTxt",
+              "fill": "#979797",
+              "content": "아이디/비밀번호 찾기",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JUsP1",
+          "name": "MbLoginBtn",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#5538B6",
+          "cornerRadius": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "1OyPS",
+              "name": "mbLoginBtnTxt",
+              "fill": "#FFFFFF",
+              "content": "로그인",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TO6y4",
+          "name": "MbDivRow",
+          "width": "fill_container",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "xJN1h",
+              "name": "mbDivL",
+              "fill": "#CACACA",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "BDFzK",
+              "name": "mbDivTxt",
+              "fill": "#979797",
+              "content": "SNS 간편로그인",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "bQcYW",
+              "name": "mbDivR",
+              "fill": "#CACACA",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DFHsQ",
+          "name": "MbSNSRow",
+          "width": "fill_container",
+          "gap": 16,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "thVxG",
+              "name": "mbKakao",
+              "width": 44,
+              "height": 44,
+              "fill": "#FEE500",
+              "cornerRadius": 22,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Pgy8o",
+                  "name": "mbKakaoTxt",
+                  "fill": "#3C1E1E",
+                  "content": "K",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tx6Mr",
+              "name": "mbNaver",
+              "width": 44,
+              "height": 44,
+              "fill": "#03C75A",
+              "cornerRadius": 22,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hPR0n",
+                  "name": "mbNaverTxt",
+                  "fill": "#FFFFFF",
+                  "content": "N",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vjAPB",
+              "name": "mbGoogle",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 22,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ltTaC",
+                  "name": "mbGoogleTxt",
+                  "fill": "#424242",
+                  "content": "G",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "4fFi8",
+          "name": "mbSignupAsk",
+          "fill": "#979797",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "아직 후니프린팅 회원이 아니신가요?",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "l82IR",
+          "name": "mbSignupBtn",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#5538B6"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "gz4z9",
+              "name": "mbSignupBtnTxt",
+              "fill": "#5538B6",
+              "content": "회원가입",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "yBrem",
+      "x": 0,
+      "y": 1000,
+      "name": "Screen2-FindID-PC",
+      "width": 1280,
+      "height": 900,
+      "fill": "#F6F6F6",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "p3fnm",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "S2Header",
+          "width": 1280,
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QkV0P",
+              "name": "s2logo",
+              "fill": "#5538B6",
+              "content": "후니프린팅",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "7svNQ",
+              "name": "s2nav",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dq1bp",
+                  "name": "s2nav1",
+                  "fill": "#424242",
+                  "content": "제품",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "s6Vlb",
+                  "name": "s2nav2",
+                  "fill": "#424242",
+                  "content": "서비스",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YwBkz",
+          "name": "FindIDCard",
+          "width": 448,
+          "fill": "#FFFFFF",
+          "cornerRadius": 8,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#00000014",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 16
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 40,
+          "children": [
+            {
+              "type": "text",
+              "id": "rX48L",
+              "name": "s2title",
+              "fill": "#424242",
+              "content": "아이디 찾기",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "87jb8",
+              "name": "s2desc",
+              "fill": "#979797",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "이름과 휴대폰 번호로 가입한 아이디를 찾습니다.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "6BPaY",
+              "name": "s2nameInp",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4ArK0",
+                  "name": "s2namePh",
+                  "fill": "#979797",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "이름",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TqTbd",
+              "name": "PhoneRow",
+              "width": "fill_container",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "4TXPl",
+                  "name": "phoneInp",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "C8Qfy",
+                      "name": "phonePh",
+                      "fill": "#979797",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "휴대폰 번호",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "03zei",
+                  "name": "verifyBtn",
+                  "width": 80,
+                  "height": 44,
+                  "fill": "#5538B6",
+                  "cornerRadius": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "N6fNE",
+                      "name": "verifyBtnTxt",
+                      "fill": "#FFFFFF",
+                      "content": "인증",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jkouB",
+              "name": "CodeRow",
+              "width": "fill_container",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "70h6X",
+                  "name": "codeInp",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4mTwf",
+                      "name": "codePh",
+                      "fill": "#979797",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "인증번호 입력",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "vd4Gu",
+                  "name": "timerTxt",
+                  "fill": "#EF4444",
+                  "content": "3:00",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BkPUq",
+              "name": "findBtn",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DcjJO",
+                  "name": "findBtnTxt",
+                  "fill": "#FFFFFF",
+                  "content": "아이디 찾기",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gO1xK",
+              "name": "ResultBox",
+              "width": "fill_container",
+              "fill": "#EEEBF9",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uLIQs",
+                  "name": "resultTxt",
+                  "fill": "#424242",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "찾은 아이디: hu***ng",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "I0hYK",
+                  "name": "resultLoginBtn",
+                  "width": "fill_container",
+                  "height": 40,
+                  "fill": "#5538B6",
+                  "cornerRadius": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WKIHt",
+                      "name": "resultLoginBtnTxt",
+                      "fill": "#FFFFFF",
+                      "content": "로그인하기",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tCewj",
+      "x": 1380,
+      "y": 1000,
+      "name": "Screen2-FindID-Mobile",
+      "width": 375,
+      "height": 800,
+      "fill": "#F6F6F6",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "e9TYA",
+          "name": "mb2title",
+          "fill": "#424242",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "아이디 찾기",
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "ao9Iv",
+          "name": "mb2desc",
+          "fill": "#979797",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "이름과 휴대폰 번호로 가입한 아이디를 찾습니다.",
+          "fontFamily": "Inter",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "8txj2",
+          "name": "mb2nameInp",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#FFFFFF",
+          "cornerRadius": 4,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "OrKpI",
+              "name": "mb2namePh",
+              "fill": "#979797",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "이름",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Cv9Xm",
+          "name": "mb2phoneRow",
+          "width": "fill_container",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "68Kdu",
+              "name": "mb2phoneInp",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MOcX5",
+                  "name": "mb2phonePh",
+                  "fill": "#979797",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "휴대폰 번호",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v4vzX",
+              "name": "mb2verifyBtn",
+              "width": 72,
+              "height": 44,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kiKOa",
+                  "name": "mb2verifyBtnTxt",
+                  "fill": "#FFFFFF",
+                  "content": "인증",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "USTYR",
+          "name": "mb2codeRow",
+          "width": "fill_container",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "n6kmJ",
+              "name": "mb2codeInp",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "padding": [
+                0,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4EeM9",
+                  "name": "mb2codePh",
+                  "fill": "#979797",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "인증번호 입력",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "bHpL2",
+              "name": "mb2timer",
+              "fill": "#EF4444",
+              "content": "3:00",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "K4k86",
+          "name": "mb2findBtn",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "#5538B6",
+          "cornerRadius": 4,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SVMeA",
+              "name": "mb2findBtnTxt",
+              "fill": "#FFFFFF",
+              "content": "아이디 찾기",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wcGXd",
+          "name": "mb2result",
+          "width": "fill_container",
+          "fill": "#EEEBF9",
+          "cornerRadius": 4,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#CACACA"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "JCYES",
+              "name": "mb2resultTxt",
+              "fill": "#424242",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "찾은 아이디: hu***ng",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "HxTUj",
+              "name": "mb2loginBtn",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6wrRr",
+                  "name": "mb2loginBtnTxt",
+                  "fill": "#FFFFFF",
+                  "content": "로그인하기",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "r0zgB",
+      "x": 0,
+      "y": 2000,
+      "name": "Screen3-FindPW-PC",
+      "width": 1280,
+      "height": 900,
+      "fill": "#F6F6F6"
+    },
+    {
+      "type": "frame",
+      "id": "bClVV",
+      "x": 1380,
+      "y": 2000,
+      "name": "Screen3-FindPW-Mobile",
+      "width": 375,
+      "height": 800,
+      "fill": "#F6F6F6"
+    },
+    {
+      "type": "frame",
+      "id": "rjoJE",
+      "x": 0,
+      "y": 3000,
+      "name": "Screen4-SNSProcess-PC",
+      "width": 1280,
+      "height": 900,
+      "fill": "#F6F6F6"
+    },
+    {
+      "type": "frame",
+      "id": "pe11m",
+      "x": 1380,
+      "y": 3000,
+      "name": "Screen4-SNSProcess-Mobile",
+      "width": 375,
+      "height": 800,
+      "fill": "#F6F6F6"
+    },
+    {
+      "type": "frame",
+      "id": "mb4sf",
+      "x": 0,
+      "y": -300,
+      "name": "_Components",
+      "fill": "$--card",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1,
+        "fill": "$--border"
+      },
+      "gap": 16,
+      "padding": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "MOy1O",
+          "name": "PrimaryButton",
+          "reusable": true,
+          "width": 320,
+          "height": 40,
+          "fill": "$--primary",
+          "cornerRadius": 6,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--primary"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sr6Ky",
+              "name": "label",
+              "fill": "$--primary-foreground",
+              "content": "버튼",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wykWI",
+          "name": "OutlinedButton",
+          "reusable": true,
+          "width": 320,
+          "height": 40,
+          "fill": "$--background",
+          "cornerRadius": 6,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--primary"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Qbvn2",
+              "name": "label",
+              "fill": "$--primary",
+              "content": "버튼",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fbRoc",
+          "name": "DefaultInput",
+          "reusable": true,
+          "width": 320,
+          "height": 40,
+          "fill": "$--background",
+          "cornerRadius": 6,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "gkjP4",
+              "name": "placeholder",
+              "fill": "$--muted-foreground",
+              "content": "입력해주세요",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7cbkH",
+          "name": "PasswordInput",
+          "reusable": true,
+          "width": 320,
+          "height": 40,
+          "fill": "$--background",
+          "cornerRadius": 6,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "HPW0L",
+              "name": "placeholder",
+              "fill": "$--muted-foreground",
+              "content": "비밀번호",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon_font",
+              "id": "rDggB",
+              "name": "toggleIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "eye",
+              "iconFontFamily": "lucide",
+              "fill": "$--muted-foreground"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZPyVI",
+          "name": "SNSButton-Kakao",
+          "reusable": true,
+          "width": 44,
+          "height": 44,
+          "fill": "$--kakao",
+          "cornerRadius": 22,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--kakao"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "CT0bA",
+              "name": "label",
+              "fill": "#3C1E1E",
+              "content": "K",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LfvHy",
+          "name": "SNSButton-Naver",
+          "reusable": true,
+          "width": 44,
+          "height": 44,
+          "fill": "$--naver",
+          "cornerRadius": 22,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--naver"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "bLLB6",
+              "name": "label",
+              "fill": "$--primary-foreground",
+              "content": "N",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YChr7",
+          "name": "SNSButton-Google",
+          "reusable": true,
+          "width": 44,
+          "height": 44,
+          "fill": "$--background",
+          "cornerRadius": 22,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "wbLWp",
+              "name": "label",
+              "fill": "$--foreground",
+              "content": "G",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NXYOz",
+          "name": "Checkbox",
+          "reusable": true,
+          "height": 40,
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "lbamr",
+              "name": "box",
+              "width": 20,
+              "height": 20,
+              "fill": "$--background",
+              "cornerRadius": 4,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              }
+            },
+            {
+              "type": "text",
+              "id": "O2jZw",
+              "name": "label",
+              "fill": "$--foreground",
+              "content": "체크",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gk188",
+          "name": "TextDivider",
+          "reusable": true,
+          "width": 200,
+          "height": 20,
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "line",
+              "id": "TZDpH",
+              "name": "line1",
+              "width": "fill_container",
+              "height": 1,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$--border"
+              }
+            },
+            {
+              "type": "text",
+              "id": "euUFH",
+              "name": "text",
+              "fill": "$--muted-foreground",
+              "content": "또는",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "line",
+              "id": "EHgQu",
+              "name": "line2",
+              "width": "fill_container",
+              "height": 1,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$--border"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "yuEpF",
+      "x": 0,
+      "y": 0,
+      "name": "Screen1-Login-PC",
+      "width": 1280,
+      "height": 800,
+      "fill": "$--card",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dozbu",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QhAz1",
+              "name": "logo",
+              "fill": "$--primary",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "aXCB0",
+              "name": "navLinks",
+              "fill": "$--muted-foreground",
+              "content": "로그인  회원가입  마이페이지  장바구니",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SIGil",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IbUy4",
+              "name": "LoginCard",
+              "width": 400,
+              "fill": "$--background",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uNwQq",
+                  "name": "title",
+                  "fill": "$--foreground",
+                  "content": "로그인",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "id": "5wxdz",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "emailInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 87,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "이메일"
+                    }
+                  }
+                },
+                {
+                  "id": "j9Qh5",
+                  "type": "ref",
+                  "ref": "7cbkH",
+                  "name": "passwordInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 147,
+                  "descendants": {
+                    "rDggB": {
+                      "x": 304
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "HBrP7",
+                  "name": "findLink",
+                  "fill": "$--muted-foreground",
+                  "content": "아이디/비밀번호 찾기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "r76li",
+                  "type": "ref",
+                  "ref": "MOy1O",
+                  "name": "loginBtn",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 246,
+                  "descendants": {
+                    "sr6Ky": {
+                      "x": 148.5,
+                      "content": "로그인"
+                    }
+                  }
+                },
+                {
+                  "id": "8SoGy",
+                  "type": "ref",
+                  "ref": "gk188",
+                  "name": "snsDivider",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 306,
+                  "descendants": {
+                    "TZDpH": {
+                      "width": "fill_container"
+                    },
+                    "euUFH": {
+                      "x": 124,
+                      "content": "SNS 간편로그인"
+                    },
+                    "EHgQu": {
+                      "width": "fill_container",
+                      "x": 224
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "BaX71",
+                  "name": "snsRow",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "eCW4G",
+                      "type": "ref",
+                      "ref": "ZPyVI",
+                      "name": "kakao",
+                      "x": 86,
+                      "y": 0
+                    },
+                    {
+                      "id": "ac9bo",
+                      "type": "ref",
+                      "ref": "LfvHy",
+                      "name": "naver",
+                      "x": 146,
+                      "y": 0
+                    },
+                    {
+                      "id": "tDpfx",
+                      "type": "ref",
+                      "ref": "YChr7",
+                      "name": "google",
+                      "x": 206,
+                      "y": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "UFdIt",
+                  "name": "joinPrompt",
+                  "fill": "$--muted-foreground",
+                  "content": "아직 후니프린팅 회원이 아니신가요?",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "GiIg0",
+                  "type": "ref",
+                  "ref": "wykWI",
+                  "name": "joinBtn",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 449,
+                  "descendants": {
+                    "Qbvn2": {
+                      "x": 142,
+                      "content": "회원가입"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "04Pcy",
+      "x": 1380,
+      "y": 0,
+      "name": "Screen1-Login-Mobile",
+      "width": 375,
+      "height": 700,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "s9hoF",
+          "name": "MobileHeader",
+          "width": "fill_container",
+          "height": 48,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "XUiSq",
+              "name": "logo",
+              "fill": "$--primary",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "cDQam",
+              "name": "cartLink",
+              "fill": "$--muted-foreground",
+              "content": "장바구니",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2r9rG",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "hJqho",
+              "name": "title",
+              "fill": "$--foreground",
+              "content": "로그인",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "id": "rfuIV",
+              "type": "ref",
+              "ref": "fbRoc",
+              "name": "emailInput",
+              "width": "fill_container",
+              "x": 16,
+              "y": 87,
+              "descendants": {
+                "gkjP4": {
+                  "content": "이메일"
+                }
+              }
+            },
+            {
+              "id": "C71gm",
+              "type": "ref",
+              "ref": "7cbkH",
+              "name": "passwordInput",
+              "width": "fill_container",
+              "x": 16,
+              "y": 147,
+              "descendants": {
+                "rDggB": {
+                  "x": 311
+                }
+              }
+            },
+            {
+              "type": "text",
+              "id": "ZrL4j",
+              "name": "findLink",
+              "fill": "$--muted-foreground",
+              "content": "아이디/비밀번호 찾기",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "HDC6K",
+              "type": "ref",
+              "ref": "MOy1O",
+              "name": "loginBtn",
+              "width": "fill_container",
+              "y": 246,
+              "descendants": {
+                "sr6Ky": {
+                  "x": 152,
+                  "content": "로그인"
+                }
+              }
+            },
+            {
+              "id": "COeQR",
+              "type": "ref",
+              "ref": "gk188",
+              "name": "snsDivider",
+              "width": "fill_container",
+              "x": 16,
+              "y": 306,
+              "descendants": {
+                "TZDpH": {
+                  "width": "fill_container"
+                },
+                "euUFH": {
+                  "x": 127.5,
+                  "content": "SNS 간편로그인"
+                },
+                "EHgQu": {
+                  "width": "fill_container",
+                  "x": 227.5
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "szD5O",
+              "name": "snsRow",
+              "width": "fill_container",
+              "gap": 16,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "id": "0bJut",
+                  "type": "ref",
+                  "ref": "ZPyVI",
+                  "name": "kakao",
+                  "x": 89.5,
+                  "y": 0
+                },
+                {
+                  "id": "KlLgn",
+                  "type": "ref",
+                  "ref": "LfvHy",
+                  "name": "naver",
+                  "x": 149.5,
+                  "y": 0
+                },
+                {
+                  "id": "LF3Sk",
+                  "type": "ref",
+                  "ref": "YChr7",
+                  "name": "google",
+                  "x": 209.5,
+                  "y": 0
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "SiFVl",
+              "name": "joinPrompt",
+              "fill": "$--muted-foreground",
+              "content": "아직 후니프린팅 회원이 아니신가요?",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "MLhdc",
+              "type": "ref",
+              "ref": "wykWI",
+              "name": "joinBtn",
+              "width": "fill_container",
+              "x": 16,
+              "y": 449,
+              "descendants": {
+                "Qbvn2": {
+                  "x": 145.5,
+                  "content": "회원가입"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fsVG7",
+      "x": 0,
+      "y": 900,
+      "name": "Screen2-FindID-PC",
+      "width": 1280,
+      "height": 800,
+      "fill": "$--card",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "61We0",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "xx8KU",
+              "name": "logo",
+              "fill": "$--primary",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "p8d5J",
+              "name": "navLinks",
+              "fill": "$--muted-foreground",
+              "content": "로그인  회원가입  마이페이지  장바구니",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AKtIa",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cFHIw",
+              "name": "FindIdCard",
+              "width": 400,
+              "fill": "$--background",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ffdQ7",
+                  "name": "title",
+                  "fill": "$--foreground",
+                  "content": "아이디 찾기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "TN50L",
+                  "name": "description",
+                  "fill": "$--muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "이름과 휴대폰 번호로 가입한 아이디를 찾습니다.",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "LpiDc",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "nameInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 127,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "이름"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "yK8Go",
+                  "name": "phoneRow",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "vGU5c",
+                      "type": "ref",
+                      "ref": "fbRoc",
+                      "name": "phoneInput",
+                      "width": "fill_container",
+                      "x": 0,
+                      "y": 0,
+                      "descendants": {
+                        "gkjP4": {
+                          "content": "휴대폰 번호"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bjmur",
+                      "name": "verifyBtn",
+                      "width": 80,
+                      "height": 40,
+                      "fill": "$--primary",
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--primary"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "i24CE",
+                          "name": "label",
+                          "fill": "$--primary-foreground",
+                          "content": "인증",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y7jFY",
+                  "name": "codeRow",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "DtXoq",
+                      "type": "ref",
+                      "ref": "fbRoc",
+                      "name": "codeInput",
+                      "width": "fill_container",
+                      "x": 0,
+                      "y": 0,
+                      "descendants": {
+                        "gkjP4": {
+                          "content": "인증번호"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "fFgEl",
+                      "name": "timer",
+                      "fill": "$--destructive",
+                      "content": "3:00",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "id": "1KiTx",
+                  "type": "ref",
+                  "ref": "MOy1O",
+                  "name": "findIdBtn",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 307,
+                  "descendants": {
+                    "sr6Ky": {
+                      "x": 134,
+                      "content": "아이디 찾기"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "JO2DN",
+                  "name": "resultBox",
+                  "width": "fill_container",
+                  "fill": "$--primary-light",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary-secondary"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "REpgu",
+                      "name": "resultText",
+                      "fill": "$--foreground",
+                      "content": "찾은 아이디: hu***ng",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "id": "XECXe",
+                      "type": "ref",
+                      "ref": "MOy1O",
+                      "name": "goLoginBtn",
+                      "width": "fill_container",
+                      "y": 48,
+                      "descendants": {
+                        "sr6Ky": {
+                          "x": 119.5,
+                          "content": "로그인하기"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "pK2Mh",
+      "x": 1380,
+      "y": 900,
+      "name": "Screen2-FindID-Mobile",
+      "width": 375,
+      "height": 700,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "8jhtQ",
+          "name": "MobileHeader",
+          "width": "fill_container",
+          "height": 48,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "yINOK",
+              "name": "back",
+              "fill": "$--foreground",
+              "content": "< 뒤로",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Ilqfh",
+              "name": "title",
+              "fill": "$--foreground",
+              "content": "아이디 찾기",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "du74t",
+              "name": "spacer",
+              "width": 40,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IbUf1",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            24,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "r4iJc",
+              "name": "desc",
+              "fill": "$--muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "이름과 휴대폰 번호로 가입한 아이디를 찾습니다.",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "IWYIH",
+              "type": "ref",
+              "ref": "fbRoc",
+              "name": "nameInput",
+              "width": "fill_container",
+              "x": 16,
+              "y": 64,
+              "descendants": {
+                "gkjP4": {
+                  "content": "이름"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Qk6q8",
+              "name": "phoneRow",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "qThup",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "phoneInput",
+                  "width": "fill_container",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "휴대폰 번호"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "oI4kq",
+                  "name": "verifyBtn",
+                  "width": 72,
+                  "height": 40,
+                  "fill": "$--primary",
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i8DiC",
+                      "name": "label",
+                      "fill": "$--primary-foreground",
+                      "content": "인증",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aGCqB",
+              "name": "codeRow",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "JErcR",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "codeInput",
+                  "width": "fill_container",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "인증번호"
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "24TvA",
+                  "name": "timer",
+                  "fill": "$--destructive",
+                  "content": "3:00",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "id": "vvmhl",
+              "type": "ref",
+              "ref": "MOy1O",
+              "name": "findIdBtn",
+              "width": "fill_container",
+              "y": 244,
+              "descendants": {
+                "sr6Ky": {
+                  "x": 137.5,
+                  "content": "아이디 찾기"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "u2bWD",
+              "name": "resultBox",
+              "width": "fill_container",
+              "fill": "$--primary-light",
+              "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--primary-secondary"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dvmax",
+                  "name": "resultText",
+                  "fill": "$--foreground",
+                  "content": "찾은 아이디: hu***ng",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "id": "vBHkW",
+                  "type": "ref",
+                  "ref": "MOy1O",
+                  "name": "goLoginBtn",
+                  "width": "fill_container",
+                  "y": 48,
+                  "descendants": {
+                    "sr6Ky": {
+                      "x": 123,
+                      "content": "로그인하기"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JpqMQ",
+      "x": 0,
+      "y": 1800,
+      "name": "Screen3-FindPW-PC",
+      "width": 1280,
+      "height": 900,
+      "fill": "$--card",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "kpldj",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "9PLIL",
+              "name": "logo",
+              "fill": "$--primary",
+              "content": "후니프린팅",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "fagai",
+              "name": "navLinks",
+              "fill": "$--muted-foreground",
+              "content": "로그인  회원가입  마이페이지  장바구니",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "77lpK",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "P2yGP",
+              "name": "FindPwCard",
+              "width": 400,
+              "fill": "$--background",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$--border"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "e7FDR",
+                  "name": "title",
+                  "fill": "$--foreground",
+                  "content": "비밀번호 찾기",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "9uaWR",
+                  "name": "step1Label",
+                  "fill": "$--primary",
+                  "content": "Step 1: 본인 인증",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "id": "CH3F8",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "memberIdInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 127,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "아이디"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "xDcCk",
+                  "name": "phoneRow",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "qNww7",
+                      "type": "ref",
+                      "ref": "fbRoc",
+                      "name": "phoneInput",
+                      "width": "fill_container",
+                      "x": 0,
+                      "y": 0,
+                      "descendants": {
+                        "gkjP4": {
+                          "content": "휴대폰 번호"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "1D6Q5",
+                      "name": "verifyBtn",
+                      "width": 80,
+                      "height": 40,
+                      "fill": "$--primary",
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$--primary"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "8paTi",
+                          "name": "label",
+                          "fill": "$--primary-foreground",
+                          "content": "인증",
+                          "fontFamily": "Noto Sans KR",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gQBlf",
+                  "name": "codeRow",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "SGfnP",
+                      "type": "ref",
+                      "ref": "fbRoc",
+                      "name": "codeInput",
+                      "width": "fill_container",
+                      "x": 0,
+                      "y": 0,
+                      "descendants": {
+                        "gkjP4": {
+                          "content": "인증번호"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "gzmSb",
+                      "name": "timer",
+                      "fill": "$--destructive",
+                      "content": "3:00",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "id": "y7zT1",
+                  "type": "ref",
+                  "ref": "MOy1O",
+                  "name": "authBtn",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 307,
+                  "descendants": {
+                    "sr6Ky": {
+                      "x": 142,
+                      "content": "인증하기"
+                    }
+                  }
+                },
+                {
+                  "type": "line",
+                  "id": "pkH6U",
+                  "name": "divider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$--border"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "SyUxA",
+                  "name": "step2Label",
+                  "fill": "$--primary",
+                  "content": "Step 2: 비밀번호 재설정",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "id": "MVop6",
+                  "type": "ref",
+                  "ref": "7cbkH",
+                  "name": "newPwInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 428,
+                  "descendants": {
+                    "HPW0L": {
+                      "content": "새 비밀번호"
+                    },
+                    "rDggB": {
+                      "x": 304
+                    }
+                  }
+                },
+                {
+                  "id": "AQgGB",
+                  "type": "ref",
+                  "ref": "7cbkH",
+                  "name": "confirmPwInput",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 488,
+                  "descendants": {
+                    "HPW0L": {
+                      "content": "비밀번호 확인"
+                    },
+                    "rDggB": {
+                      "x": 304
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "tvmHC",
+                  "name": "strengthBar",
+                  "width": "fill_container",
+                  "height": 8,
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qOkWG",
+                      "name": "bar1",
+                      "width": "fill_container",
+                      "height": 8,
+                      "fill": "$--color-success",
+                      "cornerRadius": 4
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7Mz4L",
+                      "name": "bar2",
+                      "width": "fill_container",
+                      "height": 8,
+                      "fill": "$--color-success",
+                      "cornerRadius": 4
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DGRf5",
+                      "name": "bar3",
+                      "width": "fill_container",
+                      "height": 8,
+                      "fill": "$--border",
+                      "cornerRadius": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "XSnhq",
+                  "type": "ref",
+                  "ref": "MOy1O",
+                  "name": "resetBtn",
+                  "width": "fill_container",
+                  "x": 32,
+                  "y": 576,
+                  "descendants": {
+                    "sr6Ky": {
+                      "x": 127.5,
+                      "content": "비밀번호 변경"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Md2ir",
+      "x": 1380,
+      "y": 1800,
+      "name": "Screen3-FindPW-Mobile",
+      "width": 375,
+      "height": 800,
+      "fill": "$--background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "83JnE",
+          "name": "MobileHeader",
+          "width": "fill_container",
+          "height": 48,
+          "fill": "$--background",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "z1FI1",
+              "name": "back",
+              "fill": "$--foreground",
+              "content": "< 뒤로",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "417eM",
+              "name": "title",
+              "fill": "$--foreground",
+              "content": "비밀번호 찾기",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "AtTDM",
+              "name": "spacer",
+              "width": 40,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zCwuB",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "LAJkT",
+              "name": "step1",
+              "fill": "$--primary",
+              "content": "Step 1: 본인 인증",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "id": "2EP3a",
+              "type": "ref",
+              "ref": "fbRoc",
+              "name": "memberId",
+              "width": "fill_container",
+              "x": 16,
+              "y": 60,
+              "descendants": {
+                "gkjP4": {
+                  "content": "아이디"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "9l6an",
+              "name": "phoneRow",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "cAu5H",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "phone",
+                  "width": "fill_container",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "휴대폰 번호"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "o3nsq",
+                  "name": "verifyBtn",
+                  "width": 72,
+                  "height": 40,
+                  "fill": "$--primary",
+                  "cornerRadius": 6,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$--primary"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kb3s2",
+                      "name": "label",
+                      "fill": "$--primary-foreground",
+                      "content": "인증",
+                      "fontFamily": "Noto Sans KR",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OkBrK",
+              "name": "codeRow",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "6IPAr",
+                  "type": "ref",
+                  "ref": "fbRoc",
+                  "name": "code",
+                  "width": "fill_container",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "gkjP4": {
+                      "content": "인증번호"
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "ivth7",
+                  "name": "timer",
+                  "fill": "$--destructive",
+                  "content": "3:00",
+                  "fontFamily": "Noto Sans KR",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "id": "D8yDv",
+              "type": "ref",
+              "ref": "MOy1O",
+              "name": "authBtn",
+              "width": "fill_container",
+              "y": 228,
+              "descendants": {
+                "sr6Ky": {
+                  "x": 145.5,
+                  "content": "인증하기"
+                }
+              }
+            },
+            {
+              "type": "line",
+              "id": "ApKky",
+              "name": "divider",
+              "width": "fill_container",
+              "height": 1,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$--border"
+              }
+            },
+            {
+              "type": "text",
+              "id": "X9lTE",
+              "name": "step2",
+              "fill": "$--primary",
+              "content": "Step 2: 비밀번호 재설정",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "id": "RjhWe",
+              "type": "ref",
+              "ref": "7cbkH",
+              "name": "newPw",
+              "width": "fill_container",
+              "x": 16,
+              "y": 337,
+              "descendants": {
+                "HPW0L": {
+                  "content": "새 비밀번호"
+                },
+                "rDggB": {
+                  "x": 311
+                }
+              }
+            },
+            {
+              "id": "oe6XS",
+              "type": "ref",
+              "ref": "7cbkH",
+              "name": "cfmPw",
+              "width": "fill_container",
+              "x": 16,
+              "y": 393,
+              "descendants": {
+                "HPW0L": {
+                  "content": "비밀번호 확인"
+                },
+                "rDggB": {
+                  "x": 311
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "eJjXK",
+              "name": "strengthBar",
+              "width": "fill_container",
+              "height": 8,
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tm2W8",
+                  "name": "bar1",
+                  "width": "fill_container",
+                  "height": 8,
+                  "fill": "$--color-success",
+                  "cornerRadius": 4
+                },
+                {
+                  "type": "frame",
+                  "id": "mvbBo",
+                  "name": "bar2",
+                  "width": "fill_container",
+                  "height": 8,
+                  "fill": "$--color-success",
+                  "cornerRadius": 4
+                },
+                {
+                  "type": "frame",
+                  "id": "rtdbQ",
+                  "name": "bar3",
+                  "width": "fill_container",
+                  "height": 8,
+                  "fill": "$--border",
+                  "cornerRadius": 4
+                }
+              ]
+            },
+            {
+              "id": "qJBHY",
+              "type": "ref",
+              "ref": "MOy1O",
+              "name": "resetBtn",
+              "width": "fill_container",
+              "y": 473,
+              "descendants": {
+                "sr6Ky": {
+                  "x": 131,
+                  "content": "비밀번호 변경"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "vBdYX",
+      "x": 0,
+      "y": 2800,
+      "name": "Screen4-SNSProcess-PC",
+      "width": 1280,
+      "height": 600,
+      "fill": "$--card",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Odltq",
+          "name": "ProcessCard",
+          "width": 320,
+          "fill": "$--background",
+          "cornerRadius": 12,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "$--border"
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 48,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "YR9L7",
+              "name": "spinner",
+              "fill": "$--background",
+              "width": 48,
+              "height": 48,
+              "stroke": {
+                "align": "center",
+                "thickness": 3,
+                "fill": "$--primary"
+              }
+            },
+            {
+              "type": "text",
+              "id": "M6Y5y",
+              "name": "message",
+              "fill": "$--foreground",
+              "content": "카카오 로그인 처리 중...",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "ThA4D",
+              "name": "subMessage",
+              "fill": "$--muted-foreground",
+              "content": "잠시만 기다려주세요",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "GYoko",
+      "x": 1380,
+      "y": 2800,
+      "name": "Screen4-SNSProcess-Mobile",
+      "width": 375,
+      "height": 600,
+      "fill": "$--background",
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "5z9en",
+          "name": "ProcessCard",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 32,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "k4DUf",
+              "name": "spinner",
+              "fill": "$--background",
+              "width": 48,
+              "height": 48,
+              "stroke": {
+                "align": "center",
+                "thickness": 3,
+                "fill": "$--primary"
+              }
+            },
+            {
+              "type": "text",
+              "id": "w1liZ",
+              "name": "message",
+              "fill": "$--foreground",
+              "content": "카카오 로그인 처리 중...",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "JhnsR",
+              "name": "subMessage",
+              "fill": "$--muted-foreground",
+              "content": "잠시만 기다려주세요",
+              "fontFamily": "Noto Sans KR",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "--background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "--card": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "--color-success": {
+      "type": "color",
+      "value": "#22C55E"
+    },
+    "--destructive": {
+      "type": "color",
+      "value": "#EF4444"
+    },
+    "--foreground": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "--kakao": {
+      "type": "color",
+      "value": "#FEE500"
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": "#979797"
+    },
+    "--naver": {
+      "type": "color",
+      "value": "#03C75A"
+    },
+    "--primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "--primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--primary-light": {
+      "type": "color",
+      "value": "#EEEBF9"
+    },
+    "--primary-secondary": {
+      "type": "color",
+      "value": "#9580D9"
+    }
+  }
+}

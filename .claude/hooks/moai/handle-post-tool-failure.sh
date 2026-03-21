@@ -16,13 +16,13 @@ if command -v moai &> /dev/null; then
 fi
 
 # Try detected Go bin path from initialization
-if [ -f "/home/innojini/go/bin/moai" ]; then
-	exec "/home/innojini/go/bin/moai" hook post-tool-failure < "$temp_file"
+if [ -f "/Users/innojini/go/bin/moai" ]; then
+	exec "/Users/innojini/go/bin/moai" hook post-tool-failure < "$temp_file"
 fi
 
 # Try default ~/go/bin/moai
-if [ -f "/home/innojini/go/bin/moai" ]; then
-	exec "/home/innojini/go/bin/moai" hook post-tool-failure < "$temp_file"
+if [ -f "$HOME/go/bin/moai" ]; then
+	exec "$HOME/go/bin/moai" hook post-tool-failure < "$temp_file"
 fi
 
 # Not found - exit silently (Claude Code handles missing hooks gracefully)

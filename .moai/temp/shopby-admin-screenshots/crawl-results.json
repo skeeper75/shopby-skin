@@ -1,0 +1,198 @@
+[
+  {
+    "id": "dashboard",
+    "name": "대시보드",
+    "url": "https://service.shopby.co.kr/",
+    "screenshot": "02-dashboard.png",
+    "navPath": "대시보드",
+    "components": {
+      "tables": "2개의 테이블",
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "28개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드, 상품등록, 상품조회, 주문조회, 회원조회, 쿠폰등록, 쿠폰조회)",
+      "tabs": "2개의 탭",
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "huniprinting48",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "order-list",
+    "name": "주문관리 > 전체주문",
+    "url": "https://service.shopby.co.kr/order/list?mallNos=81683&searchDateType=ORDER_YMDT&startYmd=2026-03-12&endYmd=2026-03-19&searchType=ALL&page=1&includeReservation=true&platformTypes=,PC,MOBILE_WEB,MOBILE_APP&partnerNo=0&taskMessageSearchType=ALL&includeHoldDelivery=true&orderStatusTypes=DEPOSIT_WAIT,PAY_DONE,PRODUCT_PREPARE,DELIVERY_PREPARE,DELIVERY_ING,DELIVERY_DONE,BUY_CONFIRM,CANCEL_DONE,EXCHANGE_DONE,RETURN_DONE&size=30&tabSort=deliveryResult&showDetail=false",
+    "screenshot": "03-order-list.png",
+    "navPath": "주문관리 > 전체주문",
+    "components": {
+      "tables": null,
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "5개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드)",
+      "tabs": null,
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "전체주문 조회",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "product-list",
+    "name": "상품관리 > 상품목록",
+    "url": "https://service.shopby.co.kr/product/list",
+    "screenshot": "04-product-list.png",
+    "navPath": "상품관리 > 상품목록",
+    "components": {
+      "tables": null,
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "5개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드)",
+      "tabs": null,
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "상품정보 조회/수정",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "product-register",
+    "name": "상품관리 > 상품등록",
+    "url": "https://service.shopby.co.kr/product/add",
+    "screenshot": "05-product-register.png",
+    "navPath": "상품관리 > 상품등록",
+    "components": {
+      "tables": null,
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "5개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드)",
+      "tabs": null,
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "일반 상품 등록",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "member-list",
+    "name": "회원관리 > 회원목록",
+    "url": "https://service.shopby.co.kr/member/list",
+    "screenshot": "06-member-list.png",
+    "navPath": "회원관리 > 회원목록",
+    "components": {
+      "tables": null,
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "5개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드)",
+      "tabs": null,
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "회원조회",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "coupon-list",
+    "name": "프로모션 > 쿠폰관리",
+    "url": "https://service.shopby.co.kr/promotion/coupon/list",
+    "screenshot": "07-coupon-list.png",
+    "navPath": "프로모션 > 쿠폰관리",
+    "components": {
+      "tables": null,
+      "forms": "1개의 폼 (입력 요소 0개)",
+      "buttons": "5개 (예: QR코드로 다운받기링크로 이동하여 다운받기, 전체메뉴 열기, 로그아웃, X엑셀 다운로드)",
+      "tabs": "2개의 탭",
+      "modals": "2개의 모달",
+      "filters": null,
+      "sidebar": "",
+      "pageTitle": "할인쿠폰 관리",
+      "breadcrumb": null,
+      "layout": "좌측 사이드바 + 상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "board-notice",
+    "name": "게시판관리 > 공지사항",
+    "url": "https://service.shopby.co.kr/board/notice/list",
+    "screenshot": "08-board-notice.png",
+    "navPath": "게시판관리 > 공지사항",
+    "components": {
+      "tables": null,
+      "forms": null,
+      "buttons": "3개 (예: 이전 페이지로메인으로, 이전 페이지로, 메인으로)",
+      "tabs": null,
+      "modals": null,
+      "filters": null,
+      "pageTitle": "shop by 서비스어드민",
+      "breadcrumb": null,
+      "layout": "상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "board-inquiry",
+    "name": "게시판관리 > 1:1문의",
+    "url": "https://service.shopby.co.kr/board/qna/list",
+    "screenshot": "09-board-inquiry.png",
+    "navPath": "게시판관리 > 1:1문의",
+    "components": {
+      "tables": null,
+      "forms": null,
+      "buttons": "3개 (예: 이전 페이지로메인으로, 이전 페이지로, 메인으로)",
+      "tabs": null,
+      "modals": null,
+      "filters": null,
+      "pageTitle": "shop by 서비스어드민",
+      "breadcrumb": null,
+      "layout": "상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "stats-sales",
+    "name": "통계 > 매출통계",
+    "url": "https://service.shopby.co.kr/statistics/sales",
+    "screenshot": "10-stats-sales.png",
+    "navPath": "통계 > 매출통계",
+    "components": {
+      "tables": null,
+      "forms": null,
+      "buttons": "3개 (예: 이전 페이지로메인으로, 이전 페이지로, 메인으로)",
+      "tabs": null,
+      "modals": null,
+      "filters": null,
+      "pageTitle": "shop by 서비스어드민",
+      "breadcrumb": null,
+      "layout": "상단 헤더"
+    },
+    "status": "success"
+  },
+  {
+    "id": "settings",
+    "name": "설정",
+    "url": "https://service.shopby.co.kr/setting",
+    "screenshot": "11-settings.png",
+    "navPath": "설정",
+    "components": {
+      "tables": null,
+      "forms": null,
+      "buttons": "3개 (예: 이전 페이지로메인으로, 이전 페이지로, 메인으로)",
+      "tabs": null,
+      "modals": null,
+      "filters": null,
+      "pageTitle": "shop by 서비스어드민",
+      "breadcrumb": null,
+      "layout": "상단 헤더"
+    },
+    "status": "success"
+  }
+]

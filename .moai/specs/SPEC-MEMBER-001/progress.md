@@ -22,8 +22,16 @@
 - wireframes/management-module.md: 회원관리 모듈 10개 화면 와이어프레임
 - pencil-to-code-guide.md: Pencil → React/Tailwind 코드 전환 가이드
 
-### 다음 단계: Phase 4 (Pencil .pen 디자인)
-- 분할 전략: 4+1 파일 (auth/registration/management/admin + components)
-- 파일당 최대 12화면, 400노드
-- 후니프린팅 디자인시스템(huni-design-system plugin) 참조 필수
-- pencil-to-code-guide.md 규칙 준수 (시맨틱 네이밍, 토큰, Auto Layout)
+### Phase 4: Pencil .pen 디자인 (완료 - 2026-03-20)
+- designs/member-components.pen: 14개 재사용 컴포넌트 (TextField, Button, Checkbox, SNSButton, PasswordStrength, SmsAuthField, StepIndicator 등)
+- designs/member-auth.pen: 인증 모듈 13개 프레임 (10 base + 3 state variants)
+- designs/member-registration.pen: 회원가입 모듈 10개 프레임 (3 base + 7 state variants)
+- designs/member-management.pen: 회원관리 모듈 10개 프레임 (비회원주문, 등급, 정보수정, 탈퇴)
+- 디자인 토큰: 12+ 변수 ($primary, $error, $success 등) 전 파일 적용
+- PC 전용 (1280px), 모바일은 추후 별도 진행
+- 총 47개 프레임 (P1 30개 화면 커버)
+
+### 다음 단계: Phase 5 (개발) 또는 Phase 4.5 (모바일 디자인)
+- Phase 5: /moai run SPEC-MEMBER-001 (DDD 구현)
+- Phase 4.5: 모바일 반응형 프레임 추가 (핵심 화면만 375px)
+- P2 관리자 모듈 (SCR-MBR-031~042): 별도 SPEC 또는 Phase 확장
