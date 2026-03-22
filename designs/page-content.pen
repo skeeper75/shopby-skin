@@ -7,7 +7,7 @@
       "x": 0,
       "y": 0,
       "name": "SCR-PG-021 회사소개",
-      "width": 1920,
+      "width": 1280,
       "height": 2400,
       "fill": "$color-bg-section",
       "layout": "vertical",
@@ -34,14 +34,34 @@
               "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "YY7bq",
-                  "name": "lg",
-                  "fill": "$color-primary",
-                  "content": "후니프린팅",
-                  "fontFamily": "Noto Sans",
-                  "fontSize": 24,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "RGdgk",
+                  "name": "Logo",
+                  "width": 280,
+                  "height": 51,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pLkS9",
+                      "name": "logoHuni",
+                      "fill": "#5538B6",
+                      "content": "Huni",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xDBFo",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
@@ -338,9 +358,20 @@
                       "type": "frame",
                       "id": "FGlQk",
                       "name": "eq1",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "glasfarben",
+                        "link": "https://unsplash.com/@glasfarben",
+                        "author": "Bianca Maria"
+                      },
                       "width": 280,
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1725200237518-b82fe8b9111d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM2Nzl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8,
                       "layout": "vertical",
                       "gap": 8,
@@ -383,9 +414,20 @@
                       "type": "frame",
                       "id": "Xk94Y",
                       "name": "eq2",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "optiny",
+                        "link": "https://unsplash.com/@optiny",
+                        "author": "Raymond Yeung"
+                      },
                       "width": 280,
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1743243922847-2c94800238fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM2Nzl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8,
                       "layout": "vertical",
                       "gap": 8,
@@ -428,9 +470,20 @@
                       "type": "frame",
                       "id": "n6CS7",
                       "name": "eq3",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "caleb_woods",
+                        "link": "https://unsplash.com/@caleb_woods",
+                        "author": "Caleb Woods"
+                      },
                       "width": 280,
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1503796627019-324e68809dc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM2ODB8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8,
                       "layout": "vertical",
                       "gap": 8,
@@ -548,7 +601,7 @@
       "x": 0,
       "y": 2500,
       "name": "SCR-PG-022 이용약관",
-      "width": 1920,
+      "width": 1280,
       "height": 1400,
       "fill": "$color-bg-section",
       "layout": "vertical",
@@ -576,14 +629,34 @@
               "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "ZK8YY",
-                  "name": "tLogo",
-                  "fill": "$color-primary",
-                  "content": "후니프린팅",
-                  "fontFamily": "Noto Sans",
-                  "fontSize": 24,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "u7rpA",
+                  "name": "Logo",
+                  "width": 280,
+                  "height": 51,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mkCRT",
+                      "name": "logoHuni",
+                      "fill": "#5538B6",
+                      "content": "Huni",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YG0s9",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
+                    }
+                  ]
                 }
               ]
             },
@@ -789,7 +862,7 @@
       "x": 0,
       "y": 4000,
       "name": "SCR-PG-024 찾아오시는길",
-      "width": 1920,
+      "width": 1280,
       "height": 1400,
       "fill": "$color-bg-section",
       "layout": "vertical",
@@ -817,14 +890,34 @@
               "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "eUGXp",
-                  "name": "lLogo",
-                  "fill": "$color-primary",
-                  "content": "후니프린팅",
-                  "fontFamily": "Noto Sans",
-                  "fontSize": 24,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "uKTAq",
+                  "name": "Logo",
+                  "width": 280,
+                  "height": 51,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MNUuJ",
+                      "name": "logoHuni",
+                      "fill": "#5538B6",
+                      "content": "Huni",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oX55Z",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
+                    }
+                  ]
                 }
               ]
             },
@@ -931,38 +1024,193 @@
               "type": "frame",
               "id": "Xu44d",
               "name": "MapEmbed",
+              "metadata": {
+                "type": "unsplash",
+                "username": "smoove857",
+                "link": "https://unsplash.com/@smoove857",
+                "author": "Will Ma"
+              },
               "width": "fill_container",
               "height": 400,
-              "fill": "$color-bg-section",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1640831526144-32a5c072a9d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQ5NzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
               "cornerRadius": 8,
               "stroke": {
                 "thickness": 1,
                 "fill": "$color-border"
               },
-              "layout": "vertical",
-              "gap": 8,
-              "justifyContent": "center",
-              "alignItems": "center",
+              "layout": "none",
               "children": [
                 {
-                  "type": "icon_font",
-                  "id": "8O7NU",
-                  "name": "mapIcon",
-                  "width": 40,
-                  "height": 40,
-                  "iconFontName": "map-pin",
-                  "iconFontFamily": "lucide",
-                  "fill": "$color-text-muted"
+                  "type": "frame",
+                  "id": "A0UA9",
+                  "x": 580,
+                  "y": 170,
+                  "name": "MapMarker",
+                  "width": 32,
+                  "height": 32,
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "17z45",
+                      "name": "markerDot",
+                      "fill": "#CC1523",
+                      "width": 32,
+                      "height": 32,
+                      "stroke": {
+                        "thickness": 3,
+                        "fill": "#FFFFFF"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "id": "tJHof",
-                  "name": "mapText",
-                  "fill": "$color-text-muted",
-                  "content": "카카오맵 지도 영역",
-                  "fontFamily": "Noto Sans",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "type": "frame",
+                  "id": "DIFgU",
+                  "x": 470,
+                  "y": 70,
+                  "name": "InfoWindow",
+                  "width": 260,
+                  "height": 100,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sdN97",
+                      "name": "infoName",
+                      "fill": "#424242",
+                      "content": "후니프린팅",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zFpX3",
+                      "name": "infoAddr",
+                      "fill": "#979797",
+                      "content": "서울 중구 필동로 80 낙원빌딩 2층",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vGQfX",
+                      "name": "infoTel",
+                      "fill": "#5538B6",
+                      "content": "02-3409-8853",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fQT49",
+                  "x": 30,
+                  "y": 20,
+                  "name": "ZoomControls",
+                  "width": 36,
+                  "height": 72,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 4,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QVqzN",
+                      "name": "ZoomIn",
+                      "width": "fill_container",
+                      "height": 36,
+                      "stroke": {
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#CACACA"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "e2cAd",
+                          "name": "zoomInT",
+                          "fill": "#424242",
+                          "content": "+",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3BlGh",
+                      "name": "ZoomOut",
+                      "width": "fill_container",
+                      "height": 36,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZDPJz",
+                          "name": "zoomOutT",
+                          "fill": "#424242",
+                          "content": "−",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Xw8Im",
+                  "x": 30,
+                  "y": 366,
+                  "name": "KakaoMapBadge",
+                  "width": 80,
+                  "height": 24,
+                  "fill": "#FFCD00",
+                  "cornerRadius": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5KQq6",
+                      "name": "kakaoLogoT",
+                      "fill": "#3C1E1E",
+                      "content": "kakao map",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 10,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
             },
@@ -1068,6 +1316,537 @@
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "PLKQv",
+      "x": 0,
+      "y": 5500,
+      "name": "SCR-PG-023 개인정보처리방침",
+      "width": 1280,
+      "height": 1400,
+      "fill": "$color-bg-section",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "1wfjI",
+          "name": "tHdr",
+          "width": "fill_container",
+          "height": 131,
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "vtvB2",
+              "name": "tTop",
+              "width": "fill_container",
+              "height": 90,
+              "padding": [
+                0,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TCnwo",
+                  "name": "Logo",
+                  "width": 280,
+                  "height": 51,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WD8Nq",
+                      "name": "logoHuni",
+                      "fill": "#5538B6",
+                      "content": "Huni",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "m9qy8",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jmtDF",
+              "name": "tCat",
+              "width": "fill_container",
+              "height": 40,
+              "gap": 24,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ud7eS",
+                  "name": "tC1",
+                  "fill": "$color-text-dark",
+                  "content": "엽서 + 스티커 + 인쇄홍보물 + ...",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OgLEg",
+              "name": "tDiv",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$color-border"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "npJ6f",
+          "name": "tBread",
+          "width": "fill_container",
+          "height": 40,
+          "fill": "$color-bg-white",
+          "gap": 8,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "5zxVE",
+              "name": "tBr",
+              "fill": "$color-text-muted",
+              "content": "홈 > 개인정보처리방침",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6caXY",
+          "name": "tTitle",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$color-bg-white",
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "oAwhd",
+              "name": "tTt",
+              "fill": "$color-text-dark",
+              "content": "개인정보처리방침",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U2Wek",
+          "name": "tContent",
+          "width": "fill_container",
+          "fill": "$color-bg-white",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "m94Tp",
+              "name": "tSec1",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sW5CF",
+                  "name": "tSec1t",
+                  "fill": "$color-text-dark",
+                  "content": "제1조 (개인정보 수집 항목)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "YR5Zb",
+                  "name": "tSec1b",
+                  "fill": "$color-text-dark",
+                  "content": "회사는 서비스 제공을 위해 다음의 개인정보를 수집합니다.\n필수항목: 이름, 이메일, 휴대전화번호, 비밀번호, 배송지 주소\n선택항목: 회사명, 사업자등록번호, 직책",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2uNpZ",
+              "name": "tSec2",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ytha0",
+                  "name": "tSec2t",
+                  "fill": "$color-text-dark",
+                  "content": "제2조 (개인정보 보유 및 이용기간)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ZtMP8",
+                  "name": "tSec2b",
+                  "fill": "$color-text-dark",
+                  "content": "1. 회원 탈퇴 시까지 (단, 관련 법령에 따라 일정 기간 보존)\n2. 전자상거래법: 계약/청약철회 기록 5년, 결제/대금공급 기록 5년\n3. 인쇄 파일 보관: 주문 완료 후 30일 이내 자동 삭제\n4. 위탁 업체: PG사(이니시스), 배송업체(CJ대한통운), 알림톡(카카오)",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5Lo4L",
+              "name": "tSec3",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PTQgS",
+                  "name": "tSec3t",
+                  "fill": "$color-text-dark",
+                  "content": "제3조 (개인정보의 파기 절차)",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "2wFjf",
+                  "name": "tSec3b",
+                  "fill": "$color-text-dark",
+                  "content": "회사는 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다. 전자적 파일은 복구 불가능한 방법으로 영구 삭제하며, 종이 문서는 분쇄기로 분쇄하거나 소각합니다.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rJTPS",
+      "x": 1380,
+      "y": 0,
+      "name": "SCR-PG-025 카카오맵 인포윈도우",
+      "width": 400,
+      "height": 300,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hdGgk",
+          "name": "InfoNote",
+          "width": "fill_container",
+          "height": 36,
+          "fill": "#EDE9FB",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "CtGpN",
+              "name": "infoNoteT",
+              "fill": "#5538B6",
+              "content": "SCR-PG-025: 카카오맵 마커 클릭 시 인포윈도우",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NtYml",
+          "name": "MapBackground",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "#E8E4D8",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "7X9ij",
+              "name": "mapPin",
+              "width": 32,
+              "height": 32,
+              "iconFontName": "map-pin",
+              "iconFontFamily": "lucide",
+              "fill": "#CC1523"
+            },
+            {
+              "type": "frame",
+              "id": "qBwc8",
+              "name": "InfoWindow",
+              "width": 240,
+              "height": 140,
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KSDNp",
+                  "name": "popName",
+                  "fill": "#424242",
+                  "content": "후니프린팅",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "K7BLn",
+                  "name": "popAddr",
+                  "fill": "#979797",
+                  "content": "서울 중구 필동로 80 낙원빌딩 2층",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Smh83",
+                  "name": "popTel",
+                  "fill": "#5538B6",
+                  "content": "TEL: 02-3409-8853",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "MavwJ",
+                  "name": "CloseBtn",
+                  "width": 20,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "2iaFB",
+                      "name": "popCloseI",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "x",
+                      "iconFontFamily": "lucide",
+                      "fill": "#979797"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "kBKvl",
+      "x": 1380,
+      "y": 400,
+      "name": "SCR-PG-026 카카오맵 로딩 실패",
+      "width": 400,
+      "height": 300,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dehF3",
+          "name": "ErrNote",
+          "width": "fill_container",
+          "height": 36,
+          "fill": "#EDE9FB",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "gBwb3",
+              "name": "errNoteT",
+              "fill": "#5538B6",
+              "content": "SCR-PG-026: 지도 로딩 실패 상태",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xyxmu",
+          "name": "ErrBody",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "#F6F6F6",
+          "layout": "vertical",
+          "gap": 12,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "mDKja",
+              "name": "errIcon",
+              "width": 40,
+              "height": 40,
+              "iconFontName": "map-pin-off",
+              "iconFontFamily": "lucide",
+              "fill": "#CACACA"
+            },
+            {
+              "type": "text",
+              "id": "b0Z5Y",
+              "name": "errMsg",
+              "fill": "#424242",
+              "content": "지도를 불러올 수 없습니다",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "vkmtS",
+              "name": "errSub",
+              "fill": "#979797",
+              "content": "네트워크 상태를 확인해주세요",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "XVdYv",
+              "name": "RetryBtn",
+              "width": 120,
+              "height": 36,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "THKNy",
+                  "name": "errRetryT",
+                  "fill": "#FFFFFF",
+                  "content": "다시 시도",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IZFoG",
+          "name": "FallbackAddr",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "gr42K",
+              "name": "errAddrT",
+              "fill": "#424242",
+              "content": "주소: 서울 중구 필동로 80 낙원빌딩 2층",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "HZZ26",
+              "name": "errAddrP",
+              "fill": "#424242",
+              "content": "전화: 02-3409-8853",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
             }
           ]
         }

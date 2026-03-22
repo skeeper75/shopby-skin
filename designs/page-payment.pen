@@ -1,0 +1,1146 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "i5cth",
+      "x": 0,
+      "y": 0,
+      "name": "SCR-PG-027 수동카드결제 (PC 1280)",
+      "width": 1280,
+      "fill": "#F6F6F6",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "CmLzQ",
+          "name": "AdminHeader",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#2D2D2D",
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zqFDa",
+              "name": "hdrLogo",
+              "fill": "#FFFFFF",
+              "content": "후니프린팅 관리자",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "FXGEt",
+              "name": "hdrUser",
+              "fill": "#CCCCCC",
+              "content": "관리자 (admin@huniprinting.com)",
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Lh5lK",
+          "name": "TitleBar",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#CACACA"
+          },
+          "gap": 12,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "Bk2Ic",
+              "name": "titleIcon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "credit-card",
+              "iconFontFamily": "lucide",
+              "fill": "#5538B6"
+            },
+            {
+              "type": "text",
+              "id": "kSedU",
+              "name": "titleTxt",
+              "fill": "#424242",
+              "content": "수동 카드결제",
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "9BKl0",
+          "name": "Body",
+          "width": "fill_container",
+          "fill": "#F6F6F6",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "mAYXh",
+              "name": "OrderSearchSection",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iFyp8",
+                  "name": "searchLabel",
+                  "fill": "#424242",
+                  "content": "주문번호 검색",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "1eseS",
+                  "name": "SearchRow",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mAg5s",
+                      "name": "OrderInput",
+                      "width": 400,
+                      "height": 44,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#CACACA"
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NYX8l",
+                          "name": "searchPh",
+                          "fill": "#979797",
+                          "content": "주문번호를 입력하세요 (예: ORD-20260321-001)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MjYpV",
+                      "name": "SearchBtn",
+                      "width": 100,
+                      "height": 44,
+                      "fill": "#5538B6",
+                      "cornerRadius": 4,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pvuav",
+                          "name": "searchBtnT",
+                          "fill": "#FFFFFF",
+                          "content": "조회",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hWl1c",
+              "name": "SCR-PG-028 주문조회결과",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fL5c1",
+                  "name": "oiLabel",
+                  "fill": "#424242",
+                  "content": "주문 정보",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "vX982",
+                  "name": "OrderInfoTable",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qSVho",
+                      "name": "row1",
+                      "width": "fill_container",
+                      "height": 40,
+                      "stroke": {
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#CACACA"
+                      },
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qrNnN",
+                          "name": "r1l",
+                          "fill": "#424242",
+                          "content": "주문번호",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CZ2XD",
+                          "name": "r1v",
+                          "fill": "#424242",
+                          "content": "ORD-20260321-001",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "45pa6",
+                      "name": "row2",
+                      "width": "fill_container",
+                      "height": 40,
+                      "stroke": {
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#CACACA"
+                      },
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sIENy",
+                          "name": "r2l",
+                          "fill": "#424242",
+                          "content": "주문자",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "O5qaZ",
+                          "name": "r2v",
+                          "fill": "#424242",
+                          "content": "홍길동 (010-1234-5678)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V8QIf",
+                      "name": "row3",
+                      "width": "fill_container",
+                      "height": 40,
+                      "stroke": {
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#CACACA"
+                      },
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "h6BeR",
+                          "name": "r3l",
+                          "fill": "#424242",
+                          "content": "상품명",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "sAdBG",
+                          "name": "r3v",
+                          "fill": "#424242",
+                          "content": "프리미엄 명함 양면컬러 200매",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dC7Pb",
+                      "name": "row4",
+                      "width": "fill_container",
+                      "height": 40,
+                      "stroke": {
+                        "thickness": {
+                          "bottom": 1
+                        },
+                        "fill": "#CACACA"
+                      },
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4AyYa",
+                          "name": "r4l",
+                          "fill": "#424242",
+                          "content": "주문금액",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VqYSA",
+                          "name": "r4v",
+                          "fill": "#5538B6",
+                          "content": "55,000원 (부가세 포함)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TuaDu",
+                      "name": "row5",
+                      "width": "fill_container",
+                      "height": 40,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "47BUH",
+                          "name": "r5l",
+                          "fill": "#424242",
+                          "content": "주문상태",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Pbxkc",
+                          "name": "StatusBadge",
+                          "height": 24,
+                          "fill": "#D97706",
+                          "cornerRadius": 4,
+                          "padding": [
+                            0,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VFbo5",
+                              "name": "r5bT",
+                              "fill": "#FFFFFF",
+                              "content": "결제대기",
+                              "fontFamily": "Noto Sans",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "51LNx",
+              "name": "PaymentSection",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fmzYa",
+                  "name": "payLabel",
+                  "fill": "#424242",
+                  "content": "결제 처리",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "JQpLL",
+                  "name": "PayAmountRow",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eGVhW",
+                      "name": "payAmtLabel",
+                      "fill": "#424242",
+                      "content": "결제금액",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rc8gZ",
+                      "name": "PayAmountInput",
+                      "width": 300,
+                      "height": 44,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#CACACA"
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "end",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aoQCs",
+                          "name": "payAmtVal",
+                          "fill": "#424242",
+                          "content": "55,000",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "8qugU",
+                      "name": "payUnit",
+                      "fill": "#424242",
+                      "content": "원",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xT9us",
+                  "name": "PayNote",
+                  "width": "fill_container",
+                  "fill": "#EDE9FB",
+                  "cornerRadius": 4,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CDxb8",
+                      "name": "payNoteI",
+                      "fill": "#3B2573",
+                      "content": "⚠ 결제 전 확인사항",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AbR0g",
+                      "name": "payNoteT",
+                      "fill": "#424242",
+                      "content": "• 고객에게 결제 동의를 구두/서면으로 확인한 후 진행하세요\n• 결제 완료 후 취소는 PG사를 통해 별도 처리해야 합니다",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9XXky",
+                  "name": "PayButtons",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lGstd",
+                      "name": "CancelBtn",
+                      "width": 120,
+                      "height": 50,
+                      "cornerRadius": 5,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#CACACA"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xF2fk",
+                          "name": "payCancelT",
+                          "fill": "#424242",
+                          "content": "취소",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vFaPu",
+                      "name": "SubmitBtn",
+                      "width": 180,
+                      "height": 50,
+                      "fill": "#5538B6",
+                      "cornerRadius": 5,
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "4mphh",
+                          "name": "paySubmitI",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "credit-card",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yVGBi",
+                          "name": "paySubmitT",
+                          "fill": "#FFFFFF",
+                          "content": "결제 처리",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "AaUPx",
+      "x": 1380,
+      "y": 0,
+      "name": "SCR-PG-029 결제 확인서",
+      "width": 600,
+      "height": 480,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "5FcnL",
+          "name": "SuccessNote",
+          "width": "fill_container",
+          "height": 36,
+          "fill": "#16A34A",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "XoqJn",
+              "name": "sucNoteT",
+              "fill": "#FFFFFF",
+              "content": "SCR-PG-029: 결제 성공 후 표시",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tJzAj",
+          "name": "SuccessBody",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 32,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "j5UWh",
+              "name": "sucIcon",
+              "width": 48,
+              "height": 48,
+              "iconFontName": "circle-check",
+              "iconFontFamily": "lucide",
+              "fill": "#16A34A"
+            },
+            {
+              "type": "text",
+              "id": "h8TNy",
+              "name": "sucMsg",
+              "fill": "#424242",
+              "content": "결제가 완료되었습니다",
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "fxLhK",
+              "name": "ReceiptTable",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fSQ6O",
+                  "name": "sr1",
+                  "width": "fill_container",
+                  "height": 36,
+                  "stroke": {
+                    "thickness": {
+                      "bottom": 1
+                    },
+                    "fill": "#CACACA"
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "F8MD8",
+                      "name": "sr1l",
+                      "fill": "#424242",
+                      "content": "결제일시",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bVwJn",
+                      "name": "sr1v",
+                      "fill": "#424242",
+                      "content": "2026-03-21 14:32:15",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Sp51L",
+                  "name": "sr2",
+                  "width": "fill_container",
+                  "height": 36,
+                  "stroke": {
+                    "thickness": {
+                      "bottom": 1
+                    },
+                    "fill": "#CACACA"
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "072wd",
+                      "name": "sr2l",
+                      "fill": "#424242",
+                      "content": "결제금액",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "idW0Z",
+                      "name": "sr2v",
+                      "fill": "#5538B6",
+                      "content": "55,000원",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PRjRD",
+                  "name": "sr3",
+                  "width": "fill_container",
+                  "height": 36,
+                  "stroke": {
+                    "thickness": {
+                      "bottom": 1
+                    },
+                    "fill": "#CACACA"
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YhiCg",
+                      "name": "sr3l",
+                      "fill": "#424242",
+                      "content": "승인번호",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BcPAK",
+                      "name": "sr3v",
+                      "fill": "#424242",
+                      "content": "INI-2026032100123",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zvdhG",
+                  "name": "sr4",
+                  "width": "fill_container",
+                  "height": 36,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pMF3X",
+                      "name": "sr4l",
+                      "fill": "#424242",
+                      "content": "처리자",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KXa3u",
+                      "name": "sr4v",
+                      "fill": "#424242",
+                      "content": "관리자 (admin)",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Uu2E2",
+              "name": "DoneBtn",
+              "width": 160,
+              "height": 44,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vlNWk",
+                  "name": "sucBtnT",
+                  "fill": "#FFFFFF",
+                  "content": "확인",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lU5Gp",
+      "x": 1380,
+      "y": 580,
+      "name": "SCR-PG-030 결제 실패",
+      "width": 400,
+      "height": 280,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "JqwFJ",
+          "name": "FailNote",
+          "width": "fill_container",
+          "height": 36,
+          "fill": "#CC1523",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "kk1Qh",
+              "name": "failNoteT",
+              "fill": "#FFFFFF",
+              "content": "SCR-PG-030: 결제 실패 상태",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "5jtUg",
+          "name": "FailBody",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "93Rm6",
+              "name": "failIcon",
+              "width": 40,
+              "height": 40,
+              "iconFontName": "circle-x",
+              "iconFontFamily": "lucide",
+              "fill": "#CC1523"
+            },
+            {
+              "type": "text",
+              "id": "LTqtd",
+              "name": "failMsg",
+              "fill": "#424242",
+              "content": "결제에 실패했습니다",
+              "fontFamily": "Noto Sans",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "mp1DY",
+              "name": "ErrorDetail",
+              "width": "fill_container",
+              "fill": "#F6F6F6",
+              "cornerRadius": 4,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xgdHK",
+                  "name": "failCodeT",
+                  "fill": "#CC1523",
+                  "content": "오류 코드: PG_ERR_5001",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "XKf0i",
+                  "name": "failCodeM",
+                  "fill": "#424242",
+                  "content": "카드 한도 초과. 다른 카드로 시도해주세요.",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DuSKs",
+              "name": "RetryBtn",
+              "width": 140,
+              "height": 44,
+              "fill": "#5538B6",
+              "cornerRadius": 4,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "K9XZR",
+                  "name": "failRetryT",
+                  "fill": "#FFFFFF",
+                  "content": "다시 시도",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "USpOU",
+      "x": 1380,
+      "y": 960,
+      "name": "SCR-PG-031 접근 거부",
+      "width": 400,
+      "height": 250,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gogvN",
+          "name": "DenyNote",
+          "width": "fill_container",
+          "height": 36,
+          "fill": "#D97706",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ds8al",
+              "name": "denyNoteT",
+              "fill": "#FFFFFF",
+              "content": "SCR-PG-031: 비관리자 접근 시",
+              "fontFamily": "Noto Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "saBnR",
+          "name": "DenyBody",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 32,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "45doj",
+              "name": "denyIcon",
+              "width": 40,
+              "height": 40,
+              "iconFontName": "shield-alert",
+              "iconFontFamily": "lucide",
+              "fill": "#D97706"
+            },
+            {
+              "type": "text",
+              "id": "u3ddq",
+              "name": "denyMsg",
+              "fill": "#424242",
+              "content": "관리자 권한이 필요합니다",
+              "fontFamily": "Noto Sans",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "UEsMP",
+              "name": "denySub",
+              "fill": "#979797",
+              "content": "이 페이지는 관리자만 접근할 수 있습니다.\n권한이 필요하시면 관리자에게 문의하세요.",
+              "lineHeight": 1.6,
+              "fontFamily": "Noto Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "dUhzo",
+              "name": "HomeBtn",
+              "width": 140,
+              "height": 44,
+              "cornerRadius": 4,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#CACACA"
+              },
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QGKF1",
+                  "name": "denyBtnT",
+                  "fill": "#424242",
+                  "content": "메인으로",
+                  "fontFamily": "Noto Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-bg-section": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "color-bg-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#CACACA"
+    },
+    "color-error": {
+      "type": "color",
+      "value": "#CC1523"
+    },
+    "color-gold": {
+      "type": "color",
+      "value": "#E6B93F"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#5538B6"
+    },
+    "color-primary-dark": {
+      "type": "color",
+      "value": "#3B2573"
+    },
+    "color-primary-light": {
+      "type": "color",
+      "value": "#EDE9FB"
+    },
+    "color-success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "color-text-dark": {
+      "type": "color",
+      "value": "#424242"
+    },
+    "color-text-muted": {
+      "type": "color",
+      "value": "#979797"
+    }
+  }
+}

@@ -7,7 +7,7 @@
       "x": 0,
       "y": 0,
       "name": "SCR-A8-GUIDE 작업가이드 목록",
-      "width": 1920,
+      "width": 1280,
       "height": 2000,
       "fill": "$color-bg-section",
       "layout": "vertical",
@@ -35,14 +35,34 @@
               "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "FT4gn",
-                  "name": "logo",
-                  "fill": "$color-primary",
-                  "content": "후니프린팅",
-                  "fontFamily": "Noto Sans",
-                  "fontSize": 24,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "nzWHi",
+                  "name": "Logo",
+                  "width": 280,
+                  "height": 51,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "buesq",
+                      "name": "logoHuni",
+                      "fill": "#5538B6",
+                      "content": "Huni",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "52r6Y",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
@@ -293,9 +313,20 @@
                       "type": "frame",
                       "id": "72rvK",
                       "name": "g1img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "26_sofia_26",
+                        "link": "https://unsplash.com/@26_sofia_26",
+                        "author": "София Овчинникова"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1740951640936-8ccd714e2df8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -363,9 +394,20 @@
                       "type": "frame",
                       "id": "lX3hd",
                       "name": "g2img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "brett_jordan",
+                        "link": "https://unsplash.com/@brett_jordan",
+                        "author": "Brett Jordan"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1642792492023-5e3f5f65e028?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3NzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -433,9 +475,20 @@
                       "type": "frame",
                       "id": "qVv0C",
                       "name": "g3img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "mitchel3uo",
+                        "link": "https://unsplash.com/@mitchel3uo",
+                        "author": "Mitchell Luo"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1579693004042-0f47ae6ce653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3NzV8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -511,9 +564,20 @@
                       "type": "frame",
                       "id": "pDfb7",
                       "name": "g4img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "brett_jordan",
+                        "link": "https://unsplash.com/@brett_jordan",
+                        "author": "Brett Jordan"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1708588823519-3342c80114f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3NzV8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -581,9 +645,20 @@
                       "type": "frame",
                       "id": "gkoIp",
                       "name": "g5img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "helloimnik",
+                        "link": "https://unsplash.com/@helloimnik",
+                        "author": "Nik"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1513004132127-ade5a645d3e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3NzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -651,9 +726,20 @@
                       "type": "frame",
                       "id": "kANVn",
                       "name": "g6img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "kellysikkema",
+                        "link": "https://unsplash.com/@kellysikkema",
+                        "author": "Kelly Sikkema"
+                      },
                       "width": "fill_container",
                       "height": 140,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1694878981915-91c701a75a39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTM3Nzd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {

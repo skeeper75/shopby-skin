@@ -8,7 +8,7 @@
       "y": 0,
       "name": "SCR-PG-004 상품 목록",
       "width": 1920,
-      "height": 2800,
+      "height": 1500,
       "fill": "$color-bg-section",
       "layout": "vertical",
       "children": [
@@ -46,10 +46,20 @@
                       "id": "oMpdF",
                       "name": "logoT",
                       "fill": "$color-primary",
-                      "content": "후니프린팅",
+                      "content": "Huni",
                       "fontFamily": "Noto Sans",
-                      "fontSize": 24,
-                      "fontWeight": "700"
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q7BIE",
+                      "name": "logoPrinting",
+                      "fill": "#424242",
+                      "content": "printing",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 28,
+                      "fontWeight": "300"
                     }
                   ]
                 },
@@ -77,9 +87,9 @@
                       "id": "JkO0k",
                       "name": "searchP",
                       "fill": "$color-text-muted",
-                      "content": "검색어를 입력해주세요",
+                      "content": "검색어를 입력하세요",
                       "fontFamily": "Noto Sans",
-                      "fontSize": 13,
+                      "fontSize": 14,
                       "fontWeight": "normal"
                     },
                     {
@@ -102,61 +112,50 @@
                   "alignItems": "center",
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "cxXZp",
-                      "name": "u1",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "cIrJa",
-                          "name": "u1i",
-                          "width": 20,
-                          "height": 20,
-                          "iconFontName": "shopping-cart",
-                          "iconFontFamily": "lucide",
-                          "fill": "$color-text-dark"
-                        },
-                        {
-                          "type": "text",
-                          "id": "IraDM",
-                          "name": "u1t",
-                          "fill": "$color-text-muted",
-                          "content": "장바구니",
-                          "fontFamily": "Noto Sans",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
-                        }
-                      ]
+                      "type": "text",
+                      "id": "BAmU2",
+                      "name": "unLogin",
+                      "fill": "#424242",
+                      "content": "로그인/회원가입",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A4fOd",
+                      "name": "unMypage",
+                      "fill": "#424242",
+                      "content": "마이페이지",
+                      "fontFamily": "Noto Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
-                      "id": "DuGUU",
-                      "name": "u2",
-                      "layout": "vertical",
+                      "id": "nQwPa",
+                      "name": "CartBtn",
                       "gap": 4,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "icon_font",
-                          "id": "RMmB5",
-                          "name": "u2i",
-                          "width": 20,
-                          "height": 20,
-                          "iconFontName": "user",
+                          "id": "LyJ9a",
+                          "name": "cartI",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "shopping-bag",
                           "iconFontFamily": "lucide",
-                          "fill": "$color-text-dark"
+                          "fill": "#424242"
                         },
                         {
                           "type": "text",
-                          "id": "o8tSI",
-                          "name": "u2t",
-                          "fill": "$color-text-muted",
-                          "content": "마이페이지",
+                          "id": "su3Sq",
+                          "name": "cartText",
+                          "fill": "#424242",
+                          "content": "장바구니",
                           "fontFamily": "Noto Sans",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         }
                       ]
@@ -549,9 +548,20 @@
                       "type": "frame",
                       "id": "uQaJp",
                       "name": "r1c1i",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "typebymayank",
+                        "link": "https://unsplash.com/@typebymayank",
+                        "author": "Mayank Baranwal"
+                      },
                       "width": "fill_container",
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1761834535611-24bcc5222ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -619,9 +629,20 @@
                       "type": "frame",
                       "id": "94Ynm",
                       "name": "r1c2i",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "feeypflanzen",
+                        "link": "https://unsplash.com/@feeypflanzen",
+                        "author": "feey"
+                      },
                       "width": "fill_container",
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1757060655567-712453112df9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -689,9 +710,20 @@
                       "type": "frame",
                       "id": "Grjnf",
                       "name": "r1c3i",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "waldemarbrandt67w",
+                        "link": "https://unsplash.com/@waldemarbrandt67w",
+                        "author": "Waldemar Brandt"
+                      },
                       "width": "fill_container",
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1610206587623-2afc395a3ca5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -759,9 +791,20 @@
                       "type": "frame",
                       "id": "1l5l4",
                       "name": "r1c4i",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "anniehatuanh",
+                        "link": "https://unsplash.com/@anniehatuanh",
+                        "author": "ANNIE HATUANH"
+                      },
                       "width": "fill_container",
                       "height": 200,
-                      "fill": "$color-bg-section",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1773587789767-4a7a72d6ed92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTN8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
                       "cornerRadius": 8
                     },
                     {
@@ -802,6 +845,338 @@
                           "name": "r1c4s",
                           "fill": "$color-gold",
                           "content": "★★★★★ (67)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LHSmr",
+              "name": "row2",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "z2p26",
+                  "name": "r2c1",
+                  "width": 280,
+                  "height": 360,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0jEdq",
+                      "name": "r2c1img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "lumitar_legends",
+                        "link": "https://unsplash.com/@lumitar_legends",
+                        "author": "Lumitar"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1534263326402-2bca76b7a48a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "i07Bp",
+                      "name": "r2c1info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MqBtn",
+                          "name": "r2c1n",
+                          "fill": "#424242",
+                          "content": "미니 엽서 (단면)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "padWh",
+                          "name": "r2c1p",
+                          "fill": "#424242",
+                          "content": "2,000원~ (부가세별도)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Fh9SX",
+                          "name": "r2c1s",
+                          "fill": "#E6B93F",
+                          "content": "★★★★☆ (28)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hB5Ik",
+                  "name": "r2c2",
+                  "width": 280,
+                  "height": 360,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xePqM",
+                      "name": "r2c2img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "aminjl",
+                        "link": "https://unsplash.com/@aminjl",
+                        "author": "Mohammad Amin"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1669299033175-09d02a0031f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTV8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ww8pH",
+                      "name": "r2c2info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F5Ty2",
+                          "name": "r2c2n",
+                          "fill": "#424242",
+                          "content": "투명 엽서 (양면)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K8mLu",
+                          "name": "r2c2p",
+                          "fill": "#424242",
+                          "content": "5,500원~ (부가세별도)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uVOX5",
+                          "name": "r2c2s",
+                          "fill": "#E6B93F",
+                          "content": "★★★★★ (41)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MDauY",
+                  "name": "r2c3",
+                  "width": 280,
+                  "height": 360,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BmS8B",
+                      "name": "r2c3img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "kelsymichael",
+                        "link": "https://unsplash.com/@kelsymichael",
+                        "author": "Kelsy Gagnebin"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1663789049904-a1e1e216c829?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bzXP4",
+                      "name": "r2c3info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9k3Kr",
+                          "name": "r2c3n",
+                          "fill": "#424242",
+                          "content": "화이트인쇄 엽서",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K4CS5",
+                          "name": "r2c3p",
+                          "fill": "#424242",
+                          "content": "4,000원~ (부가세별도)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LNal7",
+                          "name": "r2c3s",
+                          "fill": "#E6B93F",
+                          "content": "★★★★★ (53)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FCzMK",
+                  "name": "r2c4",
+                  "width": 280,
+                  "height": 360,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#CACACA"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0UUR4",
+                      "name": "r2c4img",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "mjh_shikder",
+                        "link": "https://unsplash.com/@mjh_shikder",
+                        "author": "MJH SHIKDER"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1630734242356-a6f858790740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwOTQzNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3sUl1",
+                      "name": "r2c4info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "koirE",
+                          "name": "r2c4n",
+                          "fill": "#424242",
+                          "content": "코팅 엽서 (양면)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8ASof",
+                          "name": "r2c4p",
+                          "fill": "#424242",
+                          "content": "3,500원~ (부가세별도)",
+                          "fontFamily": "Noto Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bnBfW",
+                          "name": "r2c4s",
+                          "fill": "#E6B93F",
+                          "content": "★★★★☆ (36)",
                           "fontFamily": "Noto Sans",
                           "fontSize": 12,
                           "fontWeight": "normal"
